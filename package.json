@@ -1,0 +1,34 @@
+{
+  "name": "@lopopolo/hyperbola-static",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Static site infrastructure and content for hyperbo.la",
+  "keywords": [
+    "assets",
+    "blog",
+    "build pipeline",
+    "static site",
+    "webpack"
+  ],
+  "homepage": "https://hyperbo.la",
+  "bugs": "https://github.com/lopopolo/hyperbola-static/issues",
+  "license": "MIT",
+  "author": "Ryan Lopopolo <rjl@hyperbo.la> (https://hyperbo.la/)",
+  "contributors": [
+    "Ryan Lopopolo <rjl@hyperbo.la> (https://hyperbo.la/)"
+  ],
+  "repository": "github:lopopolo/hyperbola-static",
+  "devDependencies": {},
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "commonjs": true,
+      "es6": true,
+      "node": true
+    }
+  },
+  "scripts": {
+    "fmt": "npx prettier --write '**/*'",
+    "fmt:md": "npx prettier --prose-wrap always --write '**/*.md' '*.md'"
+  }
+}
