@@ -18,7 +18,11 @@
     "Ryan Lopopolo <rjl@hyperbo.la> (https://hyperbo.la/)"
   ],
   "repository": "github:lopopolo/hyperbola-static",
-  "devDependencies": {},
+  "devDependencies": {
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
   "eslintConfig": {
     "env": {
       "browser": true,
@@ -28,6 +32,8 @@
     }
   },
   "scripts": {
+    "dev": "npx webpack-dev-server",
+    "dev:open": "npx webpack-dev-server --open",
     "fmt": "npx prettier --write '**/*'",
     "fmt:md": "npx prettier --prose-wrap always --write '**/*.md' '*.md'"
   }
