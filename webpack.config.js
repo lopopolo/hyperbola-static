@@ -1,12 +1,25 @@
 const path = require("path");
 const CnameWebpackPlugin = require("cname-webpack-plugin");
+const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 
 const plugins = [
+  new MiniCssExtractPlugin(),
   new CnameWebpackPlugin({
     domain: "hyperbo.la",
+  }),
+  new HtmlWebPackPlugin({
+    template: "homepage/index.html",
+    filename: "index.html",
+    minify: {
+      collapseWhitespace: true,
+      minifyCSS: true,
+      minifyJS: true,
+      removeComments: true,
+      useShortDoctype: true,
+    },
   }),
 ];
 

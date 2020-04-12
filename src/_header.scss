@@ -1,42 +1,36 @@
 .hyperbola-header {
-    background-color: $hyperbola-bg-light;
-    border: none;
-    height: 80px;
-}
-
-.hyperbola-logo {
-    display: block;
-    margin: 0;
-    border-style: none;
-    background: url("brand.svg") no-repeat;
-    background-size: cover;
-    height: 80px;
-    width: 230px;
+  background-color: $hyperbola-bg-light;
+  border: none;
+  height: 80px;
 }
 
 .nav-link {
-    color: $hyperbola-body-color;
-    line-height: 20px;
-    padding-top: 50px;
-    padding-left: 12px;
-    padding-right: 12px;
-    height: 80px;
+  color: $hyperbola-body-color;
+  line-height: 20px;
+  padding-top: 50px;
+  padding-left: 12px;
+  padding-right: 12px;
+  height: 80px;
+  font-weight: bold;
 }
 
 .nav-link:hover {
-    background: $hyperbola-body-color;
-    color: $hyperbola-bg-dark;
+  background: $hyperbola-body-color;
+  color: $hyperbola-bg-dark;
 }
 
 .nav-link:focus {
-    color: $hyperbola-body-color;
+  color: $hyperbola-body-color;
 }
 
 .nav-link:focus:hover {
-    color: $hyperbola-bg-dark;
+  color: $hyperbola-bg-dark;
 }
 
-.nav-link.active {
-    color: $link-color;
-    background-image: linear-gradient(to bottom, #444 0%, darkgray 100%);
+body.frontpage .nav-link.nav-link-frontpage,
+body.contact .nav-link.nav-link-contact,
+body.lifestream .nav-link.nav-link-lifestream,
+body.blog .nav-link.nav-link-blog {
+  color: $link-color;
+  background-image: linear-gradient(to bottom, #444 0%, darkgray 100%);
 }
