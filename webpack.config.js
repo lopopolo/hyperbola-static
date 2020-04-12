@@ -11,7 +11,7 @@ const plugins = [
     domain: "hyperbo.la",
   }),
   new HtmlWebPackPlugin({
-    template: "homepage/index.html",
+    template: "frontpage/index.html",
     filename: "index.html",
     minify: {
       collapseWhitespace: true,
