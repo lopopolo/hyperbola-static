@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>hyperbo.la :: contact</title>
+
+    <!-- opengraph metadata -->
+    <meta property="og:title" content="hyperbo.la" />
+    <meta property="og:site_name" content="hyperbo.la" />
+    <meta property="og:url" content="https://hyperbo.la/" />
+    <meta
+      property="og:description"
+      content="hyperbo.la: Ryan Lopopolo's website"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://hyperbo.la/logo.png" />
+
+    <%= require('html-loader!../partials/favicons.html') %> <%=
+    require('html-loader!../partials/google-analytics.html') %>
+  </head>
+  <body class="contact">
+    <div class="container mb-5">
+      <%= require('html-loader!../partials/nav.html') %>
+      <div class="card hyperbola-section-title my-3 w-100">
+        <div class="card-body">
+          <span class="card-title"><strong>hyperbo.la :: contact</strong></span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          <h1>Ryan Lopopolo</h1>
+          <h2>Personal</h2>
+          <div class="row">
+            <div class="col-md-4 d-inline-block text-truncate">Email</div>
+            <div class="col-md-8 d-inline-block text-truncate">
+              <a
+                href="<%= require('html-entities').AllHtmlEntities.encode('rjl@hyperbo.la') %>"
+              >
+                <%=
+                require('html-entities').AllHtmlEntities.encode('rjl@hyperbo.la')
+                %>
+              </a>
+            </div>
+            <div class="col-md-4 d-inline-block text-truncate">GitHub</div>
+            <div class="col-md-8 d-inline-block text-truncate">
+              <a href="https://github.com/lopopolo">
+                https://github.com/lopopolo
+              </a>
+            </div>
+            <div class="col-md-4 d-inline-block text-truncate">LinkedIn</div>
+            <div class="col-md-8 d-inline-block text-truncate">
+              <a href="https://www.linkedin.com/in/ryanlopopolo">
+                https://www.linkedin.com/in/ryanlopopolo
+              </a>
+            </div>
+          </div>
+          <h2>Résumé</h2>
+          <div class="row">
+            <div class="col-md-4 d-inline-block text-truncate">
+              <time datetime="2019-01-10">jan 10 2019</time>
+            </div>
+            <div class="col-md-8 d-inline-block text-truncate">
+              <a href="<%= require('./resume.pdf').default %>">
+                https://hyperbo.la/contact/resume/lopopolo.pdf
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h2>About</h2>
+          <div class="card mb-3 rounded">
+            <img
+              class="card-img-top"
+              alt="Ryan Lopopolo"
+              src="<%= require('responsive-loader!./lopopolo.jpg?sizes[]=240,sizes[]=480,sizes[]=720').src %>"
+              srcset="<%= require('responsive-loader!./lopopolo.jpg?sizes[]=240,sizes[]=480,sizes[]=720').srcSet %>"
+            />
+            <div class="card-body">
+              <p class="card-text">
+                I use Ruby like a hammer sometimes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

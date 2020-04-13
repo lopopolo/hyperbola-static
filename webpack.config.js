@@ -21,6 +21,17 @@ const plugins = [
       useShortDoctype: true,
     },
   }),
+  new HtmlWebPackPlugin({
+    template: "contact/index.html",
+    filename: "contact/index.html",
+    minify: {
+      collapseWhitespace: true,
+      minifyCSS: true,
+      minifyJS: true,
+      removeComments: true,
+      useShortDoctype: true,
+    },
+  }),
 ];
 
 module.exports = {
@@ -74,6 +85,15 @@ module.exports = {
         test: /\.svg$/,
         exclude: new RegExp(path.resolve(__dirname, "assets")),
         use: ["file-loader", "svgo-loader"],
+      },
+      {
+        test: /resume\.pdf$/,
+        use: {
+          loader: "file-loader",
+          options: {
+            name: "contact/resume/lopopolo.pdf",
+          },
+        },
       },
     ],
   },
