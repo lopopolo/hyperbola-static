@@ -35,26 +35,29 @@
         <div class="col-md-8">
           <div class="card mb-3">
             <div class="card-body">
-              <div class="card-title">
-                <h2>{{ blurb.title|escape }}</h2>
+              <div>
+                <%= require('html-loader!markdown-loader!./card-01.md') %>
               </div>
-              <div class="card-text">{{ blurb.body|markdown }}</div>
             </div>
           </div>
           <div class="card mb-3">
             <div class="card-body">
-              <div class="card-title">
-                <h2>{{ blurb.title|escape }}</h2>
+              <div>
+                <%= require('html-loader!markdown-loader!./card-02.md') %>
               </div>
-              <div class="card-text">{{ blurb.body|markdown }}</div>
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="d-flex flex-column">
             <h2>Current Pursuits</h2>
-            <div>{{ sched.body|markdown }}</div>
-            <div>{{ sched.body|markdown }}</div>
+            <div>
+              <%= require('html-loader!markdown-loader!./status-stripe.md') %>
+            </div>
+            <div>
+              <%= require('html-loader!markdown-loader!./status-artichoke.md')
+              %>
+            </div>
           </div>
         </div>
       </div>
