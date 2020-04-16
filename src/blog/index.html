@@ -20,6 +20,13 @@
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://hyperbo.la/logo.png" />
 
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content="<%= require('./cactus-harvesting.yaml').publishDatestamp %>" />
+    <meta property="og:article:modified_time" content="<%= require('./cactus-harvesting.yaml').publishDatestamp %>" />
+    <meta property="og:article:author" content="https://www.facebook.com/ryan.lopopolo" />
+    <meta property="og:title" content="<%= require('./cactus-harvesting.yaml').title %>" />
+    <meta property="og:description" content="<%= require('./cactus-harvesting.yaml').summary %>" />
+
     <%= require('html-loader!../partials/favicons.html') %> <%=
     require('html-loader!../partials/google-analytics.html') %>
   </head>
@@ -36,12 +43,14 @@
     <div class="card mb-3">
       <div class="card-body">
         <h2 class="card-title text-center">
-          <a href="{{ post.get_absolute_url }}">{{ post.title|escape }}</a>
+          <a href="/w/<%= require('./cactus-harvesting.yaml').slug %>">
+            <%= require('./cactus-harvesting.yaml').title %>
+          </a>
         </h2>
         <h6 class="card-subtitle text-center mb-2 text-muted">
-          <a href="/contact/">Ryan Lopopolo</a> | {{ post.publish_date|date:"F d, Y" }}
+          <a href="/contact/">Ryan Lopopolo</a> | <%= require('./cactus-harvesting.yaml').publishDate %>
         </h6>
-        <div class="card-text"><%= require('html-loader!highlight-loader!markdown-loader!./post.md') %></div>
+        <div class="card-text"><%= require('./cactus-harvesting.md') %></div>
       </div>
     </div>
   </div>
