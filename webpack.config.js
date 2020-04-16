@@ -4,6 +4,7 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
+const highlight = require('highlight.js');
 
 const plugins = [
   new MiniCssExtractPlugin(),
@@ -24,6 +25,17 @@ const plugins = [
   new HtmlWebPackPlugin({
     template: "contact/index.html",
     filename: "contact/index.html",
+    minify: {
+      collapseWhitespace: true,
+      minifyCSS: true,
+      minifyJS: true,
+      removeComments: true,
+      useShortDoctype: true,
+    },
+  }),
+  new HtmlWebPackPlugin({
+    template: "blog/index.html",
+    filename: "w/index.html",
     minify: {
       collapseWhitespace: true,
       minifyCSS: true,
@@ -94,6 +106,24 @@ module.exports = {
             name: "contact/resume/lopopolo.pdf",
           },
         },
+      },
+      {
+        test: /\.md$/,
+        use: [
+          "html-loader",
+          {
+            loader: 'markdown-loader',
+            options: {
+              highlight: (code, lang) => {
+                if (!lang || ['text', 'literal', 'nohighlight'].includes(lang)) {
+                  return `<pre class="hljs">${code}</pre>`;
+                }
+                const html = highlight.highlight(lang, code).value;
+                return `<span class="hljs">${html}</span>`;
+              },
+            },
+          },
+        ],
       },
     ],
   },

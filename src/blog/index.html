@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>hyperbo.la :: contact</title>
+
+    <!-- opengraph metadata -->
+    <meta property="og:title" content="hyperbo.la" />
+    <meta property="og:site_name" content="hyperbo.la" />
+    <meta property="og:url" content="https://hyperbo.la/" />
+    <meta
+      property="og:description"
+      content="hyperbo.la: Ryan Lopopolo's website"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://hyperbo.la/logo.png" />
+
+    <%= require('html-loader!../partials/favicons.html') %> <%=
+    require('html-loader!../partials/google-analytics.html') %>
+  </head>
+  <body class="contact">
+    <div class="container mb-5">
+      <%= require('html-loader!../partials/nav.html') %>
+      <div class="card hyperbola-section-title my-3 w-100">
+        <div class="card-body">
+          <span class="card-title"><strong>hyperbo.la :: blog</strong></span>
+        </div>
+      </div>
+<div class="row">
+  <div class="col-md-8 offset-md-2">
+    <div class="card mb-3">
+      <div class="card-body">
+        <h2 class="card-title text-center">
+          <a href="{{ post.get_absolute_url }}">{{ post.title|escape }}</a>
+        </h2>
+        <h6 class="card-subtitle text-center mb-2 text-muted">
+          <a href="/contact/">Ryan Lopopolo</a> | {{ post.publish_date|date:"F d, Y" }}
+        </h6>
+        <div class="card-text"><%= require('html-loader!highlight-loader!markdown-loader!./post.md') %></div>
+      </div>
+    </div>
+  </div>
+</div>
+  </body>
+</html>

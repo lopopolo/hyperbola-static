@@ -16,3 +16,6 @@ import "assets/favicons/site.webmanifest";
 
 // OpenGraph icons
 import "assets/logo.png";
+
+// highlight.js
+import "./blog/monokai-sublime.css";
