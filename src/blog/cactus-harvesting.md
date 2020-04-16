@@ -2,9 +2,14 @@
 [[docs](https://lopopolo.github.io/ferrocarril/cactusref/index.html)]
 [[code](https://github.com/lopopolo/ferrocarril/tree/0052dc1d0b234c2535b8dd87a096e048bdc0819e/cactusref)].
 CactusRef is nearly a drop-in replacement for
-[`std::rc`](https://doc.rust-lang.org/std/rc/index.html) (<a href="#std-rc-api-compat">see compatability note</a>)
-from the Rust standard library. Throughout this post, `Rc` refers to
-`cactusref::Rc`. I will refer to `std::rc::Rc` with its fully qualified name.
+[`std::rc`](https://doc.rust-lang.org/std/rc/index.html) from the Rust standard
+library. (CactusRef implements all `std::rc::Rc` APIs except for
+[`std::rc::Rc::downcast`](https://doc.rust-lang.org/std/rc/struct.Rc.html#method.downcast),
+[`CoerceUnsized`](https://doc.rust-lang.org/nightly/core/ops/trait.CoerceUnsized.html),
+and
+[`DispatchFromDyn`](https://doc.rust-lang.org/nightly/core/ops/trait.DispatchFromDyn.html).)
+Throughout this post, `Rc` refers to `cactusref::Rc`. I will refer to
+`std::rc::Rc` with its fully qualified name.
 
 ### Motivation
 
@@ -290,11 +295,3 @@ Thank you [Stephen](https://github.com/tummychow) and
 
 Thank you to the segfaults along the way for helping me find bugs in the cycle
 detection and drop implementations. 😱
-
-<p id="std-rc-api-compat"></p>
-
-_Compatability note_: CactusRef implements all `std::rc::Rc` APIs except for
-[`std::rc::Rc::downcast`](https://doc.rust-lang.org/std/rc/struct.Rc.html#method.downcast),
-[`CoerceUnsized`](https://doc.rust-lang.org/nightly/core/ops/trait.CoerceUnsized.html),
-and
-[`DispatchFromDyn`](https://doc.rust-lang.org/nightly/core/ops/trait.DispatchFromDyn.html).

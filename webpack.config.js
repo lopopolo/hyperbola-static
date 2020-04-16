@@ -4,7 +4,7 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
-const highlight = require('highlight.js');
+const highlight = require("highlight.js");
 
 const plugins = [
   new MiniCssExtractPlugin(),
@@ -36,8 +36,7 @@ const plugins = [
   new HtmlWebPackPlugin({
     template: "blog/post.html",
     filename: "w/cactus-harvesting/index.html",
-    markdown: path.resolve(__dirname, "src", "blog", "cactus-harvesting.md"),
-    yaml: path.resolve(__dirname, "src", "blog", "cactus-harvesting.yaml"),
+    slug: "cactus-harvesting",
     minify: {
       collapseWhitespace: true,
       minifyCSS: true,
@@ -114,10 +113,13 @@ module.exports = {
         use: [
           "html-loader",
           {
-            loader: 'markdown-loader',
+            loader: "markdown-loader",
             options: {
               highlight: (code, lang) => {
-                if (!lang || ['text', 'literal', 'nohighlight'].includes(lang)) {
+                if (
+                  !lang ||
+                  ["text", "literal", "nohighlight"].includes(lang)
+                ) {
                   return `<pre class="hljs">${code}</pre>`;
                 }
                 const html = highlight.highlight(lang, code).value;
@@ -130,7 +132,7 @@ module.exports = {
       {
         test: /\.ya?ml$/,
         type: "json",
-        use: "yaml-loader"
+        use: "yaml-loader",
       },
     ],
   },
