@@ -34,8 +34,10 @@ const plugins = [
     },
   }),
   new HtmlWebPackPlugin({
-    template: "blog/index.html",
-    filename: "w/index.html",
+    template: "blog/post.html",
+    filename: "w/cactus-harvesting/index.html",
+    markdown: path.resolve(__dirname, "src", "blog", "cactus-harvesting.md"),
+    yaml: path.resolve(__dirname, "src", "blog", "cactus-harvesting.yaml"),
     minify: {
       collapseWhitespace: true,
       minifyCSS: true,
