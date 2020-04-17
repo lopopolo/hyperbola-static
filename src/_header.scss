@@ -1,11 +1,10 @@
 .nav-link {
   color: $hyperbola-body-color;
-  line-height: 20px;
-  padding-top: 50px;
-  padding-left: 12px;
-  padding-right: 12px;
-  height: 80px;
   font-weight: bold;
+}
+
+.navbar .collapse:not(.show) .nav-link {
+  padding-top: 48px;
 }
 
 .nav-link:hover {
@@ -27,4 +26,8 @@ body.lifestream .nav-link.nav-link-lifestream,
 body.blog .nav-link.nav-link-blog {
   color: $link-color;
   background-image: linear-gradient(to bottom, #444 0%, darkgray 100%);
+}
+
+.navbar-toggler-icon {
+  background-image: url("./partials/navbar-toggler.svg");
 }
