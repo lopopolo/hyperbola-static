@@ -7,7 +7,10 @@ const TerserPlugin = require("terser-webpack-plugin");
 const highlight = require("highlight.js");
 
 const plugins = [
-  new MiniCssExtractPlugin(),
+  new MiniCssExtractPlugin({
+    filename: "[name].[contenthash].css",
+    chunkFilename: "[id].[contenthash].css",
+  }),
   new CnameWebpackPlugin({
     domain: "hyperbo.la",
   }),
@@ -56,6 +59,7 @@ module.exports = {
   },
   entry: path.resolve(__dirname, "src/index.js"),
   output: {
+    filename: "[name].[contenthash].js",
     path: path.resolve(__dirname, "dist"),
     publicPath: "/",
   },
