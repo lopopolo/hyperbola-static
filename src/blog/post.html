@@ -16,7 +16,7 @@
     <meta property="og:site_name" content="hyperbo.la" />
     <meta
       property="og:url"
-      content="https://hyperbo.la/w/<%= htmlWebpackPlugin.options.slug %>"
+      content="https://hyperbo.la/w/<%= htmlWebpackPlugin.options.slug %>/"
     />
     <meta property="og:image" content="https://hyperbo.la/logo.png" />
     <meta property="og:type" content="article" />
@@ -62,7 +62,7 @@
           <div class="card mb-3">
             <div class="card-body">
               <h2 class="card-title text-center">
-                <a href="/w/<%= htmlWebpackPlugin.options.slug %>">
+                <a href="/w/<%= htmlWebpackPlugin.options.slug %>/">
                   <%= require('./' + htmlWebpackPlugin.options.slug +
                   '.yaml').title %>
                 </a>

@@ -5,6 +5,17 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const highlight = require("highlight.js");
+const highlightTerraform = require("./terraform");
+
+highlightTerraform(highlight);
+
+const blogPosts = Object.freeze([
+  "cactus-harvesting",
+  "secrets-in-parameter-store-postmortem",
+  "terraform-blue-green",
+  "aws-org-chart",
+  "engineering-finance-partnership",
+]);
 
 const plugins = [
   new MiniCssExtractPlugin({
@@ -37,9 +48,9 @@ const plugins = [
     },
   }),
   new HtmlWebPackPlugin({
-    template: "blog/post.html",
-    filename: "w/cactus-harvesting/index.html",
-    slug: "cactus-harvesting",
+    template: "blog/index.html",
+    filename: "w/index.html",
+    posts: blogPosts,
     minify: {
       collapseWhitespace: true,
       minifyCSS: true,
@@ -48,6 +59,23 @@ const plugins = [
       useShortDoctype: true,
     },
   }),
+  ...blogPosts.map(
+    (slug) =>
+      new HtmlWebPackPlugin({
+        template: "blog/post.html",
+        filename: `w/${slug}/index.html`,
+        slug,
+        md: `${slug}.md`,
+        yaml: `${slug}.yaml`,
+        minify: {
+          collapseWhitespace: true,
+          minifyCSS: true,
+          minifyJS: true,
+          removeComments: true,
+          useShortDoctype: true,
+        },
+      })
+  ),
 ];
 
 module.exports = {
