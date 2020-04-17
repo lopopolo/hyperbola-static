@@ -8,8 +8,8 @@
     />
 
     <title>
-      hyperbo.la :: <%= require('./' + htmlWebpackPlugin.options.slug +
-      '.yaml').title %>
+      hyperbo.la :: <%= require('./posts/' + htmlWebpackPlugin.options.slug +
+      '/metadata.yaml').title %>
     </title>
 
     <!-- opengraph metadata -->
@@ -22,11 +22,11 @@
     <meta property="og:type" content="article" />
     <meta
       property="og:article:published_time"
-      content="<%= require('./' + htmlWebpackPlugin.options.slug + '.yaml').publishDatestamp %>"
+      content="<%= require('./posts/' + htmlWebpackPlugin.options.slug + '/metadata.yaml').publishDatestamp %>"
     />
     <meta
       property="og:article:modified_time"
-      content="<%= require('./' + htmlWebpackPlugin.options.slug + '.yaml').publishDatestamp %>"
+      content="<%= require('./posts/' + htmlWebpackPlugin.options.slug + '/metadata.yaml').publishDatestamp %>"
     />
     <meta
       property="og:article:author"
@@ -34,11 +34,11 @@
     />
     <meta
       property="og:title"
-      content="<%= require('./' + htmlWebpackPlugin.options.slug + '.yaml').title %>"
+      content="<%= require('./posts/' + htmlWebpackPlugin.options.slug + '/metadata.yaml').title %>"
     />
     <meta
       property="og:description"
-      content="<%= require('./' + htmlWebpackPlugin.options.slug + '.yaml').summary %>"
+      content="<%= require('./posts/' + htmlWebpackPlugin.options.slug + '/metadata.yaml').summary %>"
     />
 
     <%= require('html-loader!../partials/favicons.html') %> <%=
@@ -51,8 +51,8 @@
         <div class="card-body">
           <span class="card-title">
             <strong>
-              hyperbo.la :: <%= require('./' + htmlWebpackPlugin.options.slug +
-              '.yaml').title %>
+              hyperbo.la :: <%= require('./posts/' + htmlWebpackPlugin.options.slug +
+              '/metadata.yaml').title %>
             </strong>
           </span>
         </div>
@@ -63,16 +63,16 @@
             <div class="card-body">
               <h2 class="card-title text-center">
                 <a href="/w/<%= htmlWebpackPlugin.options.slug %>/">
-                  <%= require('./' + htmlWebpackPlugin.options.slug +
-                  '.yaml').title %>
+                  <%= require('./posts/' + htmlWebpackPlugin.options.slug +
+                  '/metadata.yaml').title %>
                 </a>
               </h2>
               <h6 class="card-subtitle text-center mb-2 text-muted">
-                <a href="/contact/">Ryan Lopopolo</a> | <%= require('./' +
-                htmlWebpackPlugin.options.slug + '.yaml').publishDate %>
+                <a href="/contact/">Ryan Lopopolo</a> | <%= require('./posts/' +
+                htmlWebpackPlugin.options.slug + '/metadata.yaml').publishDate %>
               </h6>
               <div class="card-text">
-                <%= require('./' + htmlWebpackPlugin.options.slug + '.md') %>
+                <%= require('./posts/' + htmlWebpackPlugin.options.slug + '/post.md') %>
               </div>
             </div>
           </div>

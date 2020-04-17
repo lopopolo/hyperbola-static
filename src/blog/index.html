@@ -39,16 +39,16 @@
           <div class="card mb-3">
             <div class="card-body">
               <h2 class="card-title">
-                <a href="/w/<%= slug %>/"
-                  ><%= require('./' + slug + '.yaml').title %></a
-                >
+                <a href="/w/<%= slug %>/">
+                  <%= require('./posts/' + slug + '/metadata.yaml').title %>
+                </a>
               </h2>
               <h6 class="card-subtitle mb-2 text-muted">
-                <a href="/contact/">Ryan Lopopolo</a> | <%= require('./' + slug
-                + '.yaml').publishDate %>
+                <a href="/contact/">Ryan Lopopolo</a> | <%= require('./posts/' + slug
+                + '/metadata.yaml').publishDate %>
               </h6>
               <div class="card-text">
-                <%= require('./' + slug + '.yaml').summary %>
+                <%= require('./posts/' + slug + '/metadata.yaml').summary %>
               </div>
             </div>
           </div>
