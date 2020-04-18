@@ -32,6 +32,21 @@ jobs:
           user_name: lopopolo
           user_email: rjl@hyperbo.la
 
+  js:
+    name: Lint and format JS
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install Nodejs toolchain
+        run: npm ci
+
+      - name: Lint and check formatting with eslint
+        run: npx eslint .
+
   text:
     name: Lint and format text
     runs-on: ubuntu-latest
