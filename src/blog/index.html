@@ -32,29 +32,112 @@
           </span>
         </div>
       </div>
-      <% for (var i = 0; i < htmlWebpackPlugin.options.posts.length; i++) { %>
-      <% slug = htmlWebpackPlugin.options.posts[i] %>
+      
+      
       <div class="row">
         <div class="col-lg-9 mx-auto">
           <div class="card mb-3">
             <div class="card-body">
               <h2 class="card-title">
-                <a href="/w/<%= slug %>/">
-                  <%= require('./posts/' + slug + '/metadata.yaml').title %>
+                <a href="/w/cactus-harvesting/">
+                  Cactus Harvesting: Cycle-Aware Reference Counting in Rust
                 </a>
               </h2>
               <h6 class="card-subtitle mb-2 text-muted">
-                <a href="/contact/">Ryan Lopopolo</a> | <%= require('./posts/' + slug
-                + '/metadata.yaml').publishDate %>
+                <a href="/contact/">Ryan Lopopolo</a> | July 15, 2019
               </h6>
               <div class="card-text">
-                <%= require('./posts/' + slug + '/metadata.yaml').summary %>
+                🌵 CactusRef lets you build cyclic data structures using strong references and knows how to deallocate unreachable cycles. You can use CactusRef to implement a doubly linked list. The CactusRef API is compatible with std::rc.
               </div>
             </div>
           </div>
         </div>
       </div>
-      <% } %>
+      
+      
+      <div class="row">
+        <div class="col-lg-9 mx-auto">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h2 class="card-title">
+                <a href="/w/secrets-in-parameter-store-postmortem/">
+                  Postmortem: 502s During Parameter Store Rollout
+                </a>
+              </h2>
+              <h6 class="card-subtitle mb-2 text-muted">
+                <a href="/contact/">Ryan Lopopolo</a> | November 16, 2018
+              </h6>
+              <div class="card-text">
+                Terraform misconfiguration of SSM PrivateLink endpoint completely brings down hyperbo.la.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <div class="row">
+        <div class="col-lg-9 mx-auto">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h2 class="card-title">
+                <a href="/w/terraform-blue-green/">
+                  Blue-Green Deployments With Autoscaling Groups and Terraform
+                </a>
+              </h2>
+              <h6 class="card-subtitle mb-2 text-muted">
+                <a href="/contact/">Ryan Lopopolo</a> | November 05, 2018
+              </h6>
+              <div class="card-text">
+                Moving blue-green deployments into terraform-managed autoscaling groups makes rolling out new AMIs easier.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <div class="row">
+        <div class="col-lg-9 mx-auto">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h2 class="card-title">
+                <a href="/w/aws-org-chart/">
+                  AWS Is Your Org Chart
+                </a>
+              </h2>
+              <h6 class="card-subtitle mb-2 text-muted">
+                <a href="/contact/">Ryan Lopopolo</a> | October 27, 2018
+              </h6>
+              <div class="card-text">
+                Your AWS infrastructure is designed by your org chart. Alignment comes from increased communication and accountability.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <div class="row">
+        <div class="col-lg-9 mx-auto">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h2 class="card-title">
+                <a href="/w/engineering-finance-partnership/">
+                  Productive Engineering–Finance Partnership
+                </a>
+              </h2>
+              <h6 class="card-subtitle mb-2 text-muted">
+                <a href="/contact/">Ryan Lopopolo</a> | October 27, 2018
+              </h6>
+              <div class="card-text">
+                A successful partnership between Engineering and Finance creates better business outcomes.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
     </div>
   </body>
 </html>
