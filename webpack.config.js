@@ -4,12 +4,12 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
-const highlight = require("highlight.js");
-const highlightTerraform = require("./terraform");
+
+const hljs = require("highlight.js");
+const { definer: terraform } = require("./vendor/terraform");
+hljs.registerLanguage("terraform", terraform);
 
 const blog = require("./blog");
-
-highlightTerraform(highlight);
 
 const plugins = [
   new MiniCssExtractPlugin({
@@ -114,14 +114,16 @@ module.exports = {
             loader: "markdown-loader",
             options: {
               highlight: (code, lang) => {
-                if (
-                  !lang ||
-                  ["text", "literal", "nohighlight"].includes(lang)
-                ) {
-                  return `<pre class="hljs">${code}</pre>`;
+                switch (lang) {
+                  case null:
+                  case "text":
+                  case "literal":
+                  case "nohighlight":
+                    return `<pre class="hljs">${code}</pre>`;
+                  default:
+                    const html = hljs.highlight(lang, code).value;
+                    return `<span class="hljs">${html}</span>`;
                 }
-                const html = highlight.highlight(lang, code).value;
-                return `<span class="hljs">${html}</span>`;
               },
             },
           },
