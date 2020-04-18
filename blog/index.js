@@ -22,6 +22,32 @@ const blogPosts = Object.freeze([
   "engineering-finance-partnership",
 ]);
 
+async function walk(dir) {
+  try {
+    const files = await fs.readdir(dir);
+    const children = files.map(async (file) => {
+      try {
+        const filepath = path.join(dir, file);
+        const stats = await fs.stat(filepath);
+        if (stats.isDirectory()) {
+          return walk(filepath);
+        }
+        if (stats.isFile()) {
+          return Promise.resolve(filepath);
+        }
+        return Promise.reject(filepath);
+      } catch (err) {
+        return Promise.reject(err);
+      }
+    });
+    return Promise.all(children).then((dirEntries) =>
+      dirEntries.flat(Infinity).filter((entry) => entry != null)
+    );
+  } catch (err) {
+    return Promise.reject(err);
+  }
+}
+
 async function parsePost(slug) {
   try {
     const data = await fs.readFile(
@@ -66,7 +92,39 @@ async function compilePost(slug) {
     const templateOut = path.resolve(postDir, "index.html");
     console.log(templateOut);
     await fs.writeFile(templateOut, rendered);
+    await copyPostAssets(slug);
     return Promise.resolve(slug);
+  } catch (err) {
+    return Promise.reject(err);
+  }
+}
+
+async function copyPostAssets(slug) {
+  try {
+    const assetsDir = path.resolve(__dirname, "posts", slug, "assets");
+    let assets;
+    try {
+      assets = await walk(assetsDir);
+    } catch (err) {
+      console.log(err);
+      return Promise.resolve(slug);
+    }
+    return Promise.all(
+      assets.map(async (asset) => {
+        const assetOut = path.resolve(
+          __dirname,
+          "..",
+          "src",
+          "blog",
+          "posts",
+          slug,
+          path.relative(assetsDir, asset)
+        );
+        console.log(assetOut);
+        await fs.copyFile(asset, assetOut);
+        return Promise.resolve(slug);
+      })
+    );
   } catch (err) {
     return Promise.reject(err);
   }
