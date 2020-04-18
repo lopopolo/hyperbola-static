@@ -118,11 +118,13 @@ module.exports = {
                   case null:
                   case "text":
                   case "literal":
-                  case "nohighlight":
+                  case "nohighlight": {
                     return `<pre class="hljs">${code}</pre>`;
-                  default:
+                  }
+                  default: {
                     const html = hljs.highlight(lang, code).value;
                     return `<span class="hljs">${html}</span>`;
+                  }
                 }
               },
             },
