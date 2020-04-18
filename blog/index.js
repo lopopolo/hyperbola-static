@@ -9,7 +9,12 @@ const moment = require("moment");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 const blogPosts = Object.freeze([
+  "synthesis",
   "cactus-harvesting",
+  "sprint-log-2019-03-08",
+  "nemawashi",
+  "reflections-on-learning-rust",
+  "social-coding-2018",
   "secrets-in-parameter-store-postmortem",
   "terraform-blue-green",
   "aws-org-chart",
