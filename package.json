@@ -18,19 +18,27 @@
     "Ryan Lopopolo <rjl@hyperbo.la> (https://hyperbo.la/)"
   ],
   "repository": "github:lopopolo/hyperbola-static",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.1"
+  },
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
     "babel-loader": "^8.1.0",
     "cname-webpack-plugin": "^2.0.1",
     "css-loader": "^3.5.2",
+    "ejs": "^3.0.2",
     "file-loader": "^6.0.0",
+    "front-matter": "^3.1.0",
     "highlight.js": "^9.18.1",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.2.0",
     "jimp": "^0.10.1",
     "markdown-loader": "^5.1.0",
     "mini-css-extract-plugin": "^0.9.0",
+    "moment": "^2.24.0",
     "node-sass": "^4.13.1",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "responsive-loader": "^1.2.0",
@@ -50,20 +58,21 @@
       "commonjs": true,
       "es6": true,
       "node": true
+    },
+    "extends": [
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 8,
+      "sourceType": "module"
     }
   },
   "scripts": {
+    "build": "node ./blog/index.js && npm run fmt && npm run fmt:md",
     "dev": "npx webpack-dev-server",
     "dev:open": "npx webpack-dev-server --open",
     "fmt": "npx prettier --write '**/*'",
-    "fmt:md": "npx prettier --prose-wrap always --write '**/*.md' '*.md'"
-  },
-  "dependencies": {
-    "bootstrap": "^4.4.1",
-    "ejs": "^3.0.2",
-    "front-matter": "^3.1.0",
-    "jquery": "^3.4.1",
-    "moment": "^2.24.0",
-    "popper.js": "^1.16.1"
+    "fmt:md": "npx prettier --prose-wrap always --write '**/*.md' '*.md'",
+    "lint:js": "npx eslint --fix ."
   }
 }
