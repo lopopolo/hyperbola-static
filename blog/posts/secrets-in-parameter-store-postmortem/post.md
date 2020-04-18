@@ -6,6 +6,7 @@ summary: >-
   Terraform misconfiguration of SSM PrivateLink endpoint completely brings down
   hyperbo.la.
 ---
+
 Attempting to deploy
 [0.149.2](https://github.com/lopopolo/hyperbola/tree/v0.149.2) brought down
 [hyperbo.la](https://hyperbo.la/) and caused all requests to return 502 status

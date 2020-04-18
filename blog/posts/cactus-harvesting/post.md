@@ -7,6 +7,7 @@ summary: >-
   and knows how to deallocate unreachable cycles. You can use CactusRef to
   implement a doubly linked list. The CactusRef API is compatible with std::rc.
 ---
+
 🌵 CactusRef is a single-threaded, cycle-aware, reference counting smart pointer
 [[docs](https://lopopolo.github.io/ferrocarril/cactusref/index.html)]
 [[code](https://github.com/lopopolo/ferrocarril/tree/0052dc1d0b234c2535b8dd87a096e048bdc0819e/cactusref)].

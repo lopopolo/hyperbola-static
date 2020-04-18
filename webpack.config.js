@@ -41,7 +41,7 @@ const plugins = [
       useShortDoctype: true,
     },
   }),
-  ...blog
+  ...blog,
 ];
 
 module.exports = {

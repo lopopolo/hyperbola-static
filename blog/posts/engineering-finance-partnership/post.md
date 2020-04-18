@@ -6,6 +6,7 @@ summary: >-
   A successful partnership between Engineering and Finance creates better
   business outcomes.
 ---
+
 I led the cloud cost accounting team at Stripe. We worked to significantly
 reduce AWS costs, primarily through automated
 [reserved instance purchasing](https://stripe.com/blog/aws-reserved-instances).

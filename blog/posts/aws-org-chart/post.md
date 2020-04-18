@@ -6,6 +6,7 @@ summary: >-
   Your AWS infrastructure is designed by your org chart. Alignment comes from
   increased communication and accountability.
 ---
+
 The resources scattered throughout your AWS infrastructure form a map of your
 org. They show how your organization plans and makes technical decisions. Let's
 walk through some scenarios and see what they imply about your org structure.

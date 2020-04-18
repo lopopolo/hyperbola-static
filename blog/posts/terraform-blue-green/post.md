@@ -6,6 +6,7 @@ summary: >-
   Moving blue-green deployments into terraform-managed autoscaling groups makes
   rolling out new AMIs easier.
 ---
+
 Blue-green deployments make deploys less risky by running old and new code
 simultaneously on identical stacks. If there is a problem with the deploy, you
 can quickly fail back to the previous version.

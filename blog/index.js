@@ -18,7 +18,10 @@ const blogPosts = Object.freeze([
 
 async function parsePost(slug) {
   try {
-    const data = await fs.readFile(path.resolve(__dirname, "posts", slug, "post.md"), "utf8");
+    const data = await fs.readFile(
+      path.resolve(__dirname, "posts", slug, "post.md"),
+      "utf8"
+    );
     return frontMatter(data);
   } catch (err) {
     return Promise.reject(err);
@@ -26,11 +29,11 @@ async function parsePost(slug) {
 }
 
 function extractTemplateParams(slug, data) {
-  console.log(slug, data)
+  console.log(slug, data);
   const date = moment(data.publishDate);
   const post = Object.create(null);
   post.title = data.title;
-  post.absoluteUrl = `/w/${slug}/`
+  post.absoluteUrl = `/w/${slug}/`;
   post.datestamp = date.format("YYYY-MM-DD");
   post.publishDate = date.format("MMMM DD, YYYY");
   post.summary = data.summary;
@@ -43,9 +46,12 @@ function extractTemplateParams(slug, data) {
 async function compilePost(slug) {
   try {
     const data = await parsePost(slug);
-    const template = await fs.readFile(path.resolve(__dirname, "template.html"), "utf8");
+    const template = await fs.readFile(
+      path.resolve(__dirname, "template.html"),
+      "utf8"
+    );
     const postDir = path.resolve(__dirname, "..", "src", "blog", "posts", slug);
-    await fs.mkdir(postDir, {recursive:true});
+    await fs.mkdir(postDir, { recursive: true });
     const mdOut = path.resolve(postDir, "post.md");
     console.log(mdOut);
     await fs.writeFile(mdOut, data.body);
@@ -62,16 +68,23 @@ async function compilePost(slug) {
 
 async function compileIndex(posts) {
   try {
-    const postMetadata = await Promise.all(posts.map(async (slug) => {
-      const data = await parsePost(slug);
-      return Promise.resolve([slug, data]);
-    }));
-    const template = await fs.readFile(path.resolve(__dirname, "index.html"), "utf8");
+    const postMetadata = await Promise.all(
+      posts.map(async (slug) => {
+        const data = await parsePost(slug);
+        return Promise.resolve([slug, data]);
+      })
+    );
+    const template = await fs.readFile(
+      path.resolve(__dirname, "index.html"),
+      "utf8"
+    );
     const outDir = path.resolve(__dirname, "..", "src", "blog");
-    await fs.mkdir(outDir, {recursive:true});
-    const context = postMetadata.map(([slug, data]) => extractTemplateParams(slug, data.attributes).post);
+    await fs.mkdir(outDir, { recursive: true });
+    const context = postMetadata.map(
+      ([slug, data]) => extractTemplateParams(slug, data.attributes).post
+    );
     console.log(context);
-    const rendered = ejs.render(template, {posts: context });
+    const rendered = ejs.render(template, { posts: context });
     const templateOut = path.resolve(outDir, "index.html");
     console.log(templateOut);
     await fs.writeFile(templateOut, rendered);
@@ -93,7 +106,7 @@ async function runner() {
   } finally {
     timer.unref();
   }
-};
+}
 
 if (require.main === module) {
   runner();
