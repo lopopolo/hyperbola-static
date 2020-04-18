@@ -3,9 +3,9 @@ title: "Cactus Harvesting: Cycle-Aware Reference Counting in Rust"
 publishDate: "2019-07-15"
 slug: cactus-harvesting
 summary: >-
-  🌵 CactusRef lets you build cyclic data structures using strong references
-  and knows how to deallocate unreachable cycles. You can use CactusRef to
-  implement a doubly linked list. The CactusRef API is compatible with std::rc.
+  🌵 CactusRef lets you build cyclic data structures using strong references and
+  knows how to deallocate unreachable cycles. You can use CactusRef to implement
+  a doubly linked list. The CactusRef API is compatible with std::rc.
 ---
 
 🌵 CactusRef is a single-threaded, cycle-aware, reference counting smart pointer

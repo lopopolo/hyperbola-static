@@ -3,9 +3,9 @@ title: "Reflections on Learning Rust By Building Punchtop"
 publishDate: "2019-01-27"
 slug: reflections-on-learning-rust
 summary: >-
-  To learn Rust, I implemented an audio game. There were some things I liked
-  and some things I didn't. Some things were easy and some were hard. And there
-  were plenty of libraries that were a joy to use.
+  To learn Rust, I implemented an audio game. There were some things I liked and
+  some things I didn't. Some things were easy and some were hard. And there were
+  plenty of libraries that were a joy to use.
 ---
 
 [Punchtop](https://github.com/lopopolo/punchtop) is an

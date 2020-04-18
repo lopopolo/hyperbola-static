@@ -3,8 +3,8 @@ title: "Social Coding 2018 Recap"
 publishDate: "2018-12-28"
 slug: social-coding-2018
 summary: >-
-  I contributed to open source more than I ever have in 2018; but there is a
-  lot I can do to improve.
+  I contributed to open source more than I ever have in 2018; but there is a lot
+  I can do to improve.
 ---
 
 I keep track of every open source contribution I have ever made with the

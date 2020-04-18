@@ -11,6 +11,7 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const blogPosts = Object.freeze([
   "synthesis",
   "cactus-harvesting",
+  "the-conjoined-villages",
   "sprint-log-2019-03-08",
   "nemawashi",
   "reflections-on-learning-rust",
