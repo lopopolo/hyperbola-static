@@ -1,0 +1,3771 @@
+---
+- id: 1
+  publishDate: "2010-12-21T05:43:26Z"
+  post: >-
+    Had a bad run-in with rm -rf. lost the sqlite database for the site. on the
+    bright side, I'm using mysql now. #linux #fail
+- id: 2
+  publishDate: "2010-12-21T06:09:18Z"
+  post: >-
+    props to matt goral for giving me some tips on how to make my logo better.
+    this is the tweaked version.
+- id: 3
+  publishDate: "2010-12-21T07:11:13Z"
+  post: >-
+    lots of code refactoring going on right now. One drawback of the ease and
+    speed of #django is that it allows you not to think.
+- id: 4
+  publishDate: "2010-12-22T06:20:40Z"
+  post: >-
+    working on a sort of app store for projects i've done, a glorified portfolio
+- id: 5
+  publishDate: "2010-12-28T00:10:37Z"
+  post: >-
+    Just set up three HD cable boxes and they look sups sweet. #tv
+- id: 6
+  publishDate: "2011-01-02T07:52:35Z"
+  post: >-
+    This is why I like django's pluggable apps. I can get distracted and not
+    finish a project, but the site still works. #django #distractions
+- id: 7
+  publishDate: "2011-01-05T04:59:39Z"
+  post: >-
+    I HATE FLEX SO MUCH #fail #ihateflex
+- id: 8
+  publishDate: "2011-01-07T07:34:06Z"
+  post: >-
+    relaxing during IAP. I've started working on a side project: a flash-based
+    dj mixer that uses #music from youtube. #flash
+- id: 9
+  publishDate: "2011-01-13T22:39:00Z"
+  post: >-
+    Found out that my raid array not mounting a couple months ago was due to a
+    failed drive. Can't recover it. I lost so much data. #linux #fail
+- id: 10
+  publishDate: "2011-01-14T09:07:42Z"
+  post: >-
+    "Finished" tagging my #music ... 1122 artists, 3394 albums, 28553 songs. All
+    told about 200GB. This feels so #good
+- id: 11
+  publishDate: "2011-01-24T03:28:32Z"
+  post: >-
+    #idea http://ku.sh - an online yelp for medical marijuana dispensaries. It's
+    already been done. I really like the domain name though.
+- id: 12
+  publishDate: "2011-01-24T03:30:54Z"
+  post: >-
+    #idea a new NFL stat - average number of plays to achieve a first down (both
+    intra- and cross-drive). I think it'd be interesting to compare this to
+    average drive lengths, points/drive, and defenses
+- id: 13
+  publishDate: "2011-01-24T23:46:46Z"
+  post: >-
+    lesson learned: never edit a site live. #fail #django
+- id: 14
+  publishDate: "2011-01-28T03:37:12Z"
+  post: >-
+    #thingsiwant a honeycomb tablet. the xoom looks way cool
+- id: 15
+  publishDate: "2011-01-28T03:41:42Z"
+  post: >-
+    #idea http://i.sh with subdomains offering an infinite number of
+    collections/collages of stuff. Can't be done because of .sh domain name
+    rules.
+- id: 16
+  publishDate: "2011-02-07T21:28:06Z"
+  post: >-
+    http://www.engadget.com/2011/02/07/circboard-brings-fast-typing-to-console-controllers-video/
+    totally had an #idea similar to this a few years back when i was in to boxee
+- id: 17
+  publishDate: "2011-03-14T23:07:24Z"
+  post: >-
+    got my offer today. will be working for ooyala for 3 months this summer.
+    #backfromthedead
+- id: 18
+  publishDate: "2011-04-09T22:49:37Z"
+  post: >-
+    lol. edited the site live again while working on a new app. 500 errors
+    abound. #django #fail
+- id: 19
+  publishDate: "2011-04-29T16:14:04Z"
+  post: >-
+    killed my own email solution because I had no confidence it would work
+    reliably. Rolling with Google Apps now
+- id: 20
+  publishDate: "2011-05-01T02:56:51Z"
+  post: >-
+    I need a 512GB iPhone #firstworldproblems
+- id: 21
+  publishDate: "2011-05-01T10:34:35Z"
+  post: >-
+    it's amazing how the time melts away when ur mucking around on a server
+- id: 22
+  publishDate: "2011-05-04T20:55:32Z"
+  post: >-
+    unintentional side effect of my server's firewall: I can't traceroute it.
+    #fail
+- id: 23
+  publishDate: "2011-05-09T02:59:22Z"
+  post: >-
+    its amazing how the time melts away when you're playing portal
+- id: 24
+  publishDate: "2011-05-17T19:32:42Z"
+  post: >-
+    broing out is somehow making studying for algorithms not suck
+- id: 25
+  publishDate: "2011-05-17T19:36:06Z"
+  post: >-
+    #thingsiwant
+    http://www.engadget.com/2011/05/16/seagates-goflex-satellite-portable-hard-drive-streams-content-o/
+    probs cheaper than a 512gb iphone
+- id: 26
+  publishDate: "2011-05-22T11:23:07Z"
+  post: >-
+    ruby's splat is just python's tuple (un)packing #sweet #lame
+- id: 27
+  publishDate: "2011-05-22T14:44:43Z"
+  post: >-
+    sysadmin ing is fun. hello beautiful browser based svn repo browsing
+    (insurrection) and web-based svn admining (svn-admin) #linux #win
+- id: 28
+  publishDate: "2011-06-06T03:57:03Z"
+  post: >-
+    I got accepted to the EECS MEng program!!! woooo!!
+- id: 29
+  publishDate: "2011-06-06T03:57:22Z"
+  post: >-
+    first day of work tomorrow #excited
+- id: 30
+  publishDate: "2011-06-06T04:34:33Z"
+  post: >-
+    for some reason every part of the #django admin worked except the root page.
+    had to turn on debug mode to see I was improperly configured #fail
+- id: 31
+  publishDate: "2011-06-06T05:31:42Z"
+  post: >-
+    this site: now with 5 times less 500 errors #django #fail
+- id: 32
+  publishDate: "2011-06-08T02:58:06Z"
+  post: >-
+    lesson learned: never muck around with mysql's database directory; you will
+    screw up #fail #linux
+- id: 33
+  publishDate: "2011-06-08T02:58:20Z"
+  post: >-
+    pushed my first bugfix today!!!!
+- id: 34
+  publishDate: "2011-06-11T08:21:14Z"
+  post: >-
+    this is the best CAPTCHA I've ever seen: http://turntable.fm/inviterequest
+- id: 35
+  publishDate: "2011-06-17T06:46:48Z"
+  post: >-
+    vi mode is the best thing I have ever discovered about the command line
+- id: 36
+  publishDate: "2011-06-17T06:47:10Z"
+  post: >-
+    this weekend's project, get all my config files on github
+- id: 37
+  publishDate: "2011-06-18T21:42:27Z"
+  post: >-
+    a month into the summer and NOW my music streaming server decides to be
+    glitchy #fail
+- id: 38
+  publishDate: "2011-06-20T06:52:08Z"
+  post: >-
+    Should I upgrade 10.04 LTS to 11.04? #linux
+- id: 39
+  publishDate: "2011-06-20T06:53:03Z"
+  post: >-
+    finally broke down and got a github account. My username is lopopolo
+- id: 40
+  publishDate: "2011-06-26T22:26:48Z"
+  post: >-
+    have access to one of ESPN's private repos on github #leet
+- id: 41
+  publishDate: "2011-06-30T04:00:04Z"
+  post: >-
+    wrote my first MapReduce job today!
+- id: 42
+  publishDate: "2011-07-04T04:37:56Z"
+  post: >-
+    it's a kitty!
+- id: 43
+  publishDate: "2011-07-09T03:55:19Z"
+  post: >-
+    rebased some already pushed commits to clean up my history and forced the
+    push. I feel so dirty. #git #fail
+- id: 44
+  publishDate: "2011-07-09T04:28:44Z"
+  post: >-
+    Finally fixed the css on my site to be less of an abomination. width: auto,
+    you are wonderful
+- id: 45
+  publishDate: "2011-07-09T04:51:00Z"
+  post: >-
+    one day I'll set up a #django dev environment again. Until then, we'll do it
+    live!
+- id: 46
+  publishDate: "2011-07-09T04:52:31Z"
+  post: >-
+    I need to get around to resetting up this server. I want to switch from svn
+    to git and redo the whole apache config. why did I put the site in /var
+    where I have to sudo all the time?? #linux #fail
+- id: 47
+  publishDate: "2011-07-09T06:14:34Z"
+  post: >-
+    hyperbola, now with 500% more cache-control headers
+- id: 48
+  publishDate: "2011-07-09T06:35:05Z"
+  post: >-
+    why `svn status` prints nothing when you have a clean working directory is
+    beyond me. #git ftw
+- id: 49
+  publishDate: "2011-07-11T03:42:34Z"
+  post: >-
+    open("|-"), you are a tricky beast. Successfully fork bombed myself 5 times
+    before I sorted that out.
+- id: 50
+  publishDate: "2011-07-11T06:35:54Z"
+  post: >-
+    checked my Activity Monitor, had 2 #ruby processes each at 90% cpu which had
+    been running for hours. trapping signals #fail
+- id: 51
+  publishDate: "2011-07-15T05:49:25Z"
+  post: >-
+    Thinking about migrating this site to EC2. Probably gonna stick with
+    #django. http://dev.hyperbo.la will probably die; github does it way better.
+    Moving all media assets to s3: maybe. ssl: probs not
+- id: 52
+  publishDate: "2011-07-15T05:50:25Z"
+  post: >-
+    #thingsiwant Next birthday present to myself: CrashPlan+. Offsite #backup of
+    all of my media? Yes, please.
+- id: 53
+  publishDate: "2011-07-15T05:54:54Z"
+  post: >-
+    oh #quora, you sly kitten, requiring me to sign up to view all the answers
+    to a question
+- id: 55
+  publishDate: "2011-07-16T01:33:59Z"
+  post: >-
+    My new favicon welcomes my site to 1996 #itsgreattobehere #fail
+- id: 56
+  publishDate: "2011-07-17T22:33:59Z"
+  post: >-
+    After working with #rails for a bit now, I kinda like the #magic. DB
+    interations seem so much more natural than they do in #django
+- id: 57
+  publishDate: "2011-07-19T02:38:52Z"
+  post: >-
+    just had THE #idea ... Bounced it off someone aaaaaaaaaaand it's gone.
+- id: 58
+  publishDate: "2011-07-19T04:24:11Z"
+  post: >-
+    I avoid adding punctuation after my #hashtags because there's a #bug in my
+    regex that parses them. #thingsishouldfix #django
+- id: 59
+  publishDate: "2011-07-26T05:48:31Z"
+  post: >-
+    the hyperbola repos have been migrated to github. and so begins the death of
+    dev.hyperbo.la
+- id: 60
+  publishDate: "2011-07-26T05:52:01Z"
+  post: >-
+    #mashup #idea: quova + mixpanel. Give it the ability to scope by
+    region/state/country/county
+- id: 61
+  publishDate: "2011-07-27T06:40:34Z"
+  post: >-
+    finally got around to giving my #vim config some love. MacVim is pretty
+    cool.
+- id: 62
+  publishDate: "2011-07-29T04:45:22Z"
+  post: >-
+    duplicity: http://duplicity.nongnu.org/ #backups #comebacktothislater
+- id: 63
+  publishDate: "2011-07-29T05:35:28Z"
+  post: >-
+    got a new #server. It's in Newark. It's some lonely VM. It's time to get
+    serious.
+- id: 64
+  publishDate: "2011-07-30T03:07:28Z"
+  post: >-
+    What a busy friday. Switched to iTerm. 256 colors is nice. Set up a git repo
+    with all my dotfiles. Got real #serious with my #bash config.
+- id: 65
+  publishDate: "2011-08-01T07:40:54Z"
+  post: >-
+    first post on the new server. It runs. I'm trying to make this #django thing
+    leaner and less hacky. Still have a ways to go. Boy do I need to set up a
+    dev env.
+- id: 66
+  publishDate: "2011-08-02T02:59:15Z"
+  post: >-
+    #thisisa.pathological#testcase.#dealwithit
+- id: 67
+  publishDate: "2011-08-02T03:08:19Z"
+  post: >-
+    I haven't posted about #music in a while: #songkick is the best. I'm going
+    to so many more concerts now. I get too immersed in #turntable for it to be
+    a regular thing.
+- id: 68
+  publishDate: "2011-08-05T04:04:44Z"
+  post: >-
+    Disabled #root login over ssh. Have no idea what the password is. This is
+    the #ubuntu way.
+- id: 69
+  publishDate: "2011-08-06T08:12:38Z"
+  post: >-
+    And so I wait for the dns change to propagate ... soon, we'll be live here
+    from NJ
+- id: 70
+  publishDate: "2011-08-07T00:48:59Z"
+  post: >-
+    #vim omni completion + #supertab = #vim #bliss. I'm never using an IDE again
+- id: 71
+  publishDate: "2011-08-07T08:40:54Z"
+  post: >-
+    yet again, #vim is awesome: http://danielchoi.com/software/vitunes.html
+- id: 72
+  publishDate: "2011-08-07T20:12:48Z"
+  post: >-
+    Got a #django bug accepted: https://code.djangoproject.com/ticket/16573
+- id: 73
+  publishDate: "2011-08-10T02:59:30Z"
+  post: >-
+    #thingsiwant: these #shoes =>
+    http://www.flightclubla.com/p.php?fc=la&c=af&i=020685
+- id: 74
+  publishDate: "2011-08-10T05:36:38Z"
+  post: >-
+    next project: install rvm and homebrew
+- id: 75
+  publishDate: "2011-08-12T07:18:47Z"
+  post: >-
+    this is way cooler than rvm: https://github.com/sstephenson/rbenv #ruby
+- id: 76
+  publishDate: "2011-08-12T22:36:24Z"
+  post: >-
+    Woo! my #django #patch got accepted.
+    https://code.djangoproject.com/changeset/16609
+- id: 77
+  publishDate: "2011-08-13T22:34:09Z"
+  post: >-
+    RSS and Atom feeds now render posts the same way I render them on the
+    lifestream page. Thanks to my one reader derenrich for the feature request.
+- id: 78
+  publishDate: "2011-08-17T19:45:45Z"
+  post: >-
+    Just demoed my Custom Events analytics project at #ooyala. It went well:
+    "This is the future of freemium analytics."
+- id: 79
+  publishDate: "2011-08-20T04:57:24Z"
+  post: >-
+    Finished my internship at #ooyala. Had an awesome summer; learned so much.
+- id: 80
+  publishDate: "2011-08-20T05:41:19Z"
+  post: >-
+    So #rails caches column names across the database and generates SQL for them
+    even if they are never used. Why does this make sense? #fail
+- id: 81
+  publishDate: "2011-08-24T06:36:49Z"
+  post: >-
+    It's been real California; can't wait to come back
+- id: 82
+  publishDate: "2011-08-24T23:31:31Z"
+  post: >-
+    http://blogs.wsj.com/deals/2011/08/24/steve-jobs-resigns-as-apple-ceo/
+    #apple has a succession plan?? Is it a monarchy?
+- id: 83
+  publishDate: "2011-08-25T04:03:39Z"
+  post: >-
+    I was not able to access google plus for about a week. Figured they were
+    just having issues because I was still able to access email fine. Ended up
+    having to recover my account. #fail
+- id: 84
+  publishDate: "2011-08-27T03:08:44Z"
+  post: >-
+    http://www.ibm.com/developerworks/web/library/wa-ruby/?ca=drs- #ruby on
+    #android. This is pretty awesome, as is the name.
+- id: 85
+  publishDate: "2011-08-29T17:12:30Z"
+  post: >-
+    for the number of times i ssh'd into my iMac this sumer, you would think
+    that I'd have just put my ssh key on it #fail #doingitthehardway
+- id: 86
+  publishDate: "2011-08-29T17:14:11Z"
+  post: >-
+    I'm going to miss #ruby's hash rocket
+    http://blog.peepcode.com/tutorials/2011/rip-ruby-hash-rocket-syntax
+- id: 87
+  publishDate: "2011-08-30T20:21:04Z"
+  post: >-
+    Just finished deploying my own #gollum wiki. Let's get more #1337
+- id: 88
+  publishDate: "2011-08-31T02:06:35Z"
+  post: >-
+    http://stabyourself.net/mari0/ #mario + #portal = awesome
+- id: 89
+  publishDate: "2011-08-31T20:28:37Z"
+  post: >-
+    here's the #plan: 63 units, 6 classes, 3 of which are grad H. It's gonna be
+    a bumpin term
+- id: 90
+  publishDate: "2011-09-01T04:10:43Z"
+  post: >-
+    I remember when I wanted one of these #sonymylo
+- id: 91
+  publishDate: "2011-09-02T01:27:34Z"
+  post: >-
+    Abiding by the principle of least surprise is, to me at least, least
+    surprising. #whatarethesewords
+- id: 92
+  publishDate: "2011-09-02T04:41:22Z"
+  post: >-
+    So I used #github socially to review someone's code and got flamed. That's
+    the last time I do that.
+- id: 93
+  publishDate: "2011-09-02T04:44:12Z"
+  post: >-
+    I got to 100 #tweets a hell of a lot faster than I did here (still not there
+    yet)
+- id: 94
+  publishDate: "2011-09-08T06:15:32Z"
+  post: >-
+    #UPnP stopped working on my router. Flashed it like a boss.
+- id: 95
+  publishDate: "2011-09-09T16:30:54Z"
+  post: >-
+    bookmarking for later: useful defaults for OS X apps.
+    https://github.com/mathiasbynens/dotfiles/blob/master/.osx
+- id: 96
+  publishDate: "2011-09-09T16:40:23Z"
+  post: >-
+    #java gets #lambda syntax
+    http://mail.openjdk.java.net/pipermail/lambda-dev/2011-September/003936.html
+    #finally
+- id: 97
+  publishDate: "2011-09-09T16:59:40Z"
+  post: >-
+    I hope you think this is as stupid as I do:
+    http://wiki.hyperbo.la/All-nighters
+- id: 98
+  publishDate: "2011-09-10T16:37:19Z"
+  post: >-
+    Because kernel.org is down, I used airdrop to copy over a cached version of
+    the git source and formula from another computer so I could install it with
+    homebrew #gardenpath
+- id: 99
+  publishDate: "2011-09-10T16:43:48Z"
+  post: >-
+    its amazing how much quicker a script runs when you don't create 60,000
+    Hashes and compile a regex 30k times #ruby
+- id: 100
+  publishDate: "2011-09-12T22:04:19Z"
+  post: >-
+    #compiling #gcc from source to get an ELF cross-compiler on OSX. This is so
+    #fail
+- id: 101
+  publishDate: "2011-09-12T22:33:14Z"
+  post: >-
+    #timeboxed this gcc cross compiler nonsense. Using debathena in a VM is
+    easier. #hammer
+- id: 102
+  publishDate: "2011-09-13T00:06:55Z"
+  post: >-
+    why does iChat think it's ok to grow as large as it wants vertically? #no,
+    I'll manage my windows by myself.
+- id: 103
+  publishDate: "2011-09-15T04:47:04Z"
+  post: >-
+    Seriously, Office? You rm the backup from the disk when I close it instead
+    of doing the sane thing and moving it to my trash? #fail #hard
+- id: 104
+  publishDate: "2011-09-16T18:33:51Z"
+  post: >-
+    the goes to operator (x --> 0) makes #C feel more like #ruby! lolz #fail
+- id: 105
+  publishDate: "2011-09-20T15:07:18Z"
+  post: >-
+    Way to steal my MEng thesis idea Twitter
+    https://github.com/nathanmarz/storm/wiki/Rationale
+- id: 106
+  publishDate: "2011-09-25T06:36:14Z"
+  post: >-
+    so in order to access Mail.app's preferences to make it not be the default
+    mailto: handler, I first have to configure it #fail
+- id: 107
+  publishDate: "2011-09-27T15:04:23Z"
+  post: >-
+    This article is so cool
+    http://en.wikipedia.org/wiki/List_of_company_name_etymologies #wikipedia
+- id: 108
+  publishDate: "2011-09-30T05:32:33Z"
+  post: >-
+    So on this one server, my default shell was /bin/sh, i'm not a sudoer, root
+    owns my home directory, and another user owns /home. #linux #fail
+- id: 109
+  publishDate: "2011-10-03T04:17:19Z"
+  post: >-
+    #backintheday, before I understood how the relational part of MySQL worked,
+    I made 20 columns to hold metadata about a record. 20 columns wasn't enough.
+    Foreign keys #ftw. learning #fail
+- id: 110
+  publishDate: "2011-10-11T16:24:52Z"
+  post: >-
+    6 doesn't byte 00110110 00100001 00111101 01100010 01111001 01110100
+- id: 111
+  publishDate: "2011-10-24T03:46:59Z"
+  post: >-
+    I have 3 spare computers lying around. What should I do with them? One idea
+    is to turn them into a cluster with one node running a shared kernel for the
+    entire cluster. #rpc #linux
+- id: 112
+  publishDate: "2011-10-26T17:48:07Z"
+  post: >-
+    A libc-free world, eh?
+    http://blogs.oracle.com/ksplice/entry/hello_from_a_libc_free #overkill
+- id: 113
+  publishDate: "2011-10-28T08:33:11Z"
+  post: >-
+    I don't know why, but I am excited about home automation today. Z-Wave looks
+    really cool
+- id: 114
+  publishDate: "2011-10-31T23:44:46Z"
+  post: >-
+    when you're at pid 400000, it's probably time for a reboot #unix
+- id: 115
+  publishDate: "2011-11-04T01:28:25Z"
+  post: >-
+    Why dynamic languages suck sometimes: I spent the last 45 minutes debugging
+    a python script. I thought I had logic errors. What actually was wrong was
+    that I renamed a variable and missed one. #fail
+- id: 116
+  publishDate: "2011-11-09T19:22:09Z"
+  post: >-
+    Just did an ubuntu server upgrade from hardy #linux #fail
+- id: 117
+  publishDate: "2011-11-14T01:51:49Z"
+  post: >-
+    Google plus, you are no longer app tabified. slow #fail
+- id: 118
+  publishDate: "2011-11-14T18:29:23Z"
+  post: >-
+    Got a #vanity url for my github account http://git.io/rjl
+- id: 119
+  publishDate: "2011-11-14T18:38:23Z"
+  post: >-
+    I first used Charles this past summer. A very valuable tool for network
+    observation and debugging http://www.charlesproxy.com
+- id: 120
+  publishDate: "2011-11-15T02:29:29Z"
+  post: >-
+    speaking of proxies ... hyperbo.la, now with 100% more reverse proxying
+    (apache to gollum) #gemsanity
+- id: 121
+  publishDate: "2011-11-17T07:53:15Z"
+  post: >-
+    * 4 * * * means every minute of the 4 o'clock hour #cron #fail
+- id: 122
+  publishDate: "2011-11-23T12:18:45Z"
+  post: >-
+    #music curating has reached a new milestone. All albums in iTunes are
+    complete. Next, get rid of all those 128 kbps tracks.
+- id: 123
+  publishDate: "2011-11-23T12:25:43Z"
+  post: >-
+    I have iTunes autoname my files based of their tags. Apparently if a track
+    starts with "(", it won't prepend the track number to the file name. #fail
+- id: 124
+  publishDate: "2011-11-28T19:16:34Z"
+  post: >-
+    a CSS rule to make images sane in fluid gmail: html > body > img {
+    max-width: 100%; max-height: 100%; }
+- id: 125
+  publishDate: "2011-11-28T22:17:57Z"
+  post: >-
+    iTunes has a skant 12 tracks in it that are 128 kbps cbr #music
+    #accomplisment
+- id: 126
+  publishDate: "2011-11-29T07:21:48Z"
+  post: >-
+    Best commit message ever #git #win
+- id: 127
+  publishDate: "2011-12-06T03:37:53Z"
+  post: >-
+    apache, quit installing sites into my sites-enabled directory. You're taking
+    my shit offline #fail
+- id: 128
+  publishDate: "2011-12-06T03:38:27Z"
+  post: >-
+    I am a #git asshole according to #esalazar and #willcu
+- id: 129
+  publishDate: "2011-12-06T18:15:43Z"
+  post: >-
+    what I've been working on: sandboxing #chrome extensions
+    http://lopopolo.github.com/ice/
+- id: 130
+  publishDate: "2011-12-06T22:45:53Z"
+  post: >-
+    #hack to fix someone else's #PHP #fail foreach ($_POST as $key => $value) {
+    $_POST[$key] = mysql_real_escape_string($value); }
+- id: 131
+  publishDate: "2011-12-07T04:29:50Z"
+  post: >-
+    printed over 600 pages in an athena cluster today #win #whatquota
+- id: 132
+  publishDate: "2011-12-08T01:30:38Z"
+  post: >-
+    this is a major #fail
+    http://deadmemes.net/2010/10/19/fear-and-loathing-in-debianubuntu-or-who-needs-etcmotd/
+- id: 133
+  publishDate: "2011-12-08T02:00:13Z"
+  post: >-
+    #firefox dims the favicons of inactive tabs. That's so nice.
+- id: 134
+  publishDate: "2011-12-13T11:28:57Z"
+  post: >-
+    sweet, there's been a patch since may, but no need to put out a bugfix
+    release or anything https://github.com/github/gollum/issues/147 #fail #git
+- id: 135
+  publishDate: "2011-12-13T19:31:47Z"
+  post: >-
+    http://johnkary.net/git-1-7-8-changes-for-the-everyday-developer/ #git grep
+    is pretty cool, but I think i'll stick to #ack
+- id: 136
+  publishDate: "2011-12-14T05:28:16Z"
+  post: >-
+    so after hacking around in #objc all day, the syntax is starting to make
+    sense. I actually kinda like it. #macruby is so awesome though.
+- id: 137
+  publishDate: "2011-12-17T19:49:08Z"
+  post: >-
+    I am so sick of nyan cats now https://github.com/lopopolo/NyanMac
+- id: 138
+  publishDate: "2011-12-17T20:20:07Z"
+  post: >-
+    history of version control. An entertaining read
+    http://www.flourish.org/blog/?p=397 woo #git
+- id: 139
+  publishDate: "2011-12-19T06:36:34Z"
+  post: >-
+    ^(void) { NSLog(@"Closures are badass"); }
+    http://spicedcocoa.wordpress.com/2010/06/16/working-with-blocks-in-objective-c/
+- id: 140
+  publishDate: "2011-12-19T09:13:08Z"
+  post: >-
+    lol my site looks like this
+    http://twitter.github.com/bootstrap/examples/container-app.html #bootstrap
+- id: 141
+  publishDate: "2011-12-20T23:50:10Z"
+  post: >-
+    Switched to solarized color scheme in terminal and #vim. Everything looks
+    different, I love it though. I'll get used to it. Also, Inconsolata rocks.
+- id: 142
+  publishDate: "2011-12-28T08:28:42Z"
+  post: >-
+    you can see the xcode in my eyes ... #allidoiscode
+- id: 143
+  publishDate: "2011-12-29T08:38:30Z"
+  post: >-
+    http://stackoverflow.com/questions/7202157/can-you-explain-why-10 this is
+    why #javascript is #awful
+- id: 144
+  publishDate: "2012-01-04T07:26:30Z"
+  post: >-
+    Just exported 1GB of article dumps from #wikipedia #thesis2012 is on
+- id: 145
+  publishDate: "2012-01-04T21:00:05Z"
+  post: >-
+    learn sometihng new ab out #ruby everyday
+    http://patshaughnessy.net/2012/1/4/never-create-ruby-strings-longer-than-23-characters
+    #interpreter
+- id: 146
+  publishDate: "2012-01-05T01:41:19Z"
+  post: >-
+    My most frequently used commands on my laptop
+- id: 147
+  publishDate: "2012-01-05T01:48:26Z"
+  post: >-
+    This is the longest-lived and most consistently updated #blog I've ever had.
+    Averaged a post every 2.5 days. I still post to #twitter more often.
+    #socialmedia
+- id: 148
+  publishDate: "2012-01-05T05:42:28Z"
+  post: >-
+    I don't understand why people think they need build scripts for their
+    dotfiles. #fail Just keep your $HOME in #git: git init && git remote add ...
+- id: 149
+  publishDate: "2012-01-06T09:19:33Z"
+  post: >-
+    #vim modelines are the best. Just added filetype modelines to all of my
+    wonkily named #bash config files. Syntax highlighting rules
+- id: 150
+  publishDate: "2012-01-06T22:03:26Z"
+  post: >-
+    cat ~/.*h_h*|cut -d" " -f1|ruby -e'h=Hash.new 0;h[$_]+=1 while
+    gets;h.each{|k,v|puts"#{v} "+k}'|sort -rn|head #golfed This snippet prints
+    out my most frequently used commands
+- id: 151
+  publishDate: "2012-01-09T11:04:05Z"
+  post: >-
+    I dislike experiencing bugs in my day-to-day usage of software I paid for.
+    Saints Row: The Third and iPhoto, I'm looking at you #fail
+- id: 152
+  publishDate: "2012-01-09T23:29:04Z"
+  post: >-
+    Thank goodness xml compresses so well
+- id: 153
+  publishDate: "2012-01-11T07:21:36Z"
+  post: >-
+    ok so setting up 4 VMs all at once was a pain in the ass
+    sr-master.xvm.mit.edu sr-worker-1.xvm.mit.edu sr-worker-2.xvm.mit.edu
+    sr-worker-3.xvm.mit.edu #thesis2012
+- id: 154
+  publishDate: "2012-01-11T11:01:47Z"
+  post: >-
+    Nokogiri::XML(file_bigger_than_1GB.xml) is a bad idea #fail
+- id: 155
+  publishDate: "2012-01-13T21:11:06Z"
+  post: >-
+    #esalazar: Something something something #git ... something something
+    something complete
+- id: 156
+  publishDate: "2012-01-14T01:45:13Z"
+  post: >-
+    A productive day: made my PS1 better and fixed a bug in the hashtag regex on
+    hyperbola (again)
+- id: 157
+  publishDate: "2012-01-18T02:36:38Z"
+  post: >-
+    a productive day: did something I've been meaning to do for a while
+    https://github.com/lopopolo/play #ruby
+- id: 158
+  publishDate: "2012-01-24T05:56:32Z"
+  post: >-
+    I've never had to implement a hash table before #spoiled by standard
+    libraries
+- id: 159
+  publishDate: "2012-01-26T08:56:50Z"
+  post: >-
+    #esalazar spent 4 hours searching for a jQuery slider and was unsuccessful
+    #fail. I spent 4 minutes and found exactly what he wanted #win
+- id: 160
+  publishDate: "2012-02-04T03:14:16Z"
+  post: >-
+    After a struggle to import data from Firefox, I've switched to Chrome
+    #thingsthatarenew The only extensions I'm running are 3 greasemonkey scripts
+    I can't live w/o
+- id: 161
+  publishDate: "2012-02-14T23:07:36Z"
+  post: >-
+    Process for rendering pset: Type in vim using markdown > render to html and
+    open in chrome > print to pdf #doingitthehardway
+- id: 162
+  publishDate: "2012-02-16T19:46:42Z"
+  post: >-
+    Laptop is using full disk encryption and #hyperbola now backs up the db and
+    all of its media to dropbox #swag #programmerresolutions
+- id: 163
+  publishDate: "2012-02-17T07:59:05Z"
+  post: >-
+    the newest xcode download slimmed down a lot. less than 1.5 gigs
+    #thingsthataregood
+- id: 164
+  publishDate: "2012-02-22T05:41:25Z"
+  post: >-
+    yes, that question I asked on piazza was an excuse to show off my PS1 to the
+    entire class #swag
+- id: 165
+  publishDate: "2012-02-27T02:23:21Z"
+  post: >-
+    what respectable course 6er needs eclipse to write html, css, and js?
+    #uiclass #smh #vimftw
+- id: 166
+  publishDate: "2012-02-27T23:07:46Z"
+  post: >-
+    Math m = null; m.sin(0.5); is valid #java and computes the sin of 0.5.
+    #learnsomethingnew Type resolution is cool.
+- id: 167
+  publishDate: "2012-02-27T23:08:08Z"
+  post: >-
+    I hate writing unit tests #junit #java #dbclass
+- id: 168
+  publishDate: "2012-02-28T06:37:05Z"
+  post: >-
+    I'd post about how #adtargeted I feel everytime I see a New Relic ad, but
+    it'd only make it worse
+- id: 169
+  publishDate: "2012-02-28T07:21:23Z"
+  post: >-
+    Linus Torvalds is a boss http://harmful.cat-v.org/software/c++/linus #c
+- id: 170
+  publishDate: "2012-02-29T23:09:45Z"
+  post: >-
+    So now that I got #airdrop working, I like it. It doesn't handle large
+    transfers so well though. Transferring a gig of #music files has taken 15
+    minutes so far and I'm only 2/3 done. #fail and #win
+- id: 171
+  publishDate: "2012-02-29T23:41:18Z"
+  post: >-
+    That feeling when you go to empty your trash and you realize that there were
+    over 14k files in it that account for 15GB of disk space. HOW DID THIS
+    HAPPEN? #fail
+- id: 172
+  publishDate: "2012-03-01T15:48:43Z"
+  post: >-
+    Today I learned that #vim and #emacs treat newlines as line terminators.
+    This means files written by them always end in a newline. #learnsomethingnew
+- id: 173
+  publishDate: "2012-03-01T18:05:34Z"
+  post: >-
+    Cute ad on stackoverflow. It reads "<heart> Your Job" #adtargeted
+    (apparently my db doesn't like unicode #fail)
+- id: 174
+  publishDate: "2012-03-01T18:32:08Z"
+  post: >-
+    I don't ♥ manually managing character sets #fail Why doesn't #django ensure
+    the #mysql db has #utf8 as its character set?
+- id: 175
+  publishDate: "2012-03-02T08:01:27Z"
+  post: >-
+    You mean I have to implement hashCode()? I guess that means I'm doing some
+    string concatenation #easyway #java
+- id: 176
+  publishDate: "2012-03-08T01:09:11Z"
+  post: >-
+    I just saw a commercial for #IE9 with a dubstep music track. Um ...
+    #browserwars?
+- id: 177
+  publishDate: "2012-03-08T09:05:05Z"
+  post: >-
+    Is it weird that my web server backups run at 4:04 AM? #lolz
+- id: 178
+  publishDate: "2012-03-14T08:10:31Z"
+  post: >-
+    #golfed OR "why use ruby -e when there's uniq -c." It's 40 chars shorter
+    than before: cat ~/.bash_history | cut -d" " -f1 | sort | uniq -c | sort -rn
+    | head
+- id: 179
+  publishDate: "2012-03-14T08:31:47Z"
+  post: >-
+    #ssh public key auth setup on hyperbola #womp #programmerresolutions
+- id: 180
+  publishDate: "2012-03-14T09:28:49Z"
+  post: >-
+    just discovered that once you're in cmd+TAB mode on OS X, cmd+` cycles
+    backward. So much easier than cmd+shift+TAB #learnability? #fail #win
+- id: 181
+  publishDate: "2012-03-20T09:45:38Z"
+  post: >-
+    https://github.com/lopopolo/dotfiles/blob/master/scripts/cron-update-remotes.bash
+    All of my problems with this script had to do with adding passphrases to my
+    #ssh keys #fail
+- id: 182
+  publishDate: "2012-03-26T03:07:50Z"
+  post: >-
+    The number of posts on #hackernews about people reinventing/bitching about
+    #git never ceases to amaze me #fanboy
+- id: 183
+  publishDate: "2012-03-27T03:27:44Z"
+  post: >-
+    all your heapspace are belong to me! #java #outofmemory #fail
+- id: 184
+  publishDate: "2012-04-04T17:49:03Z"
+  post: >-
+    I remember when I first upgraded from notepad to scite when I first
+    installed #ruby. You had to modify this conf file to get monospace all the
+    time ... #vim is so much better #nostalgia
+- id: 185
+  publishDate: "2012-04-06T07:16:12Z"
+  post: >-
+    I do not care whether your API is RESTful. Does it work and will it do what
+    I want? #marketing #fail
+- id: 186
+  publishDate: "2012-04-10T21:50:39Z"
+  post: >-
+    I feel like serializing procs to strings, passing them over HTTP and evaling
+    them is an abuse of #ruby, but it is awesome that I can #win
+- id: 187
+  publishDate: "2012-04-12T06:22:38Z"
+  post: >-
+    #lessonlearned: Don't create a billion Timer objects. One is probably
+    enough. Managed to get #eclipse to fail at repainting itself because it was
+    running about 700 threads #java #fail
+- id: 188
+  publishDate: "2012-04-12T06:29:25Z"
+  post: >-
+    I wanna give a big shoutout to the #java jvisualvm, without whom figuring
+    out my perf problems would have been much harder
+- id: 189
+  publishDate: "2012-04-19T05:43:34Z"
+  post: >-
+    screen wipes are the best things ever for both laptop screens and glasses
+    #win #thingsineedtobuy
+- id: 190
+  publishDate: "2012-04-30T21:14:16Z"
+  post: >-
+    T-minus 2.5 weeks #thesis2012 OMG I HAVE 70 EXPERIMENTS TO RUN,
+- id: 191
+  publishDate: "2012-05-01T05:50:11Z"
+  post: >-
+    ssh and an html/js terminal that will run anywhere I have chrome because of
+    native client? Yes please #win #awesome
+    https://chrome.google.com/webstore/detail/pnhechapfaindjhompbnflcldabbghjo/details
+- id: 192
+  publishDate: "2012-05-02T01:31:59Z"
+  post: >-
+    Running experiments. It's been 9 hours now. #thesis2012
+- id: 193
+  publishDate: "2012-05-02T01:37:03Z"
+  post: >-
+    A watched pot never boils. Neither does a long running task when you're not
+    tailing the log file. #thesis2012
+- id: 194
+  publishDate: "2012-05-02T02:42:14Z"
+  post: >-
+    #notetoself: Next time you need to run more than 3 tasks that take 10
+    minutes or more to run, invest in figuring out how to script it #fail
+    #thesis2012
+- id: 195
+  publishDate: "2012-05-08T04:08:34Z"
+  post: >-
+    google docs for #LaTeX https://www.sharelatex.com/
+- id: 196
+  publishDate: "2012-05-08T04:09:26Z"
+  post: >-
+    My wiki was spammed and turned into a link farm for discount
+    pharmaceuticals. Good thing its backed by #git -- fixing it was trivial
+- id: 197
+  publishDate: "2012-05-09T02:24:10Z"
+  post: >-
+    http://songza.com Not only is it awesome, but logging in doesn't stop my
+    music from playing. sweet #ux
+- id: 198
+  publishDate: "2012-05-10T02:29:00Z"
+  post: >-
+    #Songza's use of high-res album art alone makes the experience feel better
+    than #Pandora. Add in the fun way of selecting playlists and we have a
+    winner
+- id: 199
+  publishDate: "2012-05-24T23:53:29Z"
+  post: >-
+    #versioncontrol, or the lack thereof. This was my first major software
+    project. I was a junior in high school. I was making a symbolic math thing.
+    #fail or the reasons any CS class should teach #git
+- id: 200
+  publishDate: "2012-06-12T05:47:01Z"
+  post: >-
+    Gollum finally updates! Woo! #ruby #rubygems
+- id: 201
+  publishDate: "2012-06-25T05:10:46Z"
+  post: >-
+    #java gets #functional. Hooray chainable methods!
+    http://datumedge.blogspot.co.uk/2012/06/java-8-lambdas.html
+- id: 202
+  publishDate: "2012-07-02T19:01:02Z"
+  post: >-
+    Just added #solarized and a #vim plugin (vrapper) to #eclipse. zOMG this is
+    so awesome
+- id: 203
+  publishDate: "2012-07-07T07:07:48Z"
+  post: >-
+    So I have some autocmds in my vimrc already, but tonight I wrote my own. It
+    detects macruby in the shebang of a script and sets a var to tell syntastic
+    to load a different syntax checker #vim
+- id: 204
+  publishDate: "2012-07-19T06:21:49Z"
+  post: >-
+    alias jsonpp='python -mjson.tool' greatest alias ever for #json #api
+    development
+- id: 205
+  publishDate: "2012-07-28T22:11:30Z"
+  post: >-
+    Changed my terminal and vim fontsize from 14pt to 24pt at work. zOMG so much
+    better
+- id: 206
+  publishDate: "2012-07-28T22:12:25Z"
+  post: >-
+    #metaprogramming is awesome. In a new project, adding an API endpoint is as
+    simple as defining a single constant
+- id: 207
+  publishDate: "2012-09-01T08:40:39Z"
+  post: >-
+    9 months since the last reboot isn't too shabby. And now I have a 3.5
+    kernel!
+- id: 208
+  publishDate: "2012-09-20T06:32:32Z"
+  post: >-
+    Just updated the firmware on my Air. First two reboots = #kernelpanic. 3rd
+    reboot = no mouse or keyboard. 4th reboot, everything works? #fail
+- id: 209
+  publishDate: "2012-09-20T21:05:10Z"
+  post: >-
+    Running unit tests is the equivalent of waiting for code to compile.
+- id: 210
+  publishDate: "2012-09-30T00:28:09Z"
+  post: >-
+    I can't believe I ever liked #flex. To be fair though, #xcode and interface
+    builder are basically the same thing
+- id: 211
+  publishDate: "2012-11-01T06:57:42Z"
+  post: >-
+    I had a cronjob launching every minute that updated remotes on about 40 #git
+    repos. I've apparently had ~50 git processes running all the time for about
+    a year now. #fail
+- id: 212
+  publishDate: "2012-11-30T05:31:11Z"
+  post: >-
+    #itunes 11 is sexxy
+- id: 213
+  publishDate: "2013-01-09T23:50:46Z"
+  post: >-
+    Just forked, edited code, submitted a pull request, and got it merged all
+    from the browser #win #git #github
+- id: 214
+  publishDate: "2013-01-14T05:19:35Z"
+  post: >-
+    Participated in my first 24 hour hackathon last Thursday. It was awesome.
+    Highlights: food trucks, caffeine, kreayshawn, and awesome hacks #box
+- id: 215
+  publishDate: "2013-01-31T23:53:24Z"
+  post: >-
+    I have no idea why, but since I've been working at #box, I don't #git pull.
+    I always fetch and merge --ff-only or rebase. Only time I ever use pull is
+    via pull --rebase if I get ff-rejected on push
+- id: 216
+  publishDate: "2013-02-01T00:55:50Z"
+  post: >-
+    I remember a few years ago when my primary reason for staying on #FF vs
+    #Chrome was that I preferred how FF highlighted text on selection. #fail
+- id: 217
+  publishDate: "2013-02-02T01:47:07Z"
+  post: >-
+    This is messed up: http://phpfiddle.org/main/code/k6h-zn9 #php #fail
+- id: 218
+  publishDate: "2013-02-18T03:23:39Z"
+  post: >-
+    just installed 500MB of software for a scanner #wtf #fail
+- id: 219
+  publishDate: "2013-02-23T11:00:48Z"
+  post: >-
+    currently having a real bad time importing ffmpeg into xcode #fail #indexing
+- id: 220
+  publishDate: "2013-03-01T08:39:29Z"
+  post: >-
+    It makes me happy when I see people using If-None-Match sprinkled throughout
+    the splunk logs at #box #win
+- id: 221
+  publishDate: "2013-03-09T00:00:57Z"
+  post: >-
+    The Fundamental Theorem of Software Engineering: "We can solve any problem
+    by introducing an extra level of indirection."
+- id: 222
+  publishDate: "2013-03-31T21:53:20Z"
+  post: >-
+    I am super excited to see the results of the move to the T3 #javascript
+    architecture at #box
+- id: 223
+  publishDate: "2013-04-01T18:19:24Z"
+  post: >-
+    git commit -m 'removed 2 chainz' #git #win
+- id: 224
+  publishDate: "2013-05-02T06:48:57Z"
+  post: >-
+    #databases Two things that amaze me: (1) idempotent writes, (2) idempotent
+    and reorderable writes
+- id: 225
+  publishDate: "2013-05-03T06:59:43Z"
+  post: >-
+    mac #safari can attach to webviews running in the iOS simulator and open a
+    web inspector. This is cool but ... what? #debugging
+- id: 226
+  publishDate: "2013-06-14T05:07:24Z"
+  post: >-
+    One of PHP's biggest problems is that it is too easy to create associative
+    arrays. It discourages people from making proper objects. #php
+- id: 227
+  publishDate: "2013-06-18T08:30:16Z"
+  post: >-
+    Upgraded #django from 1.4 alpha to 1.5.x stable tonight. It only took a
+    couple hours. Mostly dealt with deprecated APIs and new template tag syntax
+- id: 232
+  publishDate: "2013-06-28T13:07:22Z"
+  post: >-
+    Hello #nginx. Goodbye #apache
+- id: 233
+  publishDate: "2013-07-01T00:16:51Z"
+  post: >-
+    Woo: hyperbola, now with thumbnailing #performance
+- id: 234
+  publishDate: "2013-07-03T10:15:53Z"
+  post: >-
+    Rule number 1 of operating at #scale: Your assumptions are never universally
+    true.
+- id: 235
+  publishDate: "2013-08-03T09:16:21Z"
+  post: >-
+    Won best performance hack at the #Box #Hackathon last night #win
+- id: 236
+  publishDate: "2013-08-29T08:49:25Z"
+  post: >-
+    https://github.com/box/box-ios-sdk-v2/pull/22 #ios #objc #box #git
+- id: 237
+  publishDate: "2013-09-23T03:58:16Z"
+  post: >-
+    Throughput on the #box #metadata backend is limited by the rate at which our
+    load driver can make requests. 2ms latency at the client. Damn this thing is
+    #fast #performance
+- id: 238
+  publishDate: "2013-09-23T04:00:29Z"
+  post: >-
+    Now it's time to figure out what part of the stack is preventing
+    #concurrency from exceeding 100 connections #jetty #linux
+- id: 239
+  publishDate: "2013-09-23T04:07:18Z"
+  post: >-
+    On stage at #BoxWorks ... metadata launched #Box #gocloud
+- id: 240
+  publishDate: "2013-09-26T23:47:42Z"
+  post: >-
+    The bare minimum I need on a server to feel comfortable is `set -o vi` #vim
+    #bash
+- id: 241
+  publishDate: "2013-10-26T10:39:47Z"
+  post: >-
+    6 months in the making, #box metadata made it to production today #gsd
+- id: 242
+  publishDate: "2013-10-27T00:18:07Z"
+  post: >-
+    Part of pushing #metadata to production meant we got to puppet our service
+    across dev/staging/perfpod/production. #puppet is pretty cool #box #devops
+- id: 243
+  publishDate: "2013-11-08T09:02:24Z"
+  post: >-
+    Only minor drama when upgrading hyperbola to 12.04 LTS ... #mysql failed to
+    cleanly upgrade to 5.5 and I forgot the correct URL for my staging
+    environment #linux #fail
+- id: 244
+  publishDate: "2013-11-08T10:33:33Z"
+  post: >-
+    Finally added an upstart script for my gollum wiki #linux #ops One less
+    thing to worry about when dealing with a reboot or upgrade
+- id: 245
+  publishDate: "2013-11-30T22:01:20Z"
+  post: >-
+    Actors are overrated. So far, we've preferred to use future literals and
+    ExecutorServices instead #scala #box #metadata
+- id: 246
+  publishDate: "2013-11-30T22:45:06Z"
+  post: >-
+    I reported this #github #outage #fail
+- id: 247
+  publishDate: "2013-11-30T23:40:51Z"
+  post: >-
+    so my resume link was broken for six months #fail stupid missing line in
+    #nginx conf ... not enough exploratory testing during the refactor. What
+    good is #staging for anyway?!
+- id: 248
+  publishDate: "2013-12-01T01:18:05Z"
+  post: >-
+    #django 1.6 upgrade was a breeze. Just a single deprecation warning. #win
+    ... took the opportunity to refactor some old code too :)
+- id: 249
+  publishDate: "2013-12-01T04:52:48Z"
+  post: >-
+    running alter tables in production is terrifying #mysql ... just converted
+    from MyISAM to InnoDB and added a bunch of #indexes
+- id: 250
+  publishDate: "2013-12-01T05:26:56Z"
+  post: >-
+    And with about 30 minutes of downtime I've now got 2x the ram #devops
+- id: 251
+  publishDate: "2013-12-01T12:14:26Z"
+  post: >-
+    woo! #hyperbola is now #pep8 and #flake8 compliant! Woooo linting! #python
+- id: 252
+  publishDate: "2013-12-10T08:31:49Z"
+  post: >-
+    #PHP is just netcat ... the language of the web does not have a good HTTP
+    abstraction. I'm envious of golang's HTTP package
+- id: 253
+  publishDate: "2013-12-15T10:47:16Z"
+  post: >-
+    #nginx reverse proxying to django with HTTP/1.1 ... wish this config option
+    would be the default.
+- id: 254
+  publishDate: "2013-12-21T09:59:02Z"
+  post: >-
+    wow link tags and auto RSS/Atom feed discovery ... welcome to the internet
+    Ryan ... #fail ... I feel like #django is missing a template tag here.
+- id: 255
+  publishDate: "2013-12-22T07:02:26Z"
+  post: >-
+    http://howfuckedismydatabase.com/ hehe database problems. #fail #scale
+- id: 256
+  publishDate: "2013-12-22T07:03:35Z"
+  post: >-
+    Needed: #mobile optimized #django admin skin. Posting from my iPhone is less
+    than ideal
+- id: 257
+  publishDate: "2013-12-27T07:45:37Z"
+  post: >-
+    I'm getting ad targeted for foundationDB on YouTube during my vacation ...
+    are we using it yet? #box #metadata #database
+- id: 258
+  publishDate: "2013-12-31T18:33:47Z"
+  post: >-
+    Most interesting learning from 2013: when it is appropriate to resist my
+    engineer's temptation to build the perfect thing. #lean #failfast #box
+    #metadata
+- id: 259
+  publishDate: "2014-01-08T09:36:39Z"
+  post: >-
+    The last bits of the #hyperbola deployment are gone from my home directory
+    ... finally productionized a cron to do a #database and media backup #devops
+- id: 260
+  publishDate: "2014-01-08T09:38:40Z"
+  post: >-
+    My wiki is getting filled up with #devops documentation for #hyperbola #win
+    Runbooks are fun!
+- id: 261
+  publishDate: "2014-01-08T10:09:53Z"
+  post: >-
+    Get optimized, HTML! Just added some middleware that minifies Django
+    template HTML output #performance Google pagespeed really likes my site now
+    (on Desktops) ... 94/100 #win
+- id: 262
+  publishDate: "2014-01-11T21:08:43Z"
+  post: >-
+    Spent the last week optimizing, re-styling, and significantly refactoring
+    hyperbola. The lifestream page loads ~300ms faster and DOMReady is ~600ms
+    faster #performance
+- id: 263
+  publishDate: "2014-01-11T21:09:48Z"
+  post: >-
+    Hyperbola, now with more html5-boilerplate and bootstrap ... it made CSS so
+    much easier than I normally find it to be ... and the site is now mostly
+    responsive and looks good on mobile
+- id: 264
+  publishDate: "2014-01-12T19:58:56Z"
+  post: >-
+    Switching gunicorn to a domain socket instead of a TCP port sped up the site
+    by 2x #performance
+- id: 265
+  publishDate: "2014-01-13T01:57:17Z"
+  post: >-
+    Latency at nginx for hyperbola: frontpage: 25ms, contact: 40ms, lifestream:
+    200ms #performance
+- id: 266
+  publishDate: "2014-01-13T01:58:33Z"
+  post: >-
+    about ~20% of server time for lifestream is spent reversing URLs for
+    hashtags :/ #performance #fail
+- id: 267
+  publishDate: "2014-01-13T02:03:47Z"
+  post: >-
+    got another big #performance win by not minifying HTML in python not doing
+    so shaved ~100ms off response time which means my server was spending more
+    than 100ms of CPU time for the pleasure #fail
+- id: 268
+  publishDate: "2014-01-13T05:41:40Z"
+  post: >-
+    I have no idea why, but every time my backup disk spins up on my laptop, my
+    entire system hangs for a few seconds #fail
+- id: 269
+  publishDate: "2014-01-16T06:32:20Z"
+  post: >-
+    next project: convert #hyperbola to UTC, server, #django, and #mysql
+- id: 270
+  publishDate: "2014-02-04T05:50:05Z"
+  post: >-
+    #metadata about to enter the War Room for 2 months ... #Box /dev brings
+    deliverables. Let's #GSD!
+- id: 271
+  publishDate: "2014-02-27T05:10:55Z"
+  post: >-
+    it is a rare day that I don't get home and try to type my work password into
+    my laptop #fail
+- id: 272
+  publishDate: "2014-03-04T06:11:13Z"
+  post: >-
+    Open-source #patch: https://github.com/fge/json-patch/pull/7
+- id: 273
+  publishDate: "2014-03-07T02:12:35Z"
+  post: >-
+    Did my first service deployment today. 6 nodes in 3 datacenters #box
+    #metadata #devops
+- id: 274
+  publishDate: "2014-03-08T09:19:54Z"
+  post: >-
+    Upgraded to Mavericks ... relinked all homebrew formulae like this:
+    https://gist.github.com/lopopolo/9427762
+- id: 275
+  publishDate: "2014-03-11T04:38:52Z"
+  post: >-
+    Ways you can tell we have a major release coming up: Being in the office
+    until 10:30 and 9:30 on consecutive nights.
+- id: 276
+  publishDate: "2014-03-12T04:39:46Z"
+  post: >-
+    Lack of agency is the thing I fear most as an engineer. It's something I
+    need to get better at dealing with.
+- id: 277
+  publishDate: "2014-03-14T08:14:50Z"
+  post: >-
+    Hyperbola, now with retina graphics! The logo and feed icons will come
+    through as retina.
+- id: 278
+  publishDate: "2014-03-16T22:09:12Z"
+  post: >-
+    #django sure as hell doesn't make it easy to get at the database backend ...
+    but the fact that I can is still awesome. Enabled post count badges on
+    lifestream.
+- id: 279
+  publishDate: "2014-03-18T04:10:29Z"
+  post: >-
+    #ruby has object tainting and security levels. So cool!
+    http://ruby-doc.org/core-2.1.1/Object.html#method-i-taint
+- id: 280
+  publishDate: "2014-03-18T07:52:03Z"
+  post: >-
+    Next #devops steps for hyperbola: Rebuild machine from scratch on 64-bit
+    kernel; use #docker and dockerize all services: nginx, staging django, prod
+    django, MySQL; real deploy step; #git tag releases
+- id: 281
+  publishDate: "2014-03-21T09:06:33Z"
+  post: >-
+    Today I learned more about sockets and ephemeral port exhaustion than I ever
+    wanted to know. I normally take TCP as a given. #webscale #box #metadata
+    #fail
+- id: 282
+  publishDate: "2014-03-23T07:38:49Z"
+  post: >-
+    "It's Not Right but It's Okay" -- A poem by Whitney Houston about
+    continually evolving software projects.
+- id: 283
+  publishDate: "2014-03-23T09:41:59Z"
+  post: >-
+    60ms server-side latency on the lifestream page now #performance
+- id: 284
+  publishDate: "2014-03-27T07:18:40Z"
+  post: >-
+    Killed it at #Box Dev today #metadata
+- id: 285
+  publishDate: "2014-04-05T01:54:27Z"
+  post: >-
+    I just realized that when I first learned #java, there were no generics.
+    Thanks Martin Odersky! #scala forever.
+- id: 286
+  publishDate: "2014-04-06T02:51:55Z"
+  post: >-
+    Nothing like a little bit of #regex golf on a Saturday evening.
+- id: 287
+  publishDate: "2014-04-29T06:45:14Z"
+  post: >-
+    Listened to a pretty intense #scala rant today:
+    https://www.youtube.com/watch?v=uiJycy6dFSQ ... Highlights some of my gripes
+    about the language, most notable implementation details leaking everywhere
+- id: 288
+  publishDate: "2014-05-03T09:35:46Z"
+  post: >-
+    PyCharm is neat. #python #django I found the code analysis to be useful.
+- id: 289
+  publishDate: "2014-05-07T03:59:38Z"
+  post: >-
+    Woo! First 2 hyperbola releases with #git tags today #win. Also local
+    development. dev + ops = #devops
+- id: 290
+  publishDate: "2014-05-19T05:05:45Z"
+  post: >-
+    Fuck just missed a deploy step #fail ... forgot to run pip install --upgrade
+    ... new code was missing a dep
+- id: 291
+  publishDate: "2014-05-20T07:13:22Z"
+  post: >-
+    just did a dry run of a mostly automated hyperbola deployment. virtualenv,
+    bash, git what fun :) Already staging and production have diverged. #fail
+    next is to figure out how to bring it live
+- id: 292
+  publishDate: "2014-06-01T07:25:09Z"
+  post: >-
+    Just did 2 fully automated deployments to staging! #win #automation
+- id: 293
+  publishDate: "2014-06-02T04:33:48Z"
+  post: >-
+    live site was just deployed automatically for the first time. Switched from
+    legacy deployment to automated with no downtime! #win
+- id: 294
+  publishDate: "2014-06-02T05:01:41Z"
+  post: >-
+    heh, spoke too soon ... #fail Had forgotten to update #nginx config so when
+    I deleted the legacy deployments, I lost static assets and media.
+- id: 295
+  publishDate: "2014-06-04T06:27:36Z"
+  post: >-
+    lol at the #nginx empty_gif directive
+- id: 296
+  publishDate: "2014-06-08T07:53:10Z"
+  post: >-
+    TIL that two trailing spaces + line break = br in the same p #markdown #win
+- id: 297
+  publishDate: "2014-06-09T05:06:51Z"
+  post: >-
+    swift is the #scala to objective-c's java ... that switch statement looks an
+    awful lot like scala's match construct
+- id: 298
+  publishDate: "2014-06-24T07:17:29Z"
+  post: >-
+    thinking of writing a toy in #rust or #golang
+- id: 299
+  publishDate: "2014-08-13T06:58:41Z"
+  post: >-
+    I now understand the difference between teasing apart complexity versus
+    simply moving it around
+- id: 300
+  publishDate: "2014-09-03T03:41:13Z"
+  post: >-
+    Today I exceeded linux's max shebang length #fail it is 128 btw
+- id: 301
+  publishDate: "2014-09-07T02:38:30Z"
+  post: >-
+    hyperbola, now with #django 1.7 ... I love how easy it has gotten to deploy
+    this site.
+- id: 302
+  publishDate: "2014-09-07T02:39:01Z"
+  post: >-
+    The admin site is slightly modernized in #django 1.7 ... looks nice #win
+- id: 303
+  publishDate: "2014-09-09T23:24:02Z"
+  post: >-
+    TIL #nagios flips a shit when you reboot a host #devops
+- id: 304
+  publishDate: "2014-09-10T05:03:34Z"
+  post: >-
+    why does any C program of sufficient complexity have its own allocator? Just
+    use jemalloc?
+- id: 305
+  publishDate: "2014-10-09T02:55:20Z"
+  post: >-
+    Started going through the Functional Programming in Scala book today #scala
+- id: 306
+  publishDate: "2014-10-14T05:52:01Z"
+  post: >-
+    I do not understand Box Engineering's blanket aversion to a build step. So
+    many generated artifacts checked in. #fail
+- id: 307
+  publishDate: "2014-10-18T05:35:56Z"
+  post: >-
+    Just added CORS headers for web-fonts on my 2 assets domains through
+    cloudflare ... whoa. This has apparently been broken for a while #fail #win
+    #hyperbola
+- id: 308
+  publishDate: "2014-10-20T03:28:14Z"
+  post: >-
+    I still don't have zero-downtime #MySQL upgrades. Lost a nine #fail
+- id: 318
+  publishDate: "2014-10-28T06:30:11Z"
+  post: >-
+    Now I have #utf8 support in #MySQL. I thought I did
+    http://hyperbo.la/lifestream/174/ but that was a #fail. Bitten by the
+    difference between utf8 and utf8mb4. Alas, #Django 500's; no emoji for me
+- id: 319
+  publishDate: "2014-11-01T04:19:16Z"
+  post: >-
+    Finally bootstrap-ified the last bits of #hyperbola: the frontpage and the
+    lifestream entry panel #win
+- id: 320
+  publishDate: "2014-11-01T04:20:43Z"
+  post: >-
+    #hyperbola is down to 200 lines of #CSS, half of which is used to render the
+    logo and navbar
+- id: 321
+  publishDate: "2014-11-01T23:33:29Z"
+  post: >-
+    Upgrade to Bootstrap 3.3.0 went really smoothly. Everything just worked #win
+- id: 322
+  publishDate: "2014-11-13T02:57:07Z"
+  post: >-
+    I have an album with a non-square album art in #iTunes. The UI renders it 3
+    different ways #fail
+- id: 323
+  publishDate: "2014-11-21T03:56:52Z"
+  post: >-
+    Answered a phone call on my computer for the first time. That was so cool.
+    #win
+- id: 324
+  publishDate: "2014-12-03T07:08:19Z"
+  post: >-
+    (function _() {console.log('('+_+')()')})()
+- id: 325
+  publishDate: "2015-01-07T07:22:18Z"
+  post: >-
+    I've been missing #ruby lately. I should make something.
+- id: 326
+  publishDate: "2015-01-28T03:37:44Z"
+  post: >-
+    Rebooted hyperbola for the first time in a year due to the libc vuln. Minor
+    panic ensued. Gunicorn failed to start due to log file perms,
+    /var/run/gunicorn was wiped and had to be recreated #fail
+- id: 327
+  publishDate: "2015-02-17T21:54:36Z"
+  post: >-
+    Just spent the last 25 minutes installing homebrew packages on my work
+    machine. My code is literally compiling. Took the time to do some scooter
+    laps.
+- id: 328
+  publishDate: "2015-02-27T03:45:03Z"
+  post: >-
+    Ran time ruby -e 'def is_prime n; ("1" * n) !~ /^1?$|^(11+?)\1+$/; end;
+    is_prime 982_451_653' #fail keyboard events don't fire, gfx glitches,
+    windows don't repaint, one core pegged
+- id: 329
+  publishDate: "2015-02-27T03:47:04Z"
+  post: >-
+    OMG #ruby is using 19.22GB of memory executing a one liner #fail
+- id: 330
+  publishDate: "2015-02-27T07:42:20Z"
+  post: >-
+    This is how you get a macbook to page like crazy #fail
+- id: 331
+  publishDate: "2015-03-04T05:52:38Z"
+  post: >-
+    Upcoming Xen vuln was the forcing function to get my gunicorn upstart
+    scripts able to work after a reboot. There is some nasty in them
+    https://github.com/lopopolo/hyperbola-tools/commit/8e5c4 #bash
+- id: 332
+  publishDate: "2015-03-04T05:56:51Z"
+  post: >-
+    #bug: page links do not appear on #hashtag pages
+- id: 333
+  publishDate: "2015-03-04T06:14:46Z"
+  post: >-
+    #bug fixed https://github.com/lopopolo/hyperbola/commit/01b34d with minor
+    staging break caused by django-pipeline renaming their templatetags #django
+- id: 334
+  publishDate: "2015-03-10T06:41:25Z"
+  post: >-
+    Healed my first master-master data drift today #devops #mysql
+- id: 335
+  publishDate: "2015-03-17T04:00:17Z"
+  post: >-
+    sudo lsof | grep libssl | cut -d" " -f1 | sort | uniq -c | sort -rn #fail
+    https://mta.openssl.org/pipermail/openssl-announce/2015-March/000020.html
+- id: 336
+  publishDate: "2015-03-17T23:47:16Z"
+  post: >-
+    A good chunk of my qualms about #scala is complexity resulting from laziness
+    tricks.
+- id: 337
+  publishDate: "2015-03-18T04:54:05Z"
+  post: >-
+    chrome has #emoji now. such web. #win
+- id: 338
+  publishDate: "2015-03-22T23:20:22Z"
+  post: >-
+    #ruby Fixnum is a weird beast. A class that doesn't have new.
+- id: 339
+  publishDate: "2015-04-28T03:48:51Z"
+  post: >-
+    TIL: Selecting 2 cells and then dragging to repeat causes google sheets to
+    infer the increment #win
+- id: 340
+  publishDate: "2015-04-28T03:49:41Z"
+  post: >-
+    feast or famine on the hyperbola microblog
+- id: 341
+  publishDate: "2015-05-16T06:28:40Z"
+  post: >-
+    Borg paper was a fun read. Kubernetes is really exciting.
+- id: 342
+  publishDate: "2015-05-17T22:45:27Z"
+  post: >-
+    I don't like structured identifiers because they presume data fits into a
+    hierarchy
+- id: 343
+  publishDate: "2015-06-02T05:52:12Z"
+  post: >-
+    http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1311997/pdf/jaba00061-0143a.pdf
+- id: 344
+  publishDate: "2015-06-02T05:53:08Z"
+  post: >-
+    Playing with some JSON data and jQuery ... created a rudimentary VX points
+    trip planner #javascript
+- id: 345
+  publishDate: "2015-06-18T05:25:48Z"
+  post: >-
+    Recently restructured my #dotfiles and added a Makefile so they don't live
+    in $HOME (git clean terrifies me) #git
+- id: 346
+  publishDate: "2015-06-18T05:58:41Z"
+  post: >-
+    Finally subscribed to django-announce. I was running a super old version of
+    1.7 ... oops #django
+- id: 347
+  publishDate: "2015-06-18T05:59:22Z"
+  post: >-
+    On the plus side my build script now dumps metadata about installed python
+    packages to disk so I have one place to look instead of wondering
+- id: 348
+  publishDate: "2015-06-18T06:00:18Z"
+  post: >-
+    ... and I'm no longer dumping secrets to stdout due to `source` and `set -x`
+    #12factor #fail
+- id: 349
+  publishDate: "2015-07-01T03:51:07Z"
+  post: >-
+    I love Apple's "quit unexpectedly" euphemism for crash
+- id: 350
+  publishDate: "2015-07-09T18:21:36Z"
+  post: >-
+    even with a staging env, deploys still require a site check
+- id: 351
+  publishDate: "2015-07-09T18:27:06Z"
+  post: >-
+    Just did some disk usage cleanup on hyperbola. Had 4 old ruby installs
+    hanging out (2GB), a 700MB gunicorn logfile that was being written to every
+    second, and a v full apt cache (1GB)
+- id: 352
+  publishDate: "2015-07-09T18:34:35Z"
+  post: >-
+    still hanging around: 4GB of old staging installs and 2GB of old prod
+    installs
+- id: 353
+  publishDate: "2015-07-22T04:06:51Z"
+  post: >-
+    took 1minute of downtime today for a #mysql 5.5 upgrade from ubuntu
+- id: 354
+  publishDate: "2015-08-09T05:50:07Z"
+  post: >-
+    Just spent 5 minutes hopping through man pages trying to grok a script I
+    wrote a while ago only to realize there were comments explaining exactly
+    what was going on #fail #docs
+- id: 355
+  publishDate: "2015-08-09T05:52:27Z"
+  post: >-
+    This week at work I settled on a secret delivery mechanism that bootstraps
+    with #kubernetes (or puppet if a service isn't containerized)
+- id: 356
+  publishDate: "2015-08-14T03:38:18Z"
+  post: >-
+    whoaaaaaaa ... an unsaved txt file from my work laptop showed up on my
+    personal laptop. #cloud
+- id: 357
+  publishDate: "2015-08-20T06:23:04Z"
+  post: >-
+    So this is what a real oncall rotation feels like. So many things.
+- id: 358
+  publishDate: "2015-08-30T02:21:00Z"
+  post: >-
+    Services team get rekt #oncall pages from 9pm Friday to 8am Saturday ...
+    something about the corp dc migration
+- id: 359
+  publishDate: "2015-08-30T02:18:38Z"
+  post: >-
+    #quora ahh yes ... database systems
+- id: 360
+  publishDate: "2015-08-30T22:51:27Z"
+  post: >-
+    ./unixtools gzcat ~/Desktop/f.gz.gz | ./unixtools gzip -d - ... having fun
+    implementing parts of busybox using #golang. So far I've got gzcat, gzip,
+    and yes
+- id: 361
+  publishDate: "2015-09-19T22:31:28Z"
+  post: >-
+    One of the tools I've learned when writing #golang is how to coalesce errors
+    behind an API boundary. Makes for cleaner code.
+- id: 362
+  publishDate: "2015-09-22T22:13:08Z"
+  post: >-
+    I feel dirty doing pointer dereferences in #golang
+- id: 363
+  publishDate: "2015-09-23T04:54:37Z"
+  post: >-
+    The only things that are truly unique in a relational DB are auto inc pks.
+    Even uniques such as username may be duplicated across time.
+- id: 364
+  publishDate: "2015-09-23T04:55:58Z"
+  post: >-
+    I want to live in a world where booting a machine doesn't cause config
+    propagation to break #fail ghetto consensus algorithms
+- id: 365
+  publishDate: "2015-10-19T23:28:59Z"
+  post: >-
+    Responding "maybe" to a calendar invite is the equivalent of the SF "we
+    should do lunch"
+- id: 366
+  publishDate: "2015-10-22T21:59:10Z"
+  post: >-
+    We are loading the racks onto trucks and moving them to a real datacenter.
+    Bye bye servers.
+- id: 367
+  publishDate: "2015-10-22T22:02:45Z"
+  post: >-
+    This oncall cycle, I observed my first real hardware failure. A machine
+    critical to the deployment pipeline spontaneously shutdown and failed to
+    reboot, problems with mounting RAID, etc. #fail
+- id: 368
+  publishDate: "2015-10-25T03:52:58Z"
+  post: >-
+    Wow! usability fail. The crontab command operates in 3 modes, two of which
+    are edit (-e) and remove (-r). Lovely that e and r are right next to
+    eachother on a QWERTY keyboard. #fail
+- id: 369
+  publishDate: "2015-10-31T05:01:55Z"
+  post: >-
+    Wondering why the response to some external asks isn't, "No, we're not ready
+    yet."
+- id: 370
+  publishDate: "2015-11-01T11:15:03Z"
+  post: >-
+    Finally upgraded to #django 1.8. Only an 8 commit adventure
+- id: 371
+  publishDate: "2015-11-04T22:25:35Z"
+  post: >-
+    Fixed a long outstanding bug in how the sidebar on the lifestream calculated
+    monthly post counts #win Tickled by the upgrade to #django 1.8 which caused
+    them to all display as 1. #fail
+- id: 372
+  publishDate: "2015-11-05T05:04:18Z"
+  post: >-
+    It only took a debian VM and 4 hours of my time to reformat two new USB
+    keys. #fail
+- id: 373
+  publishDate: "2015-11-07T04:10:18Z"
+  post: >-
+    I bought IntelliJ Ultimate and it has already been decently valuable:
+    https://github.com/lopopolo/hyperbola/pull/28 ... fixing lots of warnings
+    #win
+- id: 374
+  publishDate: "2015-11-07T07:12:05Z"
+  post: >-
+    #puppet is more fun when you know what you're doing.
+- id: 375
+  publishDate: "2015-11-07T08:45:06Z"
+  post: >-
+    Just realized that hyperbo.la has been in maintenance mode for a while. Last
+    few projects: upgrade to django 1.8, upgrade to django 1.7, upgrade vendored
+    dependencies (bootstrap, retinajs).
+- id: 376
+  publishDate: "2015-11-07T08:46:13Z"
+  post: >-
+    Last bits of major feature work were bootstrapifying several pages and
+    adding automatic deployment (June 2014)
+- id: 377
+  publishDate: "2015-11-07T08:48:34Z"
+  post: >-
+    Next major project is migrating to a new VM. 32-bit Ubuntu 12.04 is getting
+    long in the tooth. I have eyes on 64-bit #Debian 8 and a shiny new #linode
+    with 2GB of RAM
+- id: 378
+  publishDate: "2015-11-07T13:41:07Z"
+  post: >-
+    Having a linter is so fucking awesome. IntelliJ rocks. #win
+- id: 379
+  publishDate: "2015-11-07T13:43:19Z"
+  post: >-
+    15 commit night on hyperbola, 5 on hyperbola-tools, and 12 on my dotfiles.
+    Mostly code and style cleanups, some correctness fixes.
+- id: 380
+  publishDate: "2015-11-08T01:50:09Z"
+  post: >-
+    Despite being stable, #django deprecates frequently. What they deprecate
+    tends to have been the recommended way of doing it circa 1.4 ... feels like
+    they are slowly rewriting everything.
+- id: 381
+  publishDate: "2015-11-08T07:28:48Z"
+  post: >-
+    I feel like my #django site is futureproofed for at least the next two minor
+    version upgrades now. Just converted a ton of render_to_response snippets to
+    the new render hotness. Even feels faster.
+- id: 382
+  publishDate: "2015-11-09T06:11:41Z"
+  post: >-
+    Twitter polls ... lol
+    https://twitter.com/p4lindromica/status/659923472936628224
+- id: 383
+  publishDate: "2015-11-09T08:08:04Z"
+  post: >-
+    Added a post-commit hook to my gollum wiki today to do a pull/push. Changes
+    instantly synced to #github. No more stupid 5-minutely cron. #win
+- id: 384
+  publishDate: "2015-11-12T04:11:33Z"
+  post: >-
+    It continually amazes me at how much conflict is solved with "assume good
+    intent."
+- id: 385
+  publishDate: "2015-11-12T06:51:16Z"
+  post: >-
+    Did some archeology today to unearth an ancient version of hyperbo.la. Same
+    color scheme as today. Yes, there was an assets domain. Had to do forensic
+    analysis to reconstruct the index.html.
+- id: 386
+  publishDate: "2015-11-12T06:52:34Z"
+  post: >-
+    OG status: https://github.com/lopopolo/hyperbola/tree/og-hyperbola-v1
+- id: 387
+  publishDate: "2015-11-14T05:32:41Z"
+  post: >-
+    90mbps upload to Box from the corporate network is pretty nice when backing
+    up my photos (all 25GB of them).
+- id: 388
+  publishDate: "2015-11-15T05:34:49Z"
+  post: >-
+    Finally started cleaning old deployments. After each deploy, my deploy
+    script removes all but the latest 5 deployments for a given env.
+    http://hyperbo.la/lifestream/352/ can rest peacefully.
+- id: 389
+  publishDate: "2015-11-15T05:35:05Z"
+  post: >-
+    Root fs usage is down to 3.5G.
+- id: 390
+  publishDate: "2015-11-15T07:27:10Z"
+  post: >-
+    gunicorn workers get warm quicker now that I've allowed gunicorn write
+    access to a deployment's app and virtualenv dirs #win
+- id: 391
+  publishDate: "2015-11-15T12:03:22Z"
+  post: >-
+    Even better: precompiling app/hyperbola to pyc and getting to keep the
+    deployment read-only. better #win
+- id: 392
+  publishDate: "2015-11-15T13:11:50Z"
+  post: >-
+    Woo! I can run hyperbola on my mac. Local development! #win
+- id: 393
+  publishDate: "2015-11-15T21:53:54Z"
+  post: >-
+    Sped up the lifestream page by 30ms by caching the archive sidebar. More
+    template speedups to be had by switching to python3 (str to unicode coercion
+    in python2) #win #performance
+- id: 394
+  publishDate: "2015-11-17T07:58:08Z"
+  post: >-
+    Local development lets me run cool experiments. I have python2.7, python3.5,
+    and pypy virtualenvs.
+- id: 395
+  publishDate: "2015-11-17T07:59:08Z"
+  post: >-
+    Tested rendering the lifestream index with all 3 interpreters. pypy is
+    slower than python2.7 by 2x. python3.5 is faster than python2.7 by 2x.
+    #performance
+- id: 396
+  publishDate: "2015-11-17T08:13:18Z"
+  post: >-
+    Current prod gunicorn time (measured at nginx) for the lifestream index page
+    is 70ms with no partial caching and 40ms with the sidebar cached
+    #performance
+- id: 397
+  publishDate: "2015-11-22T03:31:41Z"
+  post: >-
+    Front page warm nginx latency is 12ms; contact page is 20ms #performance
+- id: 398
+  publishDate: "2015-11-22T03:32:19Z"
+  post: >-
+    lifestream template refactor didn't yield any #performance wins, but the
+    code is much cleaner now. #win
+- id: 399
+  publishDate: "2015-11-22T03:37:59Z"
+  post: >-
+    With this latest release, hyperbola has surpassed 500 commits! #win
+    https://github.com/lopopolo/hyperbola/tree/2015-11-21-lifestream-template-refactor
+- id: 400
+  publishDate: "2015-11-24T07:38:27Z"
+  post: >-
+    Switching from yui-compressor to yuglify saved me 1KB on bootstrap.js and 30
+    bytes on bootstrap+hyperbola css #performance
+- id: 401
+  publishDate: "2015-11-25T03:10:39Z"
+  post: >-
+    Media directory backups have been failing since the 17th due to exceeding
+    max attachment size. No alerts. #fail >>> SIZE=55759470 <<< 552 5.3.4
+    Message size exceeds fixed limit
+- id: 402
+  publishDate: "2015-11-25T03:11:15Z"
+  post: >-
+    Time to switch to using the #python SDK! In the meantime, no new media
+    uploads
+- id: 403
+  publishDate: "2015-12-13T02:19:31Z"
+  post: >-
+    python -Wall is a neat trick. Cleaned up a bunch of #django deprecation
+    warnings
+- id: 404
+  publishDate: "2015-12-13T08:15:36Z"
+  post: >-
+    Caught an issue in staging today because staging is more like prod than dev
+    is. Dev has pipeline disabled. Yay for release process. Yay for testing.
+    #win
+- id: 405
+  publishDate: "2016-01-16T08:31:29Z"
+  post: >-
+    Reading about the LMAX Disruptor http://martinfowler.com/articles/lmax.html
+    ... pretty cool. I've seen similar patterns (at lower optimization levels)
+    at Box.
+- id: 406
+  publishDate: "2016-01-30T22:02:41Z"
+  post: >-
+    <ENTER>~.
+- id: 407
+  publishDate: "2016-02-15T23:54:30Z"
+  post: >-
+    When I see L7 I think of the band instead of the OSI Model #fail
+- id: 408
+  publishDate: "2016-02-27T21:57:31Z"
+  post: >-
+    Yelp's search stemming needs some work. I searched for "used" and it is
+    highlighting "us" in the search results. #fail
+- id: 409
+  publishDate: "2016-03-05T08:37:00Z"
+  post: >-
+    Finally got around to getting my #django 1.9 upgrade branch over the line.
+    Didn't have django-pipeline pinned and 1.6 introduced a breaking change to
+    settings. All done now.
+- id: 410
+  publishDate: "2016-03-05T08:37:22Z"
+  post: >-
+    This new #django admin UI is HOT!
+- id: 411
+  publishDate: "2016-03-05T22:47:08Z"
+  post: >-
+    I use #node in my asset build pipeline. I compile js and css with yuglify.
+    Today I productionized my node install. Upgraded to latest LTS and added
+    docs for upgrading node
+- id: 412
+  publishDate: "2016-03-05T23:16:07Z"
+  post: >-
+    Someone forked my senior thesis ... what? https://github.com/nmoutana/sr
+- id: 413
+  publishDate: "2016-03-06T02:23:23Z"
+  post: >-
+    Hyperbola staging now running python 3.5.1 #py3
+- id: 414
+  publishDate: "2016-03-06T04:00:04Z"
+  post: >-
+    Today I upgraded node to 4.3.2 (from 4.2.2), python to 3.5.1 (from 2.7.3),
+    and django to 1.9.4 (from 1.8.8). What fun! #win
+- id: 415
+  publishDate: "2016-03-06T07:15:49Z"
+  post: >-
+    My ruby version on my mac stopped working because homebrew updated libicu.
+    Had to recompile/upgrade #fail
+- id: 416
+  publishDate: "2016-03-26T21:36:20Z"
+  post: >-
+    #scala takes the #objc std lib approach to collections: One public
+    interface/factory w/ many optimized implementations underneath
+- id: 417
+  publishDate: "2016-04-02T09:08:49Z"
+  post: >-
+    hyperbola prod is now running #py3 what a time to be alive
+- id: 418
+  publishDate: "2016-04-03T10:02:49Z"
+  post: >-
+    "we successfully avoided a split brain scenario due to master/master
+    replication" #mysql #fail
+- id: 419
+  publishDate: "2016-04-04T06:55:39Z"
+  post: >-
+    Today was the day of linters. Added eslint, flake8 config, and isort to
+    hyperbola
+- id: 420
+  publishDate: "2016-04-07T06:40:32Z"
+  post: >-
+    Filed a site issue JIRA on my last day. It was eventually closed as invalid.
+    By the time this happened, though, I had lost systems access and couldn't
+    discuss it further
+- id: 421
+  publishDate: "2016-04-08T07:22:02Z"
+  post: >-
+    The only times I have ever run ant as a build tool were a couple of CS
+    classes back at MIT—4 years ago. Even today, it remains my 8th most
+    frequently used command on my mac
+- id: 422
+  publishDate: "2016-04-10T05:27:54Z"
+  post: >-
+    I enjoy golfing my minified javascript. Just shaved 19 bytes off of the
+    inlined date formatter js I include on the lifestream page #js #win
+- id: 423
+  publishDate: "2016-04-13T07:30:09Z"
+  post: >-
+    https://github.com/lopopolo/play/blob/master/play#L160 hahahahaha #fail
+    Daemons in macruby #ruby
+- id: 424
+  publishDate: "2016-04-30T03:22:13Z"
+  post: >-
+    I love linters #js #css #python
+- id: 425
+  publishDate: "2016-06-09T18:55:10Z"
+  post: >-
+    nginx upgrade borked the init script. had to reboot to fix things. gunicorn
+    failed to start after reboot due to log file perms #fail
+- id: 426
+  publishDate: "2016-06-21T04:38:26Z"
+  post: >-
+    Project new VPS is underway. For the same price as my current 1G box, I'm
+    getting a 4G box with more cores #win
+- id: 427
+  publishDate: "2016-06-21T04:38:51Z"
+  post: >-
+    And a 4 years newer OS (Ubuntu 16.04 LTS) and 64-bit #win
+- id: 428
+  publishDate: "2016-06-21T04:39:29Z"
+  post: >-
+    The past few days have been spent migrating my #gollum wiki from hyperbola1
+    (old server) to hyperbola2 (new server)
+- id: 429
+  publishDate: "2016-06-21T04:40:02Z"
+  post: >-
+    In the process, I've added #TLS with Let's Encrypt #win
+- id: 430
+  publishDate: "2016-06-21T04:40:58Z"
+  post: >-
+    made the #nginx config a little more sane, converted thin to bind to a
+    domain socket, and deployed with a dedicated app user with deploy keys #win
+- id: 431
+  publishDate: "2016-06-21T05:04:15Z"
+  post: >-
+    With systemd I am one step closer to #12factor app bliss since all service
+    logs get logged to syslog #win
+- id: 432
+  publishDate: "2016-06-23T05:36:13Z"
+  post: >-
+    Forgot to blog about this: My printer ran out of toner a week before my move
+    from CA. Had the printer since 2010. RIP printer
+- id: 433
+  publishDate: "2016-07-18T20:22:36Z"
+  post: >-
+    successfully did an out of band release not of master while in the process
+    of migrating hyperbola to a new host #win #deployment #automation
+- id: 434
+  publishDate: "2016-08-22T00:51:47Z"
+  post: >-
+    #throwback <http://dev.hyperbo.la:80> hyperbo.la subversion repositories
+- id: 435
+  publishDate: "2016-08-22T00:52:55Z"
+  post: >-
+    I think I also used to host a redmine instance on dev.hyperbo.la back in the
+    day ~2010
+- id: 436
+  publishDate: "2016-08-22T00:53:31Z"
+  post: >-
+    That was when hyperbo.la ran on a reclaimed dell workstation in my frat's
+    network closet at MIT
+- id: 437
+  publishDate: "2016-08-22T00:54:10Z"
+  post: >-
+    All this discovered while clearing out my OS X Keychain
+- id: 438
+  publishDate: "2016-08-22T00:54:35Z"
+  post: >-
+    Also found the samba password to the file server named supersecret that I
+    built
+- id: 439
+  publishDate: "2016-08-22T01:09:40Z"
+  post: >-
+    #throwback #cruft just cleared out MIT client certs from 4 years ago that
+    were hanging around in my keychain
+- id: 440
+  publishDate: "2016-09-25T00:07:08Z"
+  post: >-
+    I started a new job a couple weeks ago. I'm working at #Citadel.
+- id: 441
+  publishDate: "2016-09-26T23:07:00Z"
+  post: >-
+    I need to make these out of band releases more painful so I migrate
+    hyperbola to my new host #fail
+- id: 442
+  publishDate: "2016-10-26T02:05:16Z"
+  post: >-
+    reifying #aws infrastructure with terraform is pretty cool. power is scary
+    though. yay for sandboxes!
+- id: 443
+  publishDate: "2016-11-02T05:06:08Z"
+  post: >-
+    Did my first #aws prod deploy today #win
+- id: 444
+  publishDate: "2016-11-13T08:01:50.404Z"
+  post: >-
+    Successfully migrated hyperbo.la and staging.hyperbo.la to a new host,
+    hyperbola3. Ubuntu 16.04 and 8GB of RAM. Just shut down hyperbola1. #win
+- id: 445
+  publishDate: "2016-11-13T08:05:31.458Z"
+  post: >-
+    ❤️ Emoji: 🔥🔥🔥
+- id: 446
+  publishDate: "2016-11-13T10:05:55.569Z"
+  post: >-
+    hyperbo.la staging and production are TLS enabled. Still have to turn on
+    HSTS. #win #letsencrypt
+- id: 447
+  publishDate: "2016-11-13T10:07:25.002Z"
+  post: >-
+    Some changes since moving to the new host: assets and user uploads served
+    off of www.hyperbolacdn.com; TLS; frontend deps managed with bower
+- id: 448
+  publishDate: "2016-11-15T01:45:56.791Z"
+  post: >-
+    Enabled cloudflare cdn on www.hyperbolacdn.com today. Took 4 clicks. #win
+- id: 449
+  publishDate: "2016-11-15T04:09:00.426Z"
+  post: >-
+    DOMContentLoaded in less than 200ms on lifestream index #performance #cdn
+- id: 450
+  publishDate: "2016-11-16T02:27:44.437Z"
+  post: >-
+    just automated a spreadsheet (concatenating several columns) with filter
+    #win filter(L6:L, L6:L<>"") vs manually updating ranges #automation
+- id: 451
+  publishDate: "2016-11-16T04:31:05.335Z"
+  post: >-
+    Minor crisis when running the mangle media script. Resume and lifestream
+    models have auto_now=True (an updated timestamp) and I have been using them
+    as creation timestamps. Apparently there is an auto_add_now [edit:
+    auto_now_add] param I should use. #fail
+- id: 452
+  publishDate: "2016-11-16T04:31:47.893Z"
+  post: >-
+    Fixing this required parsing a db dump (django fixtures much easier to read
+    than mysqldump output) and manually running UPDATE queries in MySQL
+- id: 453
+  publishDate: "2016-11-16T04:32:28.649Z"
+  post: >-
+    I didn't notice this in dev because the front page of the lifestream is 20
+    of the same picture of Kendrick Lamar #fail
+- id: 454
+  publishDate: "2016-11-16T04:50:17.643Z"
+  post: >-
+    diff of yesterday's backups and current backup confirm all that has been
+    altered are filenames
+- id: 455
+  publishDate: "2016-11-17T04:20:57.794Z"
+  post: >-
+    mucking around in settings.py I ended up doing a top-level import from
+    debug_toolbar. Yay for staging. #fail
+    https://github.com/lopopolo/hyperbola/commit/26c4e1d
+- id: 456
+  publishDate: "2016-11-17T04:23:54.191Z"
+  post: >-
+    Most expensive queries on hyperbola are hashtag lookups because they use
+    RLIKE.  Top 3 queries are 4.3ms, 3.2ms, 2.1ms per query. #mysql
+- id: 457
+  publishDate: "2016-11-17T04:25:11.587Z"
+  post: >-
+    Fourth most expensive query is selecting all lifestream items and pictures:
+    a LEFT OUTER JOIN with ORDER BY DESC, LIMIT, and OFFSET. There is an index
+    on the order by but MySQL prefers filesort. Table is only 500 rows though.
+    #mysql
+- id: 458
+  publishDate: "2016-11-17T05:58:34.315Z"
+  post: >-
+    hyperbola, now with properly localized dates using window.Intl #win
+- id: 459
+  publishDate: "2016-11-18T05:16:48.500Z"
+  post: >-
+    Now have proper retina image support on lifestream and contact page.
+    Generating @2x and @3x images. The flexibility of django-imagekit helped.
+    This is a well-designed library. #django #ux
+- id: 460
+  publishDate: "2016-11-20T10:44:51.586Z"
+  post: >-
+    Added middleware to hyperbola app and wiki to inject a comment with the
+    canonical hostname of the host that rendered the request. Debugging #win
+- id: 461
+  publishDate: "2016-11-20T10:45:31.851Z"
+  post: >-
+    hyperbola-wiki is now fully deployed using #ansible. #vagrant made testing
+    easy. #win
+- id: 462
+  publishDate: "2016-11-24T10:18:52.033Z"
+  post: >-
+    Created an #aws account tonight
+- id: 463
+  publishDate: "2016-11-24T10:19:30.084Z"
+  post: >-
+    Provisioned a VPC, subnets in 3 AZs, and a bastion host #aws
+- id: 464
+  publishDate: "2016-11-24T10:20:35.439Z"
+  post: >-
+    Deployed hyperbola-wiki. Initial approach was to provision on boot with a
+    user data script. This caused instances to take 15 minutes to come up
+    (apt-get upgrade, compiling ruby) #fail
+- id: 465
+  publishDate: "2016-11-24T10:21:09.616Z"
+  post: >-
+    Switched to building an ami with packer. Now an ASG roll takes 2 minutes
+    #win #aws
+- id: 466
+  publishDate: "2016-11-26T21:25:39.531Z"
+  post: >-
+    Yay refactoring! #python #django #win
+- id: 467
+  publishDate: "2016-11-26T21:26:38.303Z"
+  post: >-
+    Hit the 5 duplicate certs per week rate limit from let's encrypt by
+    repeatedly rebuilding my vagrant box #fail
+- id: 468
+  publishDate: "2016-11-26T21:27:32.523Z"
+  post: >-
+    bastion is now in an ASG with an automatically bound (with user data)
+    elastic IP. Yay fault-tolerant infra! #win #aws #terraform
+- id: 469
+  publishDate: "2016-11-27T23:12:02.277Z"
+  post: >-
+    Just freed up 350MB in my gmail by purging 35 emails. Did a search for
+    size:5000000. removed emails with mp3s as attachments and event
+    announcements with large images and pdfs #win
+- id: 470
+  publishDate: "2016-11-30T23:23:06.863Z"
+  post: >-
+    #django feature request and #patch accepted
+    https://code.djangoproject.com/ticket/27541
+- id: 471
+  publishDate: "2016-12-03T18:53:25.837Z"
+  post: >-
+    Found this in the nginx logs of my wiki in ec2. hackers. #security
+- id: 472
+  publishDate: "2016-12-15T03:25:01.400Z"
+  post: >-
+    https://www.youtube.com/watch?v=oyLBGkS5ICk
+- id: 473
+  publishDate: "2017-01-20T02:16:20.665Z"
+  post: >-
+    Immutable infrastructure is so much better than mutable infrastructure. Much
+    more satisfying to build a new image and redeploy than to upgrade nginx and
+    mysql in place, taking #downtime.
+- id: 474
+  publishDate: "2017-02-03T00:07:26.840Z"
+  post: >-
+    Media backups have been failing since I moved the site to the new server.
+    I've been uploading empty, corrupted tarballs. #fail fix here:
+    https://github.com/lopopolo/hyperbola/commit/859128 Thank you gitlab &
+    national check your backups day
+- id: 475
+  publishDate: "2017-02-08T03:05:46.553Z"
+  post: >-
+    Added liveness monitoring of healthz endpoints on wiki and hyperbo.la today
+    #monitoring #devops #win healthz goes all the way through to rack/django
+- id: 476
+  publishDate: "2017-02-08T03:06:41.963Z"
+  post: >-
+    ELB for wiki does a basic healthcheck of nginx, but a backend can be down
+    while the ELB thinks the node is healthy #monitoring
+- id: 477
+  publishDate: "2017-02-15T01:34:04.605Z"
+  post: >-
+    Today I learned about octopus merges #git
+    http://marc.info/?l=linux-kernel&m=139033182525831
+- id: 478
+  publishDate: "2017-02-23T05:39:50.244Z"
+  post: >-
+    I would not be surprised if #AWS VPC networks were all running some franken
+    overlay protocol
+- id: 479
+  publishDate: "2017-03-17T03:04:50.865Z"
+  post: >-
+    Software shouldn't be "delightful." It should be invisible.
+- id: 480
+  publishDate: "2017-03-21T23:31:33.517Z"
+  post: >-
+    Tested a #django release candidate (1.11RC1) for the first time. Site
+    continues to work. No deprecation warnings. #win
+- id: 481
+  publishDate: "2017-04-22T15:43:50.464Z"
+  post: >-
+    Upgraded to #django 1.11 ... woo LTS
+- id: 482
+  publishDate: "2017-05-11T03:14:24.026Z"
+  post: >-
+    Code that is organized in pipelines is easier to grok than code that is
+    organized in trees #functionalprogramming
+- id: 483
+  publishDate: "2017-05-11T06:06:59.586Z"
+  post: >-
+    Not sure if it is worth the effort to migrate hyperbola to #AWS. Maintenance
+    burden is pretty low. Log in maybe once a month, run an apt upgrade, and do
+    a fresh deploy. Takes less time than a packer/terraform cycle would.
+    #maintenance
+- id: 484
+  publishDate: "2017-05-11T06:08:38.506Z"
+  post: >-
+    sure an ELB + managed MySQL & redis + redundant frontends are "better" but
+    I'm not sure I need the complexity
+- id: 485
+  publishDate: "2017-05-11T06:09:03.035Z"
+  post: >-
+    Moving the wiki to #AWS was a different beast. Everything is self-contained
+    in the AMI.
+- id: 486
+  publishDate: "2017-05-11T06:09:49.999Z"
+  post: >-
+    Also, I have a google analytics snippet on the site. I have never once
+    checked the analytics.
+- id: 487
+  publishDate: "2017-05-11T06:25:02.018Z"
+  post: >-
+    It looks like I am a *tad* overprovisioned. brb taking some #downtime to
+    downsize my VM
+- id: 488
+  publishDate: "2017-05-11T06:45:03.541Z"
+  post: >-
+    All done. Downgraded from 8GB of RAM to a more reasonable 2GB of RAM. Went
+    from 4 cores down to one though 😱 #devops #maintenance
+- id: 489
+  publishDate: "2017-05-11T06:45:48.044Z"
+  post: >-
+    and the #monitoring even triggered when I took the box down. #win
+- id: 490
+  publishDate: "2017-05-13T06:37:53.096Z"
+  post: >-
+    Migrated terraform state from a private github repo to a private, encrypted
+    S3 bucket. State infra is bulkheaded from main app and protected with
+    prevent_destroy lifecycle #win #terraform #aws
+- id: 491
+  publishDate: "2017-05-13T06:41:26.275Z"
+  post: >-
+    I got a memory exhaustion pop up on my MBP earlier. I blame spotify, chrome,
+    and the 2 VMs I carelessly had running. #fail
+- id: 492
+  publishDate: "2017-05-13T06:42:00.220Z"
+  post: >-
+    I hope my next laptop has 32GB of RAM
+- id: 493
+  publishDate: "2017-06-13T22:42:25.727Z"
+  post: >-
+    Packer + Ansible + AWS + Terraform is really quite lovely #devops #win
+- id: 494
+  publishDate: "2017-06-14T15:23:49.377Z"
+  post: >-
+    I am living the dream with an n/ac-only network
+- id: 495
+  publishDate: "2017-06-21T04:11:00.255Z"
+  post: >-
+    tried copying a 2TB Time Machine volume at the file system level using
+    Finder drag and drop. #fail sadtimes. Was going on 6 hours and still
+    resolving hard links. Currently attempting block-level copy with Disk
+    Utility
+- id: 496
+  publishDate: "2017-06-23T16:39:33.197Z"
+  post: >-
+    OMG just rewrote my #git PS1 which runs as part of my PROMPT_COMMAND. Now
+    20% faster both inside and outside a repo. terminal feels so much faster now
+    #win #performance https://github.com/lopopolo/dotfiles/commit/2d5054c4ce
+- id: 497
+  publishDate: "2017-07-02T05:51:27.405Z"
+  post: >-
+    2 minutes of #downtime for libc security upgrade
+    https://www.ubuntu.com/usn/usn-3323-1/
+- id: 498
+  publishDate: "2017-07-02T05:51:45.604Z"
+  post: >-
+    this is why #AWS
+- id: 499
+  publishDate: "2017-07-02T05:52:50.937Z"
+  post: >-
+    related, using pip-tools to manage and pin python dependencies has removed
+    uncertainty from my deploy process. Upgrade packages only when I intend to
+    #win #django 1.11.3 upgrade went super smoothly in part due to this
+- id: 500
+  publishDate: "2017-07-02T05:53:21.514Z"
+  post: >-
+    💯💯💯💯💯 = 500 posts #win
+- id: 501
+  publishDate: "2017-07-02T18:40:27.680Z"
+  post: >-
+    Converted wiki from ELB to ALB this morning ... took a couple of hours.
+    modified #terraform config and updated #ansible ... also converted from
+    Let's Encrypt to ACM.
+    https://github.com/lopopolo/hyperbola-tools/commit/23fb9a7 #win
+- id: 502
+  publishDate: "2017-07-03T02:52:20.640Z"
+  post: >-
+    Discovered I had duplicate stanzas in my tfvars file. Removed the extraneous
+    one. Broke EVERYTHING. #fail The worst was my admin IAM account losing
+    access in the midst of a terraform apply. destroyed module.network,
+    module.iam, and module.hyperbola-wiki
+- id: 503
+  publishDate: "2017-07-03T02:52:50.946Z"
+  post: >-
+    Rebuilt everything and modulo some zombie deposed resources we gucci
+- id: 504
+  publishDate: "2017-07-04T01:30:14.740Z"
+  post: >-
+    #webpack is amazing. I added the time-elements web components to the
+    lifestream and contact pages. Only took an hour. Before this would have been
+    next to impossible. #frontend #win
+- id: 505
+  publishDate: "2017-07-04T01:31:20.932Z"
+  post: >-
+    The #webpack configuration, on the other hand, was not fun to get set up. I
+    particularly struggled fighting with the gulp plugin, which pins webpack 1.x
+- id: 506
+  publishDate: "2017-07-22T09:37:17.072Z"
+  post: >-
+    2am hot take: all systems problems are best solved with pointers and
+    routing. aka dependency and service injection
+- id: 507
+  publishDate: "2017-07-22T09:46:05.494Z"
+  post: >-
+    And with post 506, I can now say that hyperbola is hosted on #aws #win
+- id: 508
+  publishDate: "2017-07-22T09:50:54.445Z"
+  post: >-
+    The migration from a bespoke-bootstrapped, manual (scripted) deploy process
+    to an #ansible playbook took about 20 commits. I deployed to a local
+    #vagrant box first
+- id: 509
+  publishDate: "2017-07-22T09:52:14.320Z"
+  post: >-
+    buliding the #aws infra took about 30 commits, two #terraform destroys, and
+    two terraform code rewrites. some fun bits in the following posts
+- id: 510
+  publishDate: "2017-07-22T09:54:02.019Z"
+  post: >-
+    I initially went with the unclustered variants of elasticache and rds. Once
+    I wrapped my head around the topology,  #redis cluster mode and #aurora were
+    much easier to work with in #terraform
+- id: 511
+  publishDate: "2017-07-22T09:55:34.968Z"
+  post: >-
+    my #terraform life became much easier by using name_prefix instead of name.
+    name and name_prefix parameters were never interpolated. Instead, use
+    interpolation in tags. In practice this means config can change without
+    rebuilding the world #win
+- id: 512
+  publishDate: "2017-07-22T09:57:02.836Z"
+  post: >-
+    One source of difficulty was getting django, s3, vpc endpoints, and security
+    groups to work together to enable s3 access from my backends #fail
+- id: 513
+  publishDate: "2017-07-22T09:58:47.959Z"
+  post: >-
+    #aurora was much less forgiving with unique constraints than mysql. The
+    schema for one of my utf8mb4 varchars had a max length of 255 and a unique
+    index. It appears mysql silently truncates, whereas aurora complained the
+    index was > 767 bytes. ~ #win
+- id: 514
+  publishDate: "2017-07-24T00:37:04.346Z"
+  post: >-
+    DNS is flipped and propagated! Live in #aws! #win
+- id: 515
+  publishDate: "2017-07-24T00:53:18.538Z"
+  post: >-
+    unexpectedly memory: I had to spoof my mac address to that of my xbox 360 so
+    that I could register it on MIT's network #history
+- id: 516
+  publishDate: "2017-07-25T05:13:33.243Z"
+  post: >-
+    I found a page in my wiki called hyperbola suckage 2015. This was a
+    forward-looking list of gripes to fix as I moved from hyperbola1 to a new
+    host #history
+- id: 517
+  publishDate: "2017-07-25T05:14:50.678Z"
+  post: >-
+    1. problem: python not running the latest 2.7.x release. solution: pyenv for
+    local development and xenial (python3.5) + ansible + (future) deadsnakes ppa
+- id: 518
+  publishDate: "2017-07-25T05:16:47.235Z"
+  post: >-
+    2. django-backup.py sucks. problems: email based, backup size is limited,
+    unconfirmed delivery, plaintext transmission. solution: move media to
+    versioned S3 bucket, daily RDS snapshots, logical backup json to S3
+- id: 519
+  publishDate: "2017-07-25T05:17:43.157Z"
+  post: >-
+    3. problem: manual, bespoke server configuration. solution: #ansible,
+    #vagrant, #packer, prebaked AMIs. immutable infrastructure
+- id: 520
+  publishDate: "2017-07-25T05:18:34.490Z"
+  post: >-
+    4. problem: https is hard. solution: ACM + #terraform + ALB + CloudFront
+- id: 521
+  publishDate: "2017-07-25T05:20:35.711Z"
+  post: >-
+    4. addendum: I used #LetsEncrypt before migrating to AWS with a combination
+    of cron, systemd timers, and dehydrated. ACM is easier, less error prone,
+    and set-it-and-forget-it #win
+- id: 522
+  publishDate: "2017-07-25T05:21:34.705Z"
+  post: >-
+    5. problem: environment names are inconsistent across tooling and
+    deployment. solution: hyperbola_environment #ansible variable which
+    parameterizes everything
+- id: 523
+  publishDate: "2017-07-25T05:23:16.714Z"
+  post: >-
+    6. problem: bespoke deployment steps. deploy and cron run as lopopolo.
+    deploy needs sudo password. solution: #ansible deploy_helper module
+- id: 524
+  publishDate: "2017-07-25T05:23:52.862Z"
+  post: >-
+    6. addendum: since I already had a deploy script, it was straightforward to
+    translate it to #ansible tasks
+- id: 525
+  publishDate: "2017-07-30T01:40:37.476Z"
+  post: >-
+    I just realized that by merging hyperbola-tools into hyperbola and
+    converting my ad hoc ruby scripts to python, I moved to a monorepo and
+    standardized on a language
+- id: 526
+  publishDate: "2017-07-30T01:41:28.444Z"
+  post: >-
+    the hyperbola + hyperbola-tools binary star monorepos is a common failure
+    state, so I am told #fail
+- id: 527
+  publishDate: "2017-07-30T05:36:50.057Z"
+  post: >-
+    #fail do not try to install ansible in a virtualenv in packer. you need a
+    compiler. you don't want a compiler
+- id: 528
+  publishDate: "2017-07-30T05:44:53.629Z"
+  post: >-
+    in the quest to thin out the top-level directory sprawl in hyperbola, I got
+    rid of .secrets. required rotating ansible vault password and rekeying
+    everything because my password had single quotes, double quotes, and
+    backticks (of course) #fail
+- id: 529
+  publishDate: "2017-07-30T05:46:33.716Z"
+  post: >-
+    when reading from stdin, ansible-vault encrypt_string does not trim trailing
+    newlines, forcing one to use echo -n. #ansible knows this is a sharp edge
+    and documents it, but they should do the right thing and make it consistent
+    with password files #fail
+- id: 530
+  publishDate: "2017-07-30T06:33:56.139Z"
+  post: >-
+    I was first introduced to closures in summer '08 via #ruby blocks. This was
+    probably the most magical moment I've ever experienced programming. That
+    code was just another object you could pass around was amazing. Lisp
+    would've been mind blowing. #history
+- id: 531
+  publishDate: "2017-08-17T03:17:35.817Z"
+  post: >-
+    thinking of removing dependency on #cloudflare. currently only used for
+    hyperbo.la DNS. Email records are the scary part. #terraform makes this
+    mostly easy
+- id: 532
+  publishDate: "2017-08-23T04:42:46.013Z"
+  post: >-
+    #terraform is now a package manager. Great. #fail. For some reason plugin
+    downloads hang if the download gets an IPV6 edge node in their CDN.
+- id: 533
+  publishDate: "2017-08-28T16:39:14.670Z"
+  post: >-
+    When sorting cards in a hand, I use multi-pass bubble sort #fail n is small
+    i guess
+- id: 534
+  publishDate: "2017-09-19T04:23:02.926Z"
+  post: >-
+    With @huff's help, I have discovered ETL's True Name. ETL is just indexes.
+    Indexes are just caching. Caching is just named replication. Names are the
+    only problem in computer science.
+- id: 535
+  publishDate: "2017-09-28T05:10:18.149Z"
+  post: >-
+    I switched to Firefox Developer Edition today on my mac. It is pretty
+    blazing fast. Looking forward to 58 making it to the dev channel in November
+- id: 536
+  publishDate: "2017-09-28T05:11:03.701Z"
+  post: >-
+    and no more chrome on iOS. Using safari there. The only value chrome brings
+    is unified history and being logged in to my google account. I use neither
+    of these features
+- id: 537
+  publishDate: "2017-10-06T03:23:37.060Z"
+  post: >-
+    I skipped #django 1.11.4 and 1.11.5. Finally did an upgrade today to 1.11.6
+    #win. My dep upgrades for python, js, and ansible deps are too coarse
+    grained. Pulled in ansible changes which blocked the deployment #fail
+- id: 538
+  publishDate: "2017-10-06T03:24:36.442Z"
+  post: >-
+    Total upgrade time ~1 hour. Includes code changes, testing locally, cut
+    release, deploy to vagrant, build AMI, terraform, smoke test #win
+- id: 539
+  publishDate: "2017-10-28T03:49:53.697Z"
+  post: >-
+    I've taken to opening shipped emails with playfully mutated rap lyrics.
+    Super Nintendo. #win
+- id: 540
+  publishDate: "2017-10-28T18:51:28.317Z"
+  post: >-
+    #history throwback to the time that my wiki was spammed by a bot that turned
+    all the pages into link spam for discount pharmaceuticals
+    https://github.com/lopopolo/hyperbola/commit/1a3725b84bf82982945f68d14ff09ae7aa00d0ba
+    #fail
+- id: 541
+  publishDate: "2017-10-28T18:52:18.408Z"
+  post: >-
+    this is just one example of the times #git has saved my life #win
+- id: 542
+  publishDate: "2017-11-02T02:49:31.475Z"
+  post: >-
+    The magic command to make homebrew work after uninstalling Xcode: sudo
+    xcode-select -switch /Library/Developer/CommandLineTools #win
+- id: 543
+  publishDate: "2017-11-02T02:50:37.346Z"
+  post: >-
+    Today's shipped email featuring subtly modified lyrics from Kanye's Flashing
+    Lights
+- id: 544
+  publishDate: "2017-11-03T01:58:18.507Z"
+  post: >-
+    mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root mysql was the magic
+    incantation required to get lifestream archive views working locally
+- id: 545
+  publishDate: "2017-11-03T02:05:17.682Z"
+  post: >-
+    Just bumped backend ASG from 1 -> 3 t2.micros. With this change now all
+    parts of hyperbola (redis, mysql, backend, lb) are multi-AZ #win
+- id: 546
+  publishDate: "2017-11-03T02:05:50.788Z"
+  post: >-
+    3 AZs I feel so alive #aws
+- id: 547
+  publishDate: "2017-11-04T06:24:14.561Z"
+  post: >-
+    Now that I've shown I can go all out with the most expensive #AWS
+    components, today I exercised my cost efficiency and right sizing muscles. I
+    cut my AWS bill in half with the following steps:
+- id: 548
+  publishDate: "2017-11-04T06:25:27.228Z"
+  post: >-
+    Switched from Aurora to a multi-az RDS instance. I don't need the complex
+    topologies that aurora allows and it forced me to use an overprovisioned
+    instance type #aws
+- id: 549
+  publishDate: "2017-11-04T06:26:27.620Z"
+  post: >-
+    Switched DB instance type from db.t2.small to db.t2.micro. From running my
+    linode I know that MySQL never used more than ~400MB of RAM so I knew this
+    was safe. My database is tiny #aws
+- id: 550
+  publishDate: "2017-11-04T06:27:33.639Z"
+  post: >-
+    Removed dependency on redis by switching to a django-provided
+    database-as-cache adapter. My redis cluster was used only for admin sessions
+    and caching a sidebar on the lifestream page. Unnecessary overhead #aws
+- id: 551
+  publishDate: "2017-11-04T06:28:11.893Z"
+  post: >-
+    Switch from 3 to 2 backend machines. 1 is enough to handle the load I get,
+    so use the bare minimum for redundancy #aws
+- id: 552
+  publishDate: "2017-11-04T15:54:11.794Z"
+  post: >-
+    I accomplished this migration with ~no downtime #win. I spun up the new
+    infrastructure and then deployed new AMIs with updated service records. I
+    did have ~2 minutes of 500s when I accidentally overwrote old mysql DNS
+    record due to a bad copypasta #fail
+- id: 553
+  publishDate: "2017-11-05T19:40:05.006Z"
+  post: >-
+    hyperbola: now with multi-homed DNS. AWS Route 53 and CloudFlare, made
+    possible by terraform. (In the process upgraded hyperbo.la mail to a
+    2048-bit DKIM key) #win #redundancy #devops
+- id: 554
+  publishDate: "2017-11-06T01:45:25.358Z"
+  post: >-
+    I accidentally created a CNAME (instead of an A record) for an IP today.
+    Lots of confusing errors from nslookup, ssh, and host. Meanwhile dig
+    appeared to resolve the record. #fail
+- id: 555
+  publishDate: "2017-11-06T04:51:28.661Z"
+  post: >-
+    More cost savings. RAM footprint of a hyperbola backend is 143MB. Switch
+    from t2.micro to t2.nano #aws #win
+- id: 556
+  publishDate: "2017-11-06T05:31:46.181Z"
+  post: >-
+    Even more cost savings: dynamically provisioned bastion cloudformation stack
+    #terraform #aws
+- id: 557
+  publishDate: "2017-11-06T05:32:11.453Z"
+  post: >-
+    It is a good thing that I've automated things well enough that I don't need
+    the bastion #win
+- id: 558
+  publishDate: "2017-11-11T02:37:29.927Z"
+  post: >-
+    welp that didn't last long. CloudFlare only queries a subset of NS records
+    to check for liveness and has determined that I no longer use CloudFlare.
+    Working on purging them from #terraform and registrar now #fail
+- id: 559
+  publishDate: "2017-11-18T03:32:34.481Z"
+  post: >-
+    LOL that was only six years ago ... don't let your dreams stay dreams:
+    https://hyperbo.la/lifestream/51/ #aws
+- id: 560
+  publishDate: "2017-11-18T03:54:40.468Z"
+  post: >-
+    Most frequently used commands, redux https://hyperbo.la/lifestream/146/
+- id: 561
+  publishDate: "2017-11-18T04:26:33.523Z"
+  post: >-
+    New features in v0.116.0: bootstrap4, removed RSS and Atom feeds, 100%
+    webpack frontend build, css purification improvements, and healthz
+    middleware
+- id: 562
+  publishDate: "2017-11-18T06:36:56.542Z"
+  post: >-
+    The v0.116.0 deploy was done using a spot instance with packer. A bigger
+    instance for half the price #aws
+- id: 563
+  publishDate: "2017-11-19T00:23:19.895Z"
+  post: >-
+    New in v0.117.0: nuked time-elements webcomponents due to Firefox breakage
+    (cut js payload by a factor of 4), infra improvements to resume handling
+    #win
+- id: 564
+  publishDate: "2017-11-19T04:28:09.949Z"
+  post: >-
+    I made a thing! https://www.burnfastburnbright.com/ Bootstrap 4, route53
+    domains, and terraform made this really easy. went from 0 to 100 in about
+    1.5 hours. #win
+- id: 565
+  publishDate: "2017-11-30T05:57:21.668Z"
+  post: >-
+    Shaved another $35 (40%) off my #AWS bill by disabling the NAT on my app
+    subnets. Yay immutable infrastructure and VPC endpoints #win
+- id: 566
+  publishDate: "2017-11-30T05:58:09.335Z"
+  post: >-
+    Accidentally deleted my private subnet route tables in the process though,
+    which broke S3 access for ~20 minutes. Could've been much worse #fail
+    #outage
+- id: 567
+  publishDate: "2017-12-02T05:04:12.668Z"
+  post: >-
+    That was easy. Enabled #AWS Time Sync by adding one ansible role, reading
+    some docs, and redeploying. #win
+- id: 568
+  publishDate: "2017-12-02T05:05:16.393Z"
+  post: >-
+    I suspect that NTP traffic was the trickle of traffic that traversed my
+    recently decomissioned NAT
+- id: 569
+  publishDate: "2017-12-02T17:57:11.384Z"
+  post: >-
+    Found a lifestream bug during my Django 2.0 upgrade that was never exercised
+    on the live site because I've never had more than 40 posts in a month #fail
+- id: 570
+  publishDate: "2017-12-02T21:14:39.351Z"
+  post: >-
+    hyperbola is now running #django 2.0. Added automigrate to hyperbola-app
+    systemd unit, eliminating one of the last things I ever needed a bastion
+    host for #win
+- id: 571
+  publishDate: "2017-12-03T00:04:32.306Z"
+  post: >-
+    New in v0.122.0: python packaging actually works now. No .pth symlinks. No
+    PYTHONPATH. setup.py and pbr install hyperbola directly into the venv.
+    Finally. #win
+- id: 572
+  publishDate: "2017-12-04T06:17:27.909Z"
+  post: >-
+    Put some investment into my #vagrant setup. MySQL running in a separate VM
+    with automatically provisioned fixtures means I can go from zero to full
+    replica of prod in 10 minutes. No more dep on laptop MySQL. #win
+- id: 573
+  publishDate: "2017-12-19T05:44:29.336Z"
+  post: >-
+    Removed some "bespokeness" from hyperbola: migrated from a shell script that
+    exported env vars and exec'd to dotenv. Same concept, but now a standard
+    mechanism #win
+- id: 574
+  publishDate: "2017-12-21T14:59:14.951Z"
+  post: >-
+    Baby's first hadoop. Taken from long forgotten code written in 2005 #history
+- id: 575
+  publishDate: "2018-01-02T04:29:07.639Z"
+  post: >-
+    Starting 2018 off right by fixing pbr installation, deploying django 2.0.1,
+    upgrading Pillow, and removing dep on django-localflavor #win
+- id: 576
+  publishDate: "2018-01-22T04:03:57.900Z"
+  post: >-
+    Ansible, Let's Encrypt, nginx, and Vagrant have combined to make my local
+    env look more like prod. Spun up a new ALB-like VM with HTTPS. less
+    divergence #win
+- id: 577
+  publishDate: "2018-01-23T06:02:23.636Z"
+  post: >-
+    vagrant-lb PR: https://github.com/lopopolo/hyperbola/pull/86
+- id: 578
+  publishDate: "2018-01-27T19:53:40.657Z"
+  post: >-
+    I've had significant churn on tools in the past year for building hyperbola:
+    pip to pip-tools to pipenv. gulp to webpack. linode to AWS. bespoke
+    deployment and scripts to ansible. All good, just exhasuting.
+- id: 579
+  publishDate: "2018-01-27T19:55:17.265Z"
+  post: >-
+    Not to mention Let's Encrypt to Amazon back to Let's Encrypt again (for
+    vagrant) for certs
+- id: 580
+  publishDate: "2018-01-27T23:20:28.578Z"
+  post: >-
+    it looks like prod peaks at 75 req/s #performance
+- id: 581
+  publishDate: "2018-02-11T06:12:10.958Z"
+  post: >-
+    I have pinned dependencies everywhere _except_ my AMI build pipeline. Bitten
+    by the packer 1.2.0 upgrade breaking the ansible-local provisioner. #fail
+- id: 582
+  publishDate: "2018-02-11T06:13:51.404Z"
+  post: >-
+    So it turns out I shouldn't have ignored that MySQL backtrace when printing
+    the help text of my new django management command in dev. That's why it hung
+    when building the AMI. #fail One line fix:
+    https://github.com/lopopolo/hyperbola/commit/728f1d68
+- id: 583
+  publishDate: "2018-02-24T06:10:06.329Z"
+  post: >-
+    Semantic versioning is a lie (looking at you #packer). My config stopped
+    working because a key was deprecated between 1.1.x and 1.2.x. Somehow this
+    prevented the config from validating. #fail
+- id: 584
+  publishDate: "2018-03-23T06:55:36.140Z"
+  post: >-
+    pandas and jupyter notebooks are my new favorite hammers
+- id: 585
+  publishDate: "2018-03-23T07:10:49.034Z"
+  post: >-
+    Last week I shipped secondary attribution for Jenkins builds. Email featured
+    lyrics from Bills, Bills, Bills by Destiny's Child #win
+- id: 586
+  publishDate: "2018-03-24T22:52:03.679Z"
+  post: >-
+    This is a great article: http://rachelbythebay.com/w/2018/02/26/frame/
+- id: 587
+  publishDate: "2018-03-31T03:51:17.419Z"
+  post: >-
+    When all you have is a rock, everything looks like a hammer
+- id: 588
+  publishDate: "2018-03-31T04:06:25.837Z"
+  post: >-
+    https://hyperbo.la/lifestream/347/ was an anti-pattern which got fixed when
+    I moved to pipenv
+- id: 589
+  publishDate: "2018-04-03T02:48:44.226Z"
+  post: >-
+    Sometimes using the #AWS cost and usage reports is just not fun, mostly due
+    to the myriad of columns being undocumented. #fail
+- id: 590
+  publishDate: "2018-04-03T02:49:10.235Z"
+  post: >-
+    AWS says that product/instanceTypeFamily is "The instance family that is
+    associated with the given usage. For example, t2 or m4."
+- id: 591
+  publishDate: "2018-04-03T02:49:51.220Z"
+  post: >-
+    What they neglect to mention is that DedicatedUsage types do not have an
+    instance family associated with them
+- id: 592
+  publishDate: "2018-04-03T02:50:45.516Z"
+  post: >-
+    My current understanding of this column is that it is the instance family if
+    the usage type is eligible for RI instance size flexibility
+- id: 593
+  publishDate: "2018-04-14T00:20:04.977Z"
+  post: >-
+    I launched https://www.frklft.tires/ last week. Built with S3, CloudFront,
+    and Lambda.
+- id: 594
+  publishDate: "2018-04-14T00:29:39.443Z"
+  post: >-
+    for www.frklft.tires, I stopped using #terraform for managing the static
+    content of the site. It now lives outside of my terraform code in a public
+    directory, published explicitly with a make target #win
+- id: 595
+  publishDate: "2018-04-14T00:30:45.768Z"
+  post: >-
+    I am surprised that #django autolinked the .tires domain. We live in the
+    future.
+- id: 596
+  publishDate: "2018-04-18T08:11:09.414Z"
+  post: >-
+    Switched from community PPA to official nginx-provided binaries. That was
+    ... really easy: https://github.com/lopopolo/hyperbola/commit/5461837 #win
+    #ansible
+- id: 597
+  publishDate: "2018-05-12T07:41:55.324Z"
+  post: >-
+    Upgrades are painful, so upgrade frequently. hyperbola now running Ubuntu
+    18.04 Bionic. 2 build config changes and 1 removed ansible task. #win
+- id: 598
+  publishDate: "2018-05-24T01:27:13.805Z"
+  post: >-
+    I've been using make and vagrant for self-contained builds in other
+    projects. I've been working with #LaTeX a lot and a bionic vm with TexLive
+    installed creates a repeatable build env, takes 15 minutes to set up, and
+    doesn't pollute my desktop #win
+- id: 599
+  publishDate: "2018-05-24T01:29:15.152Z"
+  post: >-
+    The Makefile for a project like this defines two versions of all the tasks.
+    One runs locally on my mac and "recursively" calls make using `vagrant ssh`
+    setting a make var to indicate the task is running in the VM #make #LaTeX
+- id: 600
+  publishDate: "2018-05-28T02:34:33.429Z"
+  post: >-
+    LuaLaTeX is amazing. My documents look better than they did with XeLaTeX.
+    Less hyphenation, less inter-section spacing. fontspec, polyglossia,
+    selnolig, nowidow, and impnattypo packages are dope too. #LaTeX #win
+- id: 601
+  publishDate: "2018-05-28T07:24:40.651Z"
+  post: >-
+    hyperbola is ready for #django 2.1.
+    https://github.com/lopopolo/hyperbola/commit/d92a79f. That was easy #win
+- id: 602
+  publishDate: "2018-06-05T04:47:10.385Z"
+  post: >-
+    Last week I tried to build hyperbola with #docker. I ended up with 5
+    containers to deploy a stage environment.
+    https://github.com/lopopolo/hyperbola/pull/92
+- id: 603
+  publishDate: "2018-06-10T06:50:58.434Z"
+  post: >-
+    Realized that hyperbola doesn't need to be super #HA
+- id: 604
+  publishDate: "2018-06-10T06:51:40.986Z"
+  post: >-
+    Set desired backend ASG capacity to 1, but added autoscaling alarms to allow
+    scaling up to 3 instances #HA
+- id: 605
+  publishDate: "2018-06-10T06:52:33.719Z"
+  post: >-
+    Modified RDS to be single-AZ #HA
+- id: 606
+  publishDate: "2018-06-10T06:53:31.644Z"
+  post: >-
+    Saved me $17 a month. My primary #AWS #cost is now my ALB. I'd replace it
+    with an nginx if not for ACM making certs so easy
+- id: 607
+  publishDate: "2018-06-10T22:25:19.227Z"
+  post: >-
+    https://github.com/lopopolo/hyperbola/commit/5c36137,
+    https://github.com/lopopolo/hyperbola/commit/fcd007c #HA
+- id: 608
+  publishDate: "2018-06-11T02:37:11.114Z"
+  post: >-
+    Optimizing for #cost and complexity, #docker and ECS/EKS are not worth it
+    for my 1 node crud app
+- id: 609
+  publishDate: "2018-06-27T04:26:31.377Z"
+  post: >-
+    I published a post about AWS Reserved Instances today
+    https://stripe.com/blog/aws-reserved-instances
+- id: 610
+  publishDate: "2018-07-04T23:07:33.942Z"
+  post: >-
+    I've been retraining myself to say "Hey Google" instead of "OK Google"
+- id: 611
+  publishDate: "2018-08-10T03:42:30.778Z"
+  post: >-
+    The past 4ish months I've been a team of one. Been a decent slog. It's been
+    hard to be productive when all of the KTLO work falls on me. Getting a new
+    teammate in a couple weeks. Excited. 🤩
+- id: 612
+  publishDate: "2018-08-10T03:43:40.809Z"
+  post: >-
+    One hack I've been using to enhance my productivity in the face of KTLO work
+    is to write lots of things down. Project plans, system diagrams, user
+    interviews. It helps organize the work that I have done and keeps me
+    motivated.
+- id: 613
+  publishDate: "2018-08-10T06:07:28.091Z"
+  post: >-
+    Finally deployed a 2 month old branch incorporating lessons learned from my
+    Docker experiment into my VM-based deploys. Big change is building from
+    local source instead of pulling in a tarball from GitHub. Iteration speed is
+    improved #win
+- id: 614
+  publishDate: "2018-08-10T06:08:58.597Z"
+  post: >-
+    I also pruned a lot of config from my 12factor env, favoring convention for
+    things like DB connection strings. In doing so, migrated to one hostname for
+    DB across all environments. /etc/hosts alias in Vagrant, network in Docker,
+    private hosted zone in AWS
+- id: 615
+  publishDate: "2018-08-10T06:10:20.512Z"
+  post: >-
+    docker lessons: https://github.com/lopopolo/hyperbola/pull/94
+- id: 616
+  publishDate: "2018-08-22T04:18:33.187Z"
+  post: >-
+    That was easy! hyperbola running on t3s now. #aws #terraform #win
+- id: 617
+  publishDate: "2018-09-29T20:18:53.245Z"
+  post: >-
+    #AWS suggested for us to use a snowball to ship our data to a new region.
+    This is an amazing product, but yea no
+- id: 618
+  publishDate: "2018-10-02T06:05:36.670Z"
+  post: >-
+    Jumped to latest #django 2.0.x and then to latest 2.1.x today. No
+    deprecation warnings, smooth sailing. As a plus, I turned on PYTHONWARNINGS
+    for my app in systemd #win
+- id: 619
+  publishDate: "2018-10-02T06:56:51.244Z"
+  post: >-
+    I had a #patch accepted to gunicorn
+    https://github.com/benoitc/gunicorn/pull/1889
+- id: 620
+  publishDate: "2018-10-03T06:30:03.752Z"
+  post: >-
+    Further #cost optimized my #AWS infra. Saved $3/month by turning off
+    CloudWatch monitoring and making my ASG out of spot instances
+    https://github.com/lopopolo/hyperbola/commit/ffa0e34 #win
+- id: 621
+  publishDate: "2018-10-27T23:12:07.497Z"
+  post: >-
+    I made a post on Prosperity's partnership with Finance:
+    https://hyperbo.la/w/engineering-finance-partnership/ #blog
+- id: 622
+  publishDate: "2018-10-27T23:17:54.522Z"
+  post: >-
+    I made a post on how your org chart shows up in your infrastructure:
+    https://hyperbo.la/w/aws-org-chart/ #blog
+- id: 623
+  publishDate: "2018-10-28T02:25:20.595Z"
+  post: >-
+    I accidentally skipped v0.139.0 today because prettier barfed during cutting
+    the release and I forgot to reset my git tree. I guess I forgot to run
+    prettier on my whole repo when I enabled it. #fail
+- id: 624
+  publishDate: "2018-10-28T03:22:25.827Z"
+  post: >-
+    #django is a joy to use. Making my new blog app was so easy. Each view is
+    only two lines of code! #win
+- id: 625
+  publishDate: "2018-10-28T07:04:01.112Z"
+  post: >-
+    I added code block and syntax highlighting to my new #blog. Planning on
+    using it for an upcoming post about #terraform.
+- id: 626
+  publishDate: "2018-10-29T00:05:44.685Z"
+  post: >-
+    Significantly refactored my #webpack static asset pipeline today. No longer
+    build assets locally and check them in. Build happens as part of #ansible
+    provisioning. #win https://github.com/lopopolo/hyperbola/commit/eaf5b3197
+- id: 627
+  publishDate: "2018-10-29T05:28:45.494Z"
+  post: >-
+    That was a 35-commit weekend. New features and improved code quality. #win
+    https://github.com/lopopolo/hyperbola/compare/918f6d0f..4c331eee
+- id: 628
+  publishDate: "2018-10-31T07:41:40.559Z"
+  post: >-
+    code yellow 😕
+- id: 629
+  publishDate: "2018-11-03T17:27:56.210Z"
+  post: >-
+    I completed removing build artifacts from source control. Static assets dist
+    and document-root dirs: replaced with running #webpack on host. Third-party
+    #ansible roles: installed from galaxy via #packer and #vagrant at provision
+    time. #win
+- id: 630
+  publishDate: "2018-11-04T22:57:29.431Z"
+  post: >-
+    Got into an undeployable state due to differences in #provisioning between
+    local and prod environments #fail
+    https://github.com/lopopolo/hyperbola/commit/a914992
+- id: 631
+  publishDate: "2018-11-04T22:58:33.879Z"
+  post: >-
+    I recently started cleaning up after myself during #provisioning. There are
+    two steps to this: #ansible uninstalls build deps and #packer executes a
+    cleanup script that does an apt purge and autoremove
+- id: 632
+  publishDate: "2018-11-04T22:59:39.039Z"
+  post: >-
+    Undeployable manifested as healthz returning 502 when adding a new instance
+    to the ALB, marking it as unhealthy and timing out #terraform
+- id: 633
+  publishDate: "2018-11-04T23:00:44.925Z"
+  post: >-
+    Root cause: My app depends on the python package mysqlclient, which in turn
+    depends on the libmysqlclient system package. I was pulling this in
+    transitively via the dev package required for building.
+- id: 634
+  publishDate: "2018-11-04T23:01:58.325Z"
+  post: >-
+    Removing just the dev package with #ansible #provisioning had no effect in
+    local env, but combined with the apt purge in the #packer script,
+    uninstalled mysqlclient
+- id: 635
+  publishDate: "2018-11-04T23:04:30.426Z"
+  post: >-
+    This change was introduced in 0.146.0 but did not manifest due to a bug in
+    the cleanup script. I was not passing -y to apt autoremove, which caused the
+    command to abort and end the script with an error. #fail
+- id: 636
+  publishDate: "2018-11-04T23:05:31.184Z"
+  post: >-
+    The cleanup script didn't error because my set flags were in the shebang but
+    #packer was invoking the script via bash instead of directly #fail So many
+    yaks.
+- id: 637
+  publishDate: "2018-11-04T23:06:26.353Z"
+  post: >-
+    A red herring was adding a call to dd in the cleanup script to zero the free
+    space on the disk. I thought I was somehow filling the disk and not
+    reclaiming space.
+- id: 638
+  publishDate: "2018-11-04T23:11:03.973Z"
+  post: >-
+    At least I was able to repro in local #vagrant once I figured out what was
+    going on. #win
+- id: 639
+  publishDate: "2018-11-04T23:11:49.260Z"
+  post: >-
+    Add in some manual #terraform state edits and deleting things in the #aws
+    console and we're recovered #fail #win
+- id: 640
+  publishDate: "2018-11-04T23:12:39.666Z"
+  post: >-
+    The computers did exactly what I told them to do 😕 #fail
+- id: 641
+  publishDate: "2018-11-05T00:16:13.388Z"
+  post: >-
+    41-commit weekend 🤩Feel much better about my #webpack , #ansible, and
+    #packer code #win
+- id: 642
+  publishDate: "2018-11-11T16:49:26.623Z"
+  post: >-
+    I was hard down for ~5min last night while rolling out secrets in parameter
+    store. 0.149.0, 0.149.1, 0.149.2, and 0.149.3 were bad releases #fail.
+    0.149.4 is stable:
+    https://github.com/lopopolo/hyperbola/compare/v0.148.0...v0.149.4.
+    Postmortem pending.
+- id: 643
+  publishDate: "2018-11-16T05:46:24.657Z"
+  post: >-
+    I promised a postmortem:
+    https://hyperbo.la/w/secrets-in-parameter-store-postmortem/
+- id: 644
+  publishDate: "2018-11-16T06:40:26.812Z"
+  post: >-
+    I had a #patch accepted to an Ansible role I use in my Vagrant environment
+    https://github.com/mprahl/ansible-role-lets-encrypt-route-53/pull/14
+- id: 645
+  publishDate: "2018-11-17T07:39:01.410Z"
+  post: >-
+    Just accidentally truncated my .bash_history. Restored from backup but the
+    latest was 55 days ago. #fail
+- id: 646
+  publishDate: "2018-11-21T05:04:27.928Z"
+  post: >-
+    I've now over-engineered an iTunes library integrity checker by turning a
+    script into a module #win
+    https://github.com/lopopolo/dotfiles/blob/e810a83/scripts/music-integrity-check.rb
+- id: 647
+  publishDate: "2018-12-22T08:01:59.407Z"
+  post: >-
+    Been using #ack for almost a decade. Installed #ripgrep today. Wow it's so
+    fast! #win
+- id: 648
+  publishDate: "2018-12-22T08:06:23.506Z"
+  post: >-
+    Took 4.5 years but I've finally started to learn #rust:
+    https://hyperbo.la/lifestream/298/. I'm implementing a power hour game that
+    plays to a #chromecast with a #react webview UI.
+- id: 649
+  publishDate: "2018-12-23T03:55:50.652Z"
+  post: >-
+    Optimizing #react bundle ... cut bundle size by 72KB. Biggest wins are
+    turning an image into CSS + an emoji, removing unused deps, enabling
+    mini-css-extract-plugin in release builds #win #webpack index.html is 333 KB
+- id: 650
+  publishDate: "2018-12-26T19:48:40.366Z"
+  post: >-
+    First #rust #patch accepted https://github.com/asomers/futures-locks/pull/10
+    closing out 2018 with a bang
+- id: 651
+  publishDate: "2018-12-28T23:07:15.241Z"
+  post: >-
+    The most expensive part of hyperbola's #aws infrastructure is the SSM
+    PrivateLink endpoint in 3 AZs #fail #cost
+- id: 652
+  publishDate: "2019-01-21T07:54:55.022Z"
+  post: >-
+    I implemented a #rust client for the #chromecast protocol for a game I'm
+    working on. I collected a fairly exhaustive set of protocol documentation:
+    https://github.com/lopopolo/punchtop/tree/master/cast-client
+- id: 653
+  publishDate: "2019-01-21T07:57:27.342Z"
+  post: >-
+    I made a small #rust crate called stream-util for a game I'm working on.
+    https://github.com/lopopolo/punchtop/tree/master/stream-util allows graceful
+    drains of tokio mpsc channels or canceling a futures Stream. Clippy pedantic
+    and fully documented #win
+- id: 654
+  publishDate: "2019-01-21T07:59:23.646Z"
+  post: >-
+    Making a mental note that I've decided to go static with hyperbola. Not sure
+    when this project will get done, but here's to 2019. I have dreams of a
+    custom #webpack and #markdown generator, S3 and CloudFront for distribution.
+- id: 655
+  publishDate: "2019-01-21T08:00:52.835Z"
+  post: >-
+    The game that I'm working on is punchtop
+    https://github.com/lopopolo/punchtop #win #rust #powerhour
+- id: 656
+  publishDate: "2019-01-27T02:58:48.941Z"
+  post: >-
+    As an engineer, I care very much about #marketing myself, my team, and my
+    work. I am of the impression that my work does not speak for itself, I have
+    to speak for my work. Being high impact means making sure the org knows it,
+    too.
+- id: 657
+  publishDate: "2019-01-27T03:01:25.881Z"
+  post: >-
+    To be good at #marketing yourself, you need to be good at communication,
+    both written and verbal. Don't be afraid to talk about your work, either to
+    your manager, your skip level, your users, an email list, or the company all
+    hands meeting.
+- id: 658
+  publishDate: "2019-01-27T03:02:38.357Z"
+  post: >-
+    One common hangup I've encountered when discussing #marketing my work with
+    other engineers is the notion that the work was easy or trivial to
+    implement. That's not the important part! What the org cares about is
+    impact. Tell a good story!
+- id: 659
+  publishDate: "2019-01-27T05:19:01.327Z"
+  post: >-
+    #marketing is easier if you have metrics to support your impact. I like to
+    always tie my metrics back to dollars.
+- id: 660
+  publishDate: "2019-01-27T05:47:19.594Z"
+  post: >-
+    More #rust safety: removed a cast to usize with the new usize::from_be_bytes
+    converter https://github.com/lopopolo/punchtop/commit/2263c80 #win
+- id: 661
+  publishDate: "2019-01-27T06:07:45.250Z"
+  post: >-
+    I have eliminated all explicit casts in punchtop #rust #win
+    https://github.com/lopopolo/punchtop/commit/1e41ca3
+- id: 662
+  publishDate: "2019-02-10T05:27:46.883Z"
+  post: >-
+    I live in Seattle now. First week at the Stripe office was quiet due to the
+    snow. Working on expanding Stripe into Latin America.
+- id: 663
+  publishDate: "2019-02-23T21:18:43.952Z"
+  post: >-
+    Spaceships don’t come equipped with a rear view mirror 🚀 #win
+- id: 664
+  publishDate: "2019-02-23T21:19:10.554Z"
+  post: >-
+    Larson Media Training 101: Answer the question you wish you were asked.
+    #communication
+- id: 665
+  publishDate: "2019-03-11T03:57:38.223Z"
+  post: >-
+    I'm speaking at DevOpsDays Seattle on April 23. My talk is titled The AWS
+    Billing Machine and Optimizing Cloud Costs. #conference #aws #cost
+- id: 666
+  publishDate: "2019-03-11T03:58:25.042Z"
+  post: >-
+    I'm speaking at Monitorama on June 4-6. My talk is titled The AWS Billing
+    Machine and Optimizing Cloud Costs. #conference #aws #cost
+- id: 667
+  publishDate: "2019-03-12T19:54:50.300Z"
+  post: >-
+    When asking someone to do something via email, the fact that they’ve even
+    opened it is a big hurdle. Make their life easy: in-line as much as you can,
+    minimize clicks, make links easy to scan, be direct, have a tl;dr
+    #communication #email
+- id: 668
+  publishDate: "2019-03-14T07:03:55.885Z"
+  post: >-
+    Deck making for an internal tech talk called "How to Implement the
+    Chromecast Protocol in Rust When You Don't Know Rust" #rust futures and impl
+    trait 😭 #fail
+- id: 669
+  publishDate: "2019-03-20T02:18:51.589Z"
+  post: >-
+    whoa throwback `chattr +i` to prevent puppet from overwriting files on a
+    prod box that you were manually changing #devops
+- id: 670
+  publishDate: "2019-04-03T03:05:07.206Z"
+  post: >-
+    Yikes haven't done a deploy since January 6. I've definitely been ignoring
+    all of the USNs about Linux kernel vulnerabilities. #fail Django 2.2 release
+    is what got me to get to upgrading #django #win
+- id: 671
+  publishDate: "2019-04-03T03:08:18.206Z"
+  post: >-
+    Uninstalling python 3.7.1 from pyenv broke my local poetry venv for
+    hyperbola which prevented me from managing my deps #fail #python
+- id: 672
+  publishDate: "2019-04-03T03:42:33.832Z"
+  post: >-
+    The true motivation for getting me to mess with hyperbola today was an
+    instance retirement notification from AWS. I had to muck with poetry to
+    cycle my ASG #fail #aws
+- id: 673
+  publishDate: "2019-04-03T03:46:09.741Z"
+  post: >-
+    looks like I didn't finalize the deploy in January so I had a few extra AMIs
+    kicking around that I was needlessly paying for #aws #cost #fail #automation
+- id: 674
+  publishDate: "2019-04-18T05:05:54.264Z"
+  post: >-
+    I found an ICE (internal compiler error) in clippy in #rust nightly #fail
+    https://github.com/rust-lang/rust/issues/60067
+- id: 675
+  publishDate: "2019-04-18T05:21:59.115Z"
+  post: >-
+    I've been working on creating an idiomatic, modern set of #rust bindings for
+    mruby, an embedded #ruby interpreter. I am learning a ton and doing lots of
+    code things I've never done before! #win
+- id: 676
+  publishDate: "2019-04-18T05:22:32.641Z"
+  post: >-
+    I overflowed the compiler (which didn't crash it) and crashed the linter
+    with an ICE #win #fail
+- id: 677
+  publishDate: "2019-04-18T05:23:35.592Z"
+  post: >-
+    I implemented a #rust macro for the first time to implement some traits to
+    convert between mruby values and Vec and Option containers #win
+- id: 678
+  publishDate: "2019-04-18T05:24:56.689Z"
+  post: >-
+    I generated FFI bindings for mruby with bindgen! I wrote a #c extension
+    library for wrapping mruby macros! #win I wrote (a lot of) unsafe #rust
+    code. Clippy helps a lot to make sure I'm not doing anything stupid. I have
+    caused quite a few #segfault #fail
+- id: 679
+  publishDate: "2019-04-27T23:08:14.977Z"
+  post: >-
+    I just used #github to create a reproducer case for a panic in a #rust
+    library #win https://github.com/lopopolo/rust-embed-panic
+    https://github.com/pyros2097/rust-embed/issues/61 #patch
+- id: 680
+  publishDate: "2019-04-29T07:45:42.007Z"
+  post: >-
+    About 6 weeks ago I reached out to two literary agents to see if they'd help
+    me publish a book. I got an explicit rejection last week! A little bit
+    #fail, but also definitely progress #win 😊
+- id: 681
+  publishDate: "2019-05-06T07:15:34.877Z"
+  post: >-
+    Using cargo:rerun-if-changed and cargo:rerun-if-env-changed to make most sys
+    crate builds a noop. developer productivity #win #rust
+- id: 682
+  publishDate: "2019-05-09T03:02:17.386Z"
+  post: >-
+    #patch got another PR accepted in the Ansible + ACME + Route53 role I use
+    for the hyperbola dev env load balancer #win
+    https://github.com/mprahl/ansible-role-lets-encrypt-route-53/pull/15
+- id: 683
+  publishDate: "2019-05-15T06:04:18.875Z"
+  post: >-
+    The keyword "unsafe" appears 372 times in this codebase #rust
+- id: 684
+  publishDate: "2019-05-16T08:30:35.859Z"
+  post: >-
+    ferrocarril is a new project I've been working on to embed #ruby on Rails in
+    #rust https://github.com/lopopolo/ferrocarril
+- id: 685
+  publishDate: "2019-05-16T08:47:59.027Z"
+  post: >-
+    It only took 49 build jobs, but the ferrocarril build is passing on CircleCI
+    https://circleci.com/gh/lopopolo/ferrocarril/47 This is the first time I've
+    ever set up #ci for a side project #win
+- id: 686
+  publishDate: "2019-05-17T01:21:37.558Z"
+  post: >-
+    I tried to explain continuous integration to my Dad and he synthesized it as
+    "spellcheck for code" which is pretty good tbh #win #ci
+- id: 687
+  publishDate: "2019-05-17T01:23:48.959Z"
+  post: >-
+    You can tell which parts of ferrocarril are new to me based on how many
+    consecutive commits are dedicated to a feature. By this measure, the new
+    (and hard) things were sys crates, #ci, and TryFrom traits #rust #win #fail
+- id: 688
+  publishDate: "2019-05-17T01:35:59.273Z"
+  post: >-
+    Excluding generated and vendored sources, ferrocarril is 8700 lines of
+    #rust, #c, and #ruby. This is a lot of code. In very uncharacteristic
+    fashion for a side project, a big chunk is tests #win
+    https://github.com/lopopolo/ferrocarril/commit/fe2febc
+- id: 689
+  publishDate: "2019-05-24T07:08:45.603Z"
+  post: >-
+    I reported a #segfault in mruby and spoke directly with @matz! #win
+    https://github.com/mruby/mruby/issues/4460 #patch
+- id: 690
+  publishDate: "2019-05-24T07:09:51.676Z"
+  post: >-
+    My #ci builds of ferrocarril caught a bug in rustyline that made compilation
+    fail on the latest nightly #rust #win #patch
+    https://github.com/kkawakam/rustyline/issues/217
+- id: 691
+  publishDate: "2019-05-24T07:10:41.885Z"
+  post: >-
+    In a related note, I now peg the nightly version in the rust-toolchain file
+    to a specific date archive #ci #rust #win
+- id: 692
+  publishDate: "2019-05-24T07:13:34.902Z"
+  post: >-
+    Adding #ci to a project is encouraging such better code hygiene. Because I
+    want to make sure the build stays green, I actually make PRs even if it is
+    only me approving them. Seeing the code in the browser makes it easier to
+    review than #git diff #win
+- id: 693
+  publishDate: "2019-05-25T07:14:36.492Z"
+  post: >-
+    #rust Clippy bug reports:
+    https://github.com/rust-lang/rust-clippy/issues/4139
+    https://github.com/rust-lang/rust-clippy/issues/4140
+- id: 694
+  publishDate: "2019-05-25T20:04:57.734Z"
+  post: >-
+    here's another Clippy bug #rust #fail
+    https://github.com/rust-lang/rust-clippy/issues/4143
+- id: 695
+  publishDate: "2019-05-26T01:07:34.249Z"
+  post: >-
+    Despite all I talk about #aws #ec2, I cannot for the life of me type
+    isntances correctly #fail
+- id: 696
+  publishDate: "2019-05-27T12:58:16.014Z"
+  post: >-
+    It has been a really productive weekend. Merged 23 #github PRs for
+    ferrocarril #win #rust #git
+    https://github.com/lopopolo/ferrocarril/pulls?utf8=%E2%9C%93&q=is%3Apr+created%3A2019-05-24..2019-05-27+is%3Aclosed+
+- id: 697
+  publishDate: "2019-06-01T07:59:07.223Z"
+  post: >-
+    Filed a couple more issues I ran into while working on ferrocarril:
+    https://github.com/SergioBenitez/Rocket/issues/1019
+    https://github.com/rust-onig/rust-onig/issues/102 #patch
+- id: 698
+  publishDate: "2019-06-01T07:59:50.016Z"
+  post: >-
+    I have Regexp#match? https://github.com/lopopolo/ferrocarril/pull/93 #win
+    #rust #ruby
+- id: 699
+  publishDate: "2019-06-05T20:00:34.831Z"
+  post: >-
+    I reported a compiler improvement for suggestion diagnostics #rust #patch
+    https://github.com/rust-lang/rust/issues/61555
+- id: 700
+  publishDate: "2019-06-19T00:12:42.267Z"
+  post: >-
+    ruby/spec is a set of specifications for the Ruby language shared across
+    implementations. I had a fix accepted to the StringScanner spec! #patch
+    #ruby https://github.com/ruby/spec/pull/671
+- id: 701
+  publishDate: "2019-06-24T10:41:11.388Z"
+  post: >-
+    I've proposed a couple of PRs to speed up UTF-8 String handling in mruby
+    https://github.com/mruby/mruby/pull/4529
+    https://github.com/mruby/mruby/pull/4531 #patch #ruby #github
+- id: 702
+  publishDate: "2019-06-24T10:42:34.124Z"
+  post: >-
+    Adding paragraph mode to String#each_line in mruby core #ruby #patch
+    https://github.com/mruby/mruby/pull/4527
+- id: 703
+  publishDate: "2019-06-24T20:18:19.650Z"
+  post: >-
+    Added a feature (both a new capability and a compile time feature!) to
+    rust-embed to allow it to embed sources relative to crate root which is
+    useful in workspaces #rust #patch
+    https://github.com/pyros2097/rust-embed/pull/67
+- id: 704
+  publishDate: "2019-07-03T03:52:40.683Z"
+  post: >-
+    Optimized String#scan in ferrocarril to be comparable to CRuby performance
+    #rust #ruby #mruby #performance
+    https://github.com/lopopolo/ferrocarril/pull/138
+- id: 705
+  publishDate: "2019-07-07T19:33:13.709Z"
+  post: >-
+    #git bisect is why it's important that your repo be buildable at every
+    commit. Currently fixing a massive memory leak in ferrocarril #fail
+- id: 706
+  publishDate: "2019-07-10T06:28:09.266Z"
+  post: >-
+    I had a PR accepted in mruby! #patch #ruby #mruby #win
+    https://github.com/mruby/mruby/pull/4560
+- id: 707
+  publishDate: "2019-07-14T19:43:55.062Z"
+  post: >-
+    That memory leak turned out to be quite the yak shave. setjmp/longjmp from C
+    leaving #rust memory in inconsistent state #fail
+    https://github.com/lopopolo/ferrocarril/pull/168
+- id: 708
+  publishDate: "2019-07-14T19:46:55.811Z"
+  post: >-
+    Reported an uninitialized memory access to #mruby upstream that was recently
+    fixed #patch https://github.com/mruby/mruby/issues/4556
+- id: 709
+  publishDate: "2019-07-14T19:49:49.995Z"
+  post: >-
+    Reported a bug in layout generation for structure with flexible array
+    members to #rust bindgen that was recently fixed #patch
+    https://github.com/rust-lang/rust-bindgen/issues/1589
+- id: 710
+  publishDate: "2019-07-14T19:52:28.437Z"
+  post: >-
+    I’ve been uncovering a few bugs in mruby trying to get ruby/spec to at least
+    run to completion. This bug report fixed an infinite loop that unblocked
+    that #mruby #patch https://github.com/mruby/mruby/issues/4555
+- id: 711
+  publishDate: "2019-07-23T04:07:24.956Z"
+  post: >-
+    Matz likes my code omg omg omg #win #ruby #mruby #patch
+    https://github.com/mruby/mruby/pull/4560#issuecomment-509572113
+- id: 712
+  publishDate: "2019-07-29T04:29:16.791Z"
+  post: >-
+    Every toggle switch in a UI is secretly an Option<bool> #design
+- id: 713
+  publishDate: "2019-07-29T04:30:25.996Z"
+  post: >-
+    ferrocarril is all grown up. I've moved development of my #ruby to a
+    dedicated #GitHub organization. The project is called Artichoke
+    https://github.com/artichoke/artichoke
+- id: 714
+  publishDate: "2019-07-29T04:31:18.268Z"
+  post: >-
+    This weekend I did the migration, which took place in multiple parts
+    #artichoke #github
+- id: 715
+  publishDate: "2019-07-29T04:32:18.207Z"
+  post: >-
+    Step 1: extract CactusRef from ferrocarril into its own repository
+    https://github.com/artichoke/cactusref #artichoke
+- id: 716
+  publishDate: "2019-07-29T04:33:23.872Z"
+  post: >-
+    Extracting cactusref required completely rewriting #git history, updating
+    docs, adding a build, adding benches, importing my blog post, updating links
+    in the blog post #artichoke
+- id: 717
+  publishDate: "2019-07-29T04:33:52.809Z"
+  post: >-
+    CactusRef is still an incredibly unsafe crate, but at least it aborts if it
+    detects a use-after-free #fail #artichoke
+- id: 718
+  publishDate: "2019-07-29T04:34:54.949Z"
+  post: >-
+    Step 2: transfer ownership of ferrocarril to artichoke organization
+    #artichoke #github. Not much to do here, updated some links, fixed some
+    branding, got CircleCI building again #artichoke
+- id: 719
+  publishDate: "2019-07-29T04:35:26.918Z"
+  post: >-
+    Step 3: create the #artichoke repository where the core #ruby development
+    will take place. #artichoke
+- id: 720
+  publishDate: "2019-07-29T04:36:41.711Z"
+  post: >-
+    ferrocarril had different goals than artichoke: it wanted to run Rails. To
+    do that, it had a lot of extra bits in it like gems, a Rack server, and
+    sample apps. Nuked all of it #win #artichoke
+- id: 721
+  publishDate: "2019-07-29T04:38:23.919Z"
+  post: >-
+    With renewed focus of building my own #Ruby instead of extending #mruby, I
+    put in some effort to make mruby an implementation detail of #artichoke.
+    Lots of refactoring with sed. #fail
+- id: 722
+  publishDate: "2019-07-29T04:39:52.884Z"
+  post: >-
+    Being forced to set up the repository infra from scratch in cactusref was a
+    good way to fix everything I disliked about my dev environment. CircleCI
+    build and scripts/lint.sh got overhauled #win #artichoke #shell #bash #node
+    #lint
+- id: 723
+  publishDate: "2019-07-29T04:41:38.818Z"
+  post: >-
+    The biggest accomplishment was redoing the #artichoke README
+    https://github.com/artichoke/artichoke#readme Thought about project goals
+    and differentiators from MRI. Added milestones to track progress in
+    achieving goals #win #ruby #artichoke
+- id: 724
+  publishDate: "2019-07-29T04:42:34.227Z"
+  post: >-
+    One of the goals is to have a #Wasm build target. This is what nerdsniped me
+    this weekend. #artichoke
+- id: 725
+  publishDate: "2019-07-29T04:45:45.243Z"
+  post: >-
+    Neither mruby-sys nor onig can build with wasm-unknown-unknown or wasm-wasi,
+    so I was stuck with wasm-unknown-emscripten. The linker on mruby-sys would
+    dead code eliminate artichoke_backend::Artichoke #fail #Wasm #artichoke
+    #mruby
+- id: 726
+  publishDate: "2019-07-29T04:47:21.404Z"
+  post: >-
+    I forked onig and hope to add support for the wasm-unknown-unknown build
+    target. For #artichoke though, it's too soon. Once mruby-sys is pulled into
+    #Rust I'll try again #ruby #mruby #fail #patch #Wasm
+- id: 727
+  publishDate: "2019-08-01T03:33:12.677Z"
+  post: >-
+    That is a lot of code #artichoke #github #patch #win
+- id: 728
+  publishDate: "2019-08-01T03:34:17.043Z"
+  post: >-
+    That is a lot of code #artichoke #github #patch #win
+- id: 729
+  publishDate: "2019-08-01T03:37:27.828Z"
+  post: >-
+    I built an #artichoke #Wasm playground in the browser
+    https://artichoke.github.io/artichoke/ #win
+- id: 730
+  publishDate: "2019-08-01T08:06:22.808Z"
+  post: >-
+    This was hard to track down: emscripten linker error with a particular
+    function signature #rust #wasm #patch #github #fail
+    https://github.com/emscripten-core/emscripten/issues/9135
+- id: 731
+  publishDate: "2019-08-01T09:24:52.616Z"
+  post: >-
+    I'm trying to improve Regexp performance in #artichoke by using the regex
+    crate instead of oniguruma in some cases. It turns out not to be faster in
+    all cases #patch #rust #fail https://github.com/rust-lang/regex/issues/604
+- id: 732
+  publishDate: "2019-08-06T08:16:41.043Z"
+  post: >-
+    #artichoke is the top trending repo on all of #github right now #win
+- id: 733
+  publishDate: "2019-08-12T09:43:00.326Z"
+  post: >-
+    Reported a build issue on #mruby with gperf 3.1 #ci #build #patch #github
+    #artichoke https://github.com/mruby/mruby/issues/4628
+- id: 734
+  publishDate: "2019-08-12T15:34:50.466Z"
+  post: >-
+    I reported an undocumented panic in #rust that was fixed today #patch #win
+    https://github.com/rust-lang/rust/issues/63456
+- id: 735
+  publishDate: "2019-08-14T09:22:55.863Z"
+  post: >-
+    I added a macro to oniguruma to enable it to build on clang for #wasm
+    targets #patch #github #artichoke https://github.com/kkos/oniguruma/pull/150
+- id: 736
+  publishDate: "2019-08-30T04:39:31.299Z"
+  post: >-
+    Some folks have been contributing #Ruby and #Rust code to #artichoke! #win
+    #github
+- id: 737
+  publishDate: "2019-09-02T07:22:42.053Z"
+  post: >-
+    This was a nasty PR https://github.com/artichoke/artichoke/pull/242
+    #artichoke #fail
+- id: 738
+  publishDate: "2019-09-02T07:23:44.543Z"
+  post: >-
+    I'm separating the core of #artichoke from the #mruby backend specific glue.
+    This step involved reimplementing the converters with the new traits in
+    core.
+- id: 739
+  publishDate: "2019-09-02T07:24:40.471Z"
+  post: >-
+    The converters allow the runtime to convert between Rust and Ruby types.
+    They are the glue that the entire Ruby Core and Ruby Standard Library
+    implementation is built upon. #artichoke
+- id: 740
+  publishDate: "2019-09-02T07:26:40.748Z"
+  post: >-
+    The converters are central to #artichoke. Changing this core abstraction was
+    painful: 84 files changed, 2000 lines added, 2800 lines removed. #fail #git
+- id: 741
+  publishDate: "2019-09-02T07:27:43.551Z"
+  post: >-
+    This change added new functionality: Converting to and from byte and string
+    slices #win #artichoke
+- id: 742
+  publishDate: "2019-09-02T07:28:13.596Z"
+  post: >-
+    Led to reporting this #mruby bug: https://github.com/mruby/mruby/issues/4684
+    #github #fail although I was able to work around it #artichoke
+- id: 743
+  publishDate: "2019-09-02T07:28:48.486Z"
+  post: >-
+    Also added many more converter implementations with macros. There are 988
+    TryConvert implementations. #win #fail #artichoke
+- id: 744
+  publishDate: "2019-09-02T07:30:12.429Z"
+  post: >-
+    Reported a critical bug in rustfmt #fail #github #patch
+    https://github.com/rust-lang/rustfmt/issues/3770
+- id: 745
+  publishDate: "2019-09-17T06:46:47.047Z"
+  post: >-
+    I added a feature to rust-bindgen to make a dependency optional to make the
+    build lighter #github #patch
+    https://github.com/rust-lang/rust-bindgen/pull/1615
+- id: 746
+  publishDate: "2019-12-04T10:05:39.391Z"
+  post: >-
+    Just explicitly shut down the frklft.tires site by doing a terraform
+    destroy. Sad, but that code didn't need to live forever.
+- id: 747
+  publishDate: "2019-12-04T10:06:36.998Z"
+  post: >-
+    I missed a couple of months posting! I was working on my RubyConf talk about
+    #artichoke. slides here: https://artichoke.github.io/rubyconf/2019/
+- id: 748
+  publishDate: "2019-12-04T10:07:05.928Z"
+  post: >-
+    #artichoke RubyConf recording here:
+    https://www.youtube.com/watch?v=QMni48MBqFw
+- id: 749
+  publishDate: "2019-12-04T10:09:21.608Z"
+  post: >-
+    Lol following up on https://hyperbo.la/lifestream/743/ ...
+    https://github.com/artichoke/artichoke/pull/348 disabled most converters to
+    improve compilation times and
+    https://github.com/artichoke/artichoke/pull/397 added them back behind a
+    feature
+- id: 750
+  publishDate: "2019-12-21T16:37:16.945Z"
+  post: >-
+    Nothing like a little build breakage to start the weekend
+    https://github.com/artichoke/artichoke/pull/417 #artichoke #fail
+- id: 751
+  publishDate: "2020-01-18T03:14:56.722Z"
+  post: >-
+    Pushing errors to the edge and forcing callers to handle them makes for
+    better code #artichoke https://github.com/artichoke/artichoke/pull/434
+- id: 752
+  publishDate: "2020-03-07T01:05:07.419Z"
+  post: >-
+    hyperbola was down for 26 hours because the CA cert bundle on its backing
+    RDS instance was not rotated before the 2015 bundle expired #fail #outage
+    #aws
+- id: 753
+  publishDate: "2020-03-16T00:15:44.742Z"
+  post: >-
+    I've been absent from the lifestream for a bit. I've been busy implementing!
+- id: 754
+  publishDate: "2020-03-16T00:16:41.041Z"
+  post: >-
+    Migrated all #artichoke CI to GitHub Actions #github #win Jobs and workflows
+    are so much easier to reason about. And it's free 💪
+- id: 755
+  publishDate: "2020-03-16T00:17:50.643Z"
+  post: >-
+    I contributed a feature to #rust! Added an implementation to allow turning a
+    &mut str into a String using the standard From trait #win #patch
+    https://github.com/rust-lang/rust/pull/69661
+- id: 757
+  publishDate: "2020-03-16T00:19:00.228Z"
+  post: >-
+    I published my first #rust crate (and package of any kind, ever)! rand_mt is
+    a fork of an existing Mersenne Twister crate which adds compatibility with
+    the latest rand_core and makes it no_std #patch
+    https://crates.io/crates/rand_mt #patch
