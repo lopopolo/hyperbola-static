@@ -6,6 +6,7 @@
     bright side, I'm using mysql now. #linux #fail
 - id: 2
   publishDate: "2010-12-21T06:09:18Z"
+  image: "lifestream/3e2fc1e601724a2e9244734b57f056a9.png"
   post: >-
     props to matt goral for giving me some tips on how to make my logo better.
     this is the tweaked version.
@@ -188,10 +189,12 @@
     wrote my first MapReduce job today!
 - id: 42
   publishDate: "2011-07-04T04:37:56Z"
+  image: "lifestream/fe05086a45be43c8ac41265e874efeb4.jpg"
   post: >-
     it's a kitty!
 - id: 43
   publishDate: "2011-07-09T03:55:19Z"
+  image: "lifestream/e3e4d8bf9f6543848991ce813964b1ae.png"
   post: >-
     rebased some already pushed commits to clean up my history and forced the
     push. I feel so dirty. #git #fail
@@ -248,6 +251,7 @@
     to a question
 - id: 55
   publishDate: "2011-07-16T01:33:59Z"
+  image: "lifestream/eb860cf17c8a4f888c6d01eba0bf17dc.png"
   post: >-
     My new favicon welcomes my site to 1996 #itsgreattobehere #fail
 - id: 56
@@ -413,6 +417,7 @@
     a bumpin term
 - id: 90
   publishDate: "2011-09-01T04:10:43Z"
+  image: "lifestream/71b385ad3504400495ec07073cbb615d.jpg"
   post: >-
     I remember when I wanted one of these #sonymylo
 - id: 91
@@ -589,6 +594,7 @@
     #accomplisment
 - id: 126
   publishDate: "2011-11-29T07:21:48Z"
+  image: "lifestream/f295fd1b536b409fbc191c80338b9ca8.png"
   post: >-
     Best commit message ever #git #win
 - id: 127
@@ -664,6 +670,7 @@
     different, I love it though. I'll get used to it. Also, Inconsolata rocks.
 - id: 142
   publishDate: "2011-12-28T08:28:42Z"
+  image: "lifestream/3ed736a2f5ab41baa69dc9d243139b26.png"
   post: >-
     you can see the xcode in my eyes ... #allidoiscode
 - id: 143
@@ -683,6 +690,7 @@
     #interpreter
 - id: 146
   publishDate: "2012-01-05T01:41:19Z"
+  image: "lifestream/b051d72b97ee489c86b593ba96c70fb9.png"
   post: >-
     My most frequently used commands on my laptop
 - id: 147
@@ -819,6 +827,7 @@
     This means files written by them always end in a newline. #learnsomethingnew
 - id: 173
   publishDate: "2012-03-01T18:05:34Z"
+  image: "lifestream/1ec683c6e9b9445da3480edc05ca5ed8.png"
   post: >-
     Cute ad on stackoverflow. It reads "<heart> Your Job" #adtargeted
     (apparently my db doesn't like unicode #fail)
@@ -895,6 +904,7 @@
     running about 700 threads #java #fail
 - id: 188
   publishDate: "2012-04-12T06:29:25Z"
+  image: "lifestream/852c9f28074846ce8fb14f2b99f8888d.png"
   post: >-
     I wanna give a big shoutout to the #java jvisualvm, without whom figuring
     out my perf problems would have been much harder
@@ -915,6 +925,7 @@
     https://chrome.google.com/webstore/detail/pnhechapfaindjhompbnflcldabbghjo/details
 - id: 192
   publishDate: "2012-05-02T01:31:59Z"
+  image: "lifestream/7eb7bf5c383b400b85c2727642abd877.png"
   post: >-
     Running experiments. It's been 9 hours now. #thesis2012
 - id: 193
@@ -950,6 +961,7 @@
     winner
 - id: 199
   publishDate: "2012-05-24T23:53:29Z"
+  image: "lifestream/9e45387eb33741cb9a82b4e010052fa2.png"
   post: >-
     #versioncontrol, or the lack thereof. This was my first major software
     project. I was a junior in high school. I was making a symbolic math thing.
@@ -1092,6 +1104,7 @@
     couple hours. Mostly dealt with deprecated APIs and new template tag syntax
 - id: 232
   publishDate: "2013-06-28T13:07:22Z"
+  image: "lifestream/a086b345caef4e2eb457352e02d5a08b.png"
   post: >-
     Hello #nginx. Goodbye #apache
 - id: 233
@@ -1124,6 +1137,7 @@
     #concurrency from exceeding 100 connections #jetty #linux
 - id: 239
   publishDate: "2013-09-23T04:07:18Z"
+  image: "lifestream/8bc8e3806c10495282e49993b05a6e42.jpg"
   post: >-
     On stage at #BoxWorks ... metadata launched #Box #gocloud
 - id: 240
@@ -1158,6 +1172,7 @@
     ExecutorServices instead #scala #box #metadata
 - id: 246
   publishDate: "2013-11-30T22:45:06Z"
+  image: "lifestream/10909ce555744e329b85cc1af6a4f690.png"
   post: >-
     I reported this #github #outage #fail
 - id: 247
@@ -1350,6 +1365,7 @@
     60ms server-side latency on the lifestream page now #performance
 - id: 284
   publishDate: "2014-03-27T07:18:40Z"
+  image: "lifestream/bfb13819192543e29b8e6c1a6ba8634c.JPG"
   post: >-
     Killed it at #Box Dev today #metadata
 - id: 285
@@ -1486,6 +1502,7 @@
     Upgrade to Bootstrap 3.3.0 went really smoothly. Everything just worked #win
 - id: 322
   publishDate: "2014-11-13T02:57:07Z"
+  image: "lifestream/a5f024f59bdf4935becb33677c744a05.png"
   post: >-
     I have an album with a non-square album art in #iTunes. The UI renders it 3
     different ways #fail
@@ -1526,6 +1543,7 @@
     OMG #ruby is using 19.22GB of memory executing a one liner #fail
 - id: 330
   publishDate: "2015-02-27T07:42:20Z"
+  image: "lifestream/3d3c9da7d9f644aa931af2c47021565b.png"
   post: >-
     This is how you get a macbook to page like crazy #fail
 - id: 331
@@ -1657,11 +1675,13 @@
     So this is what a real oncall rotation feels like. So many things.
 - id: 358
   publishDate: "2015-08-30T02:21:00Z"
+  image: "lifestream/57c28cb501ac49f1857d5fe05b851b22.png"
   post: >-
     Services team get rekt #oncall pages from 9pm Friday to 8am Saturday ...
     something about the corp dc migration
 - id: 359
   publishDate: "2015-08-30T02:18:38Z"
+  image: "lifestream/cb8001f031f34d5bb423146d3e2faf75.png"
   post: >-
     #quora ahh yes ... database systems
 - id: 360
@@ -1781,6 +1801,7 @@
     the new render hotness. Even feels faster.
 - id: 382
   publishDate: "2015-11-09T06:11:41Z"
+  image: "lifestream/200e8a271b9543799db2bdee87b2de85.png"
   post: >-
     Twitter polls ... lol
     https://twitter.com/p4lindromica/status/659923472936628224
@@ -1796,6 +1817,7 @@
     intent."
 - id: 385
   publishDate: "2015-11-12T06:51:16Z"
+  image: "lifestream/8df8ea530cae464eb7d117c64d822c13.png"
   post: >-
     Did some archeology today to unearth an ancient version of hyperbo.la. Same
     color scheme as today. Yes, there was an assets domain. Had to do forensic
@@ -1852,6 +1874,7 @@
     #performance
 - id: 396
   publishDate: "2015-11-17T08:13:18Z"
+  image: "lifestream/8852749d46a648e58b57fca0f3ce7bd7.png"
   post: >-
     Current prod gunicorn time (measured at nginx) for the lifestream index page
     is 70ms with no partial caching and 40ms with the sidebar cached
@@ -2109,6 +2132,7 @@
     Enabled cloudflare cdn on www.hyperbolacdn.com today. Took 4 clicks. #win
 - id: 449
   publishDate: "2016-11-15T04:09:00.426Z"
+  image: "lifestream/3ac87edcd66942288d0a2b1c7afd851a.png"
   post: >-
     DOMContentLoaded in less than 200ms on lifestream index #performance #cdn
 - id: 450
@@ -2222,6 +2246,7 @@
     https://code.djangoproject.com/ticket/27541
 - id: 471
   publishDate: "2016-12-03T18:53:25.837Z"
+  image: "lifestream/43e124ee42c7460ba1adceb918c1aa16.png"
   post: >-
     Found this in the nginx logs of my wiki in ec2. hackers. #security
 - id: 472
@@ -2303,6 +2328,7 @@
     checked the analytics.
 - id: 487
   publishDate: "2017-05-11T06:25:02.018Z"
+  image: "lifestream/5561e391589a421f80c622a70a4b604d.png"
   post: >-
     It looks like I am a *tad* overprovisioned. brb taking some #downtime to
     downsize my VM
@@ -2406,6 +2432,7 @@
     routing. aka dependency and service injection
 - id: 507
   publishDate: "2017-07-22T09:46:05.494Z"
+  image: "lifestream/0556aafd9f1b42f9839be6d75fcbcce8.png"
   post: >-
     And with post 506, I can now say that hyperbola is hosted on #aws #win
 - id: 508
@@ -2698,6 +2725,7 @@
     https://hyperbo.la/lifestream/51/ #aws
 - id: 560
   publishDate: "2017-11-18T03:54:40.468Z"
+  image: "lifestream/d7d6a9bf8008493bac5b7c8f44a34b15.png"
   post: >-
     Most frequently used commands, redux https://hyperbo.la/lifestream/146/
 - id: 561
@@ -2775,6 +2803,7 @@
     mechanism #win
 - id: 574
   publishDate: "2017-12-21T14:59:14.951Z"
+  image: "lifestream/1763874e59ab4abbb9d88a41177c9ed9.png"
   post: >-
     Baby's first hadoop. Taken from long forgotten code written in 2005 #history
 - id: 575
@@ -3281,6 +3310,7 @@
     #communication #email
 - id: 668
   publishDate: "2019-03-14T07:03:55.885Z"
+  image: "lifestream/bef483dcebce42c9898ec87f7d42b41b.png"
   post: >-
     Deck making for an internal tech talk called "How to Implement the
     Chromecast Protocol in Rust When You Don't Know Rust" #rust futures and impl
@@ -3391,6 +3421,7 @@
     (and hard) things were sys crates, #ci, and TryFrom traits #rust #win #fail
 - id: 688
   publishDate: "2019-05-17T01:35:59.273Z"
+  image: "lifestream/e6623a79a0674897b96fda3d4e53449d.png"
   post: >-
     Excluding generated and vendored sources, ferrocarril is 8700 lines of
     #rust, #c, and #ruby. This is a lot of code. In very uncharacteristic
@@ -3489,6 +3520,7 @@
     https://github.com/lopopolo/ferrocarril/pull/138
 - id: 705
   publishDate: "2019-07-07T19:33:13.709Z"
+  image: "lifestream/dab9dcb721574d3681b281b336bcc260.png"
   post: >-
     #git bisect is why it's important that your repo be buildable at every
     commit. Currently fixing a massive memory leak in ferrocarril #fail
@@ -3613,14 +3645,17 @@
     #Rust I'll try again #ruby #mruby #fail #patch #Wasm
 - id: 727
   publishDate: "2019-08-01T03:33:12.677Z"
+  image: "lifestream/2f6e38b0be4a418ba3a9713504b23f24.png"
   post: >-
     That is a lot of code #artichoke #github #patch #win
 - id: 728
   publishDate: "2019-08-01T03:34:17.043Z"
+  image: "lifestream/5d1356d1e7c4486fab53b43020053383.png"
   post: >-
     That is a lot of code #artichoke #github #patch #win
 - id: 729
   publishDate: "2019-08-01T03:37:27.828Z"
+  image: "lifestream/8976f63e8ded4aa38c964206c6312bf6.png"
   post: >-
     I built an #artichoke #Wasm playground in the browser
     https://artichoke.github.io/artichoke/ #win
@@ -3638,6 +3673,7 @@
     all cases #patch #rust #fail https://github.com/rust-lang/regex/issues/604
 - id: 732
   publishDate: "2019-08-06T08:16:41.043Z"
+  image: "lifestream/d7d0fc81d1dd467c8c0f2e1aaa753322.png"
   post: >-
     #artichoke is the top trending repo on all of #github right now #win
 - id: 733
@@ -3679,6 +3715,7 @@
     implementation is built upon. #artichoke
 - id: 740
   publishDate: "2019-09-02T07:26:40.748Z"
+  image: "lifestream/3a8a46b2b3c94f64b1fea8f183731db3.png"
   post: >-
     The converters are central to #artichoke. Changing this core abstraction was
     painful: 84 files changed, 2000 lines added, 2800 lines removed. #fail #git
