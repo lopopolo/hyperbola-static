@@ -73,8 +73,8 @@
     "dev": "npx webpack-dev-server",
     "dev:open": "npx webpack-dev-server --open",
     "fmt": "npx prettier --write '**/*'",
-    "fmt:md": "npx prettier --prose-wrap always --write '**/*.md' '*.md'",
-    "fmt:yaml": "npx prettier --prose-wrap always --write '**/*.yaml' '*.yaml'",
+    "fmt:md": "npx prettier --prose-wrap always --write '**/*.md'",
+    "fmt:yaml": "npx prettier --prose-wrap always --write '**/*.yaml'",
     "lint:js": "npx eslint --fix ."
   }
 }
