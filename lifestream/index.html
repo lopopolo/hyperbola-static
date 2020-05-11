@@ -13,10 +13,7 @@
 
     <!-- opengraph metadata -->
     <meta property="og:site_name" content="hyperbo.la" />
-    <meta
-      property="og:url"
-      content="https://hyperbo.la/lifestream/"
-    />
+    <meta property="og:url" content="https://hyperbo.la/lifestream/" />
     <meta property="og:image" content="https://hyperbo.la/logo.png" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="hyperbo.la lifestream" />
@@ -25,12 +22,12 @@
       content="Ryan Lopopolo's microblog on hyperbo.la"
     />
 
-    <%%= require('html-loader!../../../partials/favicons.html') %%> <%%=
-    require('html-loader!../../../partials/google-analytics.html') %%>
+    <%%= require('html-loader!../../partials/favicons.html') %%> <%%=
+    require('html-loader!../../partials/google-analytics.html') %%>
   </head>
-  <body class="blog">
+  <body class="lifestream">
     <div class="container mb-5">
-      <%%= require('html-loader!../../../partials/nav.html') %%>
+      <%%= require('html-loader!../../partials/nav.html') %%>
       <div class="card hyperbola-section-title my-3 w-100">
         <div class="card-body">
           <span class="card-title">
@@ -38,9 +35,10 @@
           </span>
         </div>
       </div>
-    <div class="row">
-      <div class="col-md-8"></div>
-      <%%= require('html-loader!../partials/archive.html') %%>
+      <div class="row">
+        <div class="col-md-8"></div>
+        <%%= require('html-loader!../partials/archive.html') %%>
+      </div>
     </div>
   </body>
 </html>
