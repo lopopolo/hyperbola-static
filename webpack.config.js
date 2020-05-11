@@ -10,6 +10,7 @@ const { definer: terraform } = require("./vendor/terraform");
 hljs.registerLanguage("terraform", terraform);
 
 const blog = require("./blog");
+const lifestream = require("./lifestream");
 
 const plugins = [
   new MiniCssExtractPlugin({
@@ -42,6 +43,7 @@ const plugins = [
     },
   }),
   ...blog,
+  ...lifestream,
 ];
 
 module.exports = {
