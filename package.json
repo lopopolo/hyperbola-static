@@ -71,12 +71,10 @@
     }
   },
   "scripts": {
-    "build": "node ./blog/index.js && npm run fmt && npm run fmt:md && npm run fmt:yaml",
+    "build": "node ./blog/index.js && node ./lifestream/index.js && npm run fmt",
     "dev": "npx webpack-dev-server",
     "dev:open": "npx webpack-dev-server --open",
     "fmt": "npx prettier --write '**/*'",
-    "fmt:md": "npx prettier --prose-wrap always --write '**/*.md'",
-    "fmt:yaml": "npx prettier --prose-wrap always --write '**/*.yaml'",
     "lint:js": "npx eslint --fix ."
   }
 }

@@ -11,11 +11,19 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 function buildArchive(db) {
   const posts = [...db];
-  posts.sort((a, b) => moment(a.publishDate).isSameOrBefore(moment(b.publishDate)));
+  posts.sort(
+    (a, b) =>
+      moment.parseZone(b.publishDate).valueOf() -
+      moment.parseZone(a.publishDate).valueOf()
+  );
   const aggregates = new Map();
   for (const post of posts) {
-    const yearKey = moment(post.publishDate).year();
-    const monthKey = moment(post.publishDate).startOf("month").valueOf();
+    const yearKey = moment.parseZone(post.publishDate).utc().year();
+    const monthKey = moment
+      .parseZone(post.publishDate)
+      .utc()
+      .startOf("month")
+      .valueOf();
     if (!aggregates.has(yearKey)) {
       aggregates.set(yearKey, new Map());
     }
@@ -29,7 +37,7 @@ function buildArchive(db) {
   for (const [year, months] of aggregates) {
     const collected = new Map();
     for (const [month, count] of months) {
-      collected.set(moment(month), count);
+      collected.set(moment.utc(month), count);
     }
     archive.set(year, collected);
   }
@@ -43,7 +51,13 @@ async function compileArchivePartial(db) {
       path.resolve(__dirname, "archive.html"),
       "utf8"
     );
-    const partials = path.resolve(__dirname, "..", "src", "lifestream", "posts", "partials");
+    const partials = path.resolve(
+      __dirname,
+      "..",
+      "src",
+      "lifestream",
+      "partials"
+    );
     const out = path.resolve(partials, "archive.html");
     console.log(out);
 
@@ -65,7 +79,14 @@ async function compilePost(post) {
       path.resolve(__dirname, "template.html"),
       "utf8"
     );
-    const posts = path.resolve(__dirname, "..", "src", "blog", "posts", post.id);
+    const posts = path.resolve(
+      __dirname,
+      "..",
+      "src",
+      "blog",
+      "posts",
+      post.id
+    );
     const out = path.resolve(posts, "index.html");
     console.log(out);
 
@@ -87,7 +108,8 @@ async function compileIndex(db, page = 1, pageSize = 20) {
     posts.reverse();
     const slice = paginate(posts, page, pageSize);
     const context = {
-      hasPrevious: slice.currentPage > 1 && slice.currentPage <= slice.totalPages,
+      hasPrevious:
+        slice.currentPage > 1 && slice.currentPage <= slice.totalPages,
       previous: slice.currentPage - 1,
       hasNext: slice.currentPage >= 1 && slice.currentPage < slice.totalPages,
       next: slice.currentPage + 1,
@@ -99,13 +121,18 @@ async function compileIndex(db, page = 1, pageSize = 20) {
       "utf8"
     );
     const indexes = path.resolve(__dirname, "..", "src", "lifestream/index/");
-    const out = path.resolve(indexes, `page-${String(page).padStart(4, "0")}.html`);
+    const out = path.resolve(
+      indexes,
+      `page-${String(page).padStart(4, "0")}.html`
+    );
 
     const rendered = ejs.render(template, context);
     await fs.mkdir(indexes, { recursive: true });
     await fs.writeFile(out, rendered);
 
-    return Promise.resolve(`lifestream/index/page-${String(page).padStart(4, "0")}.html`);
+    return Promise.resolve(
+      `lifestream/index/page-${String(page).padStart(4, "0")}.html`
+    );
   } catch (err) {
     return Promise.reject(err);
   }
@@ -114,7 +141,10 @@ async function compileIndex(db, page = 1, pageSize = 20) {
 async function runner() {
   const timer = setInterval(() => {}, 100);
   try {
-    const rawDb = await fs.readFile(path.resolve(__dirname, "posts.yaml"), "utf8");
+    const rawDb = await fs.readFile(
+      path.resolve(__dirname, "posts.yaml"),
+      "utf8"
+    );
     const db = parser.safeLoad(rawDb, { schema: parser.FAILSAFE_SCHEMA });
     await compileArchivePartial(db);
     await compileIndex(db);
