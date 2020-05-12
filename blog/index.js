@@ -82,17 +82,18 @@ async function compilePost(slug) {
       path.resolve(__dirname, "template.html"),
       "utf8"
     );
-    const postDir = path.resolve(__dirname, "..", "src", "blog", "posts", slug);
-    await fs.mkdir(postDir, { recursive: true });
-    const mdOut = path.resolve(postDir, "post.md");
-    console.log(mdOut);
-    await fs.writeFile(mdOut, data.body);
+    const post = path.resolve(__dirname, "..", "src", "blog", "posts", slug);
+    const markdown = path.resolve(post, "post.md");
+    const out = path.resolve(post, "index.html");
+
     const context = extractTemplateParams(slug, data.attributes);
     const rendered = ejs.render(template, context);
-    const templateOut = path.resolve(postDir, "index.html");
-    console.log(templateOut);
-    await fs.writeFile(templateOut, rendered);
+
+    await fs.mkdir(post, { recursive: true });
+    await fs.writeFile(markdown, data.body);
+    await fs.writeFile(out, rendered);
     await copyPostAssets(slug);
+
     return Promise.resolve(slug);
   } catch (err) {
     return Promise.reject(err);
@@ -138,20 +139,22 @@ async function compileIndex(posts) {
         return Promise.resolve([slug, data]);
       })
     );
+
     const template = await fs.readFile(
       path.resolve(__dirname, "index.html"),
       "utf8"
     );
-    const outDir = path.resolve(__dirname, "..", "src", "blog");
-    await fs.mkdir(outDir, { recursive: true });
+    const index = path.resolve(__dirname, "..", "src", "blog", "index");
+    const out = path.resolve(index, "index.html");
+
     const context = postMetadata.map(
       ([slug, data]) => extractTemplateParams(slug, data.attributes).post
     );
-    console.log(context);
     const rendered = ejs.render(template, { posts: context });
-    const templateOut = path.resolve(outDir, "index.html");
-    console.log(templateOut);
-    await fs.writeFile(templateOut, rendered);
+
+    await fs.mkdir(index, { recursive: true });
+    await fs.writeFile(out, rendered);
+
     return Promise.resolve(posts);
   } catch (err) {
     return Promise.reject(err);
@@ -178,7 +181,7 @@ if (require.main === module) {
 
 module.exports = [
   new HtmlWebPackPlugin({
-    template: "blog/index.html",
+    template: "blog/index/index.html",
     filename: "w/index.html",
     posts: blogPosts,
     minify: {
