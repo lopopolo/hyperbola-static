@@ -17,3 +17,6 @@ target/
 
 **/vendor/*
 !**/vendor/*.md
+
+src/lifestream/**/*
+src/blog/**/*
