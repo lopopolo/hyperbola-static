@@ -115,6 +115,7 @@ module.exports = {
           {
             loader: "markdown-loader",
             options: {
+              langPrefix: "hljs language-",
               highlight: (code, lang) => {
                 switch (lang) {
                   case null:
