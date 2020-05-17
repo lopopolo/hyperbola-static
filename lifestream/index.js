@@ -7,7 +7,13 @@ const ejs = require("ejs");
 const parser = require("js-yaml");
 const moment = require("moment");
 const paginate = require("paginate-array");
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+
+const linkify = require("linkifyjs");
+const linkifyHtml = require("linkifyjs/html");
+const linkifyHashtag = require("linkifyjs/plugins/hashtag");
+linkifyHashtag(linkify);
+
+const PAGE_SIZE = 20;
 
 function buildArchive(db) {
   const posts = [...db];
@@ -73,30 +79,48 @@ async function compileArchivePartial(db) {
   }
 }
 
-async function compilePost(post) {
+async function compilePosts(db) {
   try {
+    const posts = [...db];
+    posts.sort((a, b) => b.id - a.id); // decending post ID order
+
     const template = await fs.readFile(
-      path.resolve(__dirname, "template.html"),
+      path.resolve(__dirname, "index.html"),
       "utf8"
     );
-    const posts = path.resolve(
-      __dirname,
-      "..",
-      "src",
-      "blog",
-      "posts",
-      post.id
-    );
-    const out = path.resolve(posts, "index.html");
-    console.log(out);
+    const base = path.resolve(__dirname, "..", "src", "lifestream", "posts");
+    await fs.mkdir(base, { recursive: true });
 
-    const context = post;
-    const rendered = ejs.render(template, context);
+    const promises = posts.map(async (post, index, storage) => {
+      const context = {
+        postAbsoluteUrl(item) {
+          return `/lifestream/${item.id}/`;
+        },
+        hasOlder() {
+          return storage[index - 1] !== undefined;
+        },
+        older() {
+          return this.postAbsoluteUrl(storage[index - 1]);
+        },
+        hasNewer() {
+          return storage[index + 1] !== undefined;
+        },
+        newer() {
+          return this.postAbsoluteUrl(storage[index + 1]);
+        },
+        posts: [post],
+      };
+      const postBase = path.resolve(base, post.id);
+      const out = path.resolve(postBase, "index.html");
 
-    await fs.mkdir(posts, { recursive: true });
-    await fs.writeFile(out, rendered);
+      const rendered = ejs.render(template, context);
 
-    return Promise.resolve(post.id);
+      await fs.mkdir(postBase, { recursive: true });
+      await fs.writeFile(out, rendered);
+      return [out, "lifestream/index.html"];
+    });
+
+    return Promise.all(promises);
   } catch (err) {
     return Promise.reject(err);
   }
@@ -105,14 +129,25 @@ async function compilePost(post) {
 async function compileIndex(db, page = 1, pageSize = 20) {
   try {
     const posts = [...db];
-    posts.reverse();
+    posts.sort((a, b) => b.id - a.id); // decending post ID order
+
     const slice = paginate(posts, page, pageSize);
     const context = {
-      hasPrevious:
-        slice.currentPage > 1 && slice.currentPage <= slice.totalPages,
-      previous: slice.currentPage - 1,
-      hasNext: slice.currentPage >= 1 && slice.currentPage < slice.totalPages,
-      next: slice.currentPage + 1,
+      postAbsoluteUrl(item) {
+        return `/lifestream/${item.id}/`;
+      },
+      hasOlder() {
+        return slice.currentPage < slice.totalPages;
+      },
+      older() {
+        return `/lifestream/page/${slice.currentPage + 1}/`;
+      },
+      hasNewer() {
+        return slice.currentPage > 1;
+      },
+      newer() {
+        return `/lifestream/page/${slice.currentPage - 1}/`;
+      },
       posts: slice.data,
     };
 
@@ -120,19 +155,44 @@ async function compileIndex(db, page = 1, pageSize = 20) {
       path.resolve(__dirname, "index.html"),
       "utf8"
     );
-    const indexes = path.resolve(__dirname, "..", "src", "lifestream/index/");
+    const base = path.resolve(__dirname, "..", "src", "lifestream", "index");
     const out = path.resolve(
-      indexes,
+      base,
       `page-${String(page).padStart(4, "0")}.html`
     );
 
     const rendered = ejs.render(template, context);
-    await fs.mkdir(indexes, { recursive: true });
+    await fs.mkdir(base, { recursive: true });
     await fs.writeFile(out, rendered);
 
-    return Promise.resolve(
-      `lifestream/index/page-${String(page).padStart(4, "0")}.html`
-    );
+    if (page === 1) {
+      return Promise.resolve([out, "lifestream/index.html"]);
+    }
+    return Promise.resolve([out, `lifestream/page/${page}/index.html`]);
+  } catch (err) {
+    return Promise.reject(err);
+  }
+}
+
+async function copyAssets(db) {
+  try {
+    const posts = [...db];
+
+    const base = path.resolve(__dirname, "..", "src", "lifestream", "assets");
+    await fs.mkdir(base, { recursive: true });
+
+    for (const post of posts) {
+      if (post.image === undefined) {
+        continue;
+      }
+      const filename = path.basename(post.image);
+      const out = path.resolve(base, filename);
+
+      const source = path.resolve(__dirname, post.image);
+
+      await fs.copyFile(source, out);
+    }
+    return Promise.resolve(true);
   } catch (err) {
     return Promise.reject(err);
   }
@@ -146,8 +206,70 @@ async function runner() {
       "utf8"
     );
     const db = parser.safeLoad(rawDb, { schema: parser.FAILSAFE_SCHEMA });
+
+    const out = [
+      `const HtmlWebPackPlugin = require("html-webpack-plugin");`,
+      "",
+      "module.exports = () => [",
+    ];
+
+    await copyAssets(db);
+
+    const hashtags = new Map();
+
+    for (const post of db) {
+      if (post.image) {
+        post.image = `../assets/${path.basename(post.image)}`;
+      }
+      for (const link of linkify.find(post.post)) {
+        if (link.type === "hashtag") {
+          let hashtag = link.value;
+          if (hashtag.startsWith("#")) {
+            hashtag = hashtag.slice(1);
+          }
+          if (!hashtags.has(hashtag)) {
+            hashtags.set(hashtag, []);
+          }
+          const set = hashtags.get(hashtag);
+          if (!set.includes(post.id)) {
+            set.push(post.id);
+          }
+          hashtags.set(hashtag, set);
+        }
+      }
+      post.post = linkifyHtml(post.post, {
+        className: "",
+        defaultProtocol: "https",
+        formatHref: {
+          hashtag: function(value) {
+            let hashtag = value;
+            if (hashtag.startsWith("#")) {
+              hashtag = hashtag.slice(1);
+            }
+            return `/lifestream/hashtag/${hashtag}/`;
+          }
+        },
+      });
+    }
+
     await compileArchivePartial(db);
-    await compileIndex(db);
+
+    // Feed pages
+    for (let page = 0; page * PAGE_SIZE < db.length; page += 1) {
+      const [template, filename] = await compileIndex(db, page + 1, PAGE_SIZE);
+      out.push(htmlPlugin(template, filename));
+    }
+
+    // Post pages
+    const posts = await compilePosts(db);
+    for (const [template, filename] of posts) {
+      //out.push(htmlPlugin(template, filename));
+    }
+
+    out.push("];");
+
+    const config = path.resolve(__dirname, "..", "src", "lifestream", "index.js");
+    await fs.writeFile(config, out.join("\n"));
   } catch (err) {
     console.error("Error: Unhandled exception");
     console.error(err);
@@ -161,16 +283,17 @@ if (require.main === module) {
   runner();
 }
 
-module.exports = [
-  new HtmlWebPackPlugin({
-    template: "lifestream/index/page-0001.html",
-    filename: "lifestream/index.html",
-    minify: {
-      collapseWhitespace: true,
-      minifyCSS: true,
-      minifyJS: true,
-      removeComments: true,
-      useShortDoctype: true,
-    },
-  }),
-];
+const htmlPlugin = (template, filename) =>
+  [
+    "  new HtmlWebPackPlugin({",
+    `    template: "${template}",`,
+    `    filename: "${filename}",`,
+    "    minify: {",
+    "      collapseWhitespace: true,",
+    "      minifyCSS: true,",
+    "      minifyJS: true,",
+    "      removeComments: true,",
+    "      useShortDoctype: true,",
+    "    },",
+    "  }),",
+  ].join("\n");

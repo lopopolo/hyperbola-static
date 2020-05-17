@@ -179,7 +179,7 @@ if (require.main === module) {
   runner();
 }
 
-module.exports = [
+module.exports = () => [
   new HtmlWebPackPlugin({
     template: "blog/index/index.html",
     filename: "w/index.html",
