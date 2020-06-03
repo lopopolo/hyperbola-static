@@ -22,12 +22,12 @@
       content="Ryan Lopopolo's microblog on hyperbo.la"
     />
 
-    <%%= require('html-loader!../../partials/favicons.html') %%> <%%=
-    require('html-loader!../../partials/google-analytics.html') %%>
+    <%%= require('html-loader!../../../partials/favicons.html') %%> <%%=
+    require('html-loader!../../../partials/google-analytics.html') %%>
   </head>
   <body class="lifestream">
     <div class="container mb-5">
-      <%%= require('html-loader!../../partials/nav.html') %%>
+      <%%= require('html-loader!../../../partials/nav.html') %%>
       <div class="card hyperbola-section-title my-3 w-100">
         <div class="card-body">
           <span class="card-title">
@@ -43,8 +43,8 @@
               <img
                 class="card-img-top img-thumbnail"
                 alt="Photo for post <%= post.id %>"
-                src="<%%= require('responsive-loader!<%= post.image %>?sizes[]=500,sizes[]=1000,sizes[]=1500').src %%>"
-                srcset="<%%= require('responsive-loader!<%= post.image %>?sizes[]=500,sizes[]=1000,sizes[]=1500').srcSet %%>"
+                src="<%%= require('responsive-loader!../<%= post.image %>?sizes[]=500,sizes[]=1000,sizes[]=1500').src %%>"
+                srcset="<%%= require('responsive-loader!../<%= post.image %>?sizes[]=500,sizes[]=1000,sizes[]=1500').srcSet %%>"
               />
             <% } %>
             <div class="card-body">
@@ -68,7 +68,7 @@
             <% } %>
           </div>
         </div>
-        <%%= require('html-loader!../partials/archive.html') %%>
+        <%%= require('html-loader!../../partials/archive.html') %%>
       </div>
     </div>
   </body>

@@ -85,7 +85,7 @@ async function compilePosts(db) {
     posts.sort((a, b) => b.id - a.id); // decending post ID order
 
     const template = await fs.readFile(
-      path.resolve(__dirname, "index.html"),
+      path.resolve(__dirname, "post.html"),
       "utf8"
     );
     const base = path.resolve(__dirname, "..", "src", "lifestream", "posts");
@@ -95,6 +95,12 @@ async function compilePosts(db) {
       const context = {
         postAbsoluteUrl(item) {
           return `/lifestream/${item.id}/`;
+        },
+        postDatestamp(item) {
+          return moment.parseZone(item.publishDate).utc().format("YYYY-MM-DDTHH:mm:ssZ");
+        },
+        postDateDisplay(item) {
+          return moment.parseZone(item.publishDate).utc().format("HH:mm utc MMM DD YYYY").toLowerCase();
         },
         hasOlder() {
           return storage[index - 1] !== undefined;
@@ -117,7 +123,7 @@ async function compilePosts(db) {
 
       await fs.mkdir(postBase, { recursive: true });
       await fs.writeFile(out, rendered);
-      return [out, "lifestream/index.html"];
+      return [out, `lifestream/${String(post.id)}/index.html`];
     });
 
     return Promise.all(promises);
@@ -135,6 +141,12 @@ async function compileIndex(db, page = 1, pageSize = 20) {
     const context = {
       postAbsoluteUrl(item) {
         return `/lifestream/${item.id}/`;
+      },
+      postDatestamp(item) {
+        return moment.parseZone(item.publishDate).utc().format("YYYY-MM-DDTHH:mm:ssZ");
+      },
+      postDateDisplay(item) {
+        return moment.parseZone(item.publishDate).utc().format("HH:mm utc MMM DD YYYY").toLowerCase();
       },
       hasOlder() {
         return slice.currentPage < slice.totalPages;
@@ -263,7 +275,7 @@ async function runner() {
     // Post pages
     const posts = await compilePosts(db);
     for (const [template, filename] of posts) {
-      //out.push(htmlPlugin(template, filename));
+      out.push(htmlPlugin(template, filename));
     }
 
     out.push("];");
