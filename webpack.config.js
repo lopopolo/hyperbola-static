@@ -10,6 +10,7 @@ const { definer: terraform } = require("./vendor/terraform");
 hljs.registerLanguage("terraform", terraform);
 
 const blog = require("./blog");
+const lifestream = require("./src/lifestream");
 
 const plugins = [
   new MiniCssExtractPlugin({
@@ -41,7 +42,8 @@ const plugins = [
       useShortDoctype: true,
     },
   }),
-  ...blog,
+  ...blog(),
+  ...lifestream(),
 ];
 
 module.exports = {
@@ -113,6 +115,7 @@ module.exports = {
           {
             loader: "markdown-loader",
             options: {
+              langPrefix: "hljs language-",
               highlight: (code, lang) => {
                 switch (lang) {
                   case null:

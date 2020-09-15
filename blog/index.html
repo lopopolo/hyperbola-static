@@ -19,12 +19,12 @@
       content="Ryan Lopopolo's blog on hyperbo.la"
     />
 
-    <%%= require('html-loader!../partials/favicons.html') %%> <%%=
-    require('html-loader!../partials/google-analytics.html') %%>
+    <%%= require('html-loader!../../partials/favicons.html') %%> <%%=
+    require('html-loader!../../partials/google-analytics.html') %%>
   </head>
   <body class="blog">
     <div class="container mb-5">
-      <%%= require('html-loader!../partials/nav.html') %%>
+      <%%= require('html-loader!../../partials/nav.html') %%>
       <div class="card hyperbola-section-title my-3 w-100">
         <div class="card-body">
           <span class="card-title">
@@ -32,7 +32,7 @@
           </span>
         </div>
       </div>
-      <% for (var i = 0; i < posts.length; i++) { %> <% post = posts[i] %>
+      <% for (const post of posts) { %>
       <div class="row">
         <div class="col-lg-9 mx-auto">
           <div class="card mb-3">
