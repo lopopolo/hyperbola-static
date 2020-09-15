@@ -38,16 +38,12 @@
           <div class="card mb-3">
             <div class="card-body">
               <h2 class="card-title">
-                <a href="<%= post.absoluteUrl %>">
-                  <%= post.title %>
-                </a>
+                <a href="<%= post.absoluteUrl %>"> <%= post.title %> </a>
               </h2>
               <h6 class="card-subtitle mb-2 text-muted">
                 <a href="/contact/">Ryan Lopopolo</a> | <%= post.publishDate %>
               </h6>
-              <div class="card-text">
-                <%= post.summary %>
-              </div>
+              <div class="card-text"><%= post.summary %></div>
             </div>
           </div>
         </div>

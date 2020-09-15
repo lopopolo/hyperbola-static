@@ -7,9 +7,7 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
-    <title>
-      hyperbo.la :: lifestream
-    </title>
+    <title>hyperbo.la :: lifestream</title>
 
     <!-- opengraph metadata -->
     <meta property="og:site_name" content="hyperbo.la" />
@@ -37,15 +35,15 @@
       </div>
       <div class="row">
         <div class="col-md-8">
-        <% for (const post of posts) { %>
+          <% for (const post of posts) { %>
           <div class="card mb-3 rounded">
             <% if (post.image) { %>
-              <img
-                class="card-img-top img-thumbnail"
-                alt="Photo for post <%= post.id %>"
-                src="<%%= require('responsive-loader!<%= post.image %>?sizes[]=500,sizes[]=1000,sizes[]=1500').src %%>"
-                srcset="<%%= require('responsive-loader!<%= post.image %>?sizes[]=500,sizes[]=1000,sizes[]=1500').srcSet %%>"
-              />
+            <img
+              class="card-img-top img-thumbnail"
+              alt="Photo for post <%= post.id %>"
+              src="<%%= require('responsive-loader!<%= post.image %>?sizes[]=500,sizes[]=1000,sizes[]=1500').src %%>"
+              srcset="<%%= require('responsive-loader!<%= post.image %>?sizes[]=500,sizes[]=1000,sizes[]=1500').srcSet %%>"
+            />
             <% } %>
             <div class="card-body">
               <small class="card-subtitle">
@@ -57,7 +55,7 @@
               <p class="card-text lifestream-content"><%- post.post %></p>
             </div>
           </div>
-        <% } %>
+          <% } %>
           <div class="d-flex flex-row justify-content-between">
             <% if (hasNewer()) { %>
             <a href="<%= newer() %>">&laquo; newer</a>

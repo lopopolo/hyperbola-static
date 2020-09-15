@@ -97,10 +97,17 @@ async function compilePosts(db) {
           return `/lifestream/${item.id}/`;
         },
         postDatestamp(item) {
-          return moment.parseZone(item.publishDate).utc().format("YYYY-MM-DDTHH:mm:ssZ");
+          return moment
+            .parseZone(item.publishDate)
+            .utc()
+            .format("YYYY-MM-DDTHH:mm:ssZ");
         },
         postDateDisplay(item) {
-          return moment.parseZone(item.publishDate).utc().format("HH:mm utc MMM DD YYYY").toLowerCase();
+          return moment
+            .parseZone(item.publishDate)
+            .utc()
+            .format("HH:mm utc MMM DD YYYY")
+            .toLowerCase();
         },
         hasOlder() {
           return storage[index - 1] !== undefined;
@@ -143,10 +150,17 @@ async function compileIndex(db, page = 1, pageSize = 20) {
         return `/lifestream/${item.id}/`;
       },
       postDatestamp(item) {
-        return moment.parseZone(item.publishDate).utc().format("YYYY-MM-DDTHH:mm:ssZ");
+        return moment
+          .parseZone(item.publishDate)
+          .utc()
+          .format("YYYY-MM-DDTHH:mm:ssZ");
       },
       postDateDisplay(item) {
-        return moment.parseZone(item.publishDate).utc().format("HH:mm utc MMM DD YYYY").toLowerCase();
+        return moment
+          .parseZone(item.publishDate)
+          .utc()
+          .format("HH:mm utc MMM DD YYYY")
+          .toLowerCase();
       },
       hasOlder() {
         return slice.currentPage < slice.totalPages;
@@ -253,13 +267,13 @@ async function runner() {
         className: "",
         defaultProtocol: "https",
         formatHref: {
-          hashtag: function(value) {
+          hashtag: function (value) {
             let hashtag = value;
             if (hashtag.startsWith("#")) {
               hashtag = hashtag.slice(1);
             }
             return `/lifestream/hashtag/${hashtag}/`;
-          }
+          },
         },
       });
     }
@@ -280,7 +294,13 @@ async function runner() {
 
     out.push("];");
 
-    const config = path.resolve(__dirname, "..", "src", "lifestream", "index.js");
+    const config = path.resolve(
+      __dirname,
+      "..",
+      "src",
+      "lifestream",
+      "index.js"
+    );
     await fs.writeFile(config, out.join("\n"));
   } catch (err) {
     console.error("Error: Unhandled exception");
