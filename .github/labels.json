@@ -80,6 +80,26 @@
     "description": "Call for participation: writing correctness tests."
   },
   {
+    "name": "P-blog",
+    "color": "28dcdc",
+    "description": "Site section: Blog."
+  },
+  {
+    "name": "P-contact",
+    "color": "28dcdc",
+    "description": "Site section: Contact page."
+  },
+  {
+    "name": "P-frontpage",
+    "color": "28dcdc",
+    "description": "Site section: Front page."
+  },
+  {
+    "name": "P-lifestream",
+    "color": "28dcdc",
+    "description": "Site section: Lifestream."
+  },
+  {
     "name": "S-blocked",
     "color": "d3dddd",
     "description": "Status: marked as blocked ❌ on something else such as other implementation work."
