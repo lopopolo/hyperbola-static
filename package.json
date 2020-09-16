@@ -36,7 +36,7 @@
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
     "image-webpack-loader": "^6.0.0",
-    "jimp": "^0.10.3",
+    "jimp": "^0.16.1",
     "js-yaml": "^3.14.0",
     "linkifyjs": "^2.1.9",
     "markdown-loader": "^5.1.0",
