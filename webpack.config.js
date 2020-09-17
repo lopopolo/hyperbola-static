@@ -9,7 +9,7 @@ const hljs = require("highlight.js");
 const { definer: terraform } = require("./vendor/terraform");
 hljs.registerLanguage("terraform", terraform);
 
-const blog = require("./blog");
+const blog = require("./webpack.config.blog");
 const lifestream = require("./src/lifestream");
 
 const plugins = [

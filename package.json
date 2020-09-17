@@ -18,6 +18,10 @@
     "Ryan Lopopolo <rjl@hyperbo.la> (https://hyperbo.la/)"
   ],
   "repository": "github:lopopolo/hyperbola-static",
+  "main": "./index.js",
+  "bin": {
+    "generate": "./bin/generate.js"
+  },
   "dependencies": {
     "bootstrap": "^4.5.0",
     "jquery": "^3.5.1",
