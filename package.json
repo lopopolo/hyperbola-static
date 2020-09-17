@@ -35,7 +35,7 @@
     "highlight.js": "^10.0.3",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
-    "image-webpack-loader": "^7.0.0",
+    "image-webpack-loader": "^7.0.1",
     "jimp": "^0.16.1",
     "js-yaml": "^3.14.0",
     "linkifyjs": "^2.1.9",
