@@ -2,14 +2,14 @@
   <h2>Archive</h2>
   <% for (const [year, months] of archive) { %>
   <h3><%= year %></h3>
-  <% for (const [month, count] of months) { %>
+  <% for (const [month, posts] of months) { %>
   <div class="d-flex flex-row justify-content-between mb-1">
     <a
       href="/lifestream/archive/<%= month.format('YYYY') %>/<%= month.format('MM') %>/"
     >
       <%= month.format('MMMM') %>
     </a>
-    <span><%= count %></span>
+    <span><%= posts.length %></span>
   </div>
   <% } %> <% } %>
 </div>

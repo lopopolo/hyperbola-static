@@ -35,9 +35,9 @@ function buildArchive(db) {
     }
     const year = aggregates.get(yearKey);
     if (!year.has(monthKey)) {
-      year.set(monthKey, 0);
+      year.set(monthKey, []);
     }
-    year.set(monthKey, 1 + year.get(monthKey));
+    year.get(monthKey).push(post);
   }
   const archive = new Map();
   for (const [year, months] of aggregates) {
@@ -166,13 +166,18 @@ async function compileIndex(db, page = 1, pageSize = 20) {
         return slice.currentPage < slice.totalPages;
       },
       older() {
-        return `/lifestream/page/${slice.currentPage + 1}/`;
+        const next = slice.currentPage + 1;
+        return `/lifestream/page/${next}/`;
       },
       hasNewer() {
         return slice.currentPage > 1;
       },
       newer() {
-        return `/lifestream/page/${slice.currentPage - 1}/`;
+        const prev = slice.currentPage - 1;
+        if (prev < 2) {
+          return `/lifestream/`;
+        }
+        return `/lifestream/page/${prev}/`;
       },
       posts: slice.data,
     };
@@ -195,6 +200,79 @@ async function compileIndex(db, page = 1, pageSize = 20) {
       return Promise.resolve([out, "lifestream/index.html"]);
     }
     return Promise.resolve([out, `lifestream/page/${page}/index.html`]);
+  } catch (err) {
+    return Promise.reject(err);
+  }
+}
+
+async function compileArchiveIndex(year, month, db, page = 1, pageSize = 20) {
+  try {
+    const monthSlug = month.format("MM");
+    const posts = [...db];
+    posts.sort((a, b) => b.id - a.id); // decending post ID order
+
+    const slice = paginate(posts, page, pageSize);
+    const context = {
+      postAbsoluteUrl(item) {
+        return `/lifestream/${item.id}/`;
+      },
+      postDatestamp(item) {
+        return moment
+          .parseZone(item.publishDate)
+          .utc()
+          .format("YYYY-MM-DDTHH:mm:ssZ");
+      },
+      postDateDisplay(item) {
+        return moment
+          .parseZone(item.publishDate)
+          .utc()
+          .format("HH:mm utc MMM DD YYYY")
+          .toLowerCase();
+      },
+      hasOlder() {
+        return slice.currentPage < slice.totalPages;
+      },
+      older() {
+        const next = slice.currentPage + 1;
+        return `/lifestream/archive/${year}/${monthSlug}/page/${next}/`;
+      },
+      hasNewer() {
+        return slice.currentPage > 1;
+      },
+      newer() {
+        const prev = slice.currentPage - 1;
+        if (prev < 2) {
+          return `/lifestream/archive/${year}/${monthSlug}/`;
+        }
+        return `/lifestream/archive/${year}/${monthSlug}/page/${prev}/`;
+      },
+      posts: slice.data,
+    };
+
+    const template = await fs.readFile(
+      path.resolve(__dirname, "index.html"),
+      "utf8"
+    );
+    const base = path.resolve(__dirname, "..", "src", "lifestream", "archive");
+    const out = path.resolve(
+      base,
+      `archive-${year}-${monthSlug}-${String(page).padStart(4, "0")}.html`
+    );
+
+    const rendered = ejs.render(template, context);
+    await fs.mkdir(base, { recursive: true });
+    await fs.writeFile(out, rendered);
+
+    if (page === 1) {
+      return Promise.resolve([
+        out,
+        `lifestream/archive/${year}/${monthSlug}/index.html`,
+      ]);
+    }
+    return Promise.resolve([
+      out,
+      `lifestream/archive/${year}/${monthSlug}/page/${page}/index.html`,
+    ]);
   } catch (err) {
     return Promise.reject(err);
   }
@@ -279,6 +357,23 @@ async function runner() {
     }
 
     await compileArchivePartial(db);
+
+    // Archive pages
+    const archive = buildArchive(db);
+    for (const [year, months] of archive) {
+      for (const [month, posts] of months) {
+        for (let page = 0; page * PAGE_SIZE < posts.length; page += 1) {
+          const [template, filename] = await compileArchiveIndex(
+            year,
+            month,
+            posts,
+            page + 1,
+            PAGE_SIZE
+          );
+          out.push(htmlPlugin(template, filename));
+        }
+      }
+    }
 
     // Feed pages
     for (let page = 0; page * PAGE_SIZE < db.length; page += 1) {
