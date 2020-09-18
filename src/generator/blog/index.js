@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 /* eslint-disable no-console */
 
 const fs = require("fs").promises;
@@ -6,7 +5,13 @@ const path = require("path");
 const ejs = require("ejs");
 const frontMatter = require("front-matter");
 const moment = require("moment");
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+const pluginBuilder = require("../plugin_payload");
+
+const root = path.resolve(__dirname, "..", "..", "..");
+const contentRoot = path.resolve(root, "content");
+const assetsDir = (slug) => path.resolve(contentRoot, "blog", slug, "assets");
+const markdownPath = (slug) =>
+  path.resolve(contentRoot, "blog", slug, "post.md");
 
 const blogPosts = Object.freeze([
   "synthesis",
@@ -22,7 +27,7 @@ const blogPosts = Object.freeze([
   "engineering-finance-partnership",
 ]);
 
-async function walk(dir) {
+const walk = async (dir) => {
   try {
     const files = await fs.readdir(dir);
     const children = files.map(async (file) => {
@@ -40,27 +45,24 @@ async function walk(dir) {
         return Promise.reject(err);
       }
     });
-    return Promise.all(children).then((dirEntries) =>
-      dirEntries.flat(Infinity).filter((entry) => entry != null)
-    );
+    const listing = Promise.all(children);
+    return listing.then((entries) => entries.flat(Infinity));
   } catch (err) {
     return Promise.reject(err);
   }
-}
+};
 
-async function parsePost(slug) {
+const parsePost = async (slug) => {
   try {
-    const data = await fs.readFile(
-      path.resolve(__dirname, "posts", slug, "post.md"),
-      "utf8"
-    );
+    const markdown = markdownPath(slug);
+    const data = await fs.readFile(markdown, "utf8");
     return frontMatter(data);
   } catch (err) {
     return Promise.reject(err);
   }
-}
+};
 
-function extractTemplateParams(slug, data) {
+const extractTemplateParams = (slug, data) => {
   console.log(slug, data);
   const date = moment(data.publishDate);
   const post = Object.create(null);
@@ -73,65 +75,67 @@ function extractTemplateParams(slug, data) {
   const context = Object.create(null);
   context.post = Object.freeze(post);
   return Object.freeze(context);
-}
+};
 
-async function compilePost(slug) {
+const compilePost = async (slug) => {
   try {
     const data = await parsePost(slug);
     const template = await fs.readFile(
       path.resolve(__dirname, "template.html"),
       "utf8"
     );
-    const post = path.resolve(__dirname, "..", "src", "blog", "posts", slug);
-    const markdown = path.resolve(post, "post.md");
-    const out = path.resolve(post, "index.html");
+    const post = path.resolve(__dirname, "..", "..", "blog", "posts", slug);
+    const out = Object.freeze({
+      markdown: path.resolve(post, "post.md"),
+      html: path.resolve(post, "index.html"),
+    });
 
     const context = extractTemplateParams(slug, data.attributes);
     const rendered = ejs.render(template, context);
 
     await fs.mkdir(post, { recursive: true });
-    await fs.writeFile(markdown, data.body);
-    await fs.writeFile(out, rendered);
+    await fs.writeFile(out.markdown, data.body);
+    await fs.writeFile(out.html, rendered);
     await copyPostAssets(slug);
 
     return Promise.resolve(slug);
   } catch (err) {
     return Promise.reject(err);
   }
-}
+};
 
-async function copyPostAssets(slug) {
+const copyPostAssets = async (slug) => {
+  let assets;
   try {
-    const assetsDir = path.resolve(__dirname, "posts", slug, "assets");
-    let assets;
-    try {
-      assets = await walk(assetsDir);
-    } catch (err) {
-      console.log(err);
+    assets = await walk(assetsDir(slug));
+  } catch (err) {
+    // Not all posts have assets
+    console.log(err);
+    return Promise.resolve(slug);
+  }
+  try {
+    const copies = assets.map(async (asset) => {
+      const assetOut = path.resolve(
+        __dirname,
+        "..",
+        "..",
+        "blog",
+        "posts",
+        slug,
+        path.relative(assetsDir(slug), asset)
+      );
+      console.log(assetOut);
+      await fs.copyFile(asset, assetOut);
+
       return Promise.resolve(slug);
-    }
-    return Promise.all(
-      assets.map(async (asset) => {
-        const assetOut = path.resolve(
-          __dirname,
-          "..",
-          "src",
-          "blog",
-          "posts",
-          slug,
-          path.relative(assetsDir, asset)
-        );
-        console.log(assetOut);
-        await fs.copyFile(asset, assetOut);
-        return Promise.resolve(slug);
-      })
-    );
+    });
+    return Promise.all(copies);
   } catch (err) {
     return Promise.reject(err);
   }
-}
+};
 
-async function compileIndex(posts) {
+const compileIndex = async (posts) => {
   try {
     const postMetadata = await Promise.all(
       posts.map(async (slug) => {
@@ -144,8 +148,10 @@ async function compileIndex(posts) {
       path.resolve(__dirname, "index.html"),
       "utf8"
     );
-    const index = path.resolve(__dirname, "..", "src", "blog", "index");
-    const out = path.resolve(index, "index.html");
+    const index = path.resolve(__dirname, "..", "..", "blog", "index");
+    const out = Object.freeze({
+      html: path.resolve(index, "index.html"),
+    });
 
     const context = postMetadata.map(
       ([slug, data]) => extractTemplateParams(slug, data.attributes).post
@@ -153,57 +159,39 @@ async function compileIndex(posts) {
     const rendered = ejs.render(template, { posts: context });
 
     await fs.mkdir(index, { recursive: true });
-    await fs.writeFile(out, rendered);
+    await fs.writeFile(out.html, rendered);
 
     return Promise.resolve(posts);
   } catch (err) {
     return Promise.reject(err);
   }
-}
+};
 
-async function runner() {
-  const timer = setInterval(() => {}, 100);
+const webpackPlugins = async (posts) => {
   try {
-    await Promise.all(blogPosts.map(compilePost));
-    await compileIndex(blogPosts);
+    const webpackPlugins = pluginBuilder();
+    webpackPlugins.push("blog/index/index.html", "w/index.html");
+
+    for (const slug of posts) {
+      const template = `blog/posts/${slug}/index.html`;
+      const filename = `w/${slug}/index.html`;
+      webpackPlugins.push(template, filename);
+    }
+
+    const config = path.resolve(root, "webpack.config.blog.js");
+    await webpackPlugins.writeTo(config);
+
+    return Promise.resolve(posts);
   } catch (err) {
-    console.error("Error: Unhandled exception");
-    console.error(err);
-    process.exit(1);
-  } finally {
-    timer.unref();
+    return Promise.reject(err);
   }
-}
+};
 
-if (require.main === module) {
-  runner();
-}
+const generate = async () => {
+  const posts = blogPosts.map(compilePost);
+  await Promise.all(posts);
+  await compileIndex(blogPosts);
+  await webpackPlugins(blogPosts);
+};
 
-module.exports = () => [
-  new HtmlWebPackPlugin({
-    template: "blog/index/index.html",
-    filename: "w/index.html",
-    posts: blogPosts,
-    minify: {
-      collapseWhitespace: true,
-      minifyCSS: true,
-      minifyJS: true,
-      removeComments: true,
-      useShortDoctype: true,
-    },
-  }),
-  ...blogPosts.map(
-    (slug) =>
-      new HtmlWebPackPlugin({
-        template: `blog/posts/${slug}/index.html`,
-        filename: `w/${slug}/index.html`,
-        minify: {
-          collapseWhitespace: true,
-          minifyCSS: true,
-          minifyJS: true,
-          removeComments: true,
-          useShortDoctype: true,
-        },
-      })
-  ),
-];
+module.exports = generate;
