@@ -107,7 +107,7 @@ const compilePost = async (slug) => {
 const copyPostAssets = async (slug) => {
   let assets;
   try {
-    assets = await walk(assetsDir);
+    assets = await walk(assetsDir(slug));
   } catch (err) {
     // Not all posts have assets
     console.log(err);
@@ -122,7 +122,7 @@ const copyPostAssets = async (slug) => {
         "blog",
         "posts",
         slug,
-        path.relative(assetsDir, asset)
+        path.relative(assetsDir(slug), asset)
       );
       console.log(assetOut);
       await fs.copyFile(asset, assetOut);
