@@ -23,7 +23,7 @@ const main = async () => {
     program
       .command("site")
       .description("Generate the full site and static assets for hyperbo.la/")
-      .action(blog);
+      .action(site);
     program
       .command("blog")
       .description("Generate blog posts and static assets for hyperbo.la/w/")
