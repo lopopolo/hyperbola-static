@@ -26,6 +26,7 @@
     "bootstrap": "^4.5.0",
     "commander": "^6.1.0",
     "jquery": "^3.5.1",
+    "linkifyjs": "^2.1.9",
     "popper.js": "^1.16.1"
   },
   "devDependencies": {
@@ -43,7 +44,6 @@
     "image-webpack-loader": "^7.0.1",
     "jimp": "^0.16.1",
     "js-yaml": "^3.14.0",
-    "linkifyjs": "^2.1.9",
     "markdown-loader": "^5.1.0",
     "mini-css-extract-plugin": "^0.11.2",
     "moment": "^2.26.0",
