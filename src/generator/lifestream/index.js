@@ -50,6 +50,15 @@ const outputs = Object.freeze({
       return path.resolve(this.dir, filename);
     },
   }),
+  hashtag: Object.freeze({
+    dir: path.resolve(__dirname, "..", "..", "lifestream", "hashtag"),
+    page(hashtag, num) {
+      return path.resolve(
+        this.dir,
+        `hashtag-${hashtag}-${String(num).padStart(4, "0")}.html`
+      );
+    },
+  }),
   index: Object.freeze({
     dir: path.resolve(__dirname, "..", "..", "lifestream", "index"),
     page(num) {
@@ -92,6 +101,20 @@ const Archive = (year, month, pageNum) =>
       }
       const page = String(pageNum);
       return `lifestream/archive/${year}/${month}/page/${page}/index.html`;
+    },
+  });
+
+const Hashtag = (hashtag, pageNum) =>
+  Object.freeze({
+    templatePath() {
+      return outputs.hashtag.page(hashtag, pageNum);
+    },
+    urlPath() {
+      if (pageNum === 1) {
+        return `lifestream/hashtag/${hashtag}/index.html`;
+      }
+      const page = String(pageNum);
+      return `lifestream/hashtag/${hashtag}/page/${page}/index.html`;
     },
   });
 
@@ -326,6 +349,56 @@ const compileArchiveIndex = async (
   }
 };
 
+const compileHashtagIndex = async (hashtag, db, page = 1, pageSize = 20) => {
+  try {
+    const posts = [...db];
+    posts.sort((a, b) => b.id - a.id); // decending post ID order
+
+    const slice = paginate(posts, page, pageSize);
+    const context = {
+      postAbsoluteUrl(item) {
+        return `/lifestream/${item.id}/`;
+      },
+      postDatestamp(item) {
+        return DateTime.fromISO(item.publishDate).setZone("UTC").toISO();
+      },
+      postDateDisplay(item) {
+        return DateTime.fromISO(item.publishDate)
+          .setZone("UTC")
+          .toLocaleString(DateTime.DATETIME_FULL);
+      },
+      hasOlder() {
+        return slice.currentPage < slice.totalPages;
+      },
+      older() {
+        const next = slice.currentPage + 1;
+        return `/lifestream/hashtag/${hashtag}/page/${next}/`;
+      },
+      hasNewer() {
+        return slice.currentPage > 1;
+      },
+      newer() {
+        const prev = slice.currentPage - 1;
+        if (prev < 2) {
+          return `/lifestream/hashtag/${hashtag}/`;
+        }
+        return `/lifestream/hashtag/${hashtag}/page/${prev}/`;
+      },
+      posts: slice.data,
+    };
+
+    const template = await fs.readFile(templates.index, "utf8");
+
+    const rendered = ejs.render(template, context);
+    await fs.mkdir(outputs.hashtag.dir, { recursive: true });
+    await fs.writeFile(outputs.hashtag.page(hashtag, page), rendered);
+
+    return Promise.resolve(Hashtag(hashtag, page));
+  } catch (err) {
+    return Promise.reject(err);
+  }
+};
+
 const copyAssets = async (db) => {
   try {
     const posts = [...db];
@@ -377,7 +450,7 @@ const generator = async () => {
       }
       for (const link of linkify.find(post.post)) {
         if (link.type === "hashtag") {
-          let hashtag = link.value;
+          let hashtag = link.value.toLowerCase();
           if (hashtag.startsWith("#")) {
             hashtag = hashtag.slice(1);
           }
@@ -404,6 +477,21 @@ const generator = async () => {
           },
         },
       });
+    }
+    // Hashtag pages
+    for (const [hashtag, postIds] of new Map([...hashtags.entries()].sort())) {
+      const posts = [];
+      for (const id of postIds) {
+        const post = db.find((post) => post.id === id);
+        if (post === undefined) {
+          throw new Error(`missing post: ${id}`);
+        }
+        posts.push(post);
+      }
+      for (let page = 0; page * PAGE_SIZE < posts.length; page += 1) {
+        const index = await compileHashtagIndex(hashtag, posts, page + 1);
+        webpackPlugins.push(index.templatePath(), index.urlPath());
+      }
     }
 
     await compileArchivePartial(db);

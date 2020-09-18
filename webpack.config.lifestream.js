@@ -2,6 +2,1086 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = () => [
   new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-12factor-0001.html",
+    filename: "lifestream/hashtag/12factor/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-ack-0001.html",
+    filename: "lifestream/hashtag/ack/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-adtargeted-0001.html",
+    filename: "lifestream/hashtag/adtargeted/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-airdrop-0001.html",
+    filename: "lifestream/hashtag/airdrop/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-allidoiscode-0001.html",
+    filename: "lifestream/hashtag/allidoiscode/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-android-0001.html",
+    filename: "lifestream/hashtag/android/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-ansible-0001.html",
+    filename: "lifestream/hashtag/ansible/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-apache-0001.html",
+    filename: "lifestream/hashtag/apache/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-api-0001.html",
+    filename: "lifestream/hashtag/api/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-apple-0001.html",
+    filename: "lifestream/hashtag/apple/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-artichoke-0001.html",
+    filename: "lifestream/hashtag/artichoke/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-artichoke-0002.html",
+    filename: "lifestream/hashtag/artichoke/page/2/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-aurora-0001.html",
+    filename: "lifestream/hashtag/aurora/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-automation-0001.html",
+    filename: "lifestream/hashtag/automation/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-awesome-0001.html",
+    filename: "lifestream/hashtag/awesome/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-awful-0001.html",
+    filename: "lifestream/hashtag/awful/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-aws-0001.html",
+    filename: "lifestream/hashtag/aws/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-aws-0002.html",
+    filename: "lifestream/hashtag/aws/page/2/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-backfromthedead-0001.html",
+    filename: "lifestream/hashtag/backfromthedead/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-backintheday-0001.html",
+    filename: "lifestream/hashtag/backintheday/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-backup-0001.html",
+    filename: "lifestream/hashtag/backup/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-backups-0001.html",
+    filename: "lifestream/hashtag/backups/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-bash-0001.html",
+    filename: "lifestream/hashtag/bash/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-bliss-0001.html",
+    filename: "lifestream/hashtag/bliss/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-blog-0001.html",
+    filename: "lifestream/hashtag/blog/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-bootstrap-0001.html",
+    filename: "lifestream/hashtag/bootstrap/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-box-0001.html",
+    filename: "lifestream/hashtag/box/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-boxworks-0001.html",
+    filename: "lifestream/hashtag/boxworks/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-browserwars-0001.html",
+    filename: "lifestream/hashtag/browserwars/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-bug-0001.html",
+    filename: "lifestream/hashtag/bug/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-build-0001.html",
+    filename: "lifestream/hashtag/build/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-c-0001.html",
+    filename: "lifestream/hashtag/c/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-cdn-0001.html",
+    filename: "lifestream/hashtag/cdn/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-chrome-0001.html",
+    filename: "lifestream/hashtag/chrome/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-chromecast-0001.html",
+    filename: "lifestream/hashtag/chromecast/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-ci-0001.html",
+    filename: "lifestream/hashtag/ci/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-citadel-0001.html",
+    filename: "lifestream/hashtag/citadel/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-cloud-0001.html",
+    filename: "lifestream/hashtag/cloud/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-cloudflare-0001.html",
+    filename: "lifestream/hashtag/cloudflare/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-comebacktothislater-0001.html",
+    filename: "lifestream/hashtag/comebacktothislater/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-communication-0001.html",
+    filename: "lifestream/hashtag/communication/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-compiling-0001.html",
+    filename: "lifestream/hashtag/compiling/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-concurrency-0001.html",
+    filename: "lifestream/hashtag/concurrency/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-conference-0001.html",
+    filename: "lifestream/hashtag/conference/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-cost-0001.html",
+    filename: "lifestream/hashtag/cost/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-cron-0001.html",
+    filename: "lifestream/hashtag/cron/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-cruft-0001.html",
+    filename: "lifestream/hashtag/cruft/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-css-0001.html",
+    filename: "lifestream/hashtag/css/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-database-0001.html",
+    filename: "lifestream/hashtag/database/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-databases-0001.html",
+    filename: "lifestream/hashtag/databases/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-dbclass-0001.html",
+    filename: "lifestream/hashtag/dbclass/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-debian-0001.html",
+    filename: "lifestream/hashtag/debian/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-debugging-0001.html",
+    filename: "lifestream/hashtag/debugging/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-deployment-0001.html",
+    filename: "lifestream/hashtag/deployment/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-design-0001.html",
+    filename: "lifestream/hashtag/design/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-devops-0001.html",
+    filename: "lifestream/hashtag/devops/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-distractions-0001.html",
+    filename: "lifestream/hashtag/distractions/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-django-0001.html",
+    filename: "lifestream/hashtag/django/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-django-0002.html",
+    filename: "lifestream/hashtag/django/page/2/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-django-0003.html",
+    filename: "lifestream/hashtag/django/page/3/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-docker-0001.html",
+    filename: "lifestream/hashtag/docker/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-docs-0001.html",
+    filename: "lifestream/hashtag/docs/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-doingitthehardway-0001.html",
+    filename: "lifestream/hashtag/doingitthehardway/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-dotfiles-0001.html",
+    filename: "lifestream/hashtag/dotfiles/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-downtime-0001.html",
+    filename: "lifestream/hashtag/downtime/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-easyway-0001.html",
+    filename: "lifestream/hashtag/easyway/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-ec2-0001.html",
+    filename: "lifestream/hashtag/ec2/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-eclipse-0001.html",
+    filename: "lifestream/hashtag/eclipse/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-emacs-0001.html",
+    filename: "lifestream/hashtag/emacs/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-email-0001.html",
+    filename: "lifestream/hashtag/email/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-emoji-0001.html",
+    filename: "lifestream/hashtag/emoji/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-esalazar-0001.html",
+    filename: "lifestream/hashtag/esalazar/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-excited-0001.html",
+    filename: "lifestream/hashtag/excited/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-fail-0001.html",
+    filename: "lifestream/hashtag/fail/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-fail-0002.html",
+    filename: "lifestream/hashtag/fail/page/2/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-fail-0003.html",
+    filename: "lifestream/hashtag/fail/page/3/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-fail-0004.html",
+    filename: "lifestream/hashtag/fail/page/4/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-fail-0005.html",
+    filename: "lifestream/hashtag/fail/page/5/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-fail-0006.html",
+    filename: "lifestream/hashtag/fail/page/6/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-fail-0007.html",
+    filename: "lifestream/hashtag/fail/page/7/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-fail-0008.html",
+    filename: "lifestream/hashtag/fail/page/8/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-failfast-0001.html",
+    filename: "lifestream/hashtag/failfast/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-fanboy-0001.html",
+    filename: "lifestream/hashtag/fanboy/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-fast-0001.html",
+    filename: "lifestream/hashtag/fast/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-ff-0001.html",
+    filename: "lifestream/hashtag/ff/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-finally-0001.html",
+    filename: "lifestream/hashtag/finally/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-firefox-0001.html",
+    filename: "lifestream/hashtag/firefox/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-firstworldproblems-0001.html",
+    filename: "lifestream/hashtag/firstworldproblems/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-flake8-0001.html",
+    filename: "lifestream/hashtag/flake8/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-flash-0001.html",
+    filename: "lifestream/hashtag/flash/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-flex-0001.html",
+    filename: "lifestream/hashtag/flex/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-frontend-0001.html",
+    filename: "lifestream/hashtag/frontend/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-ftw-0001.html",
+    filename: "lifestream/hashtag/ftw/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-functional-0001.html",
+    filename: "lifestream/hashtag/functional/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-functionalprogramming-0001.html",
+    filename: "lifestream/hashtag/functionalprogramming/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-gardenpath-0001.html",
+    filename: "lifestream/hashtag/gardenpath/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-gcc-0001.html",
+    filename: "lifestream/hashtag/gcc/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-gemsanity-0001.html",
+    filename: "lifestream/hashtag/gemsanity/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-git-0001.html",
+    filename: "lifestream/hashtag/git/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-git-0002.html",
+    filename: "lifestream/hashtag/git/page/2/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-github-0001.html",
+    filename: "lifestream/hashtag/github/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-github-0002.html",
+    filename: "lifestream/hashtag/github/page/2/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-gocloud-0001.html",
+    filename: "lifestream/hashtag/gocloud/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-golang-0001.html",
+    filename: "lifestream/hashtag/golang/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-golfed-0001.html",
+    filename: "lifestream/hashtag/golfed/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-gollum-0001.html",
+    filename: "lifestream/hashtag/gollum/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-good-0001.html",
+    filename: "lifestream/hashtag/good/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-gsd-0001.html",
+    filename: "lifestream/hashtag/gsd/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-ha-0001.html",
+    filename: "lifestream/hashtag/ha/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-hack-0001.html",
+    filename: "lifestream/hashtag/hack/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-hackathon-0001.html",
+    filename: "lifestream/hashtag/hackathon/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-hackernews-0001.html",
+    filename: "lifestream/hashtag/hackernews/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-hammer-0001.html",
+    filename: "lifestream/hashtag/hammer/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-hard-0001.html",
+    filename: "lifestream/hashtag/hard/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-hashtag-0001.html",
+    filename: "lifestream/hashtag/hashtag/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-hashtags-0001.html",
+    filename: "lifestream/hashtag/hashtags/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-history-0001.html",
+    filename: "lifestream/hashtag/history/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-hyperbola-0001.html",
+    filename: "lifestream/hashtag/hyperbola/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-idea-0001.html",
+    filename: "lifestream/hashtag/idea/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-ie9-0001.html",
+    filename: "lifestream/hashtag/ie9/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-ihateflex-0001.html",
+    filename: "lifestream/hashtag/ihateflex/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-indexes-0001.html",
+    filename: "lifestream/hashtag/indexes/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-indexing-0001.html",
+    filename: "lifestream/hashtag/indexing/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-interpreter-0001.html",
+    filename: "lifestream/hashtag/interpreter/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-ios-0001.html",
+    filename: "lifestream/hashtag/ios/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-itsgreattobehere-0001.html",
+    filename: "lifestream/hashtag/itsgreattobehere/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-itunes-0001.html",
+    filename: "lifestream/hashtag/itunes/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-java-0001.html",
+    filename: "lifestream/hashtag/java/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-javascript-0001.html",
+    filename: "lifestream/hashtag/javascript/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-jetty-0001.html",
+    filename: "lifestream/hashtag/jetty/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-js-0001.html",
+    filename: "lifestream/hashtag/js/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-json-0001.html",
+    filename: "lifestream/hashtag/json/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-junit-0001.html",
+    filename: "lifestream/hashtag/junit/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-kernelpanic-0001.html",
+    filename: "lifestream/hashtag/kernelpanic/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-kubernetes-0001.html",
+    filename: "lifestream/hashtag/kubernetes/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-lambda-0001.html",
+    filename: "lifestream/hashtag/lambda/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-lame-0001.html",
+    filename: "lifestream/hashtag/lame/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-latex-0001.html",
+    filename: "lifestream/hashtag/latex/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-lean-0001.html",
+    filename: "lifestream/hashtag/lean/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-learnability-0001.html",
+    filename: "lifestream/hashtag/learnability/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-learnsomethingnew-0001.html",
+    filename: "lifestream/hashtag/learnsomethingnew/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-leet-0001.html",
+    filename: "lifestream/hashtag/leet/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-lessonlearned-0001.html",
+    filename: "lifestream/hashtag/lessonlearned/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-letsencrypt-0001.html",
+    filename: "lifestream/hashtag/letsencrypt/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-linode-0001.html",
+    filename: "lifestream/hashtag/linode/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-lint-0001.html",
+    filename: "lifestream/hashtag/lint/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-linux-0001.html",
+    filename: "lifestream/hashtag/linux/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-lolz-0001.html",
+    filename: "lifestream/hashtag/lolz/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-macruby-0001.html",
+    filename: "lifestream/hashtag/macruby/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-magic-0001.html",
+    filename: "lifestream/hashtag/magic/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-maintenance-0001.html",
+    filename: "lifestream/hashtag/maintenance/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-make-0001.html",
+    filename: "lifestream/hashtag/make/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-mario-0001.html",
+    filename: "lifestream/hashtag/mario/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-markdown-0001.html",
+    filename: "lifestream/hashtag/markdown/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-marketing-0001.html",
+    filename: "lifestream/hashtag/marketing/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-mashup-0001.html",
+    filename: "lifestream/hashtag/mashup/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-metadata-0001.html",
+    filename: "lifestream/hashtag/metadata/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-metaprogramming-0001.html",
+    filename: "lifestream/hashtag/metaprogramming/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-mobile-0001.html",
+    filename: "lifestream/hashtag/mobile/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-monitoring-0001.html",
+    filename: "lifestream/hashtag/monitoring/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-mruby-0001.html",
+    filename: "lifestream/hashtag/mruby/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-music-0001.html",
+    filename: "lifestream/hashtag/music/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-mysql-0001.html",
+    filename: "lifestream/hashtag/mysql/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-nagios-0001.html",
+    filename: "lifestream/hashtag/nagios/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-nginx-0001.html",
+    filename: "lifestream/hashtag/nginx/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-no-0001.html",
+    filename: "lifestream/hashtag/no/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-node-0001.html",
+    filename: "lifestream/hashtag/node/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-nostalgia-0001.html",
+    filename: "lifestream/hashtag/nostalgia/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-notetoself-0001.html",
+    filename: "lifestream/hashtag/notetoself/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-objc-0001.html",
+    filename: "lifestream/hashtag/objc/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-oncall-0001.html",
+    filename: "lifestream/hashtag/oncall/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-ooyala-0001.html",
+    filename: "lifestream/hashtag/ooyala/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-ops-0001.html",
+    filename: "lifestream/hashtag/ops/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-outage-0001.html",
+    filename: "lifestream/hashtag/outage/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-outofmemory-0001.html",
+    filename: "lifestream/hashtag/outofmemory/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-overkill-0001.html",
+    filename: "lifestream/hashtag/overkill/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-packer-0001.html",
+    filename: "lifestream/hashtag/packer/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-pandora-0001.html",
+    filename: "lifestream/hashtag/pandora/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-patch-0001.html",
+    filename: "lifestream/hashtag/patch/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-patch-0002.html",
+    filename: "lifestream/hashtag/patch/page/2/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-pep8-0001.html",
+    filename: "lifestream/hashtag/pep8/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-performance-0001.html",
+    filename: "lifestream/hashtag/performance/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-php-0001.html",
+    filename: "lifestream/hashtag/php/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-plan-0001.html",
+    filename: "lifestream/hashtag/plan/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-portal-0001.html",
+    filename: "lifestream/hashtag/portal/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-powerhour-0001.html",
+    filename: "lifestream/hashtag/powerhour/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-programmerresolutions-0001.html",
+    filename: "lifestream/hashtag/programmerresolutions/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-provisioning-0001.html",
+    filename: "lifestream/hashtag/provisioning/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-puppet-0001.html",
+    filename: "lifestream/hashtag/puppet/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-py3-0001.html",
+    filename: "lifestream/hashtag/py3/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-python-0001.html",
+    filename: "lifestream/hashtag/python/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-quora-0001.html",
+    filename: "lifestream/hashtag/quora/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-rails-0001.html",
+    filename: "lifestream/hashtag/rails/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-react-0001.html",
+    filename: "lifestream/hashtag/react/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-redis-0001.html",
+    filename: "lifestream/hashtag/redis/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-redundancy-0001.html",
+    filename: "lifestream/hashtag/redundancy/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-regex-0001.html",
+    filename: "lifestream/hashtag/regex/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-ripgrep-0001.html",
+    filename: "lifestream/hashtag/ripgrep/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-root-0001.html",
+    filename: "lifestream/hashtag/root/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-rpc-0001.html",
+    filename: "lifestream/hashtag/rpc/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-ruby-0001.html",
+    filename: "lifestream/hashtag/ruby/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-ruby-0002.html",
+    filename: "lifestream/hashtag/ruby/page/2/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-rubygems-0001.html",
+    filename: "lifestream/hashtag/rubygems/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-rust-0001.html",
+    filename: "lifestream/hashtag/rust/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-rust-0002.html",
+    filename: "lifestream/hashtag/rust/page/2/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-safari-0001.html",
+    filename: "lifestream/hashtag/safari/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-scala-0001.html",
+    filename: "lifestream/hashtag/scala/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-scale-0001.html",
+    filename: "lifestream/hashtag/scale/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-security-0001.html",
+    filename: "lifestream/hashtag/security/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-segfault-0001.html",
+    filename: "lifestream/hashtag/segfault/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-serious-0001.html",
+    filename: "lifestream/hashtag/serious/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-server-0001.html",
+    filename: "lifestream/hashtag/server/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-shell-0001.html",
+    filename: "lifestream/hashtag/shell/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-shoes-0001.html",
+    filename: "lifestream/hashtag/shoes/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-smh-0001.html",
+    filename: "lifestream/hashtag/smh/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-socialmedia-0001.html",
+    filename: "lifestream/hashtag/socialmedia/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-solarized-0001.html",
+    filename: "lifestream/hashtag/solarized/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-songkick-0001.html",
+    filename: "lifestream/hashtag/songkick/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-songza-0001.html",
+    filename: "lifestream/hashtag/songza/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-sonymylo-0001.html",
+    filename: "lifestream/hashtag/sonymylo/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-spoiled-0001.html",
+    filename: "lifestream/hashtag/spoiled/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-ssh-0001.html",
+    filename: "lifestream/hashtag/ssh/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-staging-0001.html",
+    filename: "lifestream/hashtag/staging/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-supertab-0001.html",
+    filename: "lifestream/hashtag/supertab/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-swag-0001.html",
+    filename: "lifestream/hashtag/swag/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-sweet-0001.html",
+    filename: "lifestream/hashtag/sweet/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-terraform-0001.html",
+    filename: "lifestream/hashtag/terraform/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-thesis2012-0001.html",
+    filename: "lifestream/hashtag/thesis2012/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-thingsineedtobuy-0001.html",
+    filename: "lifestream/hashtag/thingsineedtobuy/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-thingsishouldfix-0001.html",
+    filename: "lifestream/hashtag/thingsishouldfix/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-thingsiwant-0001.html",
+    filename: "lifestream/hashtag/thingsiwant/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-thingsthataregood-0001.html",
+    filename: "lifestream/hashtag/thingsthataregood/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-thingsthatarenew-0001.html",
+    filename: "lifestream/hashtag/thingsthatarenew/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-thisisa-0001.html",
+    filename: "lifestream/hashtag/thisisa/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-throwback-0001.html",
+    filename: "lifestream/hashtag/throwback/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-timeboxed-0001.html",
+    filename: "lifestream/hashtag/timeboxed/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-tls-0001.html",
+    filename: "lifestream/hashtag/tls/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-turntable-0001.html",
+    filename: "lifestream/hashtag/turntable/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-tv-0001.html",
+    filename: "lifestream/hashtag/tv/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-tweets-0001.html",
+    filename: "lifestream/hashtag/tweets/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-twitter-0001.html",
+    filename: "lifestream/hashtag/twitter/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-ubuntu-0001.html",
+    filename: "lifestream/hashtag/ubuntu/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-uiclass-0001.html",
+    filename: "lifestream/hashtag/uiclass/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-unix-0001.html",
+    filename: "lifestream/hashtag/unix/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-upnp-0001.html",
+    filename: "lifestream/hashtag/upnp/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-utf8-0001.html",
+    filename: "lifestream/hashtag/utf8/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-ux-0001.html",
+    filename: "lifestream/hashtag/ux/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-vagrant-0001.html",
+    filename: "lifestream/hashtag/vagrant/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-vanity-0001.html",
+    filename: "lifestream/hashtag/vanity/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-versioncontrol-0001.html",
+    filename: "lifestream/hashtag/versioncontrol/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-vim-0001.html",
+    filename: "lifestream/hashtag/vim/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-vimftw-0001.html",
+    filename: "lifestream/hashtag/vimftw/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-wasm-0001.html",
+    filename: "lifestream/hashtag/wasm/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-webpack-0001.html",
+    filename: "lifestream/hashtag/webpack/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-webscale-0001.html",
+    filename: "lifestream/hashtag/webscale/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-whatarethesewords-0001.html",
+    filename: "lifestream/hashtag/whatarethesewords/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-whatquota-0001.html",
+    filename: "lifestream/hashtag/whatquota/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-wikipedia-0001.html",
+    filename: "lifestream/hashtag/wikipedia/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-willcu-0001.html",
+    filename: "lifestream/hashtag/willcu/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-win-0001.html",
+    filename: "lifestream/hashtag/win/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-win-0002.html",
+    filename: "lifestream/hashtag/win/page/2/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-win-0003.html",
+    filename: "lifestream/hashtag/win/page/3/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-win-0004.html",
+    filename: "lifestream/hashtag/win/page/4/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-win-0005.html",
+    filename: "lifestream/hashtag/win/page/5/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-win-0006.html",
+    filename: "lifestream/hashtag/win/page/6/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-win-0007.html",
+    filename: "lifestream/hashtag/win/page/7/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-win-0008.html",
+    filename: "lifestream/hashtag/win/page/8/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-womp-0001.html",
+    filename: "lifestream/hashtag/womp/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-wtf-0001.html",
+    filename: "lifestream/hashtag/wtf/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-xcode-0001.html",
+    filename: "lifestream/hashtag/xcode/index.html",
+  }),
+  new HtmlWebPackPlugin({
     template: "lifestream/archive/archive-2020-03-0001.html",
     filename: "lifestream/archive/2020/03/index.html",
   }),
