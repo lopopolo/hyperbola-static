@@ -4,7 +4,7 @@ const fs = require("fs").promises;
 const path = require("path");
 const ejs = require("ejs");
 const parser = require("js-yaml");
-const moment = require("moment");
+const { DateTime } = require("luxon");
 const paginate = require("paginate-array");
 const pluginBuilder = require("../plugin_payload");
 
@@ -122,16 +122,15 @@ const buildArchive = (db) => {
   const posts = [...db];
   posts.sort(
     (a, b) =>
-      moment.parseZone(b.publishDate).valueOf() -
-      moment.parseZone(a.publishDate).valueOf()
+      DateTime.fromISO(b.publishDate).valueOf() -
+      DateTime.fromISO(a.publishDate).valueOf()
   );
 
   const aggregates = new Map();
   for (const post of posts) {
-    const yearKey = moment.parseZone(post.publishDate).utc().year();
-    const monthKey = moment
-      .parseZone(post.publishDate)
-      .utc()
+    const yearKey = DateTime.fromISO(post.publishDate).setZone("UTC").year;
+    const monthKey = DateTime.fromISO(post.publishDate)
+      .setZone("UTC")
       .startOf("month")
       .valueOf();
     if (!aggregates.has(yearKey)) {
@@ -148,7 +147,7 @@ const buildArchive = (db) => {
   for (const [year, months] of aggregates) {
     const collected = new Map();
     for (const [month, count] of months) {
-      collected.set(moment.utc(month), count);
+      collected.set(DateTime.fromMillis(month).setZone("UTC"), count);
     }
     archive.set(year, collected);
   }
@@ -186,17 +185,12 @@ const compilePosts = async (db) => {
           return `/lifestream/${item.id}/`;
         },
         postDatestamp(item) {
-          return moment
-            .parseZone(item.publishDate)
-            .utc()
-            .format("YYYY-MM-DDTHH:mm:ssZ");
+          return DateTime.fromISO(item.publishDate).setZone("UTC").toISO();
         },
         postDateDisplay(item) {
-          return moment
-            .parseZone(item.publishDate)
-            .utc()
-            .format("HH:mm utc MMM DD YYYY")
-            .toLowerCase();
+          return DateTime.fromISO(item.publishDate)
+            .setZone("UTC")
+            .toLocaleString(DateTime.DATETIME_FULL);
         },
         hasOlder() {
           return storage[index - 1] !== undefined;
@@ -237,17 +231,12 @@ const compileIndex = async (db, page = 1, pageSize = 20) => {
         return `/lifestream/${item.id}/`;
       },
       postDatestamp(item) {
-        return moment
-          .parseZone(item.publishDate)
-          .utc()
-          .format("YYYY-MM-DDTHH:mm:ssZ");
+        return DateTime.fromISO(item.publishDate).setZone("UTC").toISO();
       },
       postDateDisplay(item) {
-        return moment
-          .parseZone(item.publishDate)
-          .utc()
-          .format("HH:mm utc MMM DD YYYY")
-          .toLowerCase();
+        return DateTime.fromISO(item.publishDate)
+          .setZone("UTC")
+          .toLocaleString(DateTime.DATETIME_FULL);
       },
       hasOlder() {
         return slice.currentPage < slice.totalPages;
@@ -298,17 +287,12 @@ const compileArchiveIndex = async (
         return `/lifestream/${item.id}/`;
       },
       postDatestamp(item) {
-        return moment
-          .parseZone(item.publishDate)
-          .utc()
-          .format("YYYY-MM-DDTHH:mm:ssZ");
+        return DateTime.fromISO(item.publishDate).setZone("UTC").toISO();
       },
       postDateDisplay(item) {
-        return moment
-          .parseZone(item.publishDate)
-          .utc()
-          .format("HH:mm utc MMM DD YYYY")
-          .toLowerCase();
+        return DateTime.fromISO(item.publishDate)
+          .setZone("UTC")
+          .toLocaleString(DateTime.DATETIME_FULL);
       },
       hasOlder() {
         return slice.currentPage < slice.totalPages;
@@ -431,7 +415,7 @@ const generator = async () => {
         for (let page = 0; page * PAGE_SIZE < posts.length; page += 1) {
           const archive = await compileArchiveIndex(
             year,
-            month.format("MM"),
+            month.toLocaleString({ month: "2-digit" }),
             posts,
             page + 1,
             PAGE_SIZE

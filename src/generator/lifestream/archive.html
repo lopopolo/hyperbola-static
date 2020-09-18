@@ -5,9 +5,9 @@
   <% for (const [month, posts] of months) { %>
   <div class="d-flex flex-row justify-content-between mb-1">
     <a
-      href="/lifestream/archive/<%= month.format('YYYY') %>/<%= month.format('MM') %>/"
+      href="/lifestream/archive/<%= month.toLocaleString({ year: 'numeric' }) %>/<%= month.toLocaleString({ month: '2-digit' }) %>/"
     >
-      <%= month.format('MMMM') %>
+      <%= month.toLocaleString({ month: 'long' }) %>
     </a>
     <span><%= posts.length %></span>
   </div>
