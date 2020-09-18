@@ -4,7 +4,7 @@ const fs = require("fs").promises;
 const path = require("path");
 const ejs = require("ejs");
 const frontMatter = require("front-matter");
-const moment = require("moment");
+const { DateTime } = require("luxon");
 const pluginBuilder = require("../plugin_payload");
 
 const root = path.resolve(__dirname, "..", "..", "..");
@@ -64,12 +64,12 @@ const parsePost = async (slug) => {
 
 const extractTemplateParams = (slug, data) => {
   console.log(slug, data);
-  const date = moment(data.publishDate);
+  const date = DateTime.fromISO(data.publishDate);
   const post = Object.create(null);
   post.title = data.title;
   post.absoluteUrl = `/w/${slug}/`;
-  post.datestamp = date.format("YYYY-MM-DD");
-  post.publishDate = date.format("MMMM DD, YYYY");
+  post.datestamp = date.toISO();
+  post.publishDate = date.toLocaleString(DateTime.DATE_FULL);
   post.summary = data.summary;
   post.markdown = "./post.md";
   const context = Object.create(null);
