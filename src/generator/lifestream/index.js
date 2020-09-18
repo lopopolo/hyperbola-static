@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 /* eslint-disable no-console */
 
 const fs = require("fs").promises;
@@ -7,6 +6,7 @@ const ejs = require("ejs");
 const parser = require("js-yaml");
 const moment = require("moment");
 const paginate = require("paginate-array");
+const pluginBuilder = require("../plugin_payload");
 
 const linkify = require("linkifyjs");
 const linkifyHtml = require("linkifyjs/html");
@@ -15,13 +15,117 @@ linkifyHashtag(linkify);
 
 const PAGE_SIZE = 20;
 
-function buildArchive(db) {
+const templates = Object.freeze({
+  archive: path.resolve(__dirname, "archive.html"),
+  asset(source) {
+    const assetRoot = path.resolve(
+      __dirname,
+      "..",
+      "..",
+      "..",
+      "content",
+      "lifestream"
+    );
+    return path.resolve(assetRoot, source);
+  },
+  index: path.resolve(__dirname, "index.html"),
+  post: path.resolve(__dirname, "post.html"),
+});
+
+const outputs = Object.freeze({
+  root: path.resolve(__dirname, "..", "..", ".."),
+  archive: Object.freeze({
+    dir: path.resolve(__dirname, "..", "..", "lifestream", "archive"),
+    page(year, month, num) {
+      return path.resolve(
+        this.dir,
+        `archive-${year}-${month}-${String(num).padStart(4, "0")}.html`
+      );
+    },
+  }),
+  assets: Object.freeze({
+    dir: path.resolve(__dirname, "..", "..", "lifestream", "assets"),
+    destinationPath(asset) {
+      const filename = path.basename(asset);
+      return path.resolve(this.dir, filename);
+    },
+  }),
+  index: Object.freeze({
+    dir: path.resolve(__dirname, "..", "..", "lifestream", "index"),
+    page(num) {
+      return path.resolve(
+        this.dir,
+        `page-${String(num).padStart(4, "0")}.html`
+      );
+    },
+  }),
+  partials: Object.freeze({
+    dir: path.resolve(__dirname, "..", "..", "lifestream", "partials"),
+    archive: path.resolve(
+      __dirname,
+      "..",
+      "..",
+      "lifestream",
+      "partials",
+      "archive.html"
+    ),
+  }),
+  posts: Object.freeze({
+    dir: path.resolve(__dirname, "..", "..", "lifestream", "posts"),
+    container(id) {
+      return path.resolve(this.dir, id);
+    },
+    page(id) {
+      return path.resolve(this.container(id), "index.html");
+    },
+  }),
+});
+
+const Archive = (year, month, pageNum) =>
+  Object.freeze({
+    templatePath() {
+      return outputs.archive.page(year, month, pageNum);
+    },
+    urlPath() {
+      if (pageNum === 1) {
+        return `lifestream/archive/${year}/${month}/index.html`;
+      }
+      const page = String(pageNum);
+      return `lifestream/archive/${year}/${month}/page/${page}/index.html`;
+    },
+  });
+
+const Index = (pageNum) =>
+  Object.freeze({
+    templatePath() {
+      return outputs.index.page(pageNum);
+    },
+    urlPath() {
+      if (pageNum === 1) {
+        return "lifestream/index.html";
+      }
+      return `lifestream/page/${String(pageNum)}/index.html`;
+    },
+  });
+
+const Post = (id) =>
+  Object.freeze({
+    templatePath() {
+      return outputs.posts.page(id);
+    },
+    urlPath() {
+      return `lifestream/${String(id)}/index.html`;
+    },
+  });
+
+const buildArchive = (db) => {
   const posts = [...db];
   posts.sort(
     (a, b) =>
       moment.parseZone(b.publishDate).valueOf() -
       moment.parseZone(a.publishDate).valueOf()
   );
+
   const aggregates = new Map();
   for (const post of posts) {
     const yearKey = moment.parseZone(post.publishDate).utc().year();
@@ -39,6 +143,7 @@ function buildArchive(db) {
     }
     year.get(monthKey).push(post);
   }
+
   const archive = new Map();
   for (const [year, months] of aggregates) {
     const collected = new Map();
@@ -48,48 +153,32 @@ function buildArchive(db) {
     archive.set(year, collected);
   }
   return archive;
-}
+};
 
-async function compileArchivePartial(db) {
+const compileArchivePartial = async (db) => {
   try {
     const archive = buildArchive(db);
-    const template = await fs.readFile(
-      path.resolve(__dirname, "archive.html"),
-      "utf8"
-    );
-    const partials = path.resolve(
-      __dirname,
-      "..",
-      "src",
-      "lifestream",
-      "partials"
-    );
-    const out = path.resolve(partials, "archive.html");
-    console.log(out);
+    const template = await fs.readFile(templates.archive, "utf8");
 
     const context = { archive };
     const rendered = ejs.render(template, context);
 
-    await fs.mkdir(partials, { recursive: true });
-    await fs.writeFile(out, rendered);
+    await fs.mkdir(outputs.partials.dir, { recursive: true });
+    await fs.writeFile(outputs.partials.archive, rendered);
 
     return Promise.resolve("archive");
   } catch (err) {
     return Promise.reject(err);
   }
-}
+};
 
-async function compilePosts(db) {
+const compilePosts = async (db) => {
   try {
     const posts = [...db];
     posts.sort((a, b) => b.id - a.id); // decending post ID order
 
-    const template = await fs.readFile(
-      path.resolve(__dirname, "post.html"),
-      "utf8"
-    );
-    const base = path.resolve(__dirname, "..", "src", "lifestream", "posts");
-    await fs.mkdir(base, { recursive: true });
+    const template = await fs.readFile(templates.post, "utf8");
+    await fs.mkdir(outputs.posts.dir, { recursive: true });
 
     const promises = posts.map(async (post, index, storage) => {
       const context = {
@@ -123,23 +212,21 @@ async function compilePosts(db) {
         },
         posts: [post],
       };
-      const postBase = path.resolve(base, post.id);
-      const out = path.resolve(postBase, "index.html");
 
       const rendered = ejs.render(template, context);
 
-      await fs.mkdir(postBase, { recursive: true });
-      await fs.writeFile(out, rendered);
-      return [out, `lifestream/${String(post.id)}/index.html`];
+      await fs.mkdir(outputs.posts.container(post.id), { recursive: true });
+      await fs.writeFile(outputs.posts.page(post.id), rendered);
+      return Post(post.id);
     });
 
     return Promise.all(promises);
   } catch (err) {
     return Promise.reject(err);
   }
-}
+};
 
-async function compileIndex(db, page = 1, pageSize = 20) {
+const compileIndex = async (db, page = 1, pageSize = 20) => {
   try {
     const posts = [...db];
     posts.sort((a, b) => b.id - a.id); // decending post ID order
@@ -182,32 +269,26 @@ async function compileIndex(db, page = 1, pageSize = 20) {
       posts: slice.data,
     };
 
-    const template = await fs.readFile(
-      path.resolve(__dirname, "index.html"),
-      "utf8"
-    );
-    const base = path.resolve(__dirname, "..", "src", "lifestream", "index");
-    const out = path.resolve(
-      base,
-      `page-${String(page).padStart(4, "0")}.html`
-    );
+    const template = await fs.readFile(templates.index, "utf8");
 
     const rendered = ejs.render(template, context);
-    await fs.mkdir(base, { recursive: true });
-    await fs.writeFile(out, rendered);
+    await fs.mkdir(outputs.index.dir, { recursive: true });
+    await fs.writeFile(outputs.index.page(page), rendered);
 
-    if (page === 1) {
-      return Promise.resolve([out, "lifestream/index.html"]);
-    }
-    return Promise.resolve([out, `lifestream/page/${page}/index.html`]);
+    return Promise.resolve(Index(page));
   } catch (err) {
     return Promise.reject(err);
   }
-}
+};
 
-async function compileArchiveIndex(year, month, db, page = 1, pageSize = 20) {
+const compileArchiveIndex = async (
+  year,
+  month,
+  db,
+  page = 1,
+  pageSize = 20
+) => {
   try {
-    const monthSlug = month.format("MM");
     const posts = [...db];
     posts.sort((a, b) => b.id - a.id); // decending post ID order
 
@@ -234,7 +315,7 @@ async function compileArchiveIndex(year, month, db, page = 1, pageSize = 20) {
       },
       older() {
         const next = slice.currentPage + 1;
-        return `/lifestream/archive/${year}/${monthSlug}/page/${next}/`;
+        return `/lifestream/archive/${year}/${month}/page/${next}/`;
       },
       hasNewer() {
         return slice.currentPage > 1;
@@ -242,85 +323,70 @@ async function compileArchiveIndex(year, month, db, page = 1, pageSize = 20) {
       newer() {
         const prev = slice.currentPage - 1;
         if (prev < 2) {
-          return `/lifestream/archive/${year}/${monthSlug}/`;
+          return `/lifestream/archive/${year}/${month}/`;
         }
-        return `/lifestream/archive/${year}/${monthSlug}/page/${prev}/`;
+        return `/lifestream/archive/${year}/${month}/page/${prev}/`;
       },
       posts: slice.data,
     };
 
-    const template = await fs.readFile(
-      path.resolve(__dirname, "index.html"),
-      "utf8"
-    );
-    const base = path.resolve(__dirname, "..", "src", "lifestream", "archive");
-    const out = path.resolve(
-      base,
-      `archive-${year}-${monthSlug}-${String(page).padStart(4, "0")}.html`
-    );
+    const template = await fs.readFile(templates.index, "utf8");
 
     const rendered = ejs.render(template, context);
-    await fs.mkdir(base, { recursive: true });
-    await fs.writeFile(out, rendered);
+    await fs.mkdir(outputs.archive.dir, { recursive: true });
+    await fs.writeFile(outputs.archive.page(year, month, page), rendered);
 
-    if (page === 1) {
-      return Promise.resolve([
-        out,
-        `lifestream/archive/${year}/${monthSlug}/index.html`,
-      ]);
-    }
-    return Promise.resolve([
-      out,
-      `lifestream/archive/${year}/${monthSlug}/page/${page}/index.html`,
-    ]);
+    return Promise.resolve(Archive(year, month, page));
   } catch (err) {
     return Promise.reject(err);
   }
-}
+};
 
-async function copyAssets(db) {
+const copyAssets = async (db) => {
   try {
     const posts = [...db];
 
-    const base = path.resolve(__dirname, "..", "src", "lifestream", "assets");
-    await fs.mkdir(base, { recursive: true });
+    await fs.mkdir(outputs.assets.dir, { recursive: true });
 
     for (const post of posts) {
       if (post.image === undefined) {
         continue;
       }
-      const filename = path.basename(post.image);
-      const out = path.resolve(base, filename);
 
-      const source = path.resolve(__dirname, post.image);
-
-      await fs.copyFile(source, out);
+      await fs.copyFile(
+        templates.asset(post.image),
+        outputs.assets.destinationPath(post.image)
+      );
     }
     return Promise.resolve(true);
   } catch (err) {
     return Promise.reject(err);
   }
-}
+};
 
-async function runner() {
-  const timer = setInterval(() => {}, 100);
+const generator = async () => {
   try {
     const rawDb = await fs.readFile(
-      path.resolve(__dirname, "posts.yaml"),
+      path.resolve(
+        __dirname,
+        "..",
+        "..",
+        "..",
+        "content",
+        "lifestream",
+        "posts.yaml"
+      ),
       "utf8"
     );
     const db = parser.safeLoad(rawDb, { schema: parser.FAILSAFE_SCHEMA });
 
-    const out = [
-      `const HtmlWebPackPlugin = require("html-webpack-plugin");`,
-      "",
-      "module.exports = () => [",
-    ];
+    const webpackPlugins = pluginBuilder();
 
     await copyAssets(db);
 
     const hashtags = new Map();
 
+    // Modify the loaded DB to linkify URLs and hashtags.
     for (const post of db) {
       if (post.image) {
         post.image = `../assets/${path.basename(post.image)}`;
@@ -345,7 +411,7 @@ async function runner() {
         className: "",
         defaultProtocol: "https",
         formatHref: {
-          hashtag: function (value) {
+          hashtag: (value) => {
             let hashtag = value;
             if (hashtag.startsWith("#")) {
               hashtag = hashtag.slice(1);
@@ -363,64 +429,37 @@ async function runner() {
     for (const [year, months] of archive) {
       for (const [month, posts] of months) {
         for (let page = 0; page * PAGE_SIZE < posts.length; page += 1) {
-          const [template, filename] = await compileArchiveIndex(
+          const archive = await compileArchiveIndex(
             year,
-            month,
+            month.format("MM"),
             posts,
             page + 1,
             PAGE_SIZE
           );
-          out.push(htmlPlugin(template, filename));
+          webpackPlugins.push(archive.templatePath(), archive.urlPath());
         }
       }
     }
 
     // Feed pages
     for (let page = 0; page * PAGE_SIZE < db.length; page += 1) {
-      const [template, filename] = await compileIndex(db, page + 1, PAGE_SIZE);
-      out.push(htmlPlugin(template, filename));
+      const index = await compileIndex(db, page + 1, PAGE_SIZE);
+      webpackPlugins.push(index.templatePath(), index.urlPath());
     }
 
     // Post pages
     const posts = await compilePosts(db);
-    for (const [template, filename] of posts) {
-      out.push(htmlPlugin(template, filename));
+    for (const post of posts) {
+      webpackPlugins.push(post.templatePath(), post.urlPath());
     }
 
-    out.push("];");
-
-    const config = path.resolve(
-      __dirname,
-      "..",
-      "src",
-      "lifestream",
-      "index.js"
-    );
-    await fs.writeFile(config, out.join("\n"));
+    const config = path.resolve(outputs.root, "webpack.config.lifestream.js");
+    await webpackPlugins.writeTo(config);
   } catch (err) {
     console.error("Error: Unhandled exception");
     console.error(err);
     process.exit(1);
-  } finally {
-    timer.unref();
   }
-}
+};
 
-if (require.main === module) {
-  runner();
-}
-
-const htmlPlugin = (template, filename) =>
-  [
-    "  new HtmlWebPackPlugin({",
-    `    template: "${template}",`,
-    `    filename: "${filename}",`,
-    "    minify: {",
-    "      collapseWhitespace: true,",
-    "      minifyCSS: true,",
-    "      minifyJS: true,",
-    "      removeComments: true,",
-    "      useShortDoctype: true,",
-    "    },",
-    "  }),",
-  ].join("\n");
+module.exports = generator;

@@ -1,11 +1,14 @@
 "use strict";
 
 const fs = require("fs").promises;
+const path = require("path");
+
+const root = path.resolve(__dirname, "..");
 
 const htmlPlugin = (template, filename) =>
   [
     "  new HtmlWebPackPlugin({",
-    `    template: "${template}",`,
+    `    template: "${path.relative(root, template)}",`,
     `    filename: "${filename}",`,
     "    minify: {",
     "      collapseWhitespace: true,",
