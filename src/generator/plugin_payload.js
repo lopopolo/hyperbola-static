@@ -21,7 +21,7 @@ module.exports = () => {
   const plugins = [];
   return {
     push(template, filename) {
-      plugins.push([template, filename])
+      plugins.push([template, filename]);
     },
 
     async writeTo(dest) {
@@ -40,6 +40,6 @@ module.exports = () => {
       const pluginContents = out.join("\n");
 
       await fs.writeFile(dest, pluginContents);
-    }
-  }
+    },
+  };
 };
