@@ -5,6 +5,7 @@ const path = require("path");
 const ejs = require("ejs");
 const frontMatter = require("front-matter");
 const moment = require("moment");
+const pluginBuilder = require("../plugin_payload");
 
 const root = path.resolve(__dirname, "..", "..", "..");
 const contentRoot = path.resolve(root, "content");
@@ -168,47 +169,23 @@ const compileIndex = async (posts) => {
 
 const webpackPlugins = async (posts) => {
   try {
-    const out = [
-      `const HtmlWebPackPlugin = require("html-webpack-plugin");`,
-      "",
-      "module.exports = () => [",
-    ];
-
-    const indexTemplate = "blog/index/index.html";
-    const indexFilename = "w/index.html";
-    out.push(htmlPlugin(indexTemplate, indexFilename));
+    const webpackPlugins = pluginBuilder();
+    webpackPlugins.push("blog/index/index.html", "w/index.html");
 
     for (const slug of posts) {
       const template = `blog/posts/${slug}/index.html`;
       const filename = `w/${slug}/index.html`;
-      out.push(htmlPlugin(template, filename));
+      webpackPlugins.push(template, filename);
     }
-    out.push("];");
-    out.push("");
 
     const config = path.resolve(root, "webpack.config.blog.js");
-    await fs.writeFile(config, out.join("\n"));
+    await webpackPlugins.writeTo(config);
 
     return Promise.resolve(posts);
   } catch (err) {
     return Promise.reject(err);
   }
 };
-
-const htmlPlugin = (template, filename) =>
-  [
-    "  new HtmlWebPackPlugin({",
-    `    template: "${template}",`,
-    `    filename: "${filename}",`,
-    "    minify: {",
-    "      collapseWhitespace: true,",
-    "      minifyCSS: true,",
-    "      minifyJS: true,",
-    "      removeComments: true,",
-    "      useShortDoctype: true,",
-    "    },",
-    "  }),",
-  ].join("\n");
 
 const generate = async () => {
   const posts = blogPosts.map(compilePost);
