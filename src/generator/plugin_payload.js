@@ -10,13 +10,6 @@ const htmlPlugin = (template, filename) =>
     "  new HtmlWebPackPlugin({",
     `    template: "${path.relative(root, template)}",`,
     `    filename: "${filename}",`,
-    "    minify: {",
-    "      collapseWhitespace: true,",
-    "      minifyCSS: true,",
-    "      minifyJS: true,",
-    "      removeComments: true,",
-    "      useShortDoctype: true,",
-    "    },",
     "  }),",
   ].join("\n");
 
