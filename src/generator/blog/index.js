@@ -170,10 +170,17 @@ const compileIndex = async (posts) => {
 const webpackPlugins = async (posts) => {
   try {
     const webpackPlugins = pluginBuilder();
-    webpackPlugins.push("blog/index/index.html", "w/index.html");
+    webpackPlugins.push(
+      path.resolve(root, "src", "blog/index/index.html"),
+      "w/index.html"
+    );
 
     for (const slug of posts) {
-      const template = `blog/posts/${slug}/index.html`;
+      const template = path.resolve(
+        root,
+        "src",
+        `blog/posts/${slug}/index.html`
+      );
       const filename = `w/${slug}/index.html`;
       webpackPlugins.push(template, filename);
     }

@@ -77,7 +77,7 @@
     }
   },
   "scripts": {
-    "build": "npx -p . generate site && node ./lifestream/index.js",
+    "build": "npx -p . generate site",
     "dev": "npx webpack-dev-server",
     "dev:open": "npx webpack-dev-server --open",
     "fmt": "npx prettier --write '**/*'",

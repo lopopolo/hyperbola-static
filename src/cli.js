@@ -5,13 +5,19 @@
 const { program } = require("commander");
 const { version } = require("../package.json");
 const blogGenerator = require("./generator/blog");
+const lifestreamGenerator = require("./generator/lifestream");
 
 const site = async () => {
   await blogGenerator();
+  await lifestreamGenerator();
 };
 
 const blog = async () => {
   await blogGenerator();
+};
+
+const lifestream = async () => {
+  await lifestreamGenerator();
 };
 
 const main = async () => {
@@ -28,6 +34,12 @@ const main = async () => {
       .command("blog")
       .description("Generate blog posts and static assets for hyperbo.la/w/")
       .action(blog);
+    program
+      .command("lifestream")
+      .description(
+        "Generate lifestream posts, feeds, and static assets for hyperbo.la/lifestream/"
+      )
+      .action(lifestream);
     await program.parseAsync(process.argv);
   } catch (err) {
     console.error("Error: Unhandled exception");

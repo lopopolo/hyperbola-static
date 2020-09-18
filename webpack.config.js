@@ -1,6 +1,5 @@
 const path = require("path");
 const CnameWebpackPlugin = require("cname-webpack-plugin");
-const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
@@ -10,7 +9,9 @@ const { definer: terraform } = require("./vendor/terraform");
 hljs.registerLanguage("terraform", terraform);
 
 const blog = require("./webpack.config.blog");
-const lifestream = require("./src/lifestream");
+const contact = require("./webpack.config.contact");
+const frontpage = require("./webpack.config.frontpage");
+const lifestream = require("./webpack.config.lifestream");
 
 const plugins = [
   new MiniCssExtractPlugin({
@@ -20,29 +21,9 @@ const plugins = [
   new CnameWebpackPlugin({
     domain: "hyperbo.la",
   }),
-  new HtmlWebPackPlugin({
-    template: "frontpage/index.html",
-    filename: "index.html",
-    minify: {
-      collapseWhitespace: true,
-      minifyCSS: true,
-      minifyJS: true,
-      removeComments: true,
-      useShortDoctype: true,
-    },
-  }),
-  new HtmlWebPackPlugin({
-    template: "contact/index.html",
-    filename: "contact/index.html",
-    minify: {
-      collapseWhitespace: true,
-      minifyCSS: true,
-      minifyJS: true,
-      removeComments: true,
-      useShortDoctype: true,
-    },
-  }),
   ...blog(),
+  ...contact(),
+  ...frontpage(),
   ...lifestream(),
 ];
 
