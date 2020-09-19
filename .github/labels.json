@@ -1,5 +1,10 @@
 [
   {
+    "name": "A-aws",
+    "color": "f7e101",
+    "description": "Area: AWS infrastructure."
+  },
+  {
     "name": "A-build",
     "color": "f7e101",
     "description": "Area: CI build infrastructure."
@@ -23,6 +28,11 @@
     "name": "A-site-generator",
     "color": "f7e101",
     "description": "Area: Static site generator."
+  },
+  {
+    "name": "A-terraform",
+    "color": "f7e101",
+    "description": "Area: Infrastructure as code configuration in terraform."
   },
   {
     "name": "A-webapp",
