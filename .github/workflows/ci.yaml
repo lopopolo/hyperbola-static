@@ -57,3 +57,44 @@ jobs:
 
       - name: Lint and check formatting with prettier
         run: npx prettier --check '**/*'
+
+  terraform:
+    name: Lint and format terraform
+    runs-on: ubuntu-latest
+    # https://www.terraform.io/docs/github-actions/getting-started.html
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: "Setup Terraform"
+        uses: hashicorp/setup-terraform@v1
+
+      - name: "Format aws module"
+        run: terraform fmt -check -diff
+        working-directory: "terraform/aws"
+
+      - name: "Initialize aws module"
+        run: terraform init
+        working-directory: "terraform/aws"
+        env:
+          AWS_ACCESS_KEY: ${{ secrets.TF_AWS_ACCESS_KEY }}
+          AWS_SECRET_KEY: ${{ secrets.TF_AWS_SECRET_KEY }}
+
+      - name: "Validate aws module"
+        run: terraform validate -no-color
+        working-directory: "terraform/aws"
+
+      - name: "Format remote-state module"
+        run: terraform fmt -check -diff
+        working-directory: "terraform/remote-state"
+
+      - name: "Initialize remote-state module"
+        run: terraform init
+        working-directory: "terraform/remote-state"
+        env:
+          AWS_ACCESS_KEY: ${{ secrets.TF_AWS_ACCESS_KEY }}
+          AWS_SECRET_KEY: ${{ secrets.TF_AWS_SECRET_KEY }}
+
+      - name: "Validate remote-state module"
+        run: terraform validate -no-color
+        working-directory: "terraform/remote-state"
