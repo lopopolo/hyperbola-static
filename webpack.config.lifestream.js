@@ -1726,6 +1726,10 @@ module.exports = () => [
     filename: "lifestream/page/39/index.html",
   }),
   new HtmlWebPackPlugin({
+    template: "lifestream/posts/791/index.html",
+    filename: "lifestream/791/index.html",
+  }),
+  new HtmlWebPackPlugin({
     template: "lifestream/posts/790/index.html",
     filename: "lifestream/790/index.html",
   }),
