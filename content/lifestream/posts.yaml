@@ -3987,3 +3987,9 @@
   post: >-
     And just like that, dependabot is enabled for hyperbola-static, the WIP
     lifeastream branch is merged, and the CI is spruced up #hypstatic
+- id: 791
+  publishDate: "2020-09-20T01:45:52Z"
+  post: >-
+    hyperbola is deployed to GitHub Pages now! Executed via DNS cutover with
+    terraform. Now to destroy the old infrastructure in AWS. #github #hypstatic
+    #aws #terraform
