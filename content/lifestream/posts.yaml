@@ -3805,3 +3805,185 @@
     a fork of an existing Mersenne Twister crate which adds compatibility with
     the latest rand_core and makes it no_std #patch
     https://crates.io/crates/rand_mt #patch
+- id: 758
+  publishDate: "2020-05-21T01:13:38.593Z"
+  post: >-
+    for the past 2ish months I've been slowly working on porting hyperbola to a
+    static site with the ultimate goal of winding down an #aws account
+- id: 759
+  publishDate: "2020-05-21T01:14:13.911Z"
+  post: >-
+    I made the mistake of exporting the database first AND not documenting how I
+    transformed it to YAML, so I've been hesitant to post here #fail
+- id: 760
+  publishDate: "2020-05-21T01:15:12.696Z"
+  post: >-
+    The static site is based on webpack and webpack-html-plugin with a few
+    preprocessor scripts that emit the templates #webpack #js
+- id: 761
+  publishDate: "2020-05-21T01:16:22.251Z"
+  post: >-
+    It mostly works and is reasonably speedy, although while iterating, a
+    template error in the lifesteam post rendering code caused ~1000 templates
+    to fail compilation. I let the build peg the CPU for 20 minutes before
+    giving up #fail
+- id: 762
+  publishDate: "2020-05-21T01:17:47.150Z"
+  post: >-
+    There is about as much javascript as there is python in the dynamic,
+    django-based hyperbola, which is to say not much #win
+- id: 763
+  publishDate: "2020-05-21T01:18:36.795Z"
+  post: >-
+    Some bespoke filters I hand rolled before got pushed into dependencies, like
+    hashtag parsing and linking moving to linkifyjs #win #yolo
+- id: 764
+  publishDate: "2020-05-21T01:19:04.720Z"
+  post: >-
+    Partials tended to end up in the same places as before #win
+- id: 765
+  publishDate: "2020-05-21T01:20:49.496Z"
+  post: >-
+    Big wins from switching to static: modifying content with a lightweight dev
+    server, CI via GitHub Actions, automated deploys, better webpack integration
+    and minification, site is free as in beer to operate #win
+- id: 766
+  publishDate: "2020-05-21T01:22:28.684Z"
+  post: >-
+    No more security updates, terraform, autoscaling group rolling deploys,
+    packer and baking AMIs, Ansible deprecation warnings, RDS outages #win I can
+    unsubscribe from nginx release notes listsrv lol
+- id: 767
+  publishDate: "2020-05-21T01:24:34.987Z"
+  post: >-
+    The one dynamic bit I cannot truly replicate is shortlinks but I never used
+    this feature #win
+- id: 768
+  publishDate: "2020-05-21T01:27:15.129Z"
+  image: "images/88e8782710584af0b5b7e0c5bced1e05.png"
+  post: >-
+    Nightly builds of Artichoke are available via ruby-build: rbenv install
+    artichoke-dev #artichoke #win
+- id: 769
+  publishDate: "2020-05-21T01:28:41.810Z"
+  post: >-
+    After 50 PRs, I was able to put GH-442 to bed and remove the Rc wrapper from
+    the Artichoke state https://github.com/artichoke/artichoke/pull/670 #win
+    This refactor took 4 months #fail #rust #artichoke
+- id: 770
+  publishDate: "2020-05-21T01:29:35.827Z"
+  post: >-
+    Once GH-670 was merged, I had a segfault that only (and reliably) reproduced
+    on one test in Windows #artichoke #rust #windows
+- id: 771
+  publishDate: "2020-05-21T01:31:32.828Z"
+  post: >-
+    After repeated attempts of replicating my windows CI setup in a developer
+    VM, I sloppily installed software via web installers. With every VS
+    component, rustup, RubyInstaller, LLVM, choco, and winflexbison, I was
+    running with a reproducer #artichoke
+- id: 772
+  publishDate: "2020-05-21T01:33:02.443Z"
+  post: >-
+    #vscode and LLDB in VSCode were SO amazing to use. Within a couple of
+    iterations, I was able to track down the use-after-free:
+    https://github.com/artichoke/artichoke/pull/674 #fail #win #artichoke
+- id: 773
+  publishDate: "2020-05-21T01:48:52.078Z"
+  post: >-
+    Also Windows Terminal and the Cascadia Code font were a dream to use. I
+    replaced Inconsolata with Cascadia Code on my Mac iTerm2 #terminal #font
+    #windows #win
+- id: 774
+  publishDate: "2020-05-21T01:51:55.268Z"
+  post: >-
+    More #artichoke updates since March: a marketing site at
+    www.artichokeruby.org, prebuilt containers on Docker Hub
+    https://hub.docker.com/r/artichokeruby/artichoke, and prebuilt nightlies
+    https://github.com/artichoke/nightly/releases/latest #win
+- id: 775
+  publishDate: "2020-09-15T13:04:13.319Z"
+  post: >-
+    I've had a work in progress fork of hyperbola to migrate to a static site
+    hosted on GitHub pages for over 6 months. I can't find the time to finish
+    it. #hypstatic
+- id: 776
+  publishDate: "2020-09-15T13:04:30.801Z"
+  post: >-
+    The AWS infra that the current site runs on is $50 a month I do not need to
+    spend. #aws #cost #hypstatic
+- id: 777
+  publishDate: "2020-09-15T13:04:58.990Z"
+  post: >-
+    Most of my updates these days are either in the Artichoke Discord or
+    @artichokeruby Twitter #hypstatic
+- id: 778
+  publishDate: "2020-09-15T13:05:24.792Z"
+  post: >-
+    Remaining pieces are implementing hashtag browsing pages and the date
+    archive browsing pages #hypstatic
+- id: 779
+  publishDate: "2020-09-15T13:06:07.622Z"
+  post: >-
+    I will miss the ease of adding lifestream posts via the Django admin UI, but
+    given that I'm posting elsewhere these days, I don't think I'll miss it too
+    much #hypstatic
+- id: 780
+  publishDate: "2020-09-15T13:06:27.430Z"
+  post: >-
+    The terraform config for this project is on 0.12 and I have no desire to
+    update it to 0.13. #fail #terraform #automation #hypstatic
+- id: 781
+  publishDate: "2020-09-15T13:06:37.092Z"
+  post: >-
+    I run an outdated version of Django. #django #fail #hypstatic
+- id: 782
+  publishDate: "2020-09-15T13:06:57.521Z"
+  post: >-
+    I've lost my ability to develop locally since I don't want to install
+    VirtualBox on my new laptop. #fail #hypstatic
+- id: 783
+  publishDate: "2020-09-15T13:07:12.819Z"
+  post: >-
+    Dependency management in Python makes me sad. #fail #python #hypstatic
+- id: 784
+  publishDate: "2020-09-15T13:07:25.350Z"
+  post: >-
+    There is no automated build and no test suite. #automation #hypstatic
+- id: 785
+  publishDate: "2020-09-15T13:07:48.164Z"
+  post: >-
+    Switching to a static site built with webpack at least affords the
+    opportunity to have an integration test that the site compiles. #automation
+    #hypstatic
+- id: 786
+  publishDate: "2020-09-15T13:11:34.593Z"
+  post: >-
+    Looking at the commit history for Python hyperbola over the last 3 years
+    shows that it hasn't been developed, only maintained. It is done, but the
+    current repo is expensive to maintain. #hypstatic
+- id: 787
+  publishDate: "2020-09-15T13:14:17.833Z"
+  post: >-
+    There is Ansible, Packer, Terraform, JavaScript, Webpack, Python, Django,
+    Ubuntu, nginx, EC2, Route53, ALB, S3. I think I can simplify this to GitHub
+    Actions, GitHub Pages, Node, Webpack, and statically configured DNS with my
+    registrar. #hypstatic
+- id: 788
+  publishDate: "2020-09-15T13:16:13.119Z"
+  post: >-
+    This is a setup that has worked well for www.artichokeruby.org. Set
+    dependabot to autoupdate deps and the "maintenance" has been updating
+    content. Deploys are automatic, regression testing of dep upgrades is
+    automatic. #automation #hypstatic
+- id: 789
+  publishDate: "2020-09-15T13:33:48.010Z"
+  post: >-
+    There have been over 600 PRs in the last year of Artichoke.
+    https://hyperbo.la/lifestream/737/
+    https://github.com/artichoke/artichoke/pull/847 #artichoke #git
+- id: 790
+  publishDate: "2020-09-15T14:11:18.205Z"
+  post: >-
+    And just like that, dependabot is enabled for hyperbola-static, the WIP
+    lifeastream branch is merged, and the CI is spruced up #hypstatic

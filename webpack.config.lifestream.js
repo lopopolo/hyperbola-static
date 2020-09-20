@@ -38,6 +38,10 @@ module.exports = () => [
     filename: "lifestream/hashtag/fail/page/8/index.html",
   }),
   new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-fail-0009.html",
+    filename: "lifestream/hashtag/fail/page/9/index.html",
+  }),
+  new HtmlWebPackPlugin({
     template: "lifestream/hashtag/hashtag-django-0001.html",
     filename: "lifestream/hashtag/django/index.html",
   }),
@@ -128,6 +132,10 @@ module.exports = () => [
   new HtmlWebPackPlugin({
     template: "lifestream/hashtag/hashtag-win-0008.html",
     filename: "lifestream/hashtag/win/page/8/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-win-0009.html",
+    filename: "lifestream/hashtag/win/page/9/index.html",
   }),
   new HtmlWebPackPlugin({
     template: "lifestream/hashtag/hashtag-excited-0001.html",
@@ -922,6 +930,10 @@ module.exports = () => [
     filename: "lifestream/hashtag/aws/page/2/index.html",
   }),
   new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-aws-0003.html",
+    filename: "lifestream/hashtag/aws/page/3/index.html",
+  }),
+  new HtmlWebPackPlugin({
     template: "lifestream/hashtag/hashtag-letsencrypt-0001.html",
     filename: "lifestream/hashtag/letsencrypt/index.html",
   }),
@@ -1080,6 +1092,38 @@ module.exports = () => [
   new HtmlWebPackPlugin({
     template: "lifestream/hashtag/hashtag-build-0001.html",
     filename: "lifestream/hashtag/build/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-yolo-0001.html",
+    filename: "lifestream/hashtag/yolo/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-windows-0001.html",
+    filename: "lifestream/hashtag/windows/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-vscode-0001.html",
+    filename: "lifestream/hashtag/vscode/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-terminal-0001.html",
+    filename: "lifestream/hashtag/terminal/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-font-0001.html",
+    filename: "lifestream/hashtag/font/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-hypstatic-0001.html",
+    filename: "lifestream/hashtag/hypstatic/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/archive/archive-2020-09-0001.html",
+    filename: "lifestream/archive/2020/09/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/archive/archive-2020-05-0001.html",
+    filename: "lifestream/archive/2020/05/index.html",
   }),
   new HtmlWebPackPlugin({
     template: "lifestream/archive/archive-2020-03-0001.html",
@@ -1676,6 +1720,142 @@ module.exports = () => [
   new HtmlWebPackPlugin({
     template: "lifestream/index/page-0038.html",
     filename: "lifestream/page/38/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/index/page-0039.html",
+    filename: "lifestream/page/39/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/posts/790/index.html",
+    filename: "lifestream/790/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/posts/789/index.html",
+    filename: "lifestream/789/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/posts/788/index.html",
+    filename: "lifestream/788/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/posts/787/index.html",
+    filename: "lifestream/787/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/posts/786/index.html",
+    filename: "lifestream/786/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/posts/785/index.html",
+    filename: "lifestream/785/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/posts/784/index.html",
+    filename: "lifestream/784/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/posts/783/index.html",
+    filename: "lifestream/783/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/posts/782/index.html",
+    filename: "lifestream/782/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/posts/781/index.html",
+    filename: "lifestream/781/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/posts/780/index.html",
+    filename: "lifestream/780/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/posts/779/index.html",
+    filename: "lifestream/779/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/posts/778/index.html",
+    filename: "lifestream/778/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/posts/777/index.html",
+    filename: "lifestream/777/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/posts/776/index.html",
+    filename: "lifestream/776/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/posts/775/index.html",
+    filename: "lifestream/775/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/posts/774/index.html",
+    filename: "lifestream/774/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/posts/773/index.html",
+    filename: "lifestream/773/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/posts/772/index.html",
+    filename: "lifestream/772/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/posts/771/index.html",
+    filename: "lifestream/771/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/posts/770/index.html",
+    filename: "lifestream/770/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/posts/769/index.html",
+    filename: "lifestream/769/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/posts/768/index.html",
+    filename: "lifestream/768/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/posts/767/index.html",
+    filename: "lifestream/767/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/posts/766/index.html",
+    filename: "lifestream/766/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/posts/765/index.html",
+    filename: "lifestream/765/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/posts/764/index.html",
+    filename: "lifestream/764/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/posts/763/index.html",
+    filename: "lifestream/763/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/posts/762/index.html",
+    filename: "lifestream/762/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/posts/761/index.html",
+    filename: "lifestream/761/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/posts/760/index.html",
+    filename: "lifestream/760/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/posts/759/index.html",
+    filename: "lifestream/759/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/posts/758/index.html",
+    filename: "lifestream/758/index.html",
   }),
   new HtmlWebPackPlugin({
     template: "lifestream/posts/757/index.html",

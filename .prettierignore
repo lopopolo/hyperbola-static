@@ -15,8 +15,11 @@ target/
 !*.yaml
 !*.yml
 
+**/terraform/*
 **/vendor/*
 !**/vendor/*.md
+
+content/source/**/*
 
 src/lifestream/**/*
 src/blog/**/*
