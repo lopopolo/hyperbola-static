@@ -25,7 +25,7 @@ body.contact .nav-link.nav-link-contact,
 body.lifestream .nav-link.nav-link-lifestream,
 body.blog .nav-link.nav-link-blog {
   color: $link-color;
-  background-image: linear-gradient(to bottom, #444 0%, darkgray 100%);
+  background-image: linear-gradient(to bottom, #444 0%, #888 100%);
 }
 
 .navbar-toggler-icon {
