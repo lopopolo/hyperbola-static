@@ -23,6 +23,20 @@ resource "aws_route53_record" "apex_ipv4" {
   ]
 }
 
+resource "aws_route53_record" "apex_ipv6" {
+  zone_id = aws_route53_zone.this.zone_id
+  name    = "hyperbo.la"
+  type    = "A"
+  ttl     = "300"
+
+  records = [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153",
+  ]
+}
+
 resource "aws_route53_record" "www_ipv4" {
   zone_id = aws_route53_zone.this.zone_id
   name    = "www"
@@ -37,6 +51,19 @@ resource "aws_route53_record" "www_ipv4" {
   ]
 }
 
+resource "aws_route53_record" "www_ipv6" {
+  zone_id = aws_route53_zone.this.zone_id
+  name    = "www"
+  type    = "A"
+  ttl     = "300"
+
+  records = [
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.110.153",
+    "185.199.111.153",
+  ]
+}
 output "hyperbola_zone_id" {
   value = aws_route53_zone.this.zone_id
 }
