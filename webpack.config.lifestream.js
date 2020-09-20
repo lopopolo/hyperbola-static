@@ -1118,6 +1118,14 @@ module.exports = () => [
     filename: "lifestream/hashtag/hypstatic/index.html",
   }),
   new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-a11y-0001.html",
+    filename: "lifestream/hashtag/a11y/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/hashtag/hashtag-lighthouse-0001.html",
+    filename: "lifestream/hashtag/lighthouse/index.html",
+  }),
+  new HtmlWebPackPlugin({
     template: "lifestream/archive/archive-2020-09-0001.html",
     filename: "lifestream/archive/2020/09/index.html",
   }),
@@ -1724,6 +1732,14 @@ module.exports = () => [
   new HtmlWebPackPlugin({
     template: "lifestream/index/page-0039.html",
     filename: "lifestream/page/39/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/posts/793/index.html",
+    filename: "lifestream/793/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/posts/792/index.html",
+    filename: "lifestream/792/index.html",
   }),
   new HtmlWebPackPlugin({
     template: "lifestream/posts/791/index.html",
