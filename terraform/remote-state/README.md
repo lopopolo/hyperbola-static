@@ -1,4 +1,4 @@
-# Artichoke remote Terraform state
+# hyperbola-static remote Terraform state
 
 The terraform configuration in this directory creates the infrastructure
 necessary to store Terraform state in S3.
