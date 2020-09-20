@@ -49,9 +49,9 @@
               <h2 class="card-title text-center">
                 <a href="<%= post.absoluteUrl %>"> <%= post.title %> </a>
               </h2>
-              <h6 class="card-subtitle text-center mb-2 text-muted">
+              <div class="h6 card-subtitle text-center mb-2 text-muted">
                 <a href="/contact/">Ryan Lopopolo</a> | <%= post.publishDate %>
-              </h6>
+              </div>
               <div class="card-text">
                 <%%= require('<%= post.markdown %>') %%>
               </div>
