@@ -47,7 +47,10 @@
             <% } %>
             <div class="card-body">
               <small class="card-subtitle">
-                <time datetime="<%= postDatestamp(post) %>">
+                <time
+                  class="hyperbola-text-timestamp"
+                  datetime="<%= postDatestamp(post) %>"
+                >
                   <%= postDateDisplay(post) %>
                 </time>
                 <a href="<%= postAbsoluteUrl(post) %>">permalink</a>
