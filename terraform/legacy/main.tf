@@ -8,14 +8,9 @@ terraform {
   }
 }
 
-variable "env" {
-  default = "production"
-  type    = string
-}
-
-variable "name" {
-  default = "hyperbola"
-  type    = string
+locals {
+  env  = "production"
+  name = "hyperbola"
 }
 
 resource "aws_s3_bucket" "media" {
@@ -27,20 +22,20 @@ resource "aws_s3_bucket" "media" {
   }
 
   tags = {
-    Name        = "hyperbola-app media files for ${var.env}"
-    Environment = var.env
+    Name        = "hyperbola-app media files for ${local.env}"
+    Environment = local.env
     project     = "legacy"
     managed_by  = "terraform"
   }
 }
 
 resource "aws_s3_bucket" "backup" {
-  bucket = "hyperbola-app-backup-${var.env}"
+  bucket = "hyperbola-app-backup-${local.env}"
   acl    = "private"
 
   tags = {
-    Name        = "hyperbola-app database backups for ${var.env}"
-    Environment = var.env
+    Name        = "hyperbola-app database backups for ${local.env}"
+    Environment = local.env
     project     = "legacy"
     managed_by  = "terraform"
   }
