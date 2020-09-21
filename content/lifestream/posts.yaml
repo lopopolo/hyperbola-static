@@ -3992,16 +3992,22 @@
   post: >-
     hyperbola is deployed to GitHub Pages now! Executed via DNS cutover with
     terraform. Now to destroy the old infrastructure in AWS. #github #hypstatic
-    #aws #terraform
+    #aws #terraform #hypstatic
 - id: 792
   publishDate: "2020-09-20T18:21:47Z"
   post: >-
     The static site with local #webpack development environment is already
     paying off! Google Lighthouse accessibility score for hyperbo.la is now 100
-    with increased text contrast. #a11y #lighthouse
+    with increased text contrast. #a11y #lighthouse #hypstatic
 - id: 793
   publishDate: "2020-09-20T18:23:15Z"
   post: >-
     To make this change on dynamic hyperbola would have meant 5-10 Ansible
     deploys to a Vagrant VM. Iteration speed would have been terrible. #devops
-    #a11y #lighthouse
+    #a11y #lighthouse #hypstatic
+- id: 794
+  publishDate: "2020-09-21T14:37:50Z"
+  post: >-
+    As of last night, all hyperbo.la AWS infrastructure is torn down.
+    https://github.com/lopopolo/hyperbola/pull/111 #aws #terraform #devops
+    #hypstatic
