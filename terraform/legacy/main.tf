@@ -17,6 +17,26 @@ resource "aws_s3_bucket" "media" {
   bucket = "www.hyperbolausercontent.net"
   acl    = "private"
 
+  lifecycle_rule {
+    id      = "retire"
+    enabled = true
+
+    tags = {
+      rule      = "retire"
+      autoclean = "true"
+    }
+
+    transition {
+      days          = 30
+      storage_class = "STANDARD_IA"
+    }
+
+    noncurrent_version_transition {
+      days          = 30
+      storage_class = "STANDARD_IA"
+    }
+  }
+
   versioning {
     enabled = true
   }
@@ -43,6 +63,26 @@ resource "aws_s3_bucket_public_access_block" "media" {
 resource "aws_s3_bucket" "backup" {
   bucket = "hyperbola-app-backup-${local.env}"
   acl    = "private"
+
+  lifecycle_rule {
+    id      = "retire"
+    enabled = true
+
+    tags = {
+      rule      = "retire"
+      autoclean = "true"
+    }
+
+    transition {
+      days          = 30
+      storage_class = "STANDARD_IA"
+    }
+
+    noncurrent_version_transition {
+      days          = 30
+      storage_class = "STANDARD_IA"
+    }
+  }
 
   tags = {
     Name        = "hyperbola-app database backups for ${local.env}"
