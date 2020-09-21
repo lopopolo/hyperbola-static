@@ -139,7 +139,7 @@ const get = (db) => {
     }
   }
 
-  return hashtags;
+  return new Map([...hashtags.entries()].sort());
 };
 
 const prepare = (db) => {

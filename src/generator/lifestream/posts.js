@@ -17,6 +17,9 @@ const outputs = Object.freeze({
 
 const Post = (id) =>
   Object.freeze({
+    sortKey() {
+      return `post-${String(id).padStart(10, "0")}`;
+    },
     templatePath() {
       return outputs.page(id);
     },
@@ -80,7 +83,14 @@ const generate = async (db, webpackPlugins) => {
     );
 
     const gen = await Promise.all(promises);
-    for (const post of gen) {
+    const sortedGen = gen.sort((a, b) => {
+      if (a.sortKey() < b.sortKey()) {
+        return -1;
+      } else {
+        return 1;
+      }
+    });
+    for (const post of sortedGen) {
       webpackPlugins.push(post.templatePath(), post.urlPath());
     }
 

@@ -34,6 +34,9 @@ const outputs = Object.freeze({
 
 const Archive = (year, month, pageNum) =>
   Object.freeze({
+    sortKey() {
+      return `${year}-${month}-${pageNum}`;
+    },
     templatePath() {
       return outputs.archive.page(year, month, pageNum);
     },
@@ -180,7 +183,14 @@ const generate = async (archive, webpackPlugins) => {
     }
 
     const archives = await Promise.all(promises);
-    for (const archive of archives) {
+    const sortedArchives = archives.sort((a, b) => {
+      if (a.sortKey() < b.sortKey()) {
+        return -1;
+      } else {
+        return 1;
+      }
+    });
+    for (const archive of sortedArchives) {
       webpackPlugins.push(archive.templatePath(), archive.urlPath());
     }
 
