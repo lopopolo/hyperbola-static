@@ -30,6 +30,11 @@ resource "aws_s3_bucket" "media" {
       days          = 30
       storage_class = "STANDARD_IA"
     }
+
+    noncurrent_version_transition {
+      days          = 30
+      storage_class = "STANDARD_IA"
+    }
   }
 
   versioning {
@@ -69,6 +74,11 @@ resource "aws_s3_bucket" "backup" {
     }
 
     transition {
+      days          = 30
+      storage_class = "STANDARD_IA"
+    }
+
+    noncurrent_version_transition {
       days          = 30
       storage_class = "STANDARD_IA"
     }
