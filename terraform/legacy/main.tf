@@ -10,12 +10,12 @@ terraform {
 
 variable "env" {
   default = "production"
-  type = string
+  type    = string
 }
 
 variable "name" {
   default = "hyperbola"
-  type = string
+  type    = string
 }
 
 resource "aws_s3_bucket" "media" {
