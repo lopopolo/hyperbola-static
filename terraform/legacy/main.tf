@@ -1,0 +1,58 @@
+terraform {
+  backend "s3" {
+    bucket         = "hyperbola-static-terraform-state"
+    region         = "us-west-2"
+    key            = "legacy/terraform.tfstate"
+    encrypt        = true
+    dynamodb_table = "terraform_statelock"
+  }
+}
+
+locals {
+  env  = "production"
+  name = "hyperbola"
+}
+
+resource "aws_s3_bucket" "media" {
+  bucket = "www.hyperbolausercontent.net"
+  acl    = "private"
+
+  versioning {
+    enabled = true
+  }
+
+  tags = {
+    Name        = "hyperbola-app media files for ${local.env}"
+    Environment = local.env
+    project     = "legacy"
+    managed_by  = "terraform"
+  }
+}
+
+resource "aws_s3_bucket" "backup" {
+  bucket = "hyperbola-app-backup-${local.env}"
+  acl    = "private"
+
+  tags = {
+    Name        = "hyperbola-app database backups for ${local.env}"
+    Environment = local.env
+    project     = "legacy"
+    managed_by  = "terraform"
+  }
+}
+
+output "media_bucket" {
+  value = aws_s3_bucket.media.bucket
+}
+
+output "media_bucket_arn" {
+  value = aws_s3_bucket.media.arn
+}
+
+output "backup_bucket" {
+  value = aws_s3_bucket.backup.bucket
+}
+
+output "backup_bucket_arn" {
+  value = aws_s3_bucket.backup.arn
+}
