@@ -84,6 +84,21 @@ jobs:
         run: terraform validate -no-color
         working-directory: "terraform/aws"
 
+      - name: "Format legacy module"
+        run: terraform fmt -check -diff
+        working-directory: "terraform/legacy"
+
+      - name: "Initialize legacy module"
+        run: terraform init
+        working-directory: "terraform/legacy"
+        env:
+          AWS_ACCESS_KEY: ${{ secrets.TF_AWS_ACCESS_KEY }}
+          AWS_SECRET_KEY: ${{ secrets.TF_AWS_SECRET_KEY }}
+
+      - name: "Validate legacy module"
+        run: terraform validate -no-color
+        working-directory: "terraform/legacy"
+
       - name: "Format remote-state module"
         run: terraform fmt -check -diff
         working-directory: "terraform/remote-state"
