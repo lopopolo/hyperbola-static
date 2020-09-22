@@ -7,6 +7,17 @@
   padding-top: 48px;
 }
 
+.navbar .collapse.show .nav-item,
+.navbar .collapsing .nav-item {
+  width: 100%;
+}
+
+.navbar .collapse.show .nav-link,
+.navbar .collapsing .nav-link {
+  width: 100%;
+  text-align: center;
+}
+
 .nav-link:hover {
   background: $hyperbola-body-color;
   color: $hyperbola-bg-dark;
