@@ -23,7 +23,7 @@
     "generate": "./bin/generate.js"
   },
   "dependencies": {
-    "bootstrap": "^4.5.2",
+    "bootstrap": "^4.5.3",
     "commander": "^6.1.0",
     "ejs": "^3.1.5",
     "jquery": "^3.5.1",
