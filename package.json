@@ -32,7 +32,7 @@
     "luxon": "^1.25.0",
     "paginate-array": "^2.1.0",
     "popper.js": "^1.16.1",
-    "react": "^16.13.1",
+    "react": "^16.14.0",
     "react-dom": "^16.13.1"
   },
   "devDependencies": {
