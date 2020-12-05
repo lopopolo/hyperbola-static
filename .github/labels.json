@@ -25,6 +25,11 @@
     "description": "Area: Infrastructure for running an open source project."
   },
   {
+    "name": "A-security",
+    "color": "f7e101",
+    "description": "Area: security vulnerabilities and unsoundness issues."
+  },
+  {
     "name": "A-site-generator",
     "color": "f7e101",
     "description": "Area: Static site generator."
