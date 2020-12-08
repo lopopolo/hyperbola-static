@@ -1,14 +1,19 @@
 variable "zone_id" {
   type = string
 }
+
 variable "zone_name" {
   type = string
 }
+
 variable "google_site_verifcation_keys" {
-  type = list(string)
+  type      = list(string)
+  sensitive = true
 }
+
 variable "dkim" {
-  type = string
+  type      = string
+  sensitive = true
 }
 
 # G Suite MX record values: https://support.google.com/a/answer/174125?hl=en
