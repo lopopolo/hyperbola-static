@@ -6,6 +6,10 @@ module.exports = () => [
     filename: "w/index.html",
   }),
   new HtmlWebPackPlugin({
+    template: "blog/posts/source-level-polymorphism/index.html",
+    filename: "w/source-level-polymorphism/index.html",
+  }),
+  new HtmlWebPackPlugin({
     template: "blog/posts/synthesis/index.html",
     filename: "w/synthesis/index.html",
   }),
