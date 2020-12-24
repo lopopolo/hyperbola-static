@@ -18,4 +18,4 @@ import "assets/favicons/site.webmanifest";
 import "assets/logo.png";
 
 // highlight.js
-import "highlight.js/styles/monokai-sublime.css";
+import "highlight.js/styles/default.css";
