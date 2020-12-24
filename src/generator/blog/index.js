@@ -14,6 +14,7 @@ const markdownPath = (slug) =>
   path.resolve(contentRoot, "blog", slug, "post.md");
 
 const blogPosts = Object.freeze([
+  "source-level-polymorphism",
   "synthesis",
   "cactus-harvesting",
   "the-conjoined-villages",
