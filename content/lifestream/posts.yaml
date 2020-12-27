@@ -4011,3 +4011,9 @@
     As of last night, all hyperbo.la AWS infrastructure is torn down.
     https://github.com/lopopolo/hyperbola/pull/111 #aws #terraform #devops
     #hypstatic
+- id: 795
+  publishDate: "2020-12-27T01:22:48Z"
+  post: >-
+    Correctness test that the lifestream handles rendering dates correctly when
+    the week year and year are not the same.
+    https://twitter.com/fasterthanlime/status/1342967204153876482

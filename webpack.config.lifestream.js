@@ -1578,6 +1578,10 @@ module.exports = () => [
     filename: "lifestream/archive/2020/09/index.html",
   }),
   new HtmlWebPackPlugin({
+    template: "lifestream/archive/archive-2020-12-0001.html",
+    filename: "lifestream/archive/2020/12/index.html",
+  }),
+  new HtmlWebPackPlugin({
     template: "lifestream/index/page-0001.html",
     filename: "lifestream/index.html",
   }),
@@ -4848,5 +4852,9 @@ module.exports = () => [
   new HtmlWebPackPlugin({
     template: "lifestream/posts/794/index.html",
     filename: "lifestream/794/index.html",
+  }),
+  new HtmlWebPackPlugin({
+    template: "lifestream/posts/795/index.html",
+    filename: "lifestream/795/index.html",
   }),
 ];
