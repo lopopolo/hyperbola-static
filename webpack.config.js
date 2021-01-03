@@ -84,6 +84,15 @@ module.exports = (_env, argv) => {
           },
         },
         {
+          test: new RegExp(path.resolve(__dirname, "src", "keys")),
+          use: {
+            loader: "file-loader",
+            options: {
+              name: "keys/[name].[ext]",
+            },
+          },
+        },
+        {
           test: /\.(png|jpe?g|gif)$/i,
           exclude: new RegExp(path.resolve(__dirname, "assets")),
           use: {
