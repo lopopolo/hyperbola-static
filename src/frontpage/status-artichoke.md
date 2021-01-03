@@ -1,2 +1,5 @@
-Building [Artichoke Ruby](https://www.artichokeruby.org), a Ruby made with Rust.
-Tweeting about progress at [@artichokeruby](https://twitter.com/artichokeruby).
+Building [Artichoke Ruby], a Ruby made with Rust. Tweeting about progress at
+[@artichokeruby].
+
+[artichoke ruby]: https://www.artichokeruby.org
+[@artichokeruby]: https://twitter.com/artichokeruby

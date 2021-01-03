@@ -19,3 +19,7 @@ import "assets/logo.png";
 
 // highlight.js
 import "highlight.js/styles/default.css";
+
+// GPG keys
+import "./keys/lopopolo1.gpg";
+import "./keys/lopopolo2.gpg";
