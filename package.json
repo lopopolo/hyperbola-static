@@ -27,7 +27,7 @@
     "commander": "^6.2.1",
     "ejs": "^3.1.5",
     "jquery": "^3.5.1",
-    "js-yaml": "^3.14.1",
+    "js-yaml": "^4.0.0",
     "linkifyjs": "^2.1.9",
     "luxon": "^1.25.0",
     "paginate-array": "^2.1.0",
