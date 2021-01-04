@@ -25,7 +25,7 @@ const loadDB = async () => {
     "posts.yaml"
   );
   const rawDb = await fs.readFile(posts, "utf8");
-  const db = parser.safeLoad(rawDb, { schema: parser.FAILSAFE_SCHEMA });
+  const db = parser.load(rawDb, { schema: parser.FAILSAFE_SCHEMA });
   return db;
 };
 
