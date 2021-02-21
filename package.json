@@ -75,9 +75,10 @@
   },
   "scripts": {
     "build": "npx -p . generate site",
-    "dev": "webpack-dev-server",
-    "dev:open": "webpack-dev-server --open",
+    "dev": "rm -rf dist ; ./bin/build.sh --development ; python3 -m http.server --directory dist",
+    "dev:production": "rm -rf dist ; ./bin/build.sh --production ; python3 -m http.server --directory dist",
     "fmt": "npx prettier --write '**/*'",
-    "lint:js": "npx eslint --fix ."
+    "lint": "npx eslint .",
+    "lint:fix": "npx eslint --fix ."
   }
 }

@@ -27,18 +27,23 @@ const contact = require("./webpack.config.contact");
 const frontpage = require("./webpack.config.frontpage");
 const lifestream = require("./webpack.config.lifestream");
 
-const plugins = [
-  new MiniCssExtractPlugin({
-    filename: "[name].[contenthash].css",
-    chunkFilename: "[id].[contenthash].css",
-  }),
-  ...blog(),
-  ...contact(),
-  ...frontpage(),
-  ...lifestream(),
-];
+const buildPlugins = (slice, chunks) => {
+  const plugins = [
+    new MiniCssExtractPlugin({
+      filename: "[name].[contenthash].css",
+      chunkFilename: "[id].[contenthash].css",
+    }),
+  ];
+  const pages = [...blog(), ...contact(), ...frontpage(), ...lifestream()];
+  for (let idx = 0; idx < pages.length; idx += 1) {
+    if (idx % chunks === slice) {
+      plugins.push(pages[idx]);
+    }
+  }
+  return plugins;
+};
 
-module.exports = (_env, argv) => {
+module.exports = (env, argv) => {
   let cssLoader = "style-loader";
   let optimization = {
     minimize: false,
@@ -50,6 +55,11 @@ module.exports = (_env, argv) => {
     optimization.minimize = true;
     optimization.minimizer = ["...", new CssMinimizerPlugin()];
   }
+
+  const slice = parseInt(env.slice);
+  const chunks = parseInt(env.chunks);
+  const plugins = buildPlugins(slice, chunks);
+
   return {
     context: path.resolve(__dirname, "src"),
     resolve: {
