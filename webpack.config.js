@@ -2,6 +2,7 @@ const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
+const svgToMiniDataURI = require("mini-svg-data-uri");
 
 const hljs = require("highlight.js");
 const { definer: terraform } = require("./vendor/terraform");
@@ -70,45 +71,51 @@ module.exports = (_env, argv) => {
           use: [cssLoader, "css-loader", "sass-loader"],
         },
         {
-          test: new RegExp(path.resolve(__dirname, "assets")),
-          use: {
-            loader: "file-loader",
-            options: {
-              name: "[name].[ext]",
-            },
+          include: path.resolve(__dirname, "assets"),
+          exclude: /\.svg$/,
+          type: "asset/resource",
+          generator: {
+            filename: "[name][ext]",
           },
         },
         {
-          test: new RegExp(path.resolve(__dirname, "src", "keys")),
-          use: {
-            loader: "file-loader",
-            options: {
-              name: "keys/[name].[ext]",
-            },
+          test: /\.svg$/,
+          include: path.resolve(__dirname, "assets"),
+          type: "asset/resource",
+          use: "@hyperbola/svgo-loader",
+          generator: {
+            filename: "[name][ext]",
+          },
+        },
+        {
+          include: path.resolve(__dirname, "src", "keys"),
+          type: "asset/resource",
+          generator: {
+            filename: "keys/[name][ext]",
           },
         },
         {
           test: /\.(png|jpe?g|gif)$/i,
-          exclude: new RegExp(path.resolve(__dirname, "assets")),
-          use: {
-            loader: "url-loader",
-            options: {
-              limit: 8192,
+          exclude: path.resolve(__dirname, "assets"),
+          type: "asset",
+        },
+        {
+          test: /\.svg$/,
+          exclude: path.resolve(__dirname, "assets"),
+          type: "asset",
+          use: "@hyperbola/svgo-loader",
+          generator: {
+            dataUrl: (content) => {
+              content = content.toString();
+              return svgToMiniDataURI(content);
             },
           },
         },
         {
-          test: /\.svg$/i,
-          exclude: new RegExp(path.resolve(__dirname, "assets")),
-          use: ["file-loader", "svgo-loader"],
-        },
-        {
           test: /resume\.pdf$/,
-          use: {
-            loader: "file-loader",
-            options: {
-              name: "contact/resume/lopopolo.pdf",
-            },
+          type: "asset/resource",
+          generator: {
+            filename: "contact/resume/lopopolo.pdf",
           },
         },
         {
@@ -126,7 +133,6 @@ module.exports = (_env, argv) => {
         },
         {
           test: /\.ya?ml$/,
-          type: "json",
           use: "yaml-loader",
         },
       ],
