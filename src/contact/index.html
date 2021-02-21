@@ -36,11 +36,9 @@
             <div class="col-md-4 d-inline-block text-truncate">Email</div>
             <div class="col-md-8 d-inline-block text-truncate">
               <a
-                href="<%= require('html-entities').AllHtmlEntities.encode('rjl@hyperbo.la') %>"
+                href="mailto:&#114;&#106;&#108;&#064;&#104;&#121;&#112;&#101;&#114;&#098;&#111;&#046;&#108;&#097;"
               >
-                <%=
-                require('html-entities').AllHtmlEntities.encode('rjl@hyperbo.la')
-                %>
+                &#114;&#106;&#108;&#064;&#104;&#121;&#112;&#101;&#114;&#098;&#111;&#046;&#108;&#097;
               </a>
             </div>
             <div class="col-md-4 d-inline-block text-truncate">GitHub</div>
@@ -62,7 +60,7 @@
               <time datetime="2019-01-10">jan 10 2019</time>
             </div>
             <div class="col-md-8 d-inline-block text-truncate">
-              <a href="<%= require('./resume.pdf').default %>">
+              <a href="<%= require('./resume.pdf') %>">
                 https://hyperbo.la/contact/resume/lopopolo.pdf
               </a>
             </div>
@@ -74,8 +72,8 @@
             <img
               class="card-img-top"
               alt="Ryan Lopopolo"
-              src="<%= require('responsive-loader!./lopopolo.jpg?sizes[]=240,sizes[]=480,sizes[]=720').src %>"
-              srcset="<%= require('responsive-loader!./lopopolo.jpg?sizes[]=240,sizes[]=480,sizes[]=720').srcSet %>"
+              src="<%= require('./lopopolo.jpg') %>"
+              srcset="<%= require('./lopopolo.jpg') %> 240w,<%= require('./lopopolo@2x.jpg') %> 480w,<%= require('./lopopolo@3x.jpg') %> 720w"
             />
             <div class="card-body">
               <p class="card-text">I use Ruby like a hammer sometimes.</p>

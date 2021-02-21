@@ -1,7 +1,7 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-const TerserPlugin = require("terser-webpack-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const svgToMiniDataURI = require("mini-svg-data-uri");
 
 const hljs = require("highlight.js");
 const { definer: terraform } = require("./vendor/terraform");
@@ -27,29 +27,39 @@ const contact = require("./webpack.config.contact");
 const frontpage = require("./webpack.config.frontpage");
 const lifestream = require("./webpack.config.lifestream");
 
-const plugins = [
-  new MiniCssExtractPlugin({
-    filename: "[name].[contenthash].css",
-    chunkFilename: "[id].[contenthash].css",
-  }),
-  ...blog(),
-  ...contact(),
-  ...frontpage(),
-  ...lifestream(),
-];
+const buildPlugins = (slice, chunks) => {
+  const plugins = [
+    new MiniCssExtractPlugin({
+      filename: "[name].[contenthash].css",
+      chunkFilename: "[id].[contenthash].css",
+    }),
+  ];
+  const pages = [...blog(), ...contact(), ...frontpage(), ...lifestream()];
+  for (let idx = 0; idx < pages.length; idx += 1) {
+    if (idx % chunks === slice) {
+      plugins.push(pages[idx]);
+    }
+  }
+  return plugins;
+};
 
-module.exports = (_env, argv) => {
+module.exports = (env, argv) => {
   let cssLoader = "style-loader";
   let optimization = {
     minimize: false,
+    chunkIds: "deterministic",
+    moduleIds: "deterministic",
   };
   if (argv.mode === "production") {
     cssLoader = MiniCssExtractPlugin.loader;
-    optimization = {
-      minimize: true,
-      minimizer: [new TerserPlugin(), new OptimizeCSSAssetsPlugin()],
-    };
+    optimization.minimize = true;
+    optimization.minimizer = ["...", new CssMinimizerPlugin()];
   }
+
+  const slice = parseInt(env.slice);
+  const chunks = parseInt(env.chunks);
+  const plugins = buildPlugins(slice, chunks);
+
   return {
     context: path.resolve(__dirname, "src"),
     resolve: {
@@ -70,45 +80,51 @@ module.exports = (_env, argv) => {
           use: [cssLoader, "css-loader", "sass-loader"],
         },
         {
-          test: new RegExp(path.resolve(__dirname, "assets")),
-          use: {
-            loader: "file-loader",
-            options: {
-              name: "[name].[ext]",
-            },
+          include: path.resolve(__dirname, "assets"),
+          exclude: /\.svg$/,
+          type: "asset/resource",
+          generator: {
+            filename: "[name][ext]",
           },
         },
         {
-          test: new RegExp(path.resolve(__dirname, "src", "keys")),
-          use: {
-            loader: "file-loader",
-            options: {
-              name: "keys/[name].[ext]",
-            },
+          test: /\.svg$/,
+          include: path.resolve(__dirname, "assets"),
+          type: "asset/resource",
+          use: "@hyperbola/svgo-loader",
+          generator: {
+            filename: "[name][ext]",
+          },
+        },
+        {
+          include: path.resolve(__dirname, "src", "keys"),
+          type: "asset/resource",
+          generator: {
+            filename: "keys/[name][ext]",
           },
         },
         {
           test: /\.(png|jpe?g|gif)$/i,
-          exclude: new RegExp(path.resolve(__dirname, "assets")),
-          use: {
-            loader: "url-loader",
-            options: {
-              limit: 8192,
+          exclude: path.resolve(__dirname, "assets"),
+          type: "asset",
+        },
+        {
+          test: /\.svg$/,
+          exclude: path.resolve(__dirname, "assets"),
+          type: "asset",
+          use: "@hyperbola/svgo-loader",
+          generator: {
+            dataUrl: (content) => {
+              content = content.toString();
+              return svgToMiniDataURI(content);
             },
           },
         },
         {
-          test: /\.svg$/i,
-          exclude: new RegExp(path.resolve(__dirname, "assets")),
-          use: ["file-loader", "svgo-loader"],
-        },
-        {
           test: /resume\.pdf$/,
-          use: {
-            loader: "file-loader",
-            options: {
-              name: "contact/resume/lopopolo.pdf",
-            },
+          type: "asset/resource",
+          generator: {
+            filename: "contact/resume/lopopolo.pdf",
           },
         },
         {
@@ -123,11 +139,6 @@ module.exports = (_env, argv) => {
               },
             },
           ],
-        },
-        {
-          test: /\.ya?ml$/,
-          type: "json",
-          use: "yaml-loader",
         },
       ],
     },

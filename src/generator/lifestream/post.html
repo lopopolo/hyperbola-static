@@ -41,8 +41,7 @@
             <img
               class="card-img-top img-thumbnail"
               alt="Photo for post <%= post.id %>"
-              src="<%%= require('responsive-loader!../<%= post.image %>?sizes[]=500,sizes[]=1000,sizes[]=1500').src %%>"
-              srcset="<%%= require('responsive-loader!../<%= post.image %>?sizes[]=500,sizes[]=1000,sizes[]=1500').srcSet %%>"
+              src="<%%= require('../<%= post.image %>') %%>"
             />
             <% } %>
             <div class="card-body">

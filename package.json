@@ -36,29 +36,22 @@
     "react-dom": "^17.0.1"
   },
   "devDependencies": {
+    "@hyperbola/svgo-loader": "^0.1.2",
     "css-loader": "^5.0.2",
-    "file-loader": "^6.2.0",
+    "css-minimizer-webpack-plugin": "^1.2.0",
     "front-matter": "^4.0.2",
     "highlight.js": "^10.6.0",
     "html-loader": "^1.3.2",
-    "html-webpack-plugin": "^4.5.2",
-    "image-webpack-loader": "^7.0.1",
-    "jimp": "^0.16.1",
+    "html-webpack-plugin": "^5.2.0",
     "markdown-loader": "^6.0.0",
     "mini-css-extract-plugin": "^1.3.8",
-    "optimize-css-assets-webpack-plugin": "^5.0.4",
-    "responsive-loader": "^2.3.0",
+    "mini-svg-data-uri": "^1.2.3",
     "sass": "^1.32.8",
     "sass-loader": "^10.1.1",
     "style-loader": "^2.0.0",
     "svgo": "^1.3.2",
-    "svgo-loader": "^2.2.1",
-    "terser-webpack-plugin": "^4.2.3",
-    "url-loader": "^4.1.1",
-    "webpack": "^4.46.0",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.2",
-    "yaml-loader": "^0.6.0"
+    "webpack": "^5.23.0",
+    "webpack-cli": "^4.5.0"
   },
   "eslintConfig": {
     "env": {
@@ -77,9 +70,10 @@
   },
   "scripts": {
     "build": "npx -p . generate site",
-    "dev": "webpack-dev-server",
-    "dev:open": "webpack-dev-server --open",
+    "dev": "rm -rf dist ; ./bin/build.sh --development ; python3 -m http.server --directory dist",
+    "dev:production": "rm -rf dist ; ./bin/build.sh --production ; python3 -m http.server --directory dist",
     "fmt": "npx prettier --write '**/*'",
-    "lint:js": "npx eslint --fix ."
+    "lint": "npx eslint .",
+    "lint:fix": "npx eslint --fix ."
   }
 }

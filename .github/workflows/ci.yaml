@@ -23,7 +23,7 @@ jobs:
         run: npm run build
 
       - name: Webpack build
-        run: npx webpack --mode production
+        run: ./bin/build.sh --production
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
