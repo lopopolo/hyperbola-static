@@ -3803,8 +3803,8 @@
   post: >-
     I published my first #rust crate (and package of any kind, ever)! rand_mt is
     a fork of an existing Mersenne Twister crate which adds compatibility with
-    the latest rand_core and makes it no_std #patch
-    https://crates.io/crates/rand_mt #patch
+    the latest rand_core and makes it no_std https://crates.io/crates/rand_mt
+    #patch
 - id: 758
   publishDate: "2020-05-21T01:13:38.593Z"
   post: >-
@@ -4017,3 +4017,54 @@
     Correctness test that the lifestream handles rendering dates correctly when
     the week year and year are not the same.
     https://twitter.com/fasterthanlime/status/1342967204153876482
+- id: 796
+  publishDate: "2021-02-21T18:21:19Z"
+  post: >-
+    Just upgraded hyperbo.la's build pipeline to #webpack 4 #hypstatic
+- id: 797
+  publishDate: "2021-02-21T18:21:19Z"
+  post: >-
+    In the process nukes 1000s of lines from package-lock.json #hypstatic
+- id: 798
+  publishDate: "2021-02-21T18:21:19Z"
+  post: >-
+    There's some recursion depth error that causes #webpack to abort when using
+    ~1500 `html-webpack-plugin` plugins that I worked around by sharding the
+    webpack build.
+- id: 799
+  publishDate: "2021-02-21T18:21:19Z"
+  post: >-
+    Sharding the #webpack build meant `webpack-dev-server` was not longer an
+    acceptable choice for a dev server. Replaced this with a #bash script and
+    `python3 -m http.server`
+- id: 800
+  publishDate: "2021-02-21T18:21:19Z"
+  post: >-
+    This PR also took the opportunity to hand-optimize and hand-make retina
+    variants of all images in the blog and lifestream. This eliminated most of
+    the large asset warnings from #webpack #performance #hypstatic
+- id: 801
+  publishDate: "2021-02-21T18:35:19Z"
+  post: >-
+    Since cutting hyperbo.la over to GitHub Pages and tearing down most of the
+    AWS infra, monthly AWS costs have been about $1.25. The biggest two items
+    have been ~$0.50 each for S3 and Route53. #aws #cost #hypstatic
+- id: 802
+  publishDate: "2021-02-21T18:39:39Z"
+  post: >-
+    Published a few more #rust crates since I last checked in: boba, focaccia,
+    intaglio, and roe.
+    https://crates.io/crates/boba  https://crates.io/crates/focaccia
+    https://crates.io/crates/intaglio https://crates.io/crates/roe #patch
+- id: 803
+  publishDate: "2021-02-21T18:39:39Z"
+  post: >-
+    focaccia and roe are UTF-8 case manipulation crates for implementing parts
+    of `String` and `Symbol` in #artichoke. intaglio is Artichoke's symbol
+    table, boba is an implementation of Bubble Babble Encoding which will be
+    used in the `digest` stdlib package. #rust #patch
+- id: 804
+  publishDate: "2021-02-21T18:39:39Z"
+  post: >-
+    Most crates are no-std when possible, 100% documented, and I think pretty
+    high quality. #patch #rust
