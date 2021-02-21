@@ -25,6 +25,7 @@ also surrounded entirely by the Netherlands, which makes them
   <img
     class="mx-auto mw-100 d-block rounded"
     width="500"
+    height="500"
     src="./map.jpg"
   />
 </div>
@@ -42,6 +43,7 @@ concentric national borders.
   <img
     class="mx-auto mw-100 d-block rounded"
     width="500"
+    height="500"
     src="./counter-exclave.jpg"
   />
 </div>
@@ -58,6 +60,7 @@ house is another border. And no one knows!"
   <img
     class="mx-auto mw-100 d-block rounded"
     width="500"
+    height="500"
     src="./n1.jpg"
   />
 </div>
@@ -70,6 +73,7 @@ side of the border.
   <img
     class="mx-auto mw-100 d-block rounded"
     width="500"
+    height="500"
     src="./n2.jpg"
   />
 </div>
@@ -82,6 +86,7 @@ license plates change as you walk along the street.
   <img
     class="mx-auto mw-100 d-block rounded"
     width="500"
+    height="500"
     src="./n3.jpg"
   />
 </div>
@@ -92,6 +97,7 @@ The border is everywhere in these two villages ...
   <img
     class="mx-auto mw-100 d-block rounded"
     width="500"
+    height="500"
     src="./bike.jpg"
   />
 </div>
@@ -102,6 +108,7 @@ The border is everywhere in these two villages ...
   <img
     class="mx-auto mw-100 d-block rounded"
     width="500"
+    height="500"
     src="./border.jpg"
   />
 </div>
