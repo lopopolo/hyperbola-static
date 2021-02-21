@@ -140,10 +140,6 @@ module.exports = (env, argv) => {
             },
           ],
         },
-        {
-          test: /\.ya?ml$/,
-          use: "yaml-loader",
-        },
       ],
     },
     plugins,
