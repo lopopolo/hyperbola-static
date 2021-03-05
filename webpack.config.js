@@ -27,23 +27,17 @@ const contact = require("./webpack.config.contact");
 const frontpage = require("./webpack.config.frontpage");
 const lifestream = require("./webpack.config.lifestream");
 
-const buildPlugins = (slice, chunks) => {
+const buildPlugins = () => {
   const plugins = [
     new MiniCssExtractPlugin({
       filename: "[name].[contenthash].css",
       chunkFilename: "[id].[contenthash].css",
     }),
   ];
-  const pages = [...blog(), ...contact(), ...frontpage(), ...lifestream()];
-  for (let idx = 0; idx < pages.length; idx += 1) {
-    if (idx % chunks === slice) {
-      plugins.push(pages[idx]);
-    }
-  }
-  return plugins;
+  return [...plugins, ...blog(), ...contact(), ...frontpage(), ...lifestream()];
 };
 
-module.exports = (env, argv) => {
+module.exports = (_env, argv) => {
   let cssLoader = "style-loader";
   let optimization = {
     minimize: false,
@@ -56,9 +50,7 @@ module.exports = (env, argv) => {
     optimization.minimizer = ["...", new CssMinimizerPlugin()];
   }
 
-  const slice = parseInt(env.slice);
-  const chunks = parseInt(env.chunks);
-  const plugins = buildPlugins(slice, chunks);
+  const plugins = buildPlugins();
 
   return {
     context: path.resolve(__dirname, "src"),
@@ -144,5 +136,10 @@ module.exports = (env, argv) => {
     },
     plugins,
     optimization,
+    devServer: {
+      compress: true,
+      host: "127.0.0.1",
+      port: 13777,
+    },
   };
 };
