@@ -14,11 +14,19 @@ variable "name" {
 }
 
 variable "iam_admins" {
-  default = ["lopopolo"]
+  type = map(string)
+
+  default = {
+    lopopolo = "lopopolo"
+  }
 }
 
 variable "github_actions_runners" {
-  default = ["github-actions-repo-hyperbola-static"]
+  type = map(string)
+
+  default = {
+    hyperbola-static = "github-actions-repo-hyperbola-static"
+  }
 }
 
 data "aws_iam_policy_document" "admin" {
@@ -78,36 +86,32 @@ output "config" {
   value = <<CONFIG
 
 Admin IAM:
-  Admin Users: ${join(
-  "\n               ",
-  formatlist("%s", module.iam_admin.users),
-  )}
-
-  Access IDs: ${join(
-  "\n              ",
-  formatlist("%s", module.iam_admin.access_ids),
-  )}
-
-  Secret Keys: ${join(
-  "\n               ",
-  formatlist("%s", module.iam_admin.secret_keys),
-  )}
+${join(
+  "\n\n",
+  formatlist(
+    "%s",
+    [for user in keys(module.iam_admin.users) :
+      join("\n", [
+        "  user: ${module.iam_admin.users[user]}",
+        "    access id: ${module.iam_admin.access_ids[user]}",
+        "    secret key: ${module.iam_admin.secret_keys[user]}"
+      ])
+    ]
+  ))}
 
 GitHub Actions IAM:
-  Admin Users: ${join(
-  "\n               ",
-  formatlist("%s", module.github_actions_runner_read_only.users),
-  )}
-
-  Access IDs: ${join(
-  "\n              ",
-  formatlist("%s", module.github_actions_runner_read_only.access_ids),
-  )}
-
-  Secret Keys: ${join(
-  "\n               ",
-  formatlist("%s", module.github_actions_runner_read_only.secret_keys),
-)}
+${join(
+  "\n\n",
+  formatlist(
+    "%s",
+    [for user in keys(module.github_actions_runner_read_only.users) :
+      join("\n", [
+        "  user: ${module.github_actions_runner_read_only.users[user]}",
+        "    access id: ${module.github_actions_runner_read_only.access_ids[user]}",
+        "    secret key: ${module.github_actions_runner_read_only.secret_keys[user]}"
+      ])
+    ]
+))}
 
 CONFIG
 
@@ -123,4 +127,12 @@ output "iam_admin_access_ids" {
 
 output "iam_admin_secret_keys" {
   value = module.iam_admin.secret_keys
+}
+
+output "github_actions_iam_access_ids" {
+  value = module.github_actions_runner_read_only.access_ids
+}
+
+output "github_actions_iam_secret_keys" {
+  value = module.github_actions_runner_read_only.secret_keys
 }
