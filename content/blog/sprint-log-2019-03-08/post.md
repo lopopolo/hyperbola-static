@@ -17,7 +17,7 @@ I did lots of things this sprint. Very few of them involved writing code.
 - 1:1 conversations with 8 engineers, 1 account executive, 1 product manager, my
   engineering manager, and my skip level manager.
 - Created the outline for a blog post targeting the
-  [Stripe engineering blog](https://stripe.com/blog/engineering) on our use of
+  [Stripe engineering blog] on our use of
   graph theory to approach cost attribution.
 - Sprint stuff, planning, standups, retrospective. Led the good/bad/try starfish
   discussion at retro.
@@ -26,7 +26,7 @@ I did lots of things this sprint. Very few of them involved writing code.
   onboarding documentation.
 - Brainstormed with the Education team on how to create a drip-style marketing
   campaign over Slack for surfacing onboarding materials to new engineers.
-- Wrote a quickref on debugging with [pry](https://github.com/pry/pry) as sample
+- Wrote a quickref on debugging with [pry] as sample
   content for the drip campaign.
 - Crowdsourced two additional engineers to commit to writing sample content for
   the drip campaign.
@@ -35,12 +35,18 @@ I did lots of things this sprint. Very few of them involved writing code.
   effectively during the performance cycle with the Education team.
 - Reviewed and approved 6 PRs.
 - Hosted a
-  [Carly Rae Jepsen listening party](https://open.spotify.com/user/p4lindromica/playlist/51LWXLDxAuDSHFUfoelVXn?si=4wk5kzdbQc-zwuY4_BAMgA)
+  [Carly Rae Jepsen listening party].
   for the Seattle office.
 - Worked on slides for
-  [DevOpsDays Seattle](https://www.devopsdays.org/events/2019-seattle/program/ryan-lopopolo/).
+  [DevOpsDays Seattle].
 - Partnered with another engineer and proposed an internal tech talk called _7
   weird things you wish you knew about AWS_.
 - Synthesized the raw data on
-  [Stripe's carbon footprint](https://stripe.com/environment) from our AWS
+  [Stripe's carbon footprint] from our AWS
   resources and shared with the infra organization.
+
+[Stripe engineering blog]: https://stripe.com/blog/engineering
+[pry]: https://github.com/pry/pry
+[Carly Rae Jepsen listening party]: https://open.spotify.com/user/p4lindromica/playlist/51LWXLDxAuDSHFUfoelVXn?si=4wk5kzdbQc-zwuY4_BAMgA
+[DevOpsDays Seattle]: https://www.devopsdays.org/events/2019-seattle/program/ryan-lopopolo/
+[Stripe's carbon footprint]: https://stripe.com/environment
