@@ -11,13 +11,13 @@
     "webpack"
   ],
   "homepage": "https://hyperbo.la",
-  "bugs": "https://github.com/lopopolo/hyperbola-static/issues",
+  "bugs": "https://github.com/hyperbola/hyperbola-static/issues",
   "license": "MIT",
   "author": "Ryan Lopopolo <rjl@hyperbo.la> (https://hyperbo.la/)",
   "contributors": [
     "Ryan Lopopolo <rjl@hyperbo.la> (https://hyperbo.la/)"
   ],
-  "repository": "github:lopopolo/hyperbola-static",
+  "repository": "github:hyperbola/hyperbola-static",
   "main": "./index.js",
   "bin": {
     "generate": "./bin/generate.js"

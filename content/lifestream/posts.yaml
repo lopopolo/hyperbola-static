@@ -1550,7 +1550,7 @@
   post: >-
     Upcoming Xen vuln was the forcing function to get my gunicorn upstart
     scripts able to work after a reboot. There is some nasty in them
-    https://github.com/lopopolo/hyperbola-tools/commit/8e5c4 #bash
+    https://github.com/hyperbola/hyperbola-tools/commit/8e5c4 #bash
 - id: 332
   publishDate: "2015-03-04T05:56:51Z"
   post: >-
@@ -1558,7 +1558,7 @@
 - id: 333
   publishDate: "2015-03-04T06:14:46Z"
   post: >-
-    #bug fixed https://github.com/lopopolo/hyperbola/commit/01b34d with minor
+    #bug fixed https://github.com/hyperbola/hyperbola/commit/01b34d with minor
     staging break caused by django-pipeline renaming their templatetags #django
 - id: 334
   publishDate: "2015-03-10T06:41:25Z"
@@ -1754,7 +1754,7 @@
   publishDate: "2015-11-07T04:10:18Z"
   post: >-
     I bought IntelliJ Ultimate and it has already been decently valuable:
-    https://github.com/lopopolo/hyperbola/pull/28 ... fixing lots of warnings
+    https://github.com/hyperbola/hyperbola/pull/28 ... fixing lots of warnings
     #win
 - id: 374
   publishDate: "2015-11-07T07:12:05Z"
@@ -1824,7 +1824,7 @@
 - id: 386
   publishDate: "2015-11-12T06:52:34Z"
   post: >-
-    OG status: https://github.com/lopopolo/hyperbola/tree/og-hyperbola-v1
+    OG status: https://github.com/hyperbola/hyperbola/tree/og-hyperbola-v1
 - id: 387
   publishDate: "2015-11-14T05:32:41Z"
   post: >-
@@ -1891,7 +1891,7 @@
   publishDate: "2015-11-22T03:37:59Z"
   post: >-
     With this latest release, hyperbola has surpassed 500 commits! #win
-    https://github.com/lopopolo/hyperbola/tree/2015-11-21-lifestream-template-refactor
+    https://github.com/hyperbola/hyperbola/tree/2015-11-21-lifestream-template-refactor
 - id: 400
   publishDate: "2015-11-24T07:38:27Z"
   post: >-
@@ -2166,7 +2166,7 @@
   post: >-
     mucking around in settings.py I ended up doing a top-level import from
     debug_toolbar. Yay for staging. #fail
-    https://github.com/lopopolo/hyperbola/commit/26c4e1d
+    https://github.com/hyperbola/hyperbola/commit/26c4e1d
 - id: 456
   publishDate: "2016-11-17T04:23:54.191Z"
   post: >-
@@ -2263,7 +2263,7 @@
   post: >-
     Media backups have been failing since I moved the site to the new server.
     I've been uploading empty, corrupted tarballs. #fail fix here:
-    https://github.com/lopopolo/hyperbola/commit/859128 Thank you gitlab &
+    https://github.com/hyperbola/hyperbola/commit/859128 Thank you gitlab &
     national check your backups day
 - id: 475
   publishDate: "2017-02-08T03:05:46.553Z"
@@ -2401,7 +2401,7 @@
     Converted wiki from ELB to ALB this morning ... took a couple of hours.
     modified #terraform config and updated #ansible ... also converted from
     Let's Encrypt to ACM.
-    https://github.com/lopopolo/hyperbola-tools/commit/23fb9a7 #win
+    https://github.com/hyperbola/hyperbola-tools/commit/23fb9a7 #win
 - id: 502
   publishDate: "2017-07-03T02:52:20.640Z"
   post: >-
@@ -2618,7 +2618,7 @@
   post: >-
     #history throwback to the time that my wiki was spammed by a bot that turned
     all the pages into link spam for discount pharmaceuticals
-    https://github.com/lopopolo/hyperbola/commit/1a3725b84bf82982945f68d14ff09ae7aa00d0ba
+    https://github.com/hyperbola/hyperbola/commit/1a3725b84bf82982945f68d14ff09ae7aa00d0ba
     #fail
 - id: 541
   publishDate: "2017-10-28T18:52:18.408Z"
@@ -2819,7 +2819,7 @@
 - id: 577
   publishDate: "2018-01-23T06:02:23.636Z"
   post: >-
-    vagrant-lb PR: https://github.com/lopopolo/hyperbola/pull/86
+    vagrant-lb PR: https://github.com/hyperbola/hyperbola/pull/86
 - id: 578
   publishDate: "2018-01-27T19:53:40.657Z"
   post: >-
@@ -2846,7 +2846,7 @@
     So it turns out I shouldn't have ignored that MySQL backtrace when printing
     the help text of my new django management command in dev. That's why it hung
     when building the AMI. #fail One line fix:
-    https://github.com/lopopolo/hyperbola/commit/728f1d68
+    https://github.com/hyperbola/hyperbola/commit/728f1d68
 - id: 583
   publishDate: "2018-02-24T06:10:06.329Z"
   post: >-
@@ -2915,7 +2915,7 @@
   publishDate: "2018-04-18T08:11:09.414Z"
   post: >-
     Switched from community PPA to official nginx-provided binaries. That was
-    ... really easy: https://github.com/lopopolo/hyperbola/commit/5461837 #win
+    ... really easy: https://github.com/hyperbola/hyperbola/commit/5461837 #win
     #ansible
 - id: 597
   publishDate: "2018-05-12T07:41:55.324Z"
@@ -2945,13 +2945,13 @@
   publishDate: "2018-05-28T07:24:40.651Z"
   post: >-
     hyperbola is ready for #django 2.1.
-    https://github.com/lopopolo/hyperbola/commit/d92a79f. That was easy #win
+    https://github.com/hyperbola/hyperbola/commit/d92a79f. That was easy #win
 - id: 602
   publishDate: "2018-06-05T04:47:10.385Z"
   post: >-
     Last week I tried to build hyperbola with #docker. I ended up with 5
     containers to deploy a stage environment.
-    https://github.com/lopopolo/hyperbola/pull/92
+    https://github.com/hyperbola/hyperbola/pull/92
 - id: 603
   publishDate: "2018-06-10T06:50:58.434Z"
   post: >-
@@ -2973,8 +2973,8 @@
 - id: 607
   publishDate: "2018-06-10T22:25:19.227Z"
   post: >-
-    https://github.com/lopopolo/hyperbola/commit/5c36137,
-    https://github.com/lopopolo/hyperbola/commit/fcd007c #HA
+    https://github.com/hyperbola/hyperbola/commit/5c36137,
+    https://github.com/hyperbola/hyperbola/commit/fcd007c #HA
 - id: 608
   publishDate: "2018-06-11T02:37:11.114Z"
   post: >-
@@ -3019,7 +3019,7 @@
 - id: 615
   publishDate: "2018-08-10T06:10:20.512Z"
   post: >-
-    docker lessons: https://github.com/lopopolo/hyperbola/pull/94
+    docker lessons: https://github.com/hyperbola/hyperbola/pull/94
 - id: 616
   publishDate: "2018-08-22T04:18:33.187Z"
   post: >-
@@ -3045,7 +3045,7 @@
   post: >-
     Further #cost optimized my #AWS infra. Saved $3/month by turning off
     CloudWatch monitoring and making my ASG out of spot instances
-    https://github.com/lopopolo/hyperbola/commit/ffa0e34 #win
+    https://github.com/hyperbola/hyperbola/commit/ffa0e34 #win
 - id: 621
   publishDate: "2018-10-27T23:12:07.497Z"
   post: >-
@@ -3077,12 +3077,12 @@
   post: >-
     Significantly refactored my #webpack static asset pipeline today. No longer
     build assets locally and check them in. Build happens as part of #ansible
-    provisioning. #win https://github.com/lopopolo/hyperbola/commit/eaf5b3197
+    provisioning. #win https://github.com/hyperbola/hyperbola/commit/eaf5b3197
 - id: 627
   publishDate: "2018-10-29T05:28:45.494Z"
   post: >-
     That was a 35-commit weekend. New features and improved code quality. #win
-    https://github.com/lopopolo/hyperbola/compare/918f6d0f..4c331eee
+    https://github.com/hyperbola/hyperbola/compare/918f6d0f..4c331eee
 - id: 628
   publishDate: "2018-10-31T07:41:40.559Z"
   post: >-
@@ -3099,7 +3099,7 @@
   post: >-
     Got into an undeployable state due to differences in #provisioning between
     local and prod environments #fail
-    https://github.com/lopopolo/hyperbola/commit/a914992
+    https://github.com/hyperbola/hyperbola/commit/a914992
 - id: 631
   publishDate: "2018-11-04T22:58:33.879Z"
   post: >-
@@ -3166,7 +3166,7 @@
     I was hard down for ~5min last night while rolling out secrets in parameter
     store. 0.149.0, 0.149.1, 0.149.2, and 0.149.3 were bad releases #fail.
     0.149.4 is stable:
-    https://github.com/lopopolo/hyperbola/compare/v0.148.0...v0.149.4.
+    https://github.com/hyperbola/hyperbola/compare/v0.148.0...v0.149.4.
     Postmortem pending.
 - id: 643
   publishDate: "2018-11-16T05:46:24.657Z"
@@ -3400,12 +3400,12 @@
   publishDate: "2019-05-16T08:30:35.859Z"
   post: >-
     ferrocarril is a new project I've been working on to embed #ruby on Rails in
-    #rust https://github.com/lopopolo/ferrocarril
+    #rust https://github.com/artichoke/ferrocarril
 - id: 685
   publishDate: "2019-05-16T08:47:59.027Z"
   post: >-
     It only took 49 build jobs, but the ferrocarril build is passing on CircleCI
-    https://circleci.com/gh/lopopolo/ferrocarril/47 This is the first time I've
+    https://circleci.com/gh/artichoke/ferrocarril/47 This is the first time I've
     ever set up #ci for a side project #win
 - id: 686
   publishDate: "2019-05-17T01:21:37.558Z"
@@ -3425,7 +3425,7 @@
     Excluding generated and vendored sources, ferrocarril is 8700 lines of
     #rust, #c, and #ruby. This is a lot of code. In very uncharacteristic
     fashion for a side project, a big chunk is tests #win
-    https://github.com/lopopolo/ferrocarril/commit/fe2febc
+    https://github.com/artichoke/ferrocarril/commit/fe2febc
 - id: 689
   publishDate: "2019-05-24T07:08:45.603Z"
   post: >-
@@ -3470,7 +3470,7 @@
   post: >-
     It has been a really productive weekend. Merged 23 #github PRs for
     ferrocarril #win #rust #git
-    https://github.com/lopopolo/ferrocarril/pulls?utf8=%E2%9C%93&q=is%3Apr+created%3A2019-05-24..2019-05-27+is%3Aclosed+
+    https://github.com/artichoke/ferrocarril/pulls?utf8=%E2%9C%93&q=is%3Apr+created%3A2019-05-24..2019-05-27+is%3Aclosed+
 - id: 697
   publishDate: "2019-06-01T07:59:07.223Z"
   post: >-
@@ -3480,7 +3480,7 @@
 - id: 698
   publishDate: "2019-06-01T07:59:50.016Z"
   post: >-
-    I have Regexp#match? https://github.com/lopopolo/ferrocarril/pull/93 #win
+    I have Regexp#match? https://github.com/artichoke/ferrocarril/pull/93 #win
     #rust #ruby
 - id: 699
   publishDate: "2019-06-05T20:00:34.831Z"
@@ -3516,7 +3516,7 @@
   post: >-
     Optimized String#scan in ferrocarril to be comparable to CRuby performance
     #rust #ruby #mruby #performance
-    https://github.com/lopopolo/ferrocarril/pull/138
+    https://github.com/artichoke/ferrocarril/pull/138
 - id: 705
   publishDate: "2019-07-07T19:33:13.709Z"
   image: "images/dab9dcb721574d3681b281b336bcc260.png"
@@ -3533,7 +3533,7 @@
   post: >-
     That memory leak turned out to be quite the yak shave. setjmp/longjmp from C
     leaving #rust memory in inconsistent state #fail
-    https://github.com/lopopolo/ferrocarril/pull/168
+    https://github.com/artichoke/ferrocarril/pull/168
 - id: 708
   publishDate: "2019-07-14T19:46:55.811Z"
   post: >-
@@ -4009,7 +4009,7 @@
   publishDate: "2020-09-21T14:37:50Z"
   post: >-
     As of last night, all hyperbo.la AWS infrastructure is torn down.
-    https://github.com/lopopolo/hyperbola/pull/111 #aws #terraform #devops
+    https://github.com/hyperbola/hyperbola/pull/111 #aws #terraform #devops
     #hypstatic
 - id: 795
   publishDate: "2020-12-27T01:22:48Z"

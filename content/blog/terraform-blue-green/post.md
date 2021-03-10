@@ -15,9 +15,12 @@ One way you can perform a blue-green deployment with an AWS autoscaling group
 (ASG) involves mutating the ASG configuration and state.
 
 1. Create a new launch configuration that points to your new pre-baked AMI.
-2. [Change the launch configuration for your ASG](https://docs.aws.amazon.com/autoscaling/ec2/userguide/change-launch-config.html).
+2. [Change the launch configuration for your ASG].
 3. Gradually cycle your ASG by terminating instances running the old AMI.
 4. If all goes well, your new code is fully rolled out.
+
+[change the launch configuration for your asg]:
+  https://docs.aws.amazon.com/autoscaling/ec2/userguide/change-launch-config.html
 
 To rollback a bad deploy:
 

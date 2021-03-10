@@ -11,15 +11,19 @@ I've been on a
 [world tour](https://www.instagram.com/explore/tags/lopoworldtour/) lately,
 visiting Singapore, Dublin, London, Paris, and Amsterdam over the course of 3.5
 weeks. The coolest thing I've done on this trip is visit the small villages of
-[Baarle-Hertog 🇧🇪](https://en.wikipedia.org/wiki/Baarle-Hertog) and
-[Baarle-Nassau 🇳🇱](https://en.wikipedia.org/wiki/Baarle-Nassau), the site of one
-of the most complicated international borders in the world.
+[Baarle-Hertog] 🇧🇪 and [Baarle-Nassau] 🇳🇱, the site of one of the most
+complicated international borders in the world.
+
+[baarle-hertog]: https://en.wikipedia.org/wiki/Baarle-Hertog
+[baarle-nassau]: https://en.wikipedia.org/wiki/Baarle-Nassau
 
 Baarle-Hertog is a collection of parcels within the Netherlands that are
 Belgian. These parcels are separated from the main of Belgium, which makes them
-[exclaves](https://en.wikipedia.org/wiki/Enclave_and_exclave). These parcels are
-also surrounded entirely by the Netherlands, which makes them
-[enclaves](https://en.wikipedia.org/wiki/Enclave_and_exclave).
+[exclaves]. These parcels are also surrounded entirely by the Netherlands, which
+makes them [enclaves].
+
+[exclaves]: https://en.wikipedia.org/wiki/Enclave_and_exclave
+[enclaves]: https://en.wikipedia.org/wiki/Enclave_and_exclave
 
 <div class="mb-3 rounded">
   <img
@@ -32,8 +36,10 @@ also surrounded entirely by the Netherlands, which makes them
 
 More special, and more rare, is that within these Belgian exclaves is another
 level of recursion. Within Baarle-Hertog are seven Dutch exclaves. This extra
-level of nesting is called a
-[counter-exclave](https://en.wikipedia.org/wiki/Enclave_and_exclave#Enclaves_within_enclaves).
+level of nesting is called a [counter-exclave].
+
+[counter-exclave]:
+  https://en.wikipedia.org/wiki/Enclave_and_exclave#Enclaves_within_enclaves
 
 To stand at the center of a counter-exclave is a unique experience. There are
 not many places on earth where you are surrounded by three nested sets of

@@ -20,34 +20,38 @@ decentralized.
 Your entire EC2 fleet is comprised of six instance _types_. Capacity planning is
 centrally-managed, as is cloud orchestration.
 
-Half of your Elasticsearch clusters are
-[AWS-managed](https://aws.amazon.com/elasticsearch-service/); the other half run
-on self-managed EC2 instances. There is misalignment between two (or more)
-teams. Cost is not consistently considered when making architectural decisions,
-which means that engineering is misaligned with finance.
+Half of your Elasticsearch clusters are [AWS-managed]; the other half run on
+self-managed EC2 instances. There is misalignment between two (or more) teams.
+Cost is not consistently considered when making architectural decisions, which
+means that engineering is misaligned with finance.
 
-You buy
-[reserved instances for EC2](https://aws.amazon.com/ec2/pricing/reserved-instances/)
-but not
-[ElastiCache](https://aws.amazon.com/elasticache/pricing/#Heavy_Utilization_Reserved_Nodes).
-Missing payment options and offering classes on ElastiCache RIs prevent you from
-applying your EC2 RI purchasing rules. Your biggest ElastiCache spender does not
-discuss this with finance, indicating a missing escalation path.
+You buy [reserved instances for EC2] but not [ElastiCache]. Missing payment
+options and offering classes on ElastiCache RIs prevent you from applying your
+EC2 RI purchasing rules. Your biggest ElastiCache spender does not discuss this
+with finance, indicating a missing escalation path.
 
-You keep submitting service limit increases for
-[VPC peering limits](https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html#vpc-limits-peering).
+You keep submitting service limit increases for [VPC peering limits].
 Engineering teams think they are building isolated infrastructure, but changing
 requirements break these assumptions. There is not enough global coordination
 during medium-term planning cycles.
 
-One of your workloads upgrades from `c3`s to `c5d`s
-[the day they are released](https://aws.amazon.com/about-aws/whats-new/2018/05/introducing-amazon-ec2-c5d-instances/);
+One of your workloads upgrades from `c3`s to `c5d`s [the day they are released];
 another similar workload does not. Teams operate in silos. Technology news
 relevant to development propagates haphazardly.
 
 You purchase hundreds of reserved instances every month. You have a team
-dedicated to
-[globally-optimizing AWS costs](https://stripe.com/blog/aws-reserved-instances).
+dedicated to [globally-optimizing AWS costs].
+
+[aws-managed]: https://aws.amazon.com/elasticsearch-service/
+[reserved instances for ec2]:
+  https://aws.amazon.com/ec2/pricing/reserved-instances/
+[elasticache]:
+  https://aws.amazon.com/elasticache/pricing/#Heavy_Utilization_Reserved_Nodes
+[vpc peering limits]:
+  https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html#vpc-limits-peering
+[the day they are released]:
+  https://aws.amazon.com/about-aws/whats-new/2018/05/introducing-amazon-ec2-c5d-instances/
+[globally-optimizing aws costs]: https://stripe.com/blog/aws-reserved-instances
 
 ### Conway's Law
 
@@ -57,13 +61,15 @@ Within engineering, 1:1s across team boundaries can be an effective way of
 socializing information. Working groups for teams that have similar workloads or
 infrastructure needs can align folks on consistent techniques.
 
-The
-[misalignments between engineering and finance](https://hyperbo.la/w/engineering-finance-partnership/)
-in the case studies span department boundaries. To correct these, designate a
-single point of contact (person or team) from each department. The points are
-responsible for communicating each other's requirements across the department
-boundary. Having a single directly responsible individual (DRI) within a
-department makes it easy to determine accountability.
+The [misalignments between engineering and finance] in the case studies span
+department boundaries. To correct these, designate a single point of contact
+(person or team) from each department. The points are responsible for
+communicating each other's requirements across the department boundary. Having a
+single directly responsible individual (DRI) within a department makes it easy
+to determine accountability.
+
+[misalignments between engineering and finance]:
+  https://hyperbo.la/w/engineering-finance-partnership/
 
 ### Many Problems, Many DRIs
 
@@ -78,9 +84,10 @@ cross-team planning, assign a single person responsibility and imbue them with
 the authority to make changes. It helps if these DRIs align with team
 responsibilities so they may enlist additional resources if required.
 
-We use this model at [Stripe](https://stripe.com/jobs). The Search
-Infrastructure team is consolidating our Elasticsearch infrastructure, the
-Insight team drives our cost optimization strategy and reserved instance
-purchasing, and the TPM org drives org-wide planning. Each team has consistently
-improved how we execute on the area for which they are responsible because they
-are empowered to do so.
+We use this model at [Stripe]. The Search Infrastructure team is consolidating
+our Elasticsearch infrastructure, the Insight team drives our cost optimization
+strategy and reserved instance purchasing, and the TPM org drives org-wide
+planning. Each team has consistently improved how we execute on the area for
+which they are responsible because they are empowered to do so.
+
+[stripe]: https://stripe.com/jobs
