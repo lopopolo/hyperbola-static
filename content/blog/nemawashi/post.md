@@ -19,12 +19,14 @@ to know how we fit into the rest of the infrastructure organization. Without a
 path laid before us, I did not know how to be heard, how to influence, how to
 drive strategy.
 
-[Cory](http://onemogin.com/about/) taught me about
-[_nemawashi_](https://en.wikipedia.org/wiki/Nemawashi), a process of slow,
-deliberate consensus building. By using _nemawashi_ when trying to enact a
-change, by the time you make the proposal, the change is already _de facto_
-implemented because you already have convinced all of the stakeholders that the
-change is the right thing to do.
+[Cory] taught me about [_nemawashi_], a process of slow, deliberate consensus
+building. By using _nemawashi_ when trying to enact a change, by the time you
+make the proposal, the change is already _de facto_ implemented because you
+already have convinced all of the stakeholders that the change is the right
+thing to do.
+
+[cory]: http://onemogin.com/about/
+[_nemawashi_]: https://en.wikipedia.org/wiki/Nemawashi
 
 By the end of my second month at Stripe, I had practiced this new skill. Our AWS
 tooling had a (strong) preference for instance store-backed instance types.
@@ -37,16 +39,17 @@ to remove this restriction because new instance families:
 - have bigger reserved instance discounts.
 - enable running fewer servers.
 
-The hurdle to overcome was institutional fear of EBS. There was a large
-[EBS outage](https://aws.amazon.com/message/65648/) shortly after Stripe started
-using AWS that formed a lot of organizational scar tissue. To work through this
-fear, I had _a lot_ of 1:1 conversations across all of infrastructure. I sought
-to find out:
+The hurdle to overcome was institutional fear of EBS. There was a large [EBS
+outage] shortly after Stripe started using AWS that formed a lot of
+organizational scar tissue. To work through this fear, I had _a lot_ of 1:1
+conversations across all of infrastructure. I sought to find out:
 
 - Is your team afraid of EBS? Why?
 - What instance types would your team like to use if there were no restrictions?
 - Do you trust other infrastructure teams to make good instance type choices if
   we removed the restrictions?
+
+[ebs outage]: https://aws.amazon.com/message/65648/
 
 By having these discussions I learned:
 

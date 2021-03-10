@@ -7,50 +7,47 @@ summary: >-
   hyperbo.la.
 ---
 
-Attempting to deploy
-[0.149.2] brought down
-[hyperbo.la] and caused all requests to return 502 status
-code. Root cause is a misconfigured PrivateLink endpoint and an unsafe ASG
-cycler script.
+Attempting to deploy [0.149.2] brought down [hyperbo.la] and caused all requests
+to return 502 status code. Root cause is a misconfigured PrivateLink endpoint
+and an unsafe ASG cycler script.
 
 [0.149.2]: https://github.com/hyperbola/hyperbola/tree/v0.149.2
 [hyperbo.la]: https://hyperbo.la/
 
 ### Context
 
-Since 2014, [hyperbo.la] secrets were distributed via
-[flat files]
-with each deployment. `.env` files were necessary when
-[hyperbo.la] was a single Linode VPS, but AWS has better
-tools for distributing secrets.
+Since 2014, [hyperbo.la] secrets were distributed via [flat files] with each
+deployment. `.env` files were necessary when [hyperbo.la] was a single Linode
+VPS, but AWS has better tools for distributing secrets.
 
-[GH-100] converted `settings.py`
-to fetch secrets from
-[SSM Parameter Store].
+[GH-100] converted `settings.py` to fetch secrets from [SSM Parameter Store].
 
 App backend instances run in private VPC subnets with no Internet egress. Packer
 builds run in a single public VPC subnet with a public IP.
 
 I recently refactored terraform config to use a launch template instead of a
-launch configuration. Deploys are now managed by an untested
-[ASG cycler script].
+launch configuration. Deploys are now managed by an untested [ASG cycler
+script].
 
 0.149.0 includes a new task runner which includes a new and untested deploy
 task, `inv deploy`, and a rollback task, `inv deploy.rollback`.
 
-[flat files]: https://github.com/hyperbola/hyperbola/commit/8f08b3d8fc07bbde7f0098ec52604cd2062c0715#diff-2378b82d75acb7d14d7df6a2389e8a02
-[GH-100]: https://github.com/hyperbola/hyperbola/pull/100
-[SSM Parameter Store]: https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-paramstore.html
-[ASG cycler script]: https://github.com/hyperbola/hyperbola/blob/v0.149.2/bin/cycle_asg
+[flat files]:
+  https://github.com/hyperbola/hyperbola/commit/8f08b3d8fc07bbde7f0098ec52604cd2062c0715#diff-2378b82d75acb7d14d7df6a2389e8a02
+[gh-100]: https://github.com/hyperbola/hyperbola/pull/100
+[ssm parameter store]:
+  https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-paramstore.html
+[asg cycler script]:
+  https://github.com/hyperbola/hyperbola/blob/v0.149.2/bin/cycle_asg
 
 ### Timeline
 
 #### 0.149.1
 
-- [2018-11-10 22:11] Build fails due to
-  [malformed Ansible config].
+- [2018-11-10 22:11] Build fails due to [malformed Ansible config].
 
-[malformed Ansible config]: https://github.com/hyperbola/hyperbola/commit/f69a09882b665e5b83f0e1d61b8b03ba304be76b
+[malformed ansible config]:
+  https://github.com/hyperbola/hyperbola/commit/f69a09882b665e5b83f0e1d61b8b03ba304be76b
 
 #### 0.149.2
 
@@ -73,11 +70,12 @@ task, `inv deploy`, and a rollback task, `inv deploy.rollback`.
 - [01:25] Manual smoke test of `https://hyperbo.la/` shows deploy succeeds.
 - [01:26] `https://hyperbo.la/healthz` confirms 0.149.2 is deployed.
 
-At this point the incident is mitigated but [hyperbo.la] is
-undeployable.
+At this point the incident is mitigated but [hyperbo.la] is undeployable.
 
-[reconfigure ssm endpoint security groups]: https://github.com/hyperbola/hyperbola/commit/8ad4fe11dd4b66d476262a101ed7ad9ae9c9cdd4
-[private DNS for SSM endpoint]: https://github.com/hyperbola/hyperbola/commit/e04efe78b5b1be082facb9d4a255453acb18e0ff
+[reconfigure ssm endpoint security groups]:
+  https://github.com/hyperbola/hyperbola/commit/8ad4fe11dd4b66d476262a101ed7ad9ae9c9cdd4
+[private dns for ssm endpoint]:
+  https://github.com/hyperbola/hyperbola/commit/e04efe78b5b1be082facb9d4a255453acb18e0ff
 
 #### 0.149.3
 
@@ -88,7 +86,8 @@ undeployable.
 At this point I spent time to deep dive into VPC terraform to properly
 [configure the SSM PrivateLink endpoint].
 
-[configure the SSM PrivateLink endpoint]: https://github.com/hyperbola/hyperbola/commit/1a6b56247094faaaa57b40fbc5507994a65f53c5
+[configure the ssm privatelink endpoint]:
+  https://github.com/hyperbola/hyperbola/commit/1a6b56247094faaaa57b40fbc5507994a65f53c5
 
 #### 0.149.4
 
@@ -121,16 +120,15 @@ ALB and halt the rollout.
 
 ### Remediation Items
 
-- [GH-103]: add ALB
-  healthchecks to `cycle_asg` script.
-- [GH-101 (Done)][GH-101]: create a
-  management domain in VPC for shared infrastructure.
-- [Done][remediation-done]:
-  add a lab terraform environment for testing VPC changes.
-- [GH-104]: export instance
-  journald logs for gunicorn and nginx to CloudWatch.
+- [GH-103]: add ALB healthchecks to `cycle_asg` script.
+- [GH-101 (Done)][gh-101]: create a management domain in VPC for shared
+  infrastructure.
+- [Done][remediation-done]: add a lab terraform environment for testing VPC
+  changes.
+- [GH-104]: export instance journald logs for gunicorn and nginx to CloudWatch.
 
-[GH-103]: https://github.com/hyperbola/hyperbola/issues/103
-[GH-101]: https://github.com/hyperbola/hyperbola/pull/101
-[remediation-done]: https://github.com/hyperbola/hyperbola/commit/f8fe09f9bf30864ed5a814fdbb7116ca3d279bad
-[GH-104]: https://github.com/hyperbola/hyperbola/issues/104
+[gh-103]: https://github.com/hyperbola/hyperbola/issues/103
+[gh-101]: https://github.com/hyperbola/hyperbola/pull/101
+[remediation-done]:
+  https://github.com/hyperbola/hyperbola/commit/f8fe09f9bf30864ed5a814fdbb7116ca3d279bad
+[gh-104]: https://github.com/hyperbola/hyperbola/issues/104

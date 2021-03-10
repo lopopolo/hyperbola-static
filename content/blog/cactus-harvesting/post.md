@@ -9,41 +9,35 @@ summary: >-
 ---
 
 🌵 CactusRef is a single-threaded, cycle-aware, reference counting smart pointer
-[[docs]]
-[[code]].
-CactusRef is nearly a drop-in replacement for
-[`std::rc`] from the Rust standard
-library. (CactusRef implements all `std::rc::Rc` APIs except for
-[`std::rc::Rc::downcast`],
-[`CoerceUnsized`],
-and
-[`DispatchFromDyn`].)
-Throughout this post, `Rc` refers to `cactusref::Rc`. I will refer to
-`std::rc::Rc` with its fully qualified name.
+[[docs]] [[code]]. CactusRef is nearly a drop-in replacement for [`std::rc`]
+from the Rust standard library. (CactusRef implements all `std::rc::Rc` APIs
+except for [`std::rc::Rc::downcast`], [`CoerceUnsized`], and
+[`DispatchFromDyn`].) Throughout this post, `Rc` refers to `cactusref::Rc`. I
+will refer to `std::rc::Rc` with its fully qualified name.
 
 [docs]: https://artichoke.github.io/cactusref/cactusref/index.html
-[code]: https://github.com/artichoke/ferrocarril/tree/0052dc1d0b234c2535b8dd87a096e048bdc0819e/cactusref
+[code]:
+  https://github.com/artichoke/ferrocarril/tree/0052dc1d0b234c2535b8dd87a096e048bdc0819e/cactusref
 [`std::rc`]: https://doc.rust-lang.org/std/rc/index.html
-[`std::rc::Rc::downcast`]: https://doc.rust-lang.org/std/rc/struct.Rc.html#method.downcast
-[`CoerceUnsized`]: https://doc.rust-lang.org/nightly/core/ops/trait.CoerceUnsized.html
-[`DispatchFromDyn`]: https://doc.rust-lang.org/nightly/core/ops/trait.DispatchFromDyn.html
+[`std::rc::rc::downcast`]:
+  https://doc.rust-lang.org/std/rc/struct.Rc.html#method.downcast
+[`coerceunsized`]:
+  https://doc.rust-lang.org/nightly/core/ops/trait.CoerceUnsized.html
+[`dispatchfromdyn`]:
+  https://doc.rust-lang.org/nightly/core/ops/trait.DispatchFromDyn.html
 
 ### Motivation
 
-Building cyclic data structures in Rust is
-[hard]. When a `T` needs to have
-multiple owners, it can be wrapped in a
-[`std::rc::Rc`]. `std::rc::Rc`,
-however, is not cycle-aware. Creating a cycle of `std::rc::Rc`s will leak
-memory. To work around this, an `std::rc::Rc` can be
-[downgraded]
-into a [`std::rc::Weak`].
+Building cyclic data structures in Rust is [hard]. When a `T` needs to have
+multiple owners, it can be wrapped in a [`std::rc::Rc`]. `std::rc::Rc`, however,
+is not cycle-aware. Creating a cycle of `std::rc::Rc`s will leak memory. To work
+around this, an `std::rc::Rc` can be [downgraded] into a [`std::rc::Weak`].
 (https://doc.rust-lang.org/std/rc/struct.Weak.html).
 
 [hard]: https://news.ycombinator.com/item?id=16443688
-[`std::rc::Rc`]: https://doc.rust-lang.org/std/rc/index.html
+[`std::rc::rc`]: https://doc.rust-lang.org/std/rc/index.html
 [downgraded]: https://doc.rust-lang.org/std/rc/struct.Rc.html#method.downgrade
-[`std::rc::Weak`]: https://doc.rust-lang.org/std/rc/struct.Weak.html
+[`std::rc::weak`]: https://doc.rust-lang.org/std/rc/struct.Weak.html
 
 ### `std::rc::Rc` Limitations
 
@@ -96,12 +90,12 @@ be reaped.
 
 ### Rust Example: Doubly Linked List
 
-CactusRef can be used to
-[implement a doubly linked list]
-with ergonomic strong references. The list is deallocated when the `list`
-binding is dropped because the linked list is no longer externally reachable.
+CactusRef can be used to [implement a doubly linked list] with ergonomic strong
+references. The list is deallocated when the `list` binding is dropped because
+the linked list is no longer externally reachable.
 
-[implement a doubly linked list]: https://github.com/artichoke/ferrocarril/blob/53b4048628cd5577e378ce4fdae73a923340dcd1/cactusref/tests/no_leak_doubly_linked_list.rs
+[implement a doubly linked list]:
+  https://github.com/artichoke/ferrocarril/blob/53b4048628cd5577e378ce4fdae73a923340dcd1/cactusref/tests/no_leak_doubly_linked_list.rs
 
 ```rust
 use cactusref::{Adoptable, Rc};
@@ -194,17 +188,16 @@ drop(list);
 ### CactusRef Implementation
 
 There are two magic pieces to CactusRef: `Rc` adoption and the cycle-busting
-[`Drop`]
-implementation.
+[`Drop`] implementation.
 
-[`Drop`]: https://artichoke.github.io/cactusref/cactusref/struct.Rc.html#impl-Drop
+[`drop`]:
+  https://artichoke.github.io/cactusref/cactusref/struct.Rc.html#impl-Drop
 
 #### Adoption
 
 When an `Rc<T>` takes and holds an owned reference to another `Rc<T>`, calling
-[`Rc::adopt`]
-performs bookkeeping to build a graph of reachable objects. There is an
-unlinking API, `Rc::unadopt`, which removes a reference from the graph.
+[`Rc::adopt`] performs bookkeeping to build a graph of reachable objects. There
+is an unlinking API, `Rc::unadopt`, which removes a reference from the graph.
 
 An `Rc<T>` is able to adopt another `Rc<T>` multiple times. An `Rc<T>` is able
 to adopt _itself_ multiple times. Together, these behaviors allow implementing
@@ -228,8 +221,11 @@ This bookkeeping is implemented as a set of forward (owned) and backward (owned
 by) links stored on the data structure that backs the `Rc` (called an
 [`RcBox`]).
 
-[`Rc::adopt`]: https://artichoke.github.io/cactusref/cactusref/struct.Rc.html#impl-Adoptable
-[`RcBox`]: https://github.com/artichoke/ferrocarril/blob/53b4048628cd5577e378ce4fdae73a923340dcd1/cactusref/src/ptr.rs#L84-L91
+[`rc::adopt`]:
+  https://artichoke.github.io/cactusref/cactusref/struct.Rc.html#impl-Adoptable
+[`rcbox`]:
+  https://github.com/artichoke/ferrocarril/blob/53b4048628cd5577e378ce4fdae73a923340dcd1/cactusref/src/ptr.rs#L84-L91
+
 #### Drop
 
 There are three states that `Rc` needs to deal with on `Drop` in this order:
@@ -266,38 +262,38 @@ externally reachable and the cycle is not orphaned. Detecting an orphaned cycle
 is `O(links + nodes)` where links is the number of active adoptions and nodes is
 the number of `Rc`s in the cycle.
 
-[Deallocating an orphaned cycle]
-is _fun_ and filled with unsafe peril. It is guaranteed that at least one other
-object in the cycle owns a reference to this `Rc`, so as we deallocate members
-of the cycle, this `Rc` will be dropped again.
+[Deallocating an orphaned cycle] is _fun_ and filled with unsafe peril. It is
+guaranteed that at least one other object in the cycle owns a reference to this
+`Rc`, so as we deallocate members of the cycle, this `Rc` will be dropped again.
 
 Dropping this `Rc` multiple times is good because it manages decrementing the
 strong count of this `Rc` automatically. This ensures that any outstanding
 `Weak` pointers detect that they are dangling and return `None` on
-`Weak::upgrade`. However, it will also certainly result in a
-[double-free or use-after-free]
-if we are not careful.
+`Weak::upgrade`. However, it will also certainly result in a [double-free or
+use-after-free] if we are not careful.
 
 To avoid a double-free, the `RcBox` includes a `usize` field called `tombstone`.
-When we attempt to drop an `Rc` in the cycle we
-[mark it as killed].
-Subsequent calls to `drop` on killed `Rc`s early return after decrementing the
-strong count.
+When we attempt to drop an `Rc` in the cycle we [mark it as killed]. Subsequent
+calls to `drop` on killed `Rc`s early return after decrementing the strong
+count.
 
-To avoid a use-after-free, on drop, an `Rc`
-[removes itself from all link tables]
-so it is not used for cycle detection.
+To avoid a use-after-free, on drop, an `Rc` [removes itself from all link
+tables] so it is not used for cycle detection.
 
-To do the deallocation,
-[drop the _values_ in the `Rc`s]
-instead of the `Rc`s. This breaks the cycle during the deallocation and allows
-`Drop` to crawl the object graph.
+To do the deallocation, [drop the _values_ in the `Rc`s] instead of the `Rc`s.
+This breaks the cycle during the deallocation and allows `Drop` to crawl the
+object graph.
 
-[Deallocating an orphaned cycle]: https://github.com/artichoke/ferrocarril/blob/53b4048628cd5577e378ce4fdae73a923340dcd1/cactusref/src/cycle/drop.rs#L163-L217
-[double-free or use-after-free]: https://en.wikipedia.org/wiki/C_dynamic_memory_allocation#Common_errors
-[mark it as killed]: https://github.com/artichoke/ferrocarril/blob/53b4048628cd5577e378ce4fdae73a923340dcd1/cactusref/src/cycle/drop.rs#L182-L193
-[removes itself from all link tables]: https://github.com/artichoke/ferrocarril/blob/53b4048628cd5577e378ce4fdae73a923340dcd1/cactusref/src/cycle/drop.rs#L168-L181
-[drop the _values_ in the `Rc`s]: https://github.com/artichoke/ferrocarril/blob/53b4048628cd5577e378ce4fdae73a923340dcd1/cactusref/src/cycle/drop.rs#L194-L205
+[deallocating an orphaned cycle]:
+  https://github.com/artichoke/ferrocarril/blob/53b4048628cd5577e378ce4fdae73a923340dcd1/cactusref/src/cycle/drop.rs#L163-L217
+[double-free or use-after-free]:
+  https://en.wikipedia.org/wiki/C_dynamic_memory_allocation#Common_errors
+[mark it as killed]:
+  https://github.com/artichoke/ferrocarril/blob/53b4048628cd5577e378ce4fdae73a923340dcd1/cactusref/src/cycle/drop.rs#L182-L193
+[removes itself from all link tables]:
+  https://github.com/artichoke/ferrocarril/blob/53b4048628cd5577e378ce4fdae73a923340dcd1/cactusref/src/cycle/drop.rs#L168-L181
+[drop the _values_ in the `rc`s]:
+  https://github.com/artichoke/ferrocarril/blob/53b4048628cd5577e378ce4fdae73a923340dcd1/cactusref/src/cycle/drop.rs#L194-L205
 
 ### Cycle Detection Is a Zero-Cost Abstraction
 
@@ -307,33 +303,31 @@ Cycle detection is a zero-cost abstraction. If you never
 strong references). The only costs you pay are the memory costs of one
 [`Cell<usize>`](https://doc.rust-lang.org/nightly/core/cell/struct.Cell.html)
 for preventing double frees, two empty
-[`RefCell`]`<`[`HashMap`]`<NonNull<T>, usize>>`
-for tracking adoptions, and an if statement to check if these structures are
-empty on `drop`.
+[`RefCell`]`<`[`HashMap`]`<NonNull<T>, usize>>` for tracking adoptions, and an
+if statement to check if these structures are empty on `drop`.
 
-[`Cell<usize>`]: https://doc.rust-lang.org/nightly/core/cell/struct.Cell.html
-[`RefCell`]: https://doc.rust-lang.org/nightly/core/cell/struct.RefCell.html)
-[`HashMap`]: https://doc.rust-lang.org/nightly/std/collections/struct.HashMap.html)
+[`cell<usize>`]: https://doc.rust-lang.org/nightly/core/cell/struct.Cell.html
+[`refcell`]: https://doc.rust-lang.org/nightly/core/cell/struct.RefCell.html)
+[`hashmap`]:
+  https://doc.rust-lang.org/nightly/std/collections/struct.HashMap.html)
+
 ### Next Steps
 
-I am [implementing a Ruby] 💎 in Rust
-and CactusRef will be used to implement the heap. CactusRef allows Ruby objects
-to own strong references to their subordinate members (like instance variables,
-keys and values in the case of a `Hash`, items in the case of an `Array`, class,
-ancestor chain, and bound methods) and be automatically reaped once they become
-unreachable in the VM.
+I am [implementing a Ruby] 💎 in Rust and CactusRef will be used to implement
+the heap. CactusRef allows Ruby objects to own strong references to their
+subordinate members (like instance variables, keys and values in the case of a
+`Hash`, items in the case of an `Array`, class, ancestor chain, and bound
+methods) and be automatically reaped once they become unreachable in the VM.
 
 CactusRef allows implementing a Ruby without a garbage collector, although if
 you squint, CactusRef implements a tracing garbage collector using Rust's
 built-in memory management.
 
-Thank you [Stephen] and
-[Nelson] for helping me think hard about algorithms.
-😄
+Thank you [Stephen] and [Nelson] for helping me think hard about algorithms. 😄
 
 Thank you to the segfaults along the way for helping me find bugs in the cycle
 detection and drop implementations. 😱
 
-[implementing a Ruby]: https://github.com/artichoke/ferrocarril
-[Stephen]: https://github.com/tummychow
-[Nelson]: https://github.com/nelhage
+[implementing a ruby]: https://github.com/artichoke/ferrocarril
+[stephen]: https://github.com/tummychow
+[nelson]: https://github.com/nelhage
