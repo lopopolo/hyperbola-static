@@ -22,7 +22,7 @@ Throughout this post, `Rc` refers to `cactusref::Rc`. I will refer to
 `std::rc::Rc` with its fully qualified name.
 
 [docs]: https://artichoke.github.io/cactusref/cactusref/index.html
-[code]: https://github.com/lopopolo/ferrocarril/tree/0052dc1d0b234c2535b8dd87a096e048bdc0819e/cactusref
+[code]: https://github.com/artichoke/ferrocarril/tree/0052dc1d0b234c2535b8dd87a096e048bdc0819e/cactusref
 [`std::rc`]: https://doc.rust-lang.org/std/rc/index.html
 [`std::rc::Rc::downcast`]: https://doc.rust-lang.org/std/rc/struct.Rc.html#method.downcast
 [`CoerceUnsized`]: https://doc.rust-lang.org/nightly/core/ops/trait.CoerceUnsized.html
@@ -101,7 +101,7 @@ CactusRef can be used to
 with ergonomic strong references. The list is deallocated when the `list`
 binding is dropped because the linked list is no longer externally reachable.
 
-[implement a doubly linked list]: https://github.com/lopopolo/ferrocarril/blob/53b4048628cd5577e378ce4fdae73a923340dcd1/cactusref/tests/no_leak_doubly_linked_list.rs
+[implement a doubly linked list]: https://github.com/artichoke/ferrocarril/blob/53b4048628cd5577e378ce4fdae73a923340dcd1/cactusref/tests/no_leak_doubly_linked_list.rs
 
 ```rust
 use cactusref::{Adoptable, Rc};
