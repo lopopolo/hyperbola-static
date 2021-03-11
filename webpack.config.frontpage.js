@@ -1,7 +1,7 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = () => [
-  new HtmlWebPackPlugin({
+  new HtmlWebpackPlugin({
     template: "frontpage/index.html",
     filename: "index.html",
   }),

@@ -7,7 +7,7 @@ const root = path.resolve(__dirname, "..");
 
 const htmlPlugin = (template, filename) =>
   [
-    "  new HtmlWebPackPlugin({",
+    "  new HtmlWebpackPlugin({",
     `    template: "${path.relative(root, template)}",`,
     `    filename: "${filename}",`,
     "  }),",
@@ -22,7 +22,7 @@ module.exports = () => {
 
     async writeTo(dest) {
       const out = [
-        `const HtmlWebPackPlugin = require("html-webpack-plugin");`,
+        `const HtmlWebpackPlugin = require("html-webpack-plugin");`,
         "",
         "module.exports = () => [",
       ];
