@@ -107,7 +107,10 @@ module.exports = (env, argv) => {
         },
         {
           test: /\.html$/,
-          include: path.resolve(__dirname, "src", "partials"),
+          include: [
+            path.resolve(__dirname, "src", "partials"),
+            path.resolve(__dirname, "src", "lifestream", "partials"),
+          ],
           use: "html-loader",
         },
         {

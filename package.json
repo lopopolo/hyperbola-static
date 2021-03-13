@@ -36,6 +36,7 @@
     "react-dom": "^17.0.1"
   },
   "devDependencies": {
+    "@hyperbola/logo": "github:hyperbola/logo",
     "@hyperbola/svgo-loader": "^0.2.1",
     "css-loader": "^5.1.2",
     "css-minimizer-webpack-plugin": "^1.2.0",

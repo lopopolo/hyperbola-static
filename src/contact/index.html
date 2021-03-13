@@ -15,14 +15,14 @@
     <meta property="og:url" content="https://hyperbo.la/contact/" />
     <meta property="og:description" content="Contact Ryan Lopopolo" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://hyperbo.la/logo.png" />
+    <meta property="og:image" content="https://hyperbo.la/hyperbola-logo.png" />
 
-    <%= require('html-loader!../partials/favicons.html') %> <%=
-    require('html-loader!../partials/google-analytics.html') %>
+    <%= require('../partials/favicons.html').default %> <%=
+    require('../partials/google-analytics.html').default %>
   </head>
   <body class="contact">
     <div class="container mb-5">
-      <%= require('html-loader!../partials/nav.html') %>
+      <%= require('../partials/nav.html').default %>
       <div class="card hyperbola-section-title my-3 w-100">
         <div class="card-body">
           <span class="card-title"><strong>hyperbo.la :: contact</strong></span>

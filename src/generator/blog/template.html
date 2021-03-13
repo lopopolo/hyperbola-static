@@ -15,7 +15,7 @@
       property="og:url"
       content="https://hyperbo.la<%= post.absoluteUrl %>"
     />
-    <meta property="og:image" content="https://hyperbo.la/logo.png" />
+    <meta property="og:image" content="https://hyperbo.la/hyperbola-logo.png" />
     <meta property="og:type" content="article" />
     <meta
       property="og:article:published_time"
@@ -29,12 +29,12 @@
     <meta property="og:title" content="<%= post.title %>" />
     <meta property="og:description" content="<%= post.summary %>" />
 
-    <%%= require('html-loader!../../../partials/favicons.html') %%> <%%=
-    require('html-loader!../../../partials/google-analytics.html') %%>
+    <%%= require('../../../partials/favicons.html').default %%> <%%=
+    require('../../../partials/google-analytics.html').default %%>
   </head>
   <body class="blog">
     <div class="container mb-5">
-      <%%= require('html-loader!../../../partials/nav.html') %%>
+      <%%= require('../../../partials/nav.html').default %%>
       <div class="card hyperbola-section-title my-3 w-100">
         <div class="card-body">
           <span class="card-title">
