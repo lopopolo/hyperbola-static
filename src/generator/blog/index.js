@@ -175,9 +175,11 @@ const compileIndex = async (posts) => {
       description() {
         return "Ryan Lopopolo's blog index";
       },
-      posts: Object.freeze(postMetadata.map(
-        ([slug, data]) => extractTemplateParams(slug, data.attributes).post
-      )),
+      posts: Object.freeze(
+        postMetadata.map(
+          ([slug, data]) => extractTemplateParams(slug, data.attributes).post
+        )
+      ),
     };
     const rendered = ejs.render(template, context);
 
