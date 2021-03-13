@@ -3,25 +3,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const svgToMiniDataURI = require("mini-svg-data-uri");
 
-const hljs = require("highlight.js");
-const { definer: terraform } = require("./vendor/terraform");
-hljs.registerLanguage("terraform", terraform);
-
-const highlight = (code, lang) => {
-  switch (lang) {
-    case null:
-    case "text":
-    case "literal":
-    case "nohighlight": {
-      return `<pre class="hljs">${code}</pre>`;
-    }
-    default: {
-      const html = hljs.highlight(lang, code).value;
-      return `<span class="hljs">${html}</span>`;
-    }
-  }
-};
-
 const hyperbolaPagePlugins = require("./hyperbola-page-plugins");
 
 const buildPlugins = (slice, chunks) => {
@@ -125,17 +106,13 @@ module.exports = (env, argv) => {
           },
         },
         {
+          test: /\.html$/,
+          include: path.resolve(__dirname, "src", "partials"),
+          use: "html-loader",
+        },
+        {
           test: /\.md$/,
-          use: [
-            "html-loader",
-            {
-              loader: "markdown-loader",
-              options: {
-                langPrefix: "hljs language-",
-                highlight,
-              },
-            },
-          ],
+          use: ["html-loader", path.resolve(__dirname, "loaders/markdown.js")],
         },
       ],
     },
