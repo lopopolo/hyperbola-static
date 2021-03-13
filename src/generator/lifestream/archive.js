@@ -79,6 +79,49 @@ const contextForPage = (year, month, slice) =>
       }
       return `/lifestream/archive/${year}/${month}/page/${prev}/`;
     },
+    canonicalUrl() {
+      if (slice.currentPage === 1) {
+        return `https://hyperbo.la/lifestream/archive/${year}/${month}/`;
+      }
+      return `https://hyperbo.la/lifestream/archive/${year}/${month}/page/${slice.currentPage}/`;
+    },
+    title() {
+      const months = {
+        [1]: 'January',
+        [2]: 'February',
+        [3]: 'March',
+        [4]: 'April',
+        [5]: 'May',
+        [6]: 'June',
+        [7]: 'July',
+        [8]: 'August',
+        [9]: 'September',
+        [10]: 'October',
+        [11]: 'November',
+        [12]: 'December',
+      };
+      if (slice.currentPage === 1) {
+        return `hyperbo.la :: lifestream :: ${months[month]} ${year} archive`;
+      }
+      return `hyperbo.la :: lifestream :: ${months[month]} ${year} :: page ${slice.currentPage}`;
+    },
+    description() {
+      const months = {
+        [1]: 'January',
+        [2]: 'February',
+        [3]: 'March',
+        [4]: 'April',
+        [5]: 'May',
+        [6]: 'June',
+        [7]: 'July',
+        [8]: 'August',
+        [9]: 'September',
+        [10]: 'October',
+        [11]: 'November',
+        [12]: 'December',
+      };
+      return `hyperbo.la: Ryan Lopopolo's lifestream archive for ${months[month]} ${year} page ${slice.currentPage}`;
+    },
     posts: slice.data,
   });
 

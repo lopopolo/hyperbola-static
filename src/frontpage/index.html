@@ -6,22 +6,46 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <meta name="description" content="Ryan Lopopolo's website." />
+    <meta name="author" content="Ryan Lopopolo" />
 
     <title>hyperbo.la</title>
 
-    <!-- opengraph metadata -->
-    <meta property="og:title" content="hyperbo.la" />
-    <meta property="og:site_name" content="hyperbo.la" />
+    <link rel="canonical" href="https://hyperbo.la/" />
+
+    <!-- Favicons -->
+    <%= require("../partials/favicons.html").default %>
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="hyperbo.la" />
+    <meta
+      name="twitter:description"
+      content="hyperbo.la: Ryan Lopopolo's website."
+    />
+    <meta
+      name="twitter:image"
+      content="https://hyperbo.la/hyperbola-logo.png"
+    />
+
+    <!-- Facebook Open Graph metadata -->
     <meta property="og:url" content="https://hyperbo.la/" />
+    <meta property="og:site_name" content="hyperbo.la" />
+    <meta property="og:title" content="hyperbo.la" />
     <meta
       property="og:description"
-      content="hyperbo.la: Ryan Lopopolo's website"
+      content="hyperbo.la: Ryan Lopopolo's website."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://hyperbo.la/hyperbola-logo.png" />
+    <meta
+      property="og:image"
+      content="https://hyperbo.la/hyperbola-logo.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="400" />
 
-    <%= require('../partials/favicons.html').default %> <%=
-    require('../partials/google-analytics.html').default %>
+    <%= require("../partials/google-analytics.html").default %>
   </head>
   <body class="frontpage">
     <div class="container mb-5">

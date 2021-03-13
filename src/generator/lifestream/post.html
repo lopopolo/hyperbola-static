@@ -6,22 +6,46 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <meta name="description" content="Ryan Lopopolo's lifestream." />
+    <meta name="author" content="Ryan Lopopolo" />
 
-    <title>hyperbo.la :: lifestream</title>
+    <title><%= title() %></title>
 
-    <!-- opengraph metadata -->
-    <meta property="og:site_name" content="hyperbo.la" />
-    <meta property="og:url" content="https://hyperbo.la/lifestream/" />
-    <meta property="og:image" content="https://hyperbo.la/hyperbola-logo.png" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="hyperbo.la lifestream" />
+    <link rel="canonical" href="<%= canonicalUrl() %>" />
+
+    <!-- Favicons -->
+    <%%= require("../../../partials/favicons.html").default %%>
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="<%= title() %>" />
     <meta
-      property="og:description"
-      content="Ryan Lopopolo's microblog on hyperbo.la"
+      name="twitter:description"
+      content="<%= description() %>"
+    />
+    <meta
+      name="twitter:image"
+      content="https://hyperbo.la/hyperbola-logo.png"
     />
 
-    <%%= require('../../../partials/favicons.html').default %%> <%%=
-    require('../../../partials/google-analytics.html').default %%>
+    <!-- Facebook Open Graph metadata -->
+    <meta property="og:url" content="<%= canonicalUrl() %>" />
+    <meta property="og:site_name" content="hyperbo.la" />
+    <meta property="og:title" content="<%= title() %>" />
+    <meta
+      property="og:description"
+      content="<%= description() %>"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://hyperbo.la/hyperbola-logo.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="400" />
+
+    <%%= require("../../../partials/google-analytics.html").default %%>
   </head>
   <body class="lifestream">
     <div class="container mb-5">
@@ -35,7 +59,6 @@
       </div>
       <div class="row">
         <div class="col-md-8">
-          <% for (const post of posts) { %>
           <div class="card mb-3 rounded">
             <% if (post.image) { %>
             <img
@@ -57,7 +80,6 @@
               <p class="card-text lifestream-content"><%- post.post %></p>
             </div>
           </div>
-          <% } %>
           <div class="d-flex flex-row justify-content-between">
             <% if (hasNewer()) { %>
             <a href="<%= newer() %>">&laquo; newer</a>
