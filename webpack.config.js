@@ -22,10 +22,7 @@ const highlight = (code, lang) => {
   }
 };
 
-const blog = require("./webpack.config.blog");
-const contact = require("./webpack.config.contact");
-const frontpage = require("./webpack.config.frontpage");
-const lifestream = require("./webpack.config.lifestream");
+const hyperbolaPagePlugins = require("./hyperbola-page-plugins");
 
 const buildPlugins = () => {
   const plugins = [
@@ -34,7 +31,7 @@ const buildPlugins = () => {
       chunkFilename: "[id].[contenthash].css",
     }),
   ];
-  return [...plugins, ...blog(), ...contact(), ...frontpage(), ...lifestream()];
+  return [...plugins, ...hyperbolaPagePlugins()];
 };
 
 module.exports = (_env, argv) => {
