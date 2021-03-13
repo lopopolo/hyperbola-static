@@ -24,17 +24,23 @@ const highlight = (code, lang) => {
 
 const hyperbolaPagePlugins = require("./hyperbola-page-plugins");
 
-const buildPlugins = () => {
+const buildPlugins = (slice, chunks) => {
   const plugins = [
     new MiniCssExtractPlugin({
       filename: "[name].[contenthash].css",
       chunkFilename: "[id].[contenthash].css",
     }),
   ];
-  return [...plugins, ...hyperbolaPagePlugins()];
+  const pages = hyperbolaPagePlugins();
+  for (let idx = 0; idx < pages.length; idx += 1) {
+    if (idx % chunks === slice) {
+      plugins.push(pages[idx]);
+    }
+  }
+  return plugins;
 };
 
-module.exports = (_env, argv) => {
+module.exports = (env, argv) => {
   let cssLoader = "style-loader";
   let optimization = {
     minimize: false,
@@ -47,7 +53,9 @@ module.exports = (_env, argv) => {
     optimization.minimizer = ["...", new CssMinimizerPlugin()];
   }
 
-  const plugins = buildPlugins();
+  const slice = parseInt(env.slice);
+  const chunks = parseInt(env.chunks);
+  const plugins = buildPlugins(slice, chunks);
 
   return {
     context: path.resolve(__dirname, "src"),
