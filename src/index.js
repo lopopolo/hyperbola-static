@@ -4,6 +4,7 @@ import "bootstrap";
 
 // OpenGraph icons
 import "@hyperbola/logo/img/hyperbola-logo.png";
+import "@hyperbola/logo/img/hyperbola-logo.svg";
 
 // highlight.js
 import "highlight.js/styles/default.css";
