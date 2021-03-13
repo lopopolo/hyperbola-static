@@ -51,8 +51,7 @@
     "style-loader": "^2.0.0",
     "svgo": "^2.2.2",
     "webpack": "^5.25.0",
-    "webpack-cli": "^4.5.0",
-    "webpack-dev-server": "^4.0.0-beta.0"
+    "webpack-cli": "^4.5.0"
   },
   "eslintConfig": {
     "env": {
@@ -71,10 +70,8 @@
   },
   "scripts": {
     "build": "npx -p . generate site",
-    "dev": "webpack serve --mode development",
-    "dev:open": "webpack serve --mode development --open",
-    "dev:production": "webpack serve --mode production",
-    "dev:production:open": "webpack serve --mode production --open",
+    "dev": "rm -rf dist ; ./bin/build.sh --development ; python3 -m http.server --directory dist",
+    "dev:production": "rm -rf dist ; ./bin/build.sh --production ; python3 -m http.server --directory dist",
     "fmt": "npx prettier --write '**/*'",
     "lint": "npx eslint .",
     "lint:fix": "npx eslint --fix ."
