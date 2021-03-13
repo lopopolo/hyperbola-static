@@ -70,8 +70,9 @@
   },
   "scripts": {
     "build": "npx -p . generate site",
-    "dev": "rm -rf dist ; ./bin/build.sh --development ; python3 -m http.server --directory dist",
-    "dev:production": "rm -rf dist ; ./bin/build.sh --production ; python3 -m http.server --directory dist",
+    "dev": "./bin/build.sh --development",
+    "dev:production": "./bin/build.sh --production",
+    "serve": "python -m http.server --directory dist --bind 127.0.0.1 13777",
     "fmt": "npx prettier --write '**/*'",
     "lint": "npx eslint .",
     "lint:fix": "npx eslint --fix ."

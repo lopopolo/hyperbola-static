@@ -141,5 +141,10 @@ module.exports = (env, argv) => {
     },
     plugins,
     optimization,
+    devServer: {
+      compress: true,
+      host: "127.0.0.1",
+      port: 13777,
+    },
   };
 };
