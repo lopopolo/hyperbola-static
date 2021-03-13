@@ -186,7 +186,7 @@ const webpackPlugins = async (posts) => {
       webpackPlugins.push(template, filename);
     }
 
-    const config = path.resolve(root, "webpack.config.blog.js");
+    const config = path.resolve(root, "hyperbola-page-plugins", "blog.js");
     await webpackPlugins.writeTo(config);
 
     return Promise.resolve(posts);

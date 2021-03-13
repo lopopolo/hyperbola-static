@@ -12,7 +12,7 @@ const hashtag = require("./hashtag");
 const listing = require("./listing");
 const posts = require("./posts");
 
-const ROOT = path.resolve(__dirname, "..", "..", "..");
+const root = path.resolve(__dirname, "..", "..", "..");
 
 const loadDB = async () => {
   const posts = path.resolve(
@@ -53,7 +53,11 @@ const generator = async () => {
 
     await posts.generate(db, webpackPlugins);
 
-    const config = path.resolve(ROOT, "webpack.config.lifestream.js");
+    const config = path.resolve(
+      root,
+      "hyperbola-page-plugins",
+      "lifestream.js"
+    );
     await webpackPlugins.writeTo(config);
   } catch (err) {
     return Promise.reject(err);
