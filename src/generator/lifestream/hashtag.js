@@ -65,6 +65,21 @@ const contextForPage = (hashtag, slice) =>
       }
       return `/lifestream/hashtag/${hashtag}/page/${prev}/`;
     },
+    canonicalUrl() {
+      if (slice.currentPage === 1) {
+        return `https://hyperbo.la/lifestream/hashtag/${hashtag}`;
+      }
+      return `https://hyperbo.la/lifestream/hashtag/${hashtag}/page/${slice.currentPage}/`;
+    },
+    title() {
+      if (slice.currentPage === 1) {
+        return `hyperbo.la :: lifestream :: #${hashtag}`;
+      }
+      return `hyperbo.la :: lifestream :: #${hashtag} :: page ${slice.currentPage}`;
+    },
+    description() {
+      return `hyperbo.la: Ryan Lopopolo's lifestream #${hashtag} page ${slice.currentPage}`;
+    },
     posts: slice.data,
   });
 

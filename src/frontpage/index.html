@@ -6,26 +6,47 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <meta name="description" content="Ryan Lopopolo's website." />
+    <meta name="author" content="Ryan Lopopolo" />
 
     <title>hyperbo.la</title>
 
-    <!-- opengraph metadata -->
-    <meta property="og:title" content="hyperbo.la" />
-    <meta property="og:site_name" content="hyperbo.la" />
+    <link rel="canonical" href="https://hyperbo.la/" />
+
+    <!-- Favicons -->
+    <%= require("../partials/favicons.html").default %>
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="hyperbo.la" />
+    <meta
+      name="twitter:description"
+      content="hyperbo.la: Ryan Lopopolo's website."
+    />
+    <meta
+      name="twitter:image"
+      content="https://hyperbo.la/hyperbola-logo.png"
+    />
+
+    <!-- Facebook Open Graph metadata -->
     <meta property="og:url" content="https://hyperbo.la/" />
+    <meta property="og:site_name" content="hyperbo.la" />
+    <meta property="og:title" content="hyperbo.la" />
     <meta
       property="og:description"
-      content="hyperbo.la: Ryan Lopopolo's website"
+      content="hyperbo.la: Ryan Lopopolo's website."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://hyperbo.la/logo.png" />
+    <meta property="og:image" content="https://hyperbo.la/hyperbola-logo.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="400" />
 
-    <%= require('html-loader!../partials/favicons.html') %> <%=
-    require('html-loader!../partials/google-analytics.html') %>
+    <%= require("../partials/google-analytics.html").default %>
   </head>
   <body class="frontpage">
     <div class="container mb-5">
-      <%= require('html-loader!../partials/nav.html') %>
+      <%= require('../partials/nav.html').default %>
       <div class="card hyperbola-section-title my-3 w-100">
         <div class="card-body">
           <span class="card-title"><strong>hyperbo.la</strong></span>
@@ -35,25 +56,25 @@
         <div class="col-md-8">
           <div class="card mb-3">
             <div class="card-body">
-              <div><%= require('./card-01.md') %></div>
+              <div><%= require('./card-01.md').default %></div>
             </div>
           </div>
           <div class="card mb-3">
             <div class="card-body">
-              <div><%= require('./card-02.md') %></div>
+              <div><%= require('./card-02.md').default %></div>
             </div>
           </div>
           <div class="card mb-3">
             <div class="card-body">
-              <div><%= require('./card-03.md') %></div>
+              <div><%= require('./card-03.md').default %></div>
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="d-flex flex-column">
             <h2>Current Pursuits</h2>
-            <div><%= require('./status-stripe.md') %></div>
-            <div><%= require('./status-artichoke.md') %></div>
+            <div><%= require('./status-stripe.md').default %></div>
+            <div><%= require('./status-artichoke.md').default %></div>
           </div>
         </div>
       </div>

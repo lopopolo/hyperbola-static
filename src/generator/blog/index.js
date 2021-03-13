@@ -73,8 +73,19 @@ const extractTemplateParams = (slug, data) => {
   post.publishDate = date.toLocaleString(DateTime.DATE_FULL);
   post.summary = data.summary;
   post.markdown = "./post.md";
-  const context = Object.create(null);
-  context.post = Object.freeze(post);
+  const context = {
+    canonicalUrl() {
+      return `https://hyperbo.la/w/${slug}/`;
+    },
+    title() {
+      return `hyperbo.la :: ${data.title}`;
+    },
+    description() {
+      return post.summary;
+    },
+    post: Object.freeze(post),
+  };
+
   return Object.freeze(context);
 };
 
@@ -154,10 +165,23 @@ const compileIndex = async (posts) => {
       html: path.resolve(index, "index.html"),
     });
 
-    const context = postMetadata.map(
-      ([slug, data]) => extractTemplateParams(slug, data.attributes).post
-    );
-    const rendered = ejs.render(template, { posts: context });
+    const context = {
+      canonicalUrl() {
+        return `https://hyperbo.la/w/`;
+      },
+      title() {
+        return `hyperbo.la :: blog`;
+      },
+      description() {
+        return "Ryan Lopopolo's blog index";
+      },
+      posts: Object.freeze(
+        postMetadata.map(
+          ([slug, data]) => extractTemplateParams(slug, data.attributes).post
+        )
+      ),
+    };
+    const rendered = ejs.render(template, context);
 
     await fs.mkdir(index, { recursive: true });
     await fs.writeFile(out.html, rendered);

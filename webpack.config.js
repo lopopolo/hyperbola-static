@@ -3,25 +3,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const svgToMiniDataURI = require("mini-svg-data-uri");
 
-const hljs = require("highlight.js");
-const { definer: terraform } = require("./vendor/terraform");
-hljs.registerLanguage("terraform", terraform);
-
-const highlight = (code, lang) => {
-  switch (lang) {
-    case null:
-    case "text":
-    case "literal":
-    case "nohighlight": {
-      return `<pre class="hljs">${code}</pre>`;
-    }
-    default: {
-      const html = hljs.highlight(lang, code).value;
-      return `<span class="hljs">${html}</span>`;
-    }
-  }
-};
-
 const hyperbolaPagePlugins = require("./hyperbola-page-plugins");
 
 const buildPlugins = (slice, chunks) => {
@@ -59,11 +40,6 @@ module.exports = (env, argv) => {
 
   return {
     context: path.resolve(__dirname, "src"),
-    resolve: {
-      alias: {
-        assets: path.resolve(__dirname, "assets"),
-      },
-    },
     entry: path.resolve(__dirname, "src/index.js"),
     output: {
       filename: "[name].[contenthash].js",
@@ -77,7 +53,10 @@ module.exports = (env, argv) => {
           use: [cssLoader, "css-loader", "sass-loader"],
         },
         {
-          include: path.resolve(__dirname, "assets"),
+          include: [
+            path.resolve(__dirname, "node_modules", "@hyperbola/logo/img"),
+            path.resolve(__dirname, "node_modules", "@hyperbola/logo/favicons"),
+          ],
           exclude: /\.svg$/,
           type: "asset/resource",
           generator: {
@@ -86,7 +65,10 @@ module.exports = (env, argv) => {
         },
         {
           test: /\.svg$/,
-          include: path.resolve(__dirname, "assets"),
+          include: [
+            path.resolve(__dirname, "node_modules", "@hyperbola/logo/img"),
+            path.resolve(__dirname, "node_modules", "@hyperbola/logo/favicons"),
+          ],
           type: "asset/resource",
           use: "@hyperbola/svgo-loader",
           generator: {
@@ -94,20 +76,19 @@ module.exports = (env, argv) => {
           },
         },
         {
-          include: path.resolve(__dirname, "src", "keys"),
-          type: "asset/resource",
-          generator: {
-            filename: "keys/[name][ext]",
-          },
-        },
-        {
           test: /\.(png|jpe?g|gif)$/i,
-          exclude: path.resolve(__dirname, "assets"),
+          exclude: [
+            path.resolve(__dirname, "node_modules", "@hyperbola/logo/img"),
+            path.resolve(__dirname, "node_modules", "@hyperbola/logo/favicons"),
+          ],
           type: "asset",
         },
         {
           test: /\.svg$/,
-          exclude: path.resolve(__dirname, "assets"),
+          exclude: [
+            path.resolve(__dirname, "node_modules", "@hyperbola/logo/img"),
+            path.resolve(__dirname, "node_modules", "@hyperbola/logo/favicons"),
+          ],
           type: "asset",
           use: "@hyperbola/svgo-loader",
           generator: {
@@ -118,6 +99,13 @@ module.exports = (env, argv) => {
           },
         },
         {
+          include: path.resolve(__dirname, "src", "keys"),
+          type: "asset/resource",
+          generator: {
+            filename: "keys/[name][ext]",
+          },
+        },
+        {
           test: /resume\.pdf$/,
           type: "asset/resource",
           generator: {
@@ -125,17 +113,16 @@ module.exports = (env, argv) => {
           },
         },
         {
-          test: /\.md$/,
-          use: [
-            "html-loader",
-            {
-              loader: "markdown-loader",
-              options: {
-                langPrefix: "hljs language-",
-                highlight,
-              },
-            },
+          test: /\.html$/,
+          include: [
+            path.resolve(__dirname, "src", "partials"),
+            path.resolve(__dirname, "src", "lifestream", "partials"),
           ],
+          use: "html-loader",
+        },
+        {
+          test: /\.md$/,
+          use: ["html-loader", path.resolve(__dirname, "loaders/markdown.js")],
         },
       ],
     },

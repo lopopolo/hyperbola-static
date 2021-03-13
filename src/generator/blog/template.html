@@ -6,16 +6,30 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <meta name="description" content="Ryan Lopopolo's blog post." />
+    <meta name="author" content="Ryan Lopopolo" />
 
-    <title>hyperbo.la :: <%= post.title %></title>
+    <title><%= title() %></title>
 
-    <!-- opengraph metadata -->
-    <meta property="og:site_name" content="hyperbo.la" />
+    <link rel="canonical" href="<%= canonicalUrl() %>" />
+
+    <!-- Favicons -->
+    <%%= require("../../../partials/favicons.html").default %%>
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="<%= title() %>" />
+    <meta name="twitter:description" content="<%= description() %>" />
     <meta
-      property="og:url"
-      content="https://hyperbo.la<%= post.absoluteUrl %>"
+      name="twitter:image"
+      content="https://hyperbo.la/hyperbola-logo.png"
     />
-    <meta property="og:image" content="https://hyperbo.la/logo.png" />
+
+    <!-- Facebook Open Graph metadata -->
+    <meta property="og:url" content="<%= canonicalUrl() %>" />
+    <meta property="og:site_name" content="hyperbo.la" />
+    <meta property="og:title" content="<%= title() %>" />
+    <meta property="og:description" content="<%= description() %>" />
     <meta property="og:type" content="article" />
     <meta
       property="og:article:published_time"
@@ -26,15 +40,16 @@
       property="og:article:author"
       content="https://www.facebook.com/ryan.lopopolo"
     />
-    <meta property="og:title" content="<%= post.title %>" />
-    <meta property="og:description" content="<%= post.summary %>" />
+    <meta property="og:image" content="https://hyperbo.la/hyperbola-logo.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="400" />
 
-    <%%= require('html-loader!../../../partials/favicons.html') %%> <%%=
-    require('html-loader!../../../partials/google-analytics.html') %%>
+    <%%= require("../../../partials/google-analytics.html").default %%>
   </head>
   <body class="blog">
     <div class="container mb-5">
-      <%%= require('html-loader!../../../partials/nav.html') %%>
+      <%%= require('../../../partials/nav.html').default %%>
       <div class="card hyperbola-section-title my-3 w-100">
         <div class="card-body">
           <span class="card-title">
@@ -55,7 +70,7 @@
                 <a href="/contact/">Ryan Lopopolo</a> | <%= post.publishDate %>
               </div>
               <div class="card-text">
-                <%%= require('<%= post.markdown %>') %%>
+                <%%= require('<%= post.markdown %>').default %%>
               </div>
             </div>
           </div>

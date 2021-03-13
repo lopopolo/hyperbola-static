@@ -53,7 +53,19 @@ const contextForPage = (db, index) =>
     newer() {
       return this.postAbsoluteUrl(db[index + 1]);
     },
-    posts: [db[index]],
+    canonicalUrl() {
+      const post = db[index];
+      return `https://hyperbo.la/lifestream/${post.id}/`;
+    },
+    title() {
+      const post = db[index];
+      return `hyperbo.la :: lifestream :: post #${post.id}`;
+    },
+    description() {
+      const post = db[index];
+      return `hyperbo.la: Ryan Lopopolo's lifestream post #${post.id}`;
+    },
+    post: db[index],
   });
 
 const compile = async (db, post, index, template) => {
