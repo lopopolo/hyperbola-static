@@ -40,11 +40,6 @@ module.exports = (env, argv) => {
 
   return {
     context: path.resolve(__dirname, "src"),
-    resolve: {
-      alias: {
-        assets: path.resolve(__dirname, "assets"),
-      },
-    },
     entry: path.resolve(__dirname, "src/index.js"),
     output: {
       filename: "[name].[contenthash].js",
@@ -58,7 +53,10 @@ module.exports = (env, argv) => {
           use: [cssLoader, "css-loader", "sass-loader"],
         },
         {
-          include: path.resolve(__dirname, "assets"),
+          include: [
+            path.resolve(__dirname, "node_modules", "@hyperbola/logo/img"),
+            path.resolve(__dirname, "node_modules", "@hyperbola/logo/favicons"),
+          ],
           exclude: /\.svg$/,
           type: "asset/resource",
           generator: {
@@ -67,7 +65,10 @@ module.exports = (env, argv) => {
         },
         {
           test: /\.svg$/,
-          include: path.resolve(__dirname, "assets"),
+          include: [
+            path.resolve(__dirname, "node_modules", "@hyperbola/logo/img"),
+            path.resolve(__dirname, "node_modules", "@hyperbola/logo/favicons"),
+          ],
           type: "asset/resource",
           use: "@hyperbola/svgo-loader",
           generator: {
@@ -75,20 +76,19 @@ module.exports = (env, argv) => {
           },
         },
         {
-          include: path.resolve(__dirname, "src", "keys"),
-          type: "asset/resource",
-          generator: {
-            filename: "keys/[name][ext]",
-          },
-        },
-        {
           test: /\.(png|jpe?g|gif)$/i,
-          exclude: path.resolve(__dirname, "assets"),
+          exclude: [
+            path.resolve(__dirname, "node_modules", "@hyperbola/logo/img"),
+            path.resolve(__dirname, "node_modules", "@hyperbola/logo/favicons"),
+          ],
           type: "asset",
         },
         {
           test: /\.svg$/,
-          exclude: path.resolve(__dirname, "assets"),
+          exclude: [
+            path.resolve(__dirname, "node_modules", "@hyperbola/logo/img"),
+            path.resolve(__dirname, "node_modules", "@hyperbola/logo/favicons"),
+          ],
           type: "asset",
           use: "@hyperbola/svgo-loader",
           generator: {
@@ -96,6 +96,13 @@ module.exports = (env, argv) => {
               content = content.toString();
               return svgToMiniDataURI(content);
             },
+          },
+        },
+        {
+          include: path.resolve(__dirname, "src", "keys"),
+          type: "asset/resource",
+          generator: {
+            filename: "keys/[name][ext]",
           },
         },
         {
