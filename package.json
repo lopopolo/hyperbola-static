@@ -32,8 +32,8 @@
     "luxon": "^1.26.0",
     "paginate-array": "^2.1.0",
     "popper.js": "^1.16.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@hyperbola/logo": "github:hyperbola/logo",
