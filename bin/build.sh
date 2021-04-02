@@ -4,12 +4,12 @@ set -euo pipefail
 
 webpack_mode=""
 
-while [[ "$#" -gt 0 ]]; do
+while [[ $# -gt 0 ]]; do
   case $1 in
-    -d|--development)
+    -d | --development)
       webpack_mode="development"
       ;;
-    -p|--production)
+    -p | --production)
       webpack_mode="production"
       ;;
     *)
