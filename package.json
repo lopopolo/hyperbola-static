@@ -38,7 +38,7 @@
   "devDependencies": {
     "@hyperbola/logo": "github:hyperbola/logo",
     "@hyperbola/svgo-loader": "^0.2.1",
-    "css-loader": "^5.2.0",
+    "css-loader": "^5.2.1",
     "css-minimizer-webpack-plugin": "^1.3.0",
     "front-matter": "^4.0.2",
     "highlight.js": "^10.7.2",
