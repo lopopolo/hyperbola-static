@@ -90,44 +90,31 @@ jobs:
       - name: "Setup Terraform"
         uses: hashicorp/setup-terraform@v1
         with:
-          terraform_version: 0.14.x
+          terraform_version: 0.15.x
 
       - name: "Format aws module"
-        run: terraform fmt -check -diff
-        working-directory: "terraform/aws"
+        run: terraform -chdir=terraform/aws fmt -check -diff
 
       - name: "Initialize aws module"
-        run: terraform init
-        working-directory: "terraform/aws"
+        run: terraform -chdir=terraform/aws init
 
       - name: "Validate aws module"
-        run: terraform validate -no-color
-        working-directory: "terraform/aws"
+        run: terraform -chdir=terraform/aws validate -no-color
 
       - name: "Format legacy module"
-        run: terraform fmt -check -diff
-        working-directory: "terraform/legacy"
+        run: terraform -chdir=terraform/legacy fmt -check -diff
 
       - name: "Initialize legacy module"
-        run: terraform init
-        working-directory: "terraform/legacy"
+        run: terraform -chdir=terraform/legacy init
 
       - name: "Validate legacy module"
-        run: terraform validate -no-color
-        working-directory: "terraform/legacy"
+        run: terraform -chdir=terraform/legacy validate -no-color
 
       - name: "Format remote-state module"
-        run: terraform fmt -check -diff
-        working-directory: "terraform/legacy"
+        run: terraform -chdir=terraform/remote-state fmt -check -diff
 
       - name: "Initialize remote-state module"
-        run: terraform init
-        working-directory: "terraform/remote-state"
+        run: terraform -chdir=terraform/remote-state init
 
       - name: "Validate remote-state module"
-        run: terraform validate -no-color
-        working-directory: "terraform/remote-state"
-
-      - name: "Format remote-state module"
-        run: terraform fmt -check -diff
-        working-directory: "terraform/remote-state"
+        run: terraform -chdir=terraform/remote-state validate -no-color

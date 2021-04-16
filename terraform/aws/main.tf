@@ -113,8 +113,9 @@ ${join(
     ]
 ))}
 
-CONFIG
+  CONFIG
 
+sensitive = true
 }
 
 output "iam_admin_users" {
@@ -127,6 +128,8 @@ output "iam_admin_access_ids" {
 
 output "iam_admin_secret_keys" {
   value = module.iam_admin.secret_keys
+
+  sensitive = true
 }
 
 output "github_actions_iam_access_ids" {
@@ -135,4 +138,6 @@ output "github_actions_iam_access_ids" {
 
 output "github_actions_iam_secret_keys" {
   value = module.github_actions_runner_read_only.secret_keys
+
+  sensitive = true
 }
