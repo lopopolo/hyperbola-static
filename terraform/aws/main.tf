@@ -113,9 +113,9 @@ ${join(
     ]
 ))}
 
-CONFIG
+  CONFIG
 
-  sensitive = true
+sensitive = true
 }
 
 output "iam_admin_users" {
