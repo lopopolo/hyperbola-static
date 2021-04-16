@@ -40,7 +40,7 @@ resource "aws_route53_record" "txt" {
   type    = "TXT"
   ttl     = "300"
 
-  records = concat(list("v=spf1 include:_spf.google.com ~all"), formatlist("google-site-verification=%s", var.google_site_verifcation_keys))
+  records = flatten(["v=spf1 include:_spf.google.com ~all", formatlist("google-site-verification=%s", var.google_site_verifcation_keys)])
 }
 
 resource "aws_route53_record" "dkim" {
