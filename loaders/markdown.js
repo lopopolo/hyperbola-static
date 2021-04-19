@@ -6,8 +6,11 @@ hljs.registerLanguage("terraform", terraform);
 
 marked.setOptions({
   renderer: new marked.Renderer(),
-  highlight: (code, lang) => {
-    const highlighted = hljs.highlight(lang, code, true);
+  highlight: (code, language) => {
+    const highlighted = hljs.highlight(code, {
+      language,
+      ignoreIllegals: true,
+    });
     const html = highlighted.value;
     return html;
   },
