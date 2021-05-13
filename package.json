@@ -39,7 +39,7 @@
     "@hyperbola/logo": "github:hyperbola/logo",
     "@hyperbola/svgo-loader": "^0.2.1",
     "css-loader": "^5.2.4",
-    "css-minimizer-webpack-plugin": "^2.0.0",
+    "css-minimizer-webpack-plugin": "^3.0.0",
     "front-matter": "^4.0.2",
     "highlight.js": "^10.7.2",
     "html-loader": "^2.1.2",
