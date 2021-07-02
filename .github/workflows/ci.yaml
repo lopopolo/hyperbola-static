@@ -16,6 +16,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      # https://github.com/npm/cli/issues/2610
+      #
+      # For `github:hyperbola/logo` dependency.
+      # See: https://github.com/hyperbola/hyperbola-static/pull/267
+      - run: git config --global url."https://github.com/".insteadOf ssh://git@github.com/
+
       - name: Install toolchain
         run: npm ci
 
@@ -42,6 +48,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+
+      # https://github.com/npm/cli/issues/2610
+      #
+      # For `github:hyperbola/logo` dependency.
+      # See: https://github.com/hyperbola/hyperbola-static/pull/267
+      - run: git config --global url."https://github.com/".insteadOf ssh://git@github.com/
 
       - name: Install Nodejs toolchain
         run: npm ci
