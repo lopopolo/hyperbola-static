@@ -1,5 +1,6 @@
+---
 name: CI
-on:
+"on":
   push:
     branches:
       - trunk
@@ -83,3 +84,10 @@ jobs:
 
       - name: Lint and check formatting with prettier
         run: npx prettier --check '**/*'
+
+      - name: Lint YAML sources with yamllint
+        run: |
+          yamllint --version
+          echo "Linting YAML sources with yamllint ..."
+          yamllint --strict --format github .
+          echo "OK"
