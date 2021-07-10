@@ -54,7 +54,7 @@ should [depend on tokio sub crates]. [GH-10] reduces the number of crates that
 [depend on tokio sub crates]:
   https://github.com/tokio-rs/tokio/tree/v0.1.x#project-layout
 
-[GH-10]: https://github.com/asomers/futures-locks/pull/10) reduces the number of
+[GH-10]: https://github.com/asomers/futures-locks/pull/10
 
 ### Successes in 2018
 
